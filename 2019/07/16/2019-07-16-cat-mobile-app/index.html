@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=7.4.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.4.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.4.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="In this post we will discuss some pros cons and usages of caterpillar’s Google Play listed applications.">
+<meta name="keywords" content="Engineering,Caterpillar,Mechanical,Manufacturing,APP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Caterpillar Mobile App Research">
+<meta property="og:url" content="http://yxiao.org/2019/07/16/2019-07-16-cat-mobile-app/index.html">
+<meta property="og:site_name" content="Masdar Wireless">
+<meta property="og:description" content="In this post we will discuss some pros cons and usages of caterpillar’s Google Play listed applications.">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-09-16T02:32:44.935Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Caterpillar Mobile App Research">
+<meta name="twitter:description" content="In this post we will discuss some pros cons and usages of caterpillar’s Google Play listed applications.">
+  <link rel="canonical" href="http://yxiao.org/2019/07/16/2019-07-16-cat-mobile-app/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Caterpillar Mobile App Research | Masdar Wireless</title>
+  <meta name="generator" content="Hexo 3.9.0">
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Masdar Wireless</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">To Infinity and Beyond!</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-study">
+      
+    
+
+    <a href="/study/" rel="section"><i class="menu-item-icon fa fa-fw fa-book"></i> <br>Study</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+      </li>
+    
+  </ul>
+
+    
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="http://yxiao.org/2019/07/16/2019-07-16-cat-mobile-app/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Abraham Xiao">
+      <meta itemprop="description" content="Shut Up and Get Rich.">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Masdar Wireless">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Caterpillar Mobile App Research
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-07-16 12:00:00" itemprop="dateCreated datePublished" datetime="2019-07-16T12:00:00+08:00">2019-07-16</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-09-16 10:32:44" itemprop="dateModified" datetime="2019-09-16T10:32:44+08:00">2019-09-16</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>In this post we will discuss some pros cons and usages of caterpillar’s Google Play listed applications.</p>
+<a id="more"></a>
+
+<h2 id="Cat-Inspect-4-0"><a href="#Cat-Inspect-4-0" class="headerlink" title="Cat Inspect 4.0"></a>Cat Inspect 4.0</h2><p>Cat Inspect is an easy-to-use application which allows users to download and complete pre-defined inspection tasks, as well as include pictures, comments, and ratings for Cat and non-Cat assets. Completed inspection details are easily retrieved from the streamlined web portal for follow up and opportunity management.</p>
+<p>对应的是中联重科—-售后服务—-主动服务—-设备例检。</p>
+<ul>
+<li>Download inspection forms.</li>
+<li>Complete your inspection</li>
+<li>Immediately share the results</li>
+</ul>
+<h3 id="Inspections"><a href="#Inspections" class="headerlink" title="Inspections"></a>Inspections</h3><ul>
+<li>In progress<ul>
+<li>Assigned</li>
+<li>Submitted</li>
+<li>Inspection Types: Equipment, Site, SOS.</li>
+<li>Online and offline forms support.</li>
+<li>QR code on a machine for customer information.</li>
+<li>SMU—-Service meter unit.</li>
+<li><strong>Asset Info</strong> <strong>Custoemr Info</strong></li>
+<li>System auto save the information</li>
+<li>Normal/Monitor/Action (Additional Information)</li>
+<li>System API to <strong>draw</strong> on the uploaded photo.</li>
+<li>Your title (aka position) and sign on the inspection form.</li>
+<li><strong>You may view the inspection on CATINSPECT web</strong> <a href="cat.com/catinspect">CATINSPECT</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="Support"><a href="#Support" class="headerlink" title="Support"></a>Support</h3><ul>
+<li>Makes it easy to share issue with CAT support.</li>
+<li><strong>Describe your issue</strong></li>
+<li><strong>Attach a photo</strong></li>
+<li>Submit the request or call the support line.</li>
+</ul>
+<h3 id="Reports"><a href="#Reports" class="headerlink" title="Reports"></a>Reports</h3><p>All inspections completed by the person logged into the device.</p>
+<h2 id="Cat-App-Fleet-Management"><a href="#Cat-App-Fleet-Management" class="headerlink" title="Cat App: Fleet Management"></a>Cat App: Fleet Management</h2><p>OVERVIEW, ASSETS, OPERATIONS, MY ACTIVITY, ADMINISTRATION</p>
+<p>中联重科目前来看没有与之类似的客户车队、产品管理系统（主要提供给终端客户使用）。手机APP核心功能：<strong>客户备件在线下单；客户产品请求服务</strong>。</p>
+<p>Wherever you use your smart phone — around the jobsite, in your parked vehicle, even in your machine — you can use the Cat App. This equipment management tool, a companion to My.Cat.Com, makes it easy to <strong>track your equipment, giving you real-time access to data and actionable insights</strong>.</p>
+<p>Managing equipment is chaotic. My.Cat.Com can help you be proactive with 24/7 access to equipment data and insights anywhere you go.</p>
+<p><strong>CONNECT EVERYWHERE</strong>. With the Cat App, answers to common questions are as close as your smart phone, and you can complete everyday tasks without turning on your computer or returning to the office. There’s no need to sift through large amounts of data. Just use the app while you’re on site, at home or in transit from one job to another to:</p>
+<ul>
+<li>Track hours, location, fuel use, health &amp; utilization</li>
+<li><strong>Request parts or service</strong></li>
+<li><strong>Receive health &amp; maintenance alerts</strong></li>
+<li>Manage planned maintenance</li>
+<li>Connect with your Cat dealer</li>
+<li>Create &amp; share tasks</li>
+<li>Access Operation &amp; Maintenance Manuals, warranties, work orders, service history &amp; safety service letters</li>
+<li>Request Cat PL542 Product Link™ &amp; self-install Cat Product Link devices</li>
+<li><strong>Use your phone as a digital key to start select Next Generation Cat machines</strong></li>
+</ul>
+<p><strong>Connect with your dealer 24/7 with My.Cat.Com.</strong> Use your computer or tablet to manage yourequipment – on your schedule. Access your asset data, including location, health, maintenance, performance and more.</p>
+<p>Want to see your whole fleet without driving from site to site? View your full asset list at a glance and check regularly updated hour, fuel level and utilization information. Use the Google maps feature to see the assets closest to your current location.<br>对应的是主机的产品档案和实时的主机信息。不过配上车上的传感器信息可以做到动态更新。</p>
+<p>Don’t have time to go to the office to order parts or request service? <strong>Do it immediately on the app.</strong> Plus, when you request service, auto-filled location and machine information may save you the time and effort of typing – ask your Cat dealer if this feature is available in your region.<br>服务系统ZOOMLINK中的备件在线下单功能。</p>
+<p>Wish you could plan service when it doesn’t impact production? Get notifications about upcoming indicators based on machine operating hours so you schedule services proactively.<br>服务系统中的服务预警功能。</p>
+<p>Overwhelmed by notifications? Customize what fault codes, alerts or machine operating conditions you want to know about, even if you don’t check the app every day.</p>
+<p>Want to connect machines to telematics when it fits into your schedule? Request and self-install PL542 Product Link boxes to get connected and frequently receive data insights.<br>车联网智能终端。</p>
+<p>Tired of losing or trying to find the right key? Using the keyless start feature, you can start select Next Generation Cat machines from the app.<br>手机变身成为智能钥匙。</p>
+<p>Looking for an easy way to keep maintenance on schedule? Share maintenance tasks with your team, mark work complete and adjust future schedules if needed.</p>
+<p>Interested in the condition of individual machines? Review your S•O•SSM Services fluid analysis results or Cat Inspect reports to identify problems before they become failures.</p>
+<p>Trouble finding your paper records or manuals? Access Operational &amp; Maintenance Manuals, support agreements, service letters, warranty information, invoices and more.</p>
+<p>Interested in <strong>how the performance of different machines or jobsites compares?</strong> Run utilization and benchmarking reports to determine if you need to make adjustments to your fleet or operations.</p>
+<p>Ready to sell a piece of equipment? Download <strong>a complete work order and service history</strong> to command a higher resale price.</p>
+<p>Want to customize how you see your information? Set up your home page to get to your most important or most used tools quickly. Choose to view your assets in a table, in a grid or on a map — select an individual asset to see all its details.</p>
+<ul>
+<li>Equipment: Utilisation, Issues detected, Planned Maintenance, Subscription information, Dealer information.</li>
+<li>Keys: Bluetooth enabled key.</li>
+<li>Analytics Data: Equipment total working hours <strong>per day</strong>. Equipment <strong>Idle Time</strong>.</li>
+</ul>
+<h2 id="Cat-Value-Estimating-Tool"><a href="#Cat-Value-Estimating-Tool" class="headerlink" title="Cat Value Estimating Tool"></a>Cat Value Estimating Tool</h2><h2 id="Cat-Virtual-Showroom"><a href="#Cat-Virtual-Showroom" class="headerlink" title="Cat Virtual Showroom"></a>Cat Virtual Showroom</h2><p>手机端的产品名录加虚拟展厅进行产品体验。</p>
+<p>This application is meant for Caterpillar and dealer sales personnel only. CWS login is required to gain access. This app gives sales reps access to enterprise wide, non-confidential marketing material that can be emailed. In addition, Cat Dealers have the option of integrating their own content into the app by opening an account with Modus (gomodus.com)</p>
+<h2 id><a href="#" class="headerlink" title="#"></a>#</h2><h2 id="Copyright"><a href="#Copyright" class="headerlink" title="Copyright"></a>Copyright</h2><p>Caterpillar reserves all its right of the content listed here and above, unless specified otherwise.</p>
+
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/Engineering/" rel="tag"># Engineering</a>
+            
+              <a href="/tags/Caterpillar/" rel="tag"># Caterpillar</a>
+            
+              <a href="/tags/Mechanical/" rel="tag"># Mechanical</a>
+            
+              <a href="/tags/Manufacturing/" rel="tag"># Manufacturing</a>
+            
+              <a href="/tags/APP/" rel="tag"># APP</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/07/16/2019-07-16-dota-underlords/" rel="next" title="Dota Underlords Research">
+                  <i class="fa fa-chevron-left"></i> Dota Underlords Research
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2019/07/17/2019-07-17-you-must-sleep-early/" rel="prev" title="早睡早起 晚睡剁屌">
+                  早睡早起 晚睡剁屌 <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Cat-Inspect-4-0"><span class="nav-number">1.</span> <span class="nav-text">Cat Inspect 4.0</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Inspections"><span class="nav-number">1.1.</span> <span class="nav-text">Inspections</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Support"><span class="nav-number">1.2.</span> <span class="nav-text">Support</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Reports"><span class="nav-number">1.3.</span> <span class="nav-text">Reports</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cat-App-Fleet-Management"><span class="nav-number">2.</span> <span class="nav-text">Cat App: Fleet Management</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cat-Value-Estimating-Tool"><span class="nav-number">3.</span> <span class="nav-text">Cat Value Estimating Tool</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cat-Virtual-Showroom"><span class="nav-number">4.</span> <span class="nav-text">Cat Virtual Showroom</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">5.</span> <span class="nav-text">#</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Copyright"><span class="nav-number">6.</span> <span class="nav-text">Copyright</span></a></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/avatar.jpg"
+      alt="Abraham Xiao">
+  <p class="site-author-name" itemprop="name">Abraham Xiao</p>
+  <div class="site-description" itemprop="description">Shut Up and Get Rich.</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">144</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">257</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/ProfessorX" title="GitHub &rarr; https://github.com/ProfessorX" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="mailto:q289196573@gmail.com" title="E-Mail &rarr; mailto:q289196573@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+    
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2013 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Abraham Xiao</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.4.0</div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+
+
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.4.0"></script><script src="/js/motion.js?v=7.4.0"></script>
+<script src="/js/schemes/muse.js?v=7.4.0"></script>
+<script src="/js/next-boot.js?v=7.4.0"></script>
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.4.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

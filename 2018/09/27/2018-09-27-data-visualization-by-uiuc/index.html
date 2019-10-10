@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=7.4.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.4.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.4.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="Right after I made the decision to make a better living and apply forMS/PhD track outside China, I signed up for THE specialization onCoursera provided by UIUC. This is a 6-course specilization and it">
+<meta name="keywords" content="Java,Programming,Science,Data,Visualization">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Data Visualization by UIUC on Coursera">
+<meta property="og:url" content="http://yxiao.org/2018/09/27/2018-09-27-data-visualization-by-uiuc/index.html">
+<meta property="og:site_name" content="Masdar Wireless">
+<meta property="og:description" content="Right after I made the decision to make a better living and apply forMS/PhD track outside China, I signed up for THE specialization onCoursera provided by UIUC. This is a 6-course specilization and it">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-09-16T02:32:44.641Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Data Visualization by UIUC on Coursera">
+<meta name="twitter:description" content="Right after I made the decision to make a better living and apply forMS/PhD track outside China, I signed up for THE specialization onCoursera provided by UIUC. This is a 6-course specilization and it">
+  <link rel="canonical" href="http://yxiao.org/2018/09/27/2018-09-27-data-visualization-by-uiuc/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Data Visualization by UIUC on Coursera | Masdar Wireless</title>
+  <meta name="generator" content="Hexo 3.9.0">
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Masdar Wireless</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">To Infinity and Beyond!</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-study">
+      
+    
+
+    <a href="/study/" rel="section"><i class="menu-item-icon fa fa-fw fa-book"></i> <br>Study</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+      </li>
+    
+  </ul>
+
+    
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="http://yxiao.org/2018/09/27/2018-09-27-data-visualization-by-uiuc/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Abraham Xiao">
+      <meta itemprop="description" content="Shut Up and Get Rich.">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Masdar Wireless">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Data Visualization by UIUC on Coursera
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2018-09-27 12:00:00" itemprop="dateCreated datePublished" datetime="2018-09-27T12:00:00+08:00">2018-09-27</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-09-16 10:32:44" itemprop="dateModified" datetime="2019-09-16T10:32:44+08:00">2019-09-16</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Technology/" itemprop="url" rel="index"><span itemprop="name">Technology</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>Right after I made the decision to make a better living and apply for<br>MS/PhD track outside China, I signed up for THE specialization on<br>Coursera provided by UIUC. This is a 6-course specilization and it’s<br>named Data Mining. First of the series is Data Visualization.</p>
+<a id="more"></a>
+<ul>
+<li>content<br>{:toc}</li>
+</ul>
+<h2 id="Course-Description"><a href="#Course-Description" class="headerlink" title="Course Description"></a>Course Description</h2><p>Data Visualization is a course that teaches how to create<br>visualizations that effectively communicate the meaning behind data to<br>an observer through visual perception. We will learn how a computer<br>displays information using computer graphics, and how the human<br>perceives that information visually. We will also study the forms of<br>data, including quantitative and non-quantitative data, and how they<br>are properly mapped to the elements of a visualization to be perceived<br>well by the observer. We will briefly overview some design elements<br>for effective visualization, though we will not focus on the visual<br>design needed to make attractive and artistic visualizations. This<br>course does not require computer programming, but computer programming<br>can be used to complete the exercises. The course will conclude with<br>the integration of visualization into database and data-mining systems<br>to provide support for decision making, and the effective construction<br>of a visualization dashboard.</p>
+<h2 id="Course-Goals-and-Objectives"><a href="#Course-Goals-and-Objectives" class="headerlink" title="Course Goals and Objectives"></a>Course Goals and Objectives</h2><p>Upon successful completion of this course, you will be able to:</p>
+<ul>
+<li><p>Describe how 2-D and 3-D computer graphics are used to visualize data.</p>
+</li>
+<li><p>Describe how an observer perceives and processes information from a visual display.</p>
+</li>
+<li><p>Utilize a wide vocabulary of visualization methods and how best to apply them to different kinds of data.</p>
+</li>
+<li><p>Decide which design styles and colors work best for different visualization situations.</p>
+</li>
+<li><p>Visualize data when it is not numerical.</p>
+</li>
+<li><p>Use techniques for visualizing databases and data mining to help visually sort through massive datasets.</p>
+</li>
+<li><p>Analyze tasks and build visualization dashboards to provide data to support making a decision.</p>
+</li>
+</ul>
+<h2 id="Course-Outline"><a href="#Course-Outline" class="headerlink" title="Course Outline"></a>Course Outline</h2><p>The course consists of 4 weekly modules that focus on the following.</p>
+<p>Week 1: The Computer and the Human<br>Key Concepts:</p>
+<p>Introduction to visualization<br>Using computer graphics to display data<br>The model human processor and Fitts’s law<br>Human visual perception and cognition</p>
+<p>Week 2: Visualization of Numerical Data<br>Key Concepts:</p>
+<p>Different kinds of visualizations and how best to apply them to data<br>Basic charts such as bar charts and scatter plots<br>More advanced visualization techniques, such as streamgraphs and parallel coordinates<br>Some elements of design and color usage<br>Week 3: Visualization of Non-Numerical Data<br>Key Concepts:</p>
+<p>Graphs, networks, and hierarchies<br>Layout of relational and hierarchical data, such as treemaps<br>Methods for visualizing high-dimensional data, such as principal component analysis and multidimensional scaling<br>Week 4: The Visualization Dashboard<br>Key Concepts:</p>
+<p>Visualizing large datasets<br>Visualization of databases and data mining results<br>Visual analytics for decision support<br>Task analysis<br>Visualization dashboards</p>
+<h2 id="Elements-of-This-Course"><a href="#Elements-of-This-Course" class="headerlink" title="Elements of This Course"></a>Elements of This Course</h2><p>The course is comprised of the following elements:</p>
+<ul>
+<li><p>Lecture videos. In each module the concepts you need to know will<br>be presented through a collection of short video lectures. You may<br>stream these videos for playback within the browser by clicking on<br>their titles or download the videos. You may also download the<br>slides that go along with the videos.</p>
+</li>
+<li><p>Quizzes. Week 1 and Week 4 will include a for-credit quiz. You<br>will be allowed 3 attempts at the quiz per every 8 hours. Each<br>attempt may present a different selection of questions to<br>you. Your best score will be used when calculating your final<br>score in the class. There is no time limit on how long you take to<br>complete each attempt at the quiz.</p>
+</li>
+<li><p>Programming assignments. There are two required programming<br>assignments for the class. The first programming assignment is to<br>create a visualization of numerical data, and the second<br>programming assignment is to create a visualization of<br>non-numerical data (e.g., a network or a hierarchy). For each<br>assignment, sample data will be provided, but you are encouraged<br>to find your own data. Your goal will be to present that data in a<br>visualization that helps the observer to better understand what<br>the data represents. The programming assignments will be peer<br>graded based on rubrics that measure how well the course’s methods<br>have been applied to the visualization of the data.</p>
+</li>
+</ul>
+<h2 id="Week-1"><a href="#Week-1" class="headerlink" title="Week 1"></a>Week 1</h2><h3 id="Tips-for-Success"><a href="#Tips-for-Success" class="headerlink" title="Tips for Success"></a>Tips for Success</h3><p>To do well this week, I recommend that you do the following:</p>
+<p>Review the video lectures a number of times to gain a solid understanding of the key questions and concepts introduced this week.<br>When possible, provide tips and suggestions to your peers in this class. As a learning community, we can help each other learn and grow. One way of doing this is by helping to address the questions that your peers pose. By engaging with each other, we閳ユ獟l all learn better.<br>It閳ユ獨 always a good idea to refer to the video lectures and chapter readings we’ve read during this week and reference them in your responses. When appropriate, critique the information presented.<br>Take notes while you read the materials and watch the lectures for this week. By taking notes, you are interacting with the material and will find that it is easier to remember and to understand. With your notes, you閳ユ獟l also find that it閳ユ獨 easier to complete your assignments. So, go ahead, do yourself a favor; take some notes!</p>
+<h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h3><ul>
+<li>Model human processor</li>
+<li></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/Java/" rel="tag"># Java</a>
+            
+              <a href="/tags/Programming/" rel="tag"># Programming</a>
+            
+              <a href="/tags/Science/" rel="tag"># Science</a>
+            
+              <a href="/tags/Data/" rel="tag"># Data</a>
+            
+              <a href="/tags/Visualization/" rel="tag"># Visualization</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2018/09/26/2018-09-26-vsrp-of-kaust/" rel="next" title="Visiting Student Research Program">
+                  <i class="fa fa-chevron-left"></i> Visiting Student Research Program
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2018/10/03/2018-10-03-detecting-fraudulent-messages/" rel="prev" title="Detecting Fraudulent Messages with Strong Privacy Protection">
+                  Detecting Fraudulent Messages with Strong Privacy Protection <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Course-Description"><span class="nav-number">1.</span> <span class="nav-text">Course Description</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Course-Goals-and-Objectives"><span class="nav-number">2.</span> <span class="nav-text">Course Goals and Objectives</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Course-Outline"><span class="nav-number">3.</span> <span class="nav-text">Course Outline</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Elements-of-This-Course"><span class="nav-number">4.</span> <span class="nav-text">Elements of This Course</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Week-1"><span class="nav-number">5.</span> <span class="nav-text">Week 1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Tips-for-Success"><span class="nav-number">5.1.</span> <span class="nav-text">Tips for Success</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Notes"><span class="nav-number">5.2.</span> <span class="nav-text">Notes</span></a></li></ol></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/avatar.jpg"
+      alt="Abraham Xiao">
+  <p class="site-author-name" itemprop="name">Abraham Xiao</p>
+  <div class="site-description" itemprop="description">Shut Up and Get Rich.</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">144</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">257</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/ProfessorX" title="GitHub &rarr; https://github.com/ProfessorX" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="mailto:q289196573@gmail.com" title="E-Mail &rarr; mailto:q289196573@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+    
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2013 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Abraham Xiao</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.4.0</div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+
+
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.4.0"></script><script src="/js/motion.js?v=7.4.0"></script>
+<script src="/js/schemes/muse.js?v=7.4.0"></script>
+<script src="/js/next-boot.js?v=7.4.0"></script>
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.4.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

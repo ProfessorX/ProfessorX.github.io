@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=7.4.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.4.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.4.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="当前,无人机系统已成为信息化作战条件下夺取和保持信息优势的重要装备,而无人机数据链是无人机系统将信息优势转化为战斗力的关键设备和有效手段。大型预警、战略侦察以及高分辨率对地观察飞行器作为信息化战场信息获取的主力军,而空前巨大的信息量需求与数据链传输能力不足的矛盾日益尖锐。">
+<meta name="keywords" content="UAV,Military,UnitedStates,China,DataLink,Communication">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UAV Data Link">
+<meta property="og:url" content="http://yxiao.org/2017/04/19/2017-04-18-uav-data-link/index.html">
+<meta property="og:site_name" content="Masdar Wireless">
+<meta property="og:description" content="当前,无人机系统已成为信息化作战条件下夺取和保持信息优势的重要装备,而无人机数据链是无人机系统将信息优势转化为战斗力的关键设备和有效手段。大型预警、战略侦察以及高分辨率对地观察飞行器作为信息化战场信息获取的主力军,而空前巨大的信息量需求与数据链传输能力不足的矛盾日益尖锐。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://github.com/ProfessorX/ProfessorX.github.io/images/mq9-1.jpg">
+<meta property="og:updated_time" content="2019-09-16T02:32:44.480Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="UAV Data Link">
+<meta name="twitter:description" content="当前,无人机系统已成为信息化作战条件下夺取和保持信息优势的重要装备,而无人机数据链是无人机系统将信息优势转化为战斗力的关键设备和有效手段。大型预警、战略侦察以及高分辨率对地观察飞行器作为信息化战场信息获取的主力军,而空前巨大的信息量需求与数据链传输能力不足的矛盾日益尖锐。">
+<meta name="twitter:image" content="https://github.com/ProfessorX/ProfessorX.github.io/images/mq9-1.jpg">
+  <link rel="canonical" href="http://yxiao.org/2017/04/19/2017-04-18-uav-data-link/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>UAV Data Link | Masdar Wireless</title>
+  <meta name="generator" content="Hexo 3.9.0">
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Masdar Wireless</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">To Infinity and Beyond!</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-study">
+      
+    
+
+    <a href="/study/" rel="section"><i class="menu-item-icon fa fa-fw fa-book"></i> <br>Study</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+      </li>
+    
+  </ul>
+
+    
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="http://yxiao.org/2017/04/19/2017-04-18-uav-data-link/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Abraham Xiao">
+      <meta itemprop="description" content="Shut Up and Get Rich.">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Masdar Wireless">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">UAV Data Link
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2017-04-19 01:00:00" itemprop="dateCreated datePublished" datetime="2017-04-19T01:00:00+08:00">2017-04-19</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-09-16 10:32:44" itemprop="dateModified" datetime="2019-09-16T10:32:44+08:00">2019-09-16</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Information/" itemprop="url" rel="index"><span itemprop="name">Information</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>当前,无人机系统已成为<strong>信息化作战条件</strong>下夺取和保持信息优势的重要装备,而无<br>人机数据链是无人机系统将信息优势转化为战斗力的<strong>关键设备和有效手段</strong>。大型<br>预警、战略侦察以及高分辨率对地观察飞行器作为信息化战场信息获取的主力军,而<br>空前巨大的<strong>信息量需求</strong>与数据链<strong>传输能力不足的矛盾</strong>日益尖锐。</p>
+<a id="more"></a>
+
+<blockquote>
+<p>华为：老子不是吹，老子家的5G通信就是吊啊就是吊。错是没错，不过这么吊<br>无人机肯定不会用对吧，数据量辣么大，亲妈爆炸。</p>
+</blockquote>
+<p>在严峻的现实压力下,中国电子科技集团公司第十研究所研制的“<strong>Ku频段无人机<br>数据链</strong>”应运而生,据现场专家介绍,这套数据链处于<strong>国内领先、国际先进水平</strong>,<br>能<strong>实时准确</strong>地共享机载传感器获取的大容量数据,具有“频段高、<strong>传输稳</strong>”等众<br>多优势,真正实现了高速信息的实时获取与共享,显著提升了无人机数据链的<strong>可靠性</strong>。</p>
+<p>据介绍,“Ku频段无人机数据链”克服了高速数据可靠传输和目标稳定跟踪两大<br>难题,实现了每秒高达<strong>300兆比特</strong>数据的可靠传输。举例来说,我们在各种新闻视<br>频中看到以下场景:拥有高技术无人机系统一方,在上百公里之外对恐怖分子实施<br>侦察和打击,其无人机实际上配置的空-地实时链路传输能力也仅<strong>每秒几兆字节</strong>,<br>能力相差100倍以上。</p>
+<p>作为无人机系统的“<strong>中枢神经</strong>”,数据链是无人机与地面联系的纽带,国在无人机<br>应用日益繁多的失事案例中,“中枢神经”被斩断导致的“瘫痪”已占相当大的<br>比例。</p>
+<p>据专家介绍,Ku频段无人机数据链,是一套具有<strong>复杂电磁环境</strong>适应能力的智能系统,采<br>用认知无线电这一在无线通信领域中具有革命性的技术,具备智能感知外部电磁<br>环境,并从环境中学习,可实现任何时间、任何地点的高可靠通信,为无人机系统<br>建设了一条难以斩断的“中枢神经”,已达到国际一流水平。</p>
+<h2 id="无人侦察机是通过什么方式实现远程控制和数据传输的？"><a href="#无人侦察机是通过什么方式实现远程控制和数据传输的？" class="headerlink" title="无人侦察机是通过什么方式实现远程控制和数据传输的？"></a>无人侦察机是通过什么方式实现远程控制和数据传输的？</h2><p>作者：airbunny<br>链接：<a href="https://www.zhihu.com/question/27004521/answer/35699049" target="_blank" rel="noopener">https://www.zhihu.com/question/27004521/answer/35699049</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>不同级别的无人机，链路是不大一样的。但大致上脱不出点对点通信和依数据链<br>两种方式。</p>
+<p>使用点对点链路的无人机，大抵都是<strong>手持级别 or 中型的</strong>。高带宽的电台大多是<br>数字化的，这样可以回传各种飞行器参数、传感器读数和流媒体数据。电台工作<br>在<strong>L波段和C波段的为多（也有Ku波段的）</strong>。同时电台也多支持跳频功能。但对于<br>非常小的无人机就装不起很贵的<strong>高带宽双工电台</strong>了，一般会分为低带宽的双工数<br>据链路传输<strong>控制指令和回传数据</strong>，和高带宽的单工<strong>图像链路</strong>，以节省成本。甚至<br>在一些极端的设计里，会将回传的数据链路信<strong>叠加</strong>在图像链路里，使数据链路<br>的硬件也变成单工的，可以<strong>进一步降低成本</strong>。从结构上来看，这样的设计除了更<br>可靠和带跳频功能以外，和一般航模上用的链路没有太本质的区别。不过很多时<br>候会将他们组成小范围的网络共享观测数据。</p>
+<blockquote>
+<p>在各种五花八门的需求面前(aka,更高更快更强)，通信行业必将追随克劳德香<br>农同志的脚步，将数据传输和稳定性推至理论的极限。<br>感谢西工大，感谢申小毅老师的《信号系统》，感谢当年那个认真听课、欲求<br>不满的我。</p>
+</blockquote>
+<p>至于链路的工作距离，高功率的设备配上较好的天线大约可以到几十公里，对空<br>的话可以到上百公里甚至数百公里。但因为<strong>地球曲率的问题</strong>，一般实用的通讯范<br>围在70到90公里为多。这也就是为什么很多<strong>长航时战术无人机</strong>为何活动半径只有<br>几十公里的原因了—飞出这个范围，链路就连接不上了呀~当然那些小无人机的<br>电台，可能对空距离就5倒10公里的样子。</p>
+<blockquote>
+<p>解决方案，卫星中继通讯，内置谷歌地图（滑稽），到达一定飞行高度自动切<br>换成卫星导航（and 控制）。完成任务后一键自毁(or 返航)。可以去搜一下<br>DJI的自动返航功能，或许有帮助。</p>
+</blockquote>
+<p>而用数据链的飞行器用的也是类似的链路，但增加了<strong>组网和转发</strong>（天空中只<br>能用Ad Hoc了吧，莫非还有啥黑科技？）的功能，可以认为他加入了一个巨大的<br>空中局域网。加入数据链的<strong>很多飞行器或者中继站</strong>都可以为无人机做通信转<br>发中继，也可以让很多不同的设备间<strong>共享</strong>无人机传回来的数据。比如一架火<br>力侦察兵，他的飞行计划可能由一艘驱逐舰发送，这些指令通过一架<strong>E-3预警机</strong>转发，最后看到侦查结果的却是陆地上的一群士兵。这样做实在是太方便了，<br>而且只要附近有我方接入数据链的中继平台就可以进行通讯，所以可以很容易的<br>覆盖巨大的范围。所以至少在美国，已经开始逐渐把数据链<strong>下放到比较小</strong>的<br>无人机上面了。甚至如沙漠鹰Deserthawk这样小的无人机也开始尝试上数据链。</p>
+<blockquote>
+<p>All in one is all you need.一个感觉，我军离真正全方位立体化的信息化<br>现代战争，还有相当长一段路要走。</p>
+</blockquote>
+<p>至于卫通，一般就是给需要<strong>深入敌境</strong>的无人机，或者巨大如捕食者这样的大家伙<br>用的。比如下图这样的，MQ-9的地面控制站（GCS）。<br><img src="https://github.com/ProfessorX/ProfessorX.github.io/images/mq9-1.jpg" alt="MQ-9"></p>
+<p>看起来正副两个飞行员，有操纵杆有机头显示器，那么飞起来和一般的飞机区别<br>不大吧？</p>
+<p>其实这些飞行员都是键盘侠。</p>
+<blockquote>
+<p>妈妈再让我当一次键盘侠谢谢！</p>
+</blockquote>
+<p>和多数人想象的不一样，无人机的飞行员在绝大多数情况下不会亲自使用操纵杆<br>飞行的。由于视角有限和链路时延的问题，其实无人机不是很适合人手遥控飞行。<br>在大多数时候，飞机都是<strong>自动飞行</strong>的。无人机上都会载有<strong>任务控制计算机<br>（MCC）和自动驾驶仪（AP）</strong>。飞行员的工作就是在起飞前编制飞行计划上传<br>到MCC中，由MCC通过AP自动控制飞机完成飞行。而飞行员的任务就是坐在屏幕前<br><strong>监控</strong>飞机状态，并根据情况修改飞行计划并<strong>上传</strong>–实际上他们基本上是在用<br>键盘和鼠标来飞飞机，而不是用操纵杆。</p>
+<blockquote>
+<p>Watch and learn. 要相信电脑！要相信尖端科技！（善意的微笑）</p>
+</blockquote>
+<p>不过也因为飞机起降的时候毕竟环境比较复杂，使用AP或者有严重时延（<strong>可能<br>会有数百毫秒</strong>）的卫通着陆会有一定风险（尤其是在野战机场，一般都缺少民<br>航的盲降系统）。故此在起降的时候飞机有可能会切入非常传统的<strong>单工链路</strong>，<br>并由一名机场内的操纵手使用传统的遥控器（PGCS）进行操纵–那时候就和一架<br>遥控飞机没什么太大区别了。当然，卫通的主要用处是让<strong>机组控制飞机</strong>。如果需<br>要向前线的作战部队传送信息或者接受引导的话，飞机上还是会接入一般的数据<br>链的。而强如RQ-170这样全程无线电静默的无人机，除了降落时候用作辅助的那<br>一套以外，根本就不需要什么链路吧~</p>
+<p>大约就是这样了~</p>
+
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/UAV/" rel="tag"># UAV</a>
+            
+              <a href="/tags/Military/" rel="tag"># Military</a>
+            
+              <a href="/tags/UnitedStates/" rel="tag"># UnitedStates</a>
+            
+              <a href="/tags/China/" rel="tag"># China</a>
+            
+              <a href="/tags/DataLink/" rel="tag"># DataLink</a>
+            
+              <a href="/tags/Communication/" rel="tag"># Communication</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2017/04/18/2017-04-17-china-six-types-uav/" rel="next" title="美承认中国已领先 6大无人机震撼曝光">
+                  <i class="fa fa-chevron-left"></i> 美承认中国已领先 6大无人机震撼曝光
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2017/04/20/2017-04-20-microwave-link.networks/" rel="prev" title="Microwave Link Networks">
+                  Microwave Link Networks <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#无人侦察机是通过什么方式实现远程控制和数据传输的？"><span class="nav-number">1.</span> <span class="nav-text">无人侦察机是通过什么方式实现远程控制和数据传输的？</span></a></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/avatar.jpg"
+      alt="Abraham Xiao">
+  <p class="site-author-name" itemprop="name">Abraham Xiao</p>
+  <div class="site-description" itemprop="description">Shut Up and Get Rich.</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">144</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">257</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/ProfessorX" title="GitHub &rarr; https://github.com/ProfessorX" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="mailto:q289196573@gmail.com" title="E-Mail &rarr; mailto:q289196573@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+    
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2013 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Abraham Xiao</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.4.0</div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+
+
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.4.0"></script><script src="/js/motion.js?v=7.4.0"></script>
+<script src="/js/schemes/muse.js?v=7.4.0"></script>
+<script src="/js/next-boot.js?v=7.4.0"></script>
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.4.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

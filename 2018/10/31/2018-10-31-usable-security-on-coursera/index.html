@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=7.4.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.4.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.4.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="This post is to record the learning progress of Usable Security on Coursera.org.">
+<meta name="keywords" content="Computer,Security,Cyber,Human,Interaction">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Usable Security by University of Maryland on Coursera">
+<meta property="og:url" content="http://yxiao.org/2018/10/31/2018-10-31-usable-security-on-coursera/index.html">
+<meta property="og:site_name" content="Masdar Wireless">
+<meta property="og:description" content="This post is to record the learning progress of Usable Security on Coursera.org.">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-09-16T02:32:44.714Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Usable Security by University of Maryland on Coursera">
+<meta name="twitter:description" content="This post is to record the learning progress of Usable Security on Coursera.org.">
+  <link rel="canonical" href="http://yxiao.org/2018/10/31/2018-10-31-usable-security-on-coursera/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Usable Security by University of Maryland on Coursera | Masdar Wireless</title>
+  <meta name="generator" content="Hexo 3.9.0">
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Masdar Wireless</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">To Infinity and Beyond!</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-study">
+      
+    
+
+    <a href="/study/" rel="section"><i class="menu-item-icon fa fa-fw fa-book"></i> <br>Study</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+      </li>
+    
+  </ul>
+
+    
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="http://yxiao.org/2018/10/31/2018-10-31-usable-security-on-coursera/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Abraham Xiao">
+      <meta itemprop="description" content="Shut Up and Get Rich.">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Masdar Wireless">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Usable Security by University of Maryland on Coursera
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2018-10-31 12:00:00" itemprop="dateCreated datePublished" datetime="2018-10-31T12:00:00+08:00">2018-10-31</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-09-16 10:32:44" itemprop="dateModified" datetime="2019-09-16T10:32:44+08:00">2019-09-16</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Technology/" itemprop="url" rel="index"><span itemprop="name">Technology</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>This post is to record the learning progress of Usable Security on Coursera.org.</p>
+<a id="more"></a>
+
+<h2 id="Week-1"><a href="#Week-1" class="headerlink" title="Week 1"></a>Week 1</h2><ul>
+<li>Human-Computer Interaction, or HCI is the study of how people<br>interact with technology.</li>
+<li>Make sure that people are not working any harder than necessary.</li>
+<li><strong>Users, Tasks and Context.</strong></li>
+<li>And do not forget the evaluation.</li>
+<li>Tasks are goals users set out to accomplish in a system.</li>
+</ul>
+<h3 id="Usability"><a href="#Usability" class="headerlink" title="Usability"></a>Usability</h3><ul>
+<li>Speed.</li>
+<li>Efficiency.</li>
+<li>Learnability.</li>
+<li>Memorability.</li>
+<li>User Preference.</li>
+</ul>
+<h3 id="Mental-Models"><a href="#Mental-Models" class="headerlink" title="Mental Models"></a>Mental Models</h3><ul>
+<li>Labels</li>
+<li>Affordances.</li>
+<li>Constraints.</li>
+<li>Mappings.</li>
+<li>Conventions.</li>
+</ul>
+<h2 id="Week-2"><a href="#Week-2" class="headerlink" title="Week 2"></a>Week 2</h2><ul>
+<li>To have a usable system, you must design it. Software engineers<br>will be familiar with a process of identifying system requirements<br>and incrementally building a system with intermediate steps of<br>evaluation and revision. To create a usable system, the users’<br>requirements, tasks, needs, and preferences also need to be<br>accounted for and addressed at every step of the process.</li>
+</ul>
+<h3 id="Design-Methodologies"><a href="#Design-Methodologies" class="headerlink" title="Design Methodologies"></a>Design Methodologies</h3><ul>
+<li>Different design processes help us develop ideas in different<br>ways.</li>
+<li>Iterative Design.<ul>
+<li>Requirements. Design. Development. Testing.</li>
+</ul>
+</li>
+<li>System Centered Design.</li>
+<li>User Centered Design.<ul>
+<li>Abilities and their needs. Context. Work. Tasks.</li>
+</ul>
+</li>
+<li>Participatory Design.<ul>
+<li>Should have access to the pool of representative users. That is<br>the END USERS, not their managers or union representatives.</li>
+</ul>
+</li>
+<li>Designer Centered Designe.<ul>
+<li>It isn’t the consumers’ job to know what they want.</li>
+</ul>
+</li>
+<li>Users can give a lot of valueable information for the degisn.</li>
+<li>Support degisners coming up with new ideas.</li>
+<li>Iterate to build better systems.</li>
+<li>Different interfaces can have major impacts on the security<br>behavior of users.</li>
+<li>What do we want users to do?</li>
+<li>WHat do they <strong>need to understand</strong> to do that?</li>
+<li>How can we make it more natural for users to do the “right” thing?</li>
+</ul>
+<h3 id="Quiz-for-Week-2"><a href="#Quiz-for-Week-2" class="headerlink" title="Quiz for Week 2"></a>Quiz for Week 2</h3><ul>
+<li>When designing error messages, which are important factors to keep<br>in mind for usability?</li>
+<li>Which of these are advantages of low-fidelity (e.g. paper)<br>prototypes</li>
+<li>In participatory design and co-design, which of the following is true</li>
+</ul>
+<h2 id="Week-3"><a href="#Week-3" class="headerlink" title="Week 3"></a>Week 3</h2><p>This week, we begin to look at how to evaluate the usability of<br>systems. This is a critical component of building usable systems for<br>security (and more generally). Evaluation allows you to learn exactly<br>how usable your system is and to identify specific problems with the<br>usability. Indeed, without proper evaluation, there is no way to know<br>you have a usable system or to improve it.</p>
+<ul>
+<li>Security is almost never a task.</li>
+</ul>
+<h3 id="A-B-Testing"><a href="#A-B-Testing" class="headerlink" title="A/B Testing"></a>A/B Testing</h3><ul>
+<li>Starts with a small percentage of visitors trying the experimental<br>conditions.</li>
+<li>Automatically stop testing if any condition has very bad<br>performance.</li>
+<li>Let people consistently see the same variation so they do not get<br>confused.</li>
+<li>Small tweaks in the interface can lead to big differences in user<br>behavior.</li>
+<li>A/B testing allows you to check that by showing different versions<br>of the site to people.</li>
+<li>No explanation, but useful.</li>
+</ul>
+<h3 id="Case-Study"><a href="#Case-Study" class="headerlink" title="Case Study"></a>Case Study</h3><ul>
+<li>The interface can have measurable impacts on the usability of<br>security features.</li>
+<li>Better interfaces = more secure behavior</li>
+<li>Mental models: active warnings capture and hold more attention<br>than passive ones, and yield better results.</li>
+<li>Users don’t think the way you do.</li>
+</ul>
+<h2 id="Weel-4-Guidelines-for-Usable-Security"><a href="#Weel-4-Guidelines-for-Usable-Security" class="headerlink" title="Weel 4 Guidelines for Usable Security"></a>Weel 4 Guidelines for Usable Security</h2><ul>
+<li>The more security can be integrated into the normal workflow of<br>the user, the more usable the security mechanisms will be.</li>
+<li>Authority is someone who has the power to access something<br>regardless of the permissions.</li>
+<li>Try to make the natural easiest way also the most secure one.</li>
+<li>Follow the principle of least privilege.</li>
+<li>Make the easiest way to compelte a task the most secure.</li>
+<li>Make sure the user consents to the access they allow.</li>
+<li>Make it easy to reduce others’ access.</li>
+<li>Make sure that users know what authority they have granted and<br>what the means for security decisions.</li>
+<li>Make sure users know what authority they hold.</li>
+<li>Create interfaces that make it clear what agent (software) the<br>user is interacting with and providing information to.</li>
+<li>Enable the user to express safe security policies that fit the<br>user’s task.</li>
+<li>Make it easy for users to control access to their resources.</li>
+<li>Show a level of detail that’s informative and useful to the user,<br>and no more than that.</li>
+<li>Make it easy to see the difference between objects and actions<br>that could be confusing.</li>
+<li>Automated security controls are good, but not the only solution.</li>
+<li>Giving users control can be more secure.</li>
+<li>Assist them in the process.</li>
+</ul>
+<h2 id="Week-5-Usable-Authentication"><a href="#Week-5-Usable-Authentication" class="headerlink" title="Week 5 Usable Authentication"></a>Week 5 Usable Authentication</h2><p>Authentication is often the first part of a security system that users<br>encounter. Typically, systems have relied on passwords for<br>authentication, and our password rules and requirements have become<br>more draconian with each passing year. But it turns out they aren’t<br>really that secure and they are remarkably unusable. This week, we<br>look at usable authentication - how can we make it easier for users to<br>access a secure system?</p>
+<p>We will look at alternatives to typical password systems and analyze<br>them for both security and usability. It is not uncommon to hear<br>critiques of usability experts when authentication comes up, because<br>security experts often believe that the security of a system is<br>sacrificed to improve usability. This is not the case, and this week<br>we will see examples of different types of passwords and alternative<br>authentication systems that are both usable and secure.</p>
+<ul>
+<li>Particularly we are talking about, PASSWORDS.</li>
+<li>Password system would be more secure if passwords were more<br>usable, both for human reasons and computational reasons.</li>
+<li>Two factor authentication: more secure, less efficient(usable).</li>
+<li>Biometrics are easy and relatively secure.</li>
+<li>Common on mobile devices.</li>
+<li>Compare usability.</li>
+<li>Gesture users enjoy tend to be more secure.</li>
+<li>Users prefer gestures to password.</li>
+</ul>
+<h2 id="Week-6"><a href="#Week-6" class="headerlink" title="Week 6"></a>Week 6</h2><p>Privacy really is a type of security. When we talk about security, we<br>tend to have more absolutes. A person should or should not have access<br>to a system. Access is authorized or not. Users have permission to<br>access certain data or they do not. Privacy is a fuzzier<br>concept. Users may choose to share information with categories of<br>people they know (though they may not know exactly falls into a<br>group), and they share it with systems that can be vague about how<br>that data will be shared. But it can be just as important for a person<br>to protect their privacy as it is to protect their devices or<br>files. Indeed, some people would rather have their work computer<br>hacked than have their personal social media photos shared in ways<br>they did not intend.</p>
+<ul>
+<li>Privacy is a kind of security.</li>
+<li>Privacy policies are boring and hard to read. (POOR USABILITY!!!)</li>
+<li>Privacy policies are really important.</li>
+<li>Analyzing usability is done the same way with privacy.</li>
+<li>KEEP THE USER IN MIND FIRST.</li>
+<li>Are there better ways to convey the information in pricavy policy.</li>
+<li>Users understand what data is being collected and shared and they<br>consent to how it is used.</li>
+<li>Disclosure. Comprehension. Voluntariness. Competence. Agreement. Minimal<br>Distraction.</li>
+<li>Usable pricavy requires informed consent from users.</li>
+<li>They must understand how their data is used and agree to it being<br>used that way.</li>
+<li>These six components can help you analyze system for security.</li>
+<li>Make it clear how information is being shared.</li>
+<li>Make it easy and natural for users to control privacy.</li>
+<li>Make the default practice match users’ expectations.</li>
+</ul>
+<p>Misses: Which of these is not a guideline for usable privacy? If a<br>company has collected an American user’s personal data without their<br>consent, how can the user respond? Which of the following describes<br>informed consent? A website provides an extensive 50-printed-page<br>privacy policy written in common language that describes every detail<br>of how users’ data is collected, used, and shared. Which of the<br>following is true of informed consent?</p>
+<h2 id="Week-7"><a href="#Week-7" class="headerlink" title="Week 7"></a>Week 7</h2><p>  *</p>
+
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/Computer/" rel="tag"># Computer</a>
+            
+              <a href="/tags/Security/" rel="tag"># Security</a>
+            
+              <a href="/tags/Cyber/" rel="tag"># Cyber</a>
+            
+              <a href="/tags/Human/" rel="tag"># Human</a>
+            
+              <a href="/tags/Interaction/" rel="tag"># Interaction</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2018/10/16/2018-10-16-java-for-android-coursera/" rel="next" title="Java For Android by Vanderbilt University">
+                  <i class="fa fa-chevron-left"></i> Java For Android by Vanderbilt University
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2018/11/06/2018-11-06-algorithms-by-princeton-on-coursera/" rel="prev" title="Algorithms by Princeton University on Coursera">
+                  Algorithms by Princeton University on Coursera <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Week-1"><span class="nav-number">1.</span> <span class="nav-text">Week 1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Usability"><span class="nav-number">1.1.</span> <span class="nav-text">Usability</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Mental-Models"><span class="nav-number">1.2.</span> <span class="nav-text">Mental Models</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Week-2"><span class="nav-number">2.</span> <span class="nav-text">Week 2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Design-Methodologies"><span class="nav-number">2.1.</span> <span class="nav-text">Design Methodologies</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Quiz-for-Week-2"><span class="nav-number">2.2.</span> <span class="nav-text">Quiz for Week 2</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Week-3"><span class="nav-number">3.</span> <span class="nav-text">Week 3</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#A-B-Testing"><span class="nav-number">3.1.</span> <span class="nav-text">A/B Testing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Case-Study"><span class="nav-number">3.2.</span> <span class="nav-text">Case Study</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Weel-4-Guidelines-for-Usable-Security"><span class="nav-number">4.</span> <span class="nav-text">Weel 4 Guidelines for Usable Security</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Week-5-Usable-Authentication"><span class="nav-number">5.</span> <span class="nav-text">Week 5 Usable Authentication</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Week-6"><span class="nav-number">6.</span> <span class="nav-text">Week 6</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Week-7"><span class="nav-number">7.</span> <span class="nav-text">Week 7</span></a></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/avatar.jpg"
+      alt="Abraham Xiao">
+  <p class="site-author-name" itemprop="name">Abraham Xiao</p>
+  <div class="site-description" itemprop="description">Shut Up and Get Rich.</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">144</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">257</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/ProfessorX" title="GitHub &rarr; https://github.com/ProfessorX" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="mailto:q289196573@gmail.com" title="E-Mail &rarr; mailto:q289196573@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+    
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2013 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Abraham Xiao</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.4.0</div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+
+
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.4.0"></script><script src="/js/motion.js?v=7.4.0"></script>
+<script src="/js/schemes/muse.js?v=7.4.0"></script>
+<script src="/js/next-boot.js?v=7.4.0"></script>
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.4.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

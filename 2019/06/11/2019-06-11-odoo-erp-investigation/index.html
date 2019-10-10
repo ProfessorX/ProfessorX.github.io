@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=7.4.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.4.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.4.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="Odoo is the best management software to run a company.Millions of happy users work better with our integrated Apps.">
+<meta name="keywords" content="Management,ERP,Odoo,Manufacture,Pricing">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Odoo ERP Investigation">
+<meta property="og:url" content="http://yxiao.org/2019/06/11/2019-06-11-odoo-erp-investigation/index.html">
+<meta property="og:site_name" content="Masdar Wireless">
+<meta property="og:description" content="Odoo is the best management software to run a company.Millions of happy users work better with our integrated Apps.">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-09-16T02:32:44.832Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Odoo ERP Investigation">
+<meta name="twitter:description" content="Odoo is the best management software to run a company.Millions of happy users work better with our integrated Apps.">
+  <link rel="canonical" href="http://yxiao.org/2019/06/11/2019-06-11-odoo-erp-investigation/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Odoo ERP Investigation | Masdar Wireless</title>
+  <meta name="generator" content="Hexo 3.9.0">
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Masdar Wireless</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">To Infinity and Beyond!</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-study">
+      
+    
+
+    <a href="/study/" rel="section"><i class="menu-item-icon fa fa-fw fa-book"></i> <br>Study</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+      </li>
+    
+  </ul>
+
+    
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="http://yxiao.org/2019/06/11/2019-06-11-odoo-erp-investigation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Abraham Xiao">
+      <meta itemprop="description" content="Shut Up and Get Rich.">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Masdar Wireless">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Odoo ERP Investigation
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-06-11 14:00:00" itemprop="dateCreated datePublished" datetime="2019-06-11T14:00:00+08:00">2019-06-11</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-09-16 10:32:44" itemprop="dateModified" datetime="2019-09-16T10:32:44+08:00">2019-09-16</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Technology/" itemprop="url" rel="index"><span itemprop="name">Technology</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>Odoo is the best management software to run a company.<br>Millions of happy users work better with our integrated Apps.</p>
+<a id="more"></a>
+
+<h2 id="CRM"><a href="#CRM" class="headerlink" title="CRM"></a>CRM</h2><p>Track leads and close opportunities.</p>
+<ul>
+<li>new</li>
+<li>qualified</li>
+<li>proposition</li>
+<li>won</li>
+</ul>
+<p>The data fields in the CRM module are:</p>
+<ul>
+<li>created on</li>
+<li>opportunity</li>
+<li>customer</li>
+<li>country</li>
+<li>next activity deadline</li>
+<li>next activity summary</li>
+<li>stage</li>
+<li>expected revenue</li>
+<li>probability</li>
+<li>sales team</li>
+<li>salesperson</li>
+</ul>
+<h2 id="Website"><a href="#Website" class="headerlink" title="Website"></a>Website</h2><h2 id="Project"><a href="#Project" class="headerlink" title="Project"></a>Project</h2><p>项目管理。</p>
+<ul>
+<li>Projects<ul>
+<li>TODO</li>
+<li>In progress</li>
+<li>Done</li>
+</ul>
+</li>
+</ul>
+<p>Possible data fields in the project module are:</p>
+<ul>
+<li>title</li>
+<li>project name</li>
+<li>deadline</li>
+<li>assigned to</li>
+<li>tags</li>
+</ul>
+<h2 id="Inventory"><a href="#Inventory" class="headerlink" title="Inventory"></a>Inventory</h2><ul>
+<li><p>Receipts 收货</p>
+</li>
+<li><p>Delivery orders</p>
+</li>
+<li><p>Manufacturing</p>
+</li>
+<li><p>outgoing shipment</p>
+</li>
+<li><p>Operations</p>
+<ul>
+<li>Transfer</li>
+<li>Inventory Adjustment</li>
+<li>Scrap. Scrapping a product will remove it from your stock. The product will end up in a scrap location that can be used for reporting purpose. （即商品报废。）</li>
+</ul>
+</li>
+<li><p>Master Data</p>
+<ul>
+<li>Products</li>
+<li>Product Variants</li>
+<li>Recording rules</li>
+<li>Lots/Serial Numbre</li>
+</ul>
+</li>
+<li><p>Reporting</p>
+<ul>
+<li>Inventory Report</li>
+<li>Inventory Valuation</li>
+<li>Product Moves</li>
+</ul>
+</li>
+</ul>
+<h2 id="Invoicing"><a href="#Invoicing" class="headerlink" title="Invoicing"></a>Invoicing</h2><ul>
+<li>Company data</li>
+<li>invoice layout</li>
+<li>payment method</li>
+<li>sample invoice</li>
+</ul>
+<h2 id="Manufacturing"><a href="#Manufacturing" class="headerlink" title="Manufacturing"></a>Manufacturing</h2><ul>
+<li><p>Reference</p>
+</li>
+<li><p>Deadline start</p>
+</li>
+<li><p>product</p>
+</li>
+<li><p>source</p>
+</li>
+<li><p>quantity</p>
+</li>
+<li><p>material availability</p>
+</li>
+<li><p>state</p>
+</li>
+<li><p>Create an unbuild order. An unbuild order is used to break down a finished product into its components.</p>
+</li>
+<li><p>Master Data</p>
+<ul>
+<li>Products</li>
+<li>Product Variants</li>
+<li>Bill of materials</li>
+<li>Lots/Serial Numbers</li>
+</ul>
+</li>
+</ul>
+<h2 id="Sales"><a href="#Sales" class="headerlink" title="Sales"></a>Sales</h2><ul>
+<li><p>Quotation number.</p>
+</li>
+<li><p>Quotation date.</p>
+</li>
+<li><p>Customer.</p>
+</li>
+<li><p>Salesperson.</p>
+</li>
+<li><p>Total</p>
+</li>
+<li><p>Status</p>
+</li>
+<li><p>Order Lines</p>
+<ul>
+<li>Product</li>
+<li>Description</li>
+<li>Ordered Qty</li>
+<li>Unit Price</li>
+<li>Taxes</li>
+<li>Subtotal</li>
+<li>Untaxed Amount</li>
+<li>Taxes</li>
+</ul>
+</li>
+</ul>
+<p>From Quotation Sent to Sales Order.</p>
+<h2 id="Point-of-Sale"><a href="#Point-of-Sale" class="headerlink" title="Point of Sale"></a>Point of Sale</h2><h2 id="eCommerce"><a href="#eCommerce" class="headerlink" title="eCommerce"></a>eCommerce</h2><h2 id="Purchase"><a href="#Purchase" class="headerlink" title="Purchase"></a>Purchase</h2><ul>
+<li>Request for quotation<ul>
+<li>Reference</li>
+<li>Order date</li>
+<li>Vendor</li>
+<li>Schedule Date</li>
+<li>Purchase Representative</li>
+<li>Source document</li>
+<li>Untaxed</li>
+<li>total</li>
+<li>status</li>
+</ul>
+</li>
+</ul>
+<h2 id="Expenses"><a href="#Expenses" class="headerlink" title="Expenses"></a>Expenses</h2><p>Submit, validate and reinvoice employee expenses.</p>
+<ul>
+<li><p>Date</p>
+</li>
+<li><p>Description</p>
+</li>
+<li><p>Employee</p>
+</li>
+<li><p>Paid by</p>
+</li>
+<li><p>Total</p>
+</li>
+<li><p>Status</p>
+</li>
+<li><p>Expense report.</p>
+</li>
+<li><p>Draft.</p>
+</li>
+<li><p>Submitted.</p>
+</li>
+<li><p>Approved.</p>
+</li>
+<li><p>Posted. 财务过账。</p>
+</li>
+<li><p>A payment related to your expense has been made.</p>
+</li>
+<li><p>Posted – Paid.</p>
+</li>
+</ul>
+<h2 id="Accounting"><a href="#Accounting" class="headerlink" title="Accounting"></a>Accounting</h2><p>If we pick up at the end of a typical ‘order to cash’ scenario, after the goods have been shipped, you will: issue an invoice; receive payment; deposit that payment at the bank; make sure the Customer Invoice is closed; follow up if Customers are late; and finally present your Income on the Profit and Loss report and show the decrease in Assets on the Balance Sheet report.</p>
+<p>Invoicing in most countries occurs when a contractual obligation is met. If you ship a box to a customer, you have met the terms of the contract and can bill them. If your supplier sends you a shipment, they have met the terms of that contract and can bill you. Therefore, the terms of the contract is fulfilled when the box moves to or from the truck. At this point, Odoo supports the creation of what is called a Draft Invoice by Warehouse staff.</p>
+<h3 id="Accounts-Receivable"><a href="#Accounts-Receivable" class="headerlink" title="Accounts Receivable"></a>Accounts Receivable</h3><h3 id="Account-payables"><a href="#Account-payables" class="headerlink" title="Account payables"></a>Account payables</h3><ul>
+<li>Control supplier bills. Compare the information appearing on the Purchase Order, the Vendor Bill, and the Receipt to make sure you pay the correct bill.</li>
+<li>Forecast expenses. Get a clear forecast of your future bills to pay.</li>
+<li>Employee expenses. Track employee expenses, from the recording by every employee to the validation and reimbursement.</li>
+<li>Bill digitalization. Upload your scanned vendor bills in PDF and let Odoo creates your vendors bills with OCR and Artificial Intelligence.</li>
+</ul>
+<h3 id="Pay-bills"><a href="#Pay-bills" class="headerlink" title="Pay bills"></a>Pay bills</h3><h3 id="Bank-amp-Cash"><a href="#Bank-amp-Cash" class="headerlink" title="Bank &amp; Cash"></a>Bank &amp; Cash</h3><h3 id="Easy-Reconciliation"><a href="#Easy-Reconciliation" class="headerlink" title="Easy Reconciliation"></a>Easy Reconciliation</h3><ul>
+<li>Smart Reconciliation Tool. Get reconciliation propositions automatically, register extra journal items on the fly, search efficiently. Interface for manual reconciliations, for both open and paid invoices. Learning of account numbers based on first manual reconciliation. Odoo matches 95% of invoices &amp; payments automatically and the smart matching tool allows to do the remaining 5% super fast.</li>
+<li>Easy outstanding payments. Get partial and full reconciliation proposition directly from the invoice or the bank statement.</li>
+<li>Online Payments. Confirmed online transactions create a payment for easy reconciliation. They also show up as notifications in the document’s chatter for easier follow-up.</li>
+<li>Reconciliation Report. Audit differences between your accounts and your bank statement balance to ease reconciliation.</li>
+</ul>
+<h3 id="Performance-Reports"><a href="#Performance-Reports" class="headerlink" title="Performance Reports"></a>Performance Reports</h3><ul>
+<li>Business Intelligence reports. Use Odoo pivot table to navigate through the information: consolidations, drill-up/down, group data, filters, etc.<br>Multiple standard reports are available - Profit &amp; Loss, cash flow statements, cash reports, executive summary and aged payable/receivables, etc. Get standard reports and chart of accounts available for 80+ countries. Export to Excel and pdf.</li>
+<li>Customizable dashboards. Create your own dashboard by assembling custom reports. Generate reports for any time period, comparing time period. Get dynamic calculation of certain fields e.g. YTD earning. Share filters and dashboard across teams.</li>
+<li>Annotate any report. All reports are full dynamic allowing you to navigate easily. Create multiple annotations. Annotate reports to add your notes for the managers inline.</li>
+<li>Customizable KPI’s. Define your own KPIs based on formulaes: gross margin, customer acquisition costs, growth rate by products,…</li>
+<li>Perpetual fiscal year closing. No need to report balance sheet accounts from one year to another. Automatic calculation of P&amp;L based on chosen dates, only need to write the handling of earnings for closure. Choose lock entry dates for non advisers and all users.</li>
+</ul>
+<h3 id="Legal-Statements"><a href="#Legal-Statements" class="headerlink" title="Legal Statements"></a>Legal Statements</h3><ul>
+<li>Profit &amp; Loss</li>
+<li>Balance Sheet</li>
+<li>Cash flow statement</li>
+<li>Tax reports</li>
+<li>General ledger</li>
+<li>Country-specific statements</li>
+<li>Advanced Taxes Management</li>
+<li>Tax Audit Report</li>
+<li>Consolidated Journal Repotr</li>
+</ul>
+<h3 id="Asset-amp-Revenues"><a href="#Asset-amp-Revenues" class="headerlink" title="Asset &amp; Revenues"></a>Asset &amp; Revenues</h3><ul>
+<li>Assets Management</li>
+<li>Budgets</li>
+<li>Revenue Recognition</li>
+<li>Revenue dashboard</li>
+</ul>
+<h3 id="Connect"><a href="#Connect" class="headerlink" title="Connect"></a>Connect</h3><ul>
+<li>Web-service API</li>
+<li>Flexible Import-Export</li>
+<li>Google spreadsheet integration</li>
+<li>Taxcloud integration</li>
+</ul>
+<h3 id="Integrations"><a href="#Integrations" class="headerlink" title="Integrations"></a>Integrations</h3><ul>
+<li>Sales. Get your customer invoices created automatically from your sales order, tasks or delivery orders.</li>
+<li>Inventory. Work in periodic or perpetual inventory valuations. Get your accounting entries created automatically in standard price, average price of FIFO.</li>
+<li>Purchase. Control supplier bills is just a few clicks. No need to record everything, they are proposed by Odoo based on purchase orders or incoming shipments.</li>
+<li>E-commerce. Get all your ecommerce transactions reported automatically in your accounts: sales, payments, refunds, shipping, etc.</li>
+<li>Customer Portal. Your customers get an access to their portal where they can download invoices, check order status, track payments, etc.</li>
+</ul>
+<h2 id="Extra"><a href="#Extra" class="headerlink" title="Extra"></a>Extra</h2><ul>
+<li>要能看到数据。</li>
+<li>要实现手机上批流程的功能。</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/Management/" rel="tag"># Management</a>
+            
+              <a href="/tags/ERP/" rel="tag"># ERP</a>
+            
+              <a href="/tags/Odoo/" rel="tag"># Odoo</a>
+            
+              <a href="/tags/Manufacture/" rel="tag"># Manufacture</a>
+            
+              <a href="/tags/Pricing/" rel="tag"># Pricing</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/06/05/2019-06-05-crowds-under-crisis/" rel="next" title="危机下的四种人">
+                  <i class="fa fa-chevron-left"></i> 危机下的四种人
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2019/06/13/2019-06-13-odoo-investigation/" rel="prev" title="Odoo ERP Investigation Continues">
+                  Odoo ERP Investigation Continues <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CRM"><span class="nav-number">1.</span> <span class="nav-text">CRM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Website"><span class="nav-number">2.</span> <span class="nav-text">Website</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Project"><span class="nav-number">3.</span> <span class="nav-text">Project</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Inventory"><span class="nav-number">4.</span> <span class="nav-text">Inventory</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Invoicing"><span class="nav-number">5.</span> <span class="nav-text">Invoicing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Manufacturing"><span class="nav-number">6.</span> <span class="nav-text">Manufacturing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sales"><span class="nav-number">7.</span> <span class="nav-text">Sales</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Point-of-Sale"><span class="nav-number">8.</span> <span class="nav-text">Point of Sale</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#eCommerce"><span class="nav-number">9.</span> <span class="nav-text">eCommerce</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Purchase"><span class="nav-number">10.</span> <span class="nav-text">Purchase</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Expenses"><span class="nav-number">11.</span> <span class="nav-text">Expenses</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Accounting"><span class="nav-number">12.</span> <span class="nav-text">Accounting</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Accounts-Receivable"><span class="nav-number">12.1.</span> <span class="nav-text">Accounts Receivable</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Account-payables"><span class="nav-number">12.2.</span> <span class="nav-text">Account payables</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pay-bills"><span class="nav-number">12.3.</span> <span class="nav-text">Pay bills</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bank-amp-Cash"><span class="nav-number">12.4.</span> <span class="nav-text">Bank &amp; Cash</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Easy-Reconciliation"><span class="nav-number">12.5.</span> <span class="nav-text">Easy Reconciliation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Performance-Reports"><span class="nav-number">12.6.</span> <span class="nav-text">Performance Reports</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Legal-Statements"><span class="nav-number">12.7.</span> <span class="nav-text">Legal Statements</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Asset-amp-Revenues"><span class="nav-number">12.8.</span> <span class="nav-text">Asset &amp; Revenues</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Connect"><span class="nav-number">12.9.</span> <span class="nav-text">Connect</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Integrations"><span class="nav-number">12.10.</span> <span class="nav-text">Integrations</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Extra"><span class="nav-number">13.</span> <span class="nav-text">Extra</span></a></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/avatar.jpg"
+      alt="Abraham Xiao">
+  <p class="site-author-name" itemprop="name">Abraham Xiao</p>
+  <div class="site-description" itemprop="description">Shut Up and Get Rich.</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">144</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">257</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/ProfessorX" title="GitHub &rarr; https://github.com/ProfessorX" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="mailto:q289196573@gmail.com" title="E-Mail &rarr; mailto:q289196573@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+    
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2013 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Abraham Xiao</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.4.0</div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+
+
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.4.0"></script><script src="/js/motion.js?v=7.4.0"></script>
+<script src="/js/schemes/muse.js?v=7.4.0"></script>
+<script src="/js/next-boot.js?v=7.4.0"></script>
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.4.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
