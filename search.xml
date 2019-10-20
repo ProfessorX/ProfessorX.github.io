@@ -37,39 +37,6 @@
     
     
     <entry>
-      <title>CPS Accurate Software Research</title>
-      <link href="/2019/10/18/2019-10-18-cps-accurate-research/"/>
-      <url>/2019/10/18/2019-10-18-cps-accurate-research/</url>
-      
-        <content type="html"><![CDATA[<p>In this post we will discuss the current workflow and daily process running at Zoomlion Indonesia Subcompany.</p><p>We will analyze the accurate software and then how we are able to transfer smoothly from it to the new web-based<br>subsidiary operation management platform.</p><a id="more"></a><h2 id="General-Ledger"><a href="#General-Ledger" class="headerlink" title="General Ledger"></a>General Ledger</h2><ul><li>Chart of Account</li><li>Company Info</li><li>Currency</li><li>Financial Statement</li><li>Journal Voucher</li><li>Period End</li></ul><h2 id="Cash-Bank"><a href="#Cash-Bank" class="headerlink" title="Cash Bank"></a>Cash Bank</h2><ul><li>Deposit</li><li>Bank Book</li><li>Bank Reconcile （银行对账单）</li><li>Payment</li></ul><h2 id="Inventory"><a href="#Inventory" class="headerlink" title="Inventory"></a>Inventory</h2><ul><li>Item</li><li>Job Costing</li><li>Inventory Adjustment</li><li>Grouping</li><li>Warehouse</li><li>Set Selling Price</li><li>Item Transfer</li></ul><h2 id><a href="#" class="headerlink" title="#"></a>#</h2><p>多读书，多看报，少吃零食多睡觉。人一定要靠自己。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Report </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> ERP </tag>
-            
-            <tag> CPS </tag>
-            
-            <tag> Accurate </tag>
-            
-            <tag> Indonesia </tag>
-            
-            <tag> Deployment </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>被脸书开除的华人工程师称「在硅谷不敢失业两个月」，华人在硅谷就业有多难？</title>
       <link href="/2019/10/18/2019-10-18-i-was-laid-by-facebook/"/>
       <url>/2019/10/18/2019-10-18-i-was-laid-by-facebook/</url>
@@ -95,6 +62,39 @@
             <tag> Evolution </tag>
             
             <tag> Humanity </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CPS Accurate Research</title>
+      <link href="/2019/10/18/2019-10-18-cps-accurate-research/"/>
+      <url>/2019/10/18/2019-10-18-cps-accurate-research/</url>
+      
+        <content type="html"><![CDATA[<p>Let us see this time if it will go OK.</p><a id="more"></a><h2 id="General-Ledger"><a href="#General-Ledger" class="headerlink" title="General Ledger"></a>General Ledger</h2><h2 id="Cash-Bank"><a href="#Cash-Bank" class="headerlink" title="Cash Bank"></a>Cash Bank</h2><h2 id="Inventory"><a href="#Inventory" class="headerlink" title="Inventory"></a>Inventory</h2><h2 id="Sales"><a href="#Sales" class="headerlink" title="Sales"></a>Sales</h2><h2 id="Purchase"><a href="#Purchase" class="headerlink" title="Purchase"></a>Purchase</h2><h2 id="Fixed-Asset"><a href="#Fixed-Asset" class="headerlink" title="Fixed Asset"></a>Fixed Asset</h2><h2 id="List"><a href="#List" class="headerlink" title="List"></a>List</h2><h2 id="RMA"><a href="#RMA" class="headerlink" title="RMA"></a>RMA</h2><h2 id="Project"><a href="#Project" class="headerlink" title="Project"></a>Project</h2><h2 id="Manufacture"><a href="#Manufacture" class="headerlink" title="Manufacture"></a>Manufacture</h2><h2 id="e-Faktur"><a href="#e-Faktur" class="headerlink" title="e-Faktur"></a>e-Faktur</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> Report </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Research </tag>
+            
+            <tag> ERP </tag>
+            
+            <tag> SaaS </tag>
+            
+            <tag> CPS </tag>
+            
+            <tag> Accurate </tag>
             
         </tags>
       
