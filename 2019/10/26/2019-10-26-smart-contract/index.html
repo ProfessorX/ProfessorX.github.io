@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=7.4.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.4.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.4.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="好久没有写专栏了。今天我在知乎和微博说，智能合约3年内能得到大规模应用，我直播吃土。那里篇幅有限，就在这儿写篇文章，描述一下为什么我做出这种判断，也是自己记录下来看看会不会被打脸，然后可以反思一下自己的思维模式。 我的结论是，区块链作为分布式账本有一些应用场景，但是不会太大范围的应用。智能合约则非常不靠谱，最多能在彩票、地下赌场有些半黑半白的应用。而那些币，除了黑市洗钱、违法交易以外没有任何价值。">
+<meta name="keywords" content="China,Zhihu,Blockchain,SmartContract,P2P">
+<meta property="og:type" content="article">
+<meta property="og:title" content="为什么我说智能合约不靠谱">
+<meta property="og:url" content="http://yxiao.org/2019/10/26/2019-10-26-smart-contract/index.html">
+<meta property="og:site_name" content="Masdar Wireless">
+<meta property="og:description" content="好久没有写专栏了。今天我在知乎和微博说，智能合约3年内能得到大规模应用，我直播吃土。那里篇幅有限，就在这儿写篇文章，描述一下为什么我做出这种判断，也是自己记录下来看看会不会被打脸，然后可以反思一下自己的思维模式。 我的结论是，区块链作为分布式账本有一些应用场景，但是不会太大范围的应用。智能合约则非常不靠谱，最多能在彩票、地下赌场有些半黑半白的应用。而那些币，除了黑市洗钱、违法交易以外没有任何价值。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-10-26T10:36:27.721Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="为什么我说智能合约不靠谱">
+<meta name="twitter:description" content="好久没有写专栏了。今天我在知乎和微博说，智能合约3年内能得到大规模应用，我直播吃土。那里篇幅有限，就在这儿写篇文章，描述一下为什么我做出这种判断，也是自己记录下来看看会不会被打脸，然后可以反思一下自己的思维模式。 我的结论是，区块链作为分布式账本有一些应用场景，但是不会太大范围的应用。智能合约则非常不靠谱，最多能在彩票、地下赌场有些半黑半白的应用。而那些币，除了黑市洗钱、违法交易以外没有任何价值。">
+  <link rel="canonical" href="http://yxiao.org/2019/10/26/2019-10-26-smart-contract/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>为什么我说智能合约不靠谱 | Masdar Wireless</title>
+  <meta name="generator" content="Hexo 3.9.0">
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Masdar Wireless</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">故事会</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-study">
+      
+    
+
+    <a href="/study/" rel="section"><i class="menu-item-icon fa fa-fw fa-book"></i> <br>Study</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+      </li>
+    
+  </ul>
+
+    
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="http://yxiao.org/2019/10/26/2019-10-26-smart-contract/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Abraham Xiao">
+      <meta itemprop="description" content="Shut Up and Get Rich.">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Masdar Wireless">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">为什么我说智能合约不靠谱
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-10-26 19:00:00 / 修改时间：18:36:27" itemprop="dateCreated datePublished" datetime="2019-10-26T19:00:00+08:00">2019-10-26</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>好久没有写专栏了。<br>今天我在知乎和微博说，智能合约3年内能得到大规模应用，我直播吃土。那里篇幅有限，就在这儿写篇文章，描述一下为什么我做出这种判断，也是自己记录下来看看会不会被打脸，然后可以反思一下自己的思维模式。</p>
+<p><strong>我的结论是，区块链作为分布式账本有一些应用场景，但是不会太大范围的应用。智能合约则非常不靠谱，最多能在彩票、地下赌场有些半黑半白的应用。而那些币，除了黑市洗钱、违法交易以外没有任何价值。</strong></p>
+<a id="more"></a>
+
+<p>区块链的宣传点不外乎分布式去中心化、公开透明可审计、安全不可篡改。所以当有大公司提供BaaS服务的时候，我第一反应就是挂羊头卖狗肉，按道理认为区块链是未来将重构一切的那些支持者，更应该出来反对，但是遗憾没有，他们把这些服务当做区块链是未来的依据。微软也好，IBM也好，他们提供的区块链服务让开发者开发，用户使用，这些账本存储在哪里？在这些互联网巨头的云数据中心里，在互联网的巨无霸手心里面，完完全全违背了去中心化的理念好么？</p>
+<p>当有大公司宣称自己的业务运行在区块链上时，我有同样的反应。这些区块链节点有多少个？控制权在谁的手里？哦，全部在这些大公司的运维部么手里。我区你妈的块。</p>
+<p>那么公有链是不是更靠谱？相比而言，就分布式去中心化和公开透明可审计方面要好很多，但是不够大的区块链很容易遭受计算力攻击。物联网设备这么发达，安全又是原始阶段，黑客控制的大规模pc加上物联网设备，达到几十万的规模不是难事，更不用说国家机关的超级计算机了，51%攻击？我看91%攻击都有可能，真的不可篡改不可撤销么？</p>
+<p>有没有可能的区块链应用？联盟链也许是一个好主意。多加企业联合在一起，每家多少节点，共同存储托管一些不太敏感的数据，还是可行的。</p>
+<p>所以我认为，区块链能有一些应用，但是不会很广泛的应用。</p>
+<p>再说智能合约。这是大家谈得很多的一个东西，有人反对区块链重构一切或者说币是泡沫的时候，就有人跳出来说我们有智能合约多么多么nb，去中心化的信任，重构社会机制。前几天我花了一晚上时间看了看，就两个字，呵呵……</p>
+<p>首先，请把智能两个字去掉，或者改成自动合约，因为这跟智能没有一毛钱关系。</p>
+<p>然后我们继续。两只球队比赛，我赌a赢，你赌b赢，于是5毛赌局开始了。我怕你反悔，你怕我反悔，我们决定一起把钱交给黄鹤，让他主持公道。结果比赛结束了，我去找黄鹤领钱，发现他拿着钱带着小姨子跑了。如果有智（自）能（动）合约怎么做呢？我们写一个合（程）约（序），双方的钱包都写进去，如果a赢了你给我钱包打钱，b赢了我给你钱包转账，把这个job发到区块链的分布式网络去，这个job不可撤销不可篡改。然后静待结果，比赛结束了，结果出来了，job执行，一个人拿到钱，很赞，完美。</p>
+<p>似乎有个问题，这个比赛结果哪里来？</p>
+<p>去 第！三！方！权！威！地！址！拿！</p>
+<p>啊？不是说去中心化的信任嘛？微博上还有人跟我说预言机可以解决这个问题，简书上有个例子，区块链学堂——预言机、预言机网络、预测市场：</p>
+<p>“假设在区块链体系的租房APP上，租客与房东达成了租赁协议，其中有一个智能合同规定，在退房时，如果租客弄坏了客厅的小米9A电视，则需要按退房当天小米官方的价格原价赔偿。转眼到了退房的那一天，租客在APP上点击一键退房，APP自动下发指令让客厅的小米9A电视自检（确认是否损坏），因为租客在使用过程中，确实弄坏了小米电视，导致自检结果触发了智能合同中的赔偿条款，很不巧的时，当天小米天猫旗舰店正在做活动，比小米商城要便宜300元，此时智能合同赔偿金额要以哪个价格为准？</p>
+<p>假设现在有一个第三方系统（预言机）可以提供权威准确、不可篡改、稳定、并可接受审计的价格查询接口，包括查询小米9A电视的价格，在执行赔偿智能合约时会自动触发该预言机，向区块链发送一笔交易，交易的数据块携带了小米电视9A的价格，随着每个矿工节点区块的同步，就保证了价格完全一致。</p>
+<p>换一种解释，预言机整个完整的工作流程是这样的，首先预言机从小米官方获取小米9A的电视价格，然后向特定区块链上的地址进行转账，并将价格信息写入交易备注，这样智能合约只需要查看特定地址的交易记录，就可以获取小米9A的价格了。而由于区块链会自动同步存储包含交易的区块，所以智能合约几乎只需要访问本地就能得到价格信息。既保证了访问效率，又保证了价格的一致性。</p>
+<p>总的来说就是由<strong>预言机（第三方）</strong>将数据推送给区块链，而不需要智能合约主动向第三方拉取数据。”</p>
+<p>有卵用？讲了一大堆，预言机，分布式预言机，预言机网络，各种概念，最终呢？nb的预言机还是要去小米官网拿数据，而且折旧什么的一样各种纠缠，你的合约里面不可能考虑了各种情况万无一失。球赛的话，还得去球赛官方拿数据。</p>
+<p>信任不是无源之水，最终还是有权威第三方作为根。所谓智能合约，并没有完成去中心化的信任构建，使用的还是区块链网络的不可篡改不可撤销特性——关于这个特性我前文讲过了，<strong>区块链节点要么在云计算巨头的计算中心里面，要么直接掌握在大企业私有的idc中心里面。</strong>智能合约的生效，还是依赖一个独立权威第三方，提供结果，作为合约执行的条件，<strong>这跟支付宝有多大区别？</strong></p>
+<p>“如果说预言机和预言机网络是数据的搬运工，那么预测市场则可以给智能合同提供未来准确的数据。</p>
+<p>假设今天晚上在天河体育中心举行世界杯决赛，所有的直播和赛事数据都来自于CCTV5，却没有人能保证CCTV5的网站不被攻击，或者出现无法访问等各种意外情况，而一旦出现这些意外将造成严重的后果，在这种情况下，我们就可以运用预测市场的技术。</p>
+<p>预测市场的最终数据从哪里来呢？数据来自于人，而非机器，比如那些博彩，下注，竞猜等一切与比赛结果相关，并捆绑了自身利益的人，都可以成为预测数据的提供者，因为他们捆绑了自身利益，他们不会牺牲自身利益提供虚假数据，从而有效地保证了数据的可靠性和真实性。”</p>
+<p>最后是关于预测市场的。简单一句话概括，就是一人一票，我说a赢了你说b赢了。谁人多就是谁赢了。你们愿意参与到这种合约里面去吗？每次都赌自己在人多的那一面？</p>
+<p>当然，智能合约在某些时候还是有用的。比如说彩票、赌博。这种结果不需要第三方给出，在job里面直接随机生成。<strong>但是如果合约代码有鬼，那就自认倒霉吧</strong>——别人还可以解释成bug。一旦涉及到现实，智能合约就乏力了。</p>
+<p>币，我都懒得说了。</p>
+<p>回到开头，区块链有一些应用场景，联盟链可以搞搞，但是颠覆一切？做梦。智能合约？比作为账本的区块链都不如——最后可能成为分歧争端机那样的东西，就在一个大的同一平台上对赌，反正要权威第三方，还要区块链干啥，阿里云飞天提供一套DSL语言就o98k了。</p>
+<p>醒醒吧。</p>
+<p>作者：云舒<br>链接：<a href="https://zhuanlan.zhihu.com/p/34345088" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/34345088</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h2 id="再论区块链"><a href="#再论区块链" class="headerlink" title="再论区块链"></a>再论区块链</h2><p>作者：云舒<br>链接：<a href="https://zhuanlan.zhihu.com/p/34455537" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/34455537</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>前几天讲过一点区块链和智能合约的事情，今天就区块链再说两点——去中心化和不可篡改。</p>
+<p>我发现IBM、微软、腾讯、阿里都有自己的区块链服务，未来应该还会有更多的巨头加入进来，也许有些巨头已经加入了而我不知道，毕竟这不是我所关注的方向。这些巨头的加入，乍一看是好事，其实细想一下则不然，这是典型的打着红旗反红旗的做法。</p>
+<p>这些巨头发布的区块链服务完全是基于自身的云业务，让使用者快速构建一个区块链提供服务，<strong>但是这跟去中心化是背道而驰，最终的区块链会集中在这几家大型的云计算厂商身上，变成更强大的中心集权</strong>。另一层面，这种集中部署在某家云中心的区块链，云服务商说是不可篡改，你信么？如果你真的信，那你要区块链干啥，直接用他们的数据库服务不就好呢？</p>
+<p>扩展开来，区块链的部署技术，不外乎5种模式：云服务商提供BaaS服务，基于云服务商的IaaS自己搭建，基于开源的产品自己服务器搭建，合作伙伴基于开源产品搭建联盟链，以及分布到客户端的自主研发。</p>
+<p>就原教旨主义而言，我觉得只有最后2种是区块链，前面三种都是修正主义，前两种尤甚，是传统中心化巨头在新时代的进化，第3种如果成功也只是形成了新的巨头而已。去中心化这种浪漫主义的东西，不要谈了。不可篡改更是依附在去中心化之上的东西，皮之不存，毛之焉附？第4种，合作这个东西，是一件很困难的事情，一般是雷声大雨点小。</p>
+<p>至于第5种，现在PC端使用越来越少，主要是手机连接云端。手机上搞区块链，看起来不是一个很好的做法，存储空间，CPU计算能力等等都受限。这个就看未来摩尔定律是否一直那么给力了。我个人觉得手机APP里面搞区块链是不太靠谱的，手机开放程度也有限。还有一种做法是发专门的硬件盒子替代PC，类似原来迅雷搞的。以后要讨论区块链，就讨论这种吧。其实这种也有问题，<strong>你的封闭盒子，你的封闭区块链产品，不开源，你要做啥就做啥，我信你不可篡改</strong>？</p>
+<p>最后说一下币。</p>
+<p>前几天的事情大家都看到了，交易所可以回滚交易，<strong>信仰者也给出了各种解释，交易所只是记账呀，没有上链呀，上链链受不了啊什么的，这尼玛的还好意思说出口！？</strong>不就是东西做的烂么？还成了理由？</p>
+<p><strong>另一个层面，既然交易所没有上链，只是本地记账，这说明什么？说明交易所可以超发啊同志们。</strong>我本来只有1万个比特币，你要买，没有了，但是我依旧可以卖给你，为啥，因为不是每个人都立即提现了，只要这个资金链不断就可以一直玩下去，这也是银行的模式。</p>
+<p><strong>但是银行为啥可信，因为有银监会监管，有保证金率，你交易所有啥？？？？</strong>这就是你们可信的区块链和币？？？总而言之，去中心化基本变成了老巨头的新扩展，和新巨头对霸权发起挑战，普通的小玩家指望处处平等没有中心化，洗洗睡吧。依附其上的不可篡改和可信，谈都不要谈。</p>
+
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/China/" rel="tag"># China</a>
+            
+              <a href="/tags/Zhihu/" rel="tag"># Zhihu</a>
+            
+              <a href="/tags/Blockchain/" rel="tag"># Blockchain</a>
+            
+              <a href="/tags/SmartContract/" rel="tag"># SmartContract</a>
+            
+              <a href="/tags/P2P/" rel="tag"># P2P</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/10/23/2019-10-22-a-conversation-with-nwpu-alumni/" rel="next" title="An Unforgettable Conversation with Kimi">
+                  <i class="fa fa-chevron-left"></i> An Unforgettable Conversation with Kimi
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#再论区块链"><span class="nav-number">1.</span> <span class="nav-text">再论区块链</span></a></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/avatar.jpg"
+      alt="Abraham Xiao">
+  <p class="site-author-name" itemprop="name">Abraham Xiao</p>
+  <div class="site-description" itemprop="description">Shut Up and Get Rich.</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">153</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">272</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/ProfessorX" title="GitHub &rarr; https://github.com/ProfessorX" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="mailto:q289196573@gmail.com" title="E-Mail &rarr; mailto:q289196573@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+    
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2013 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Abraham Xiao</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.4.0</div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+
+
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.4.0"></script><script src="/js/motion.js?v=7.4.0"></script>
+<script src="/js/schemes/muse.js?v=7.4.0"></script>
+<script src="/js/next-boot.js?v=7.4.0"></script>
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.4.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
