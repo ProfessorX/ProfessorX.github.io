@@ -1,24 +1,20 @@
 <!DOCTYPE html>
-
-
-
-
-
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=7.4.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=7.4.0">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=7.4.0">
-  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
+<meta name="generator" content="Hexo 4.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="alternate" href="/atom.xml" title="Masdar Wireless" type="application/atom+xml">
 
-<link rel="stylesheet" href="/css/main.css?v=7.4.0">
+<link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
 
 <script id="hexo-configurations">
@@ -26,7 +22,7 @@
   var CONFIG = {
     root: '/',
     scheme: 'Muse',
-    version: '7.4.0',
+    version: '7.5.0',
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
     copycode: {"enable":false,"show_result":false,"style":null},
@@ -46,11 +42,6 @@
     localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
     path: 'search.xml',
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    translation: {
-      copy_button: '复制',
-      copy_success: '复制成功',
-      copy_failure: '复制失败'
-    },
     sidebarPadding: 40
   };
 </script>
@@ -63,7 +54,8 @@
 <meta property="og:description" content="Shut Up and Get Rich.">
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
-  <link rel="canonical" href="http://yxiao.org/">
+
+<link rel="canonical" href="http://yxiao.org/">
 
 
 <script id="page-configurations">
@@ -78,10 +70,7 @@
 </script>
 
   <title>Masdar Wireless</title>
-  <meta name="generator" content="Hexo 4.0.0">
   
-
-
 
 
 
@@ -100,7 +89,6 @@
   .use-motion .post-body,
   .use-motion .collection-header { opacity: initial; }
 
-  .use-motion .logo,
   .use-motion .site-title,
   .use-motion .site-subtitle {
     opacity: initial;
@@ -114,11 +102,11 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage">
   <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-meta">
 
@@ -130,15 +118,14 @@
       </a>
     </div>
         <p class="site-subtitle">故事会</p>
-      
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
   </div>
 </div>
 
@@ -146,81 +133,41 @@
 <nav class="site-nav">
   
   <ul id="menu" class="menu">
-      
-      
-      
-        
         <li class="menu-item menu-item-home">
-      
-    
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
 
   </li>
-      
-      
-      
-        
         <li class="menu-item menu-item-about">
-      
-    
 
-    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
 
   </li>
-      
-      
-      
-        
         <li class="menu-item menu-item-tags">
-      
-    
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
 
   </li>
-      
-      
-      
-        
         <li class="menu-item menu-item-categories">
-      
-    
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
 
   </li>
-      
-      
-      
-        
         <li class="menu-item menu-item-archives">
-      
-    
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
 
   </li>
-      
-      
-      
-        
         <li class="menu-item menu-item-study">
-      
-    
 
-    <a href="/study/" rel="section"><i class="menu-item-icon fa fa-fw fa-book"></i> <br>Study</a>
+    <a href="/study/" rel="section"><i class="fa fa-fw fa-book"></i>Study</a>
 
   </li>
       <li class="menu-item menu-item-search">
-        <a href="javascript:;" target="_blank" rel="noopener" class="popup-trigger">
-        
-          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
       </li>
-    
   </ul>
-
-    
 
 </nav>
   <div class="site-search">
@@ -254,23 +201,25 @@
   </div>
 
 
-    <main id="main" class="main">
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          <div id="content" class="content">
+          
+
+          <div class="content">
             
-  <div id="posts" class="posts-expand">
-        <article itemscope itemtype="http://schema.org/Article">
+
+  <div class="posts-expand">
+        
   
   
-  
-  <div class="post-block home">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yxiao.org/2019/11/21/2019-11-21-oh-chinese-academia/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="Abraham Xiao">
       <meta itemprop="description" content="Shut Up and Get Rich.">
-      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -278,9 +227,8 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/11/21/2019-11-21-oh-chinese-academia/" class="post-title-link" itemprop="url">如何看待 11 月 18 日曹雪涛团队再发 Nature 子刊论文，立即被指出涉嫌数据造假？</a>
           
+            <a href="/2019/11/21/2019-11-21-oh-chinese-academia/" class="post-title-link" itemprop="url">如何看待 11 月 18 日曹雪涛团队再发 Nature 子刊论文，立即被指出涉嫌数据造假？</a>
         </h1>
 
         <div class="post-meta">
@@ -290,30 +238,26 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              
-                
-              
-
-              <time title="创建时间：2019-11-21 19:00:00 / 修改时间：11:23:21" itemprop="dateCreated datePublished" datetime="2019-11-21T19:00:00+08:00">2019-11-21</time>
+              <time title="创建时间：2019-11-21 19:00:00" itemprop="dateCreated datePublished" datetime="2019-11-21T19:00:00+08:00">2019-11-21</time>
             </span>
-          
-            
-
-            
-          
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-22 09:24:16" itemprop="dateModified" datetime="2019-11-22T09:24:16+08:00">2019-11-22</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a></span>
-
-                
-                
-              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Report/" itemprop="url" rel="index">
+                    <span itemprop="name">Report</span>
+                  </a>
+                </span>
             </span>
-          
 
           
 
@@ -334,13 +278,11 @@
 <p>导师年纪很大了</p>
 <p>但疯狂揽项目（横向）</p>
           <!--noindex-->
-          
-            <div class="post-button text-center">
+            <div class="post-button">
               <a class="btn" href="/2019/11/21/2019-11-21-oh-chinese-academia/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
-          
           <!--/noindex-->
         
       
@@ -350,27 +292,23 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block home">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yxiao.org/2019/11/19/2019-11-19-I-am-fourty-years-old/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="Abraham Xiao">
       <meta itemprop="description" content="Shut Up and Get Rich.">
-      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -378,9 +316,8 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/11/19/2019-11-19-I-am-fourty-years-old/" class="post-title-link" itemprop="url">【戒Dota40天了】帝都 40岁老电工 月薪4k，有机会工资翻翻，重启嘛？</a>
           
+            <a href="/2019/11/19/2019-11-19-I-am-fourty-years-old/" class="post-title-link" itemprop="url">【戒Dota40天了】帝都 40岁老电工 月薪4k，有机会工资翻翻，重启嘛？</a>
         </h1>
 
         <div class="post-meta">
@@ -390,16 +327,8 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              
-                
-              
-
               <time title="创建时间：2019-11-19 19:00:00" itemprop="dateCreated datePublished" datetime="2019-11-19T19:00:00+08:00">2019-11-19</time>
             </span>
-          
-            
-
-            
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
@@ -407,21 +336,17 @@
                 <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2019-11-20 17:52:36" itemprop="dateModified" datetime="2019-11-20T17:52:36+08:00">2019-11-20</time>
               </span>
-            
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a></span>
-
-                
-                
-              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Report/" itemprop="url" rel="index">
+                    <span itemprop="name">Report</span>
+                  </a>
+                </span>
             </span>
-          
 
           
 
@@ -441,13 +366,11 @@
 <p>哎，有的hper一直以为我4k月薪是骗人的，但是真的没有，数字姐那种福利国企（吃喝不要钱，闲的飞起，福利大把，钱又多。），不是我所在的国企。</p>
 <p>脸红的说，马上就40岁了，其实都是啃老+贷款+刷信用卡度日，</p>
           <!--noindex-->
-          
-            <div class="post-button text-center">
+            <div class="post-button">
               <a class="btn" href="/2019/11/19/2019-11-19-I-am-fourty-years-old/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
-          
           <!--/noindex-->
         
       
@@ -457,27 +380,23 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block home">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yxiao.org/2019/11/14/2019-11-14-end-of-the-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="Abraham Xiao">
       <meta itemprop="description" content="Shut Up and Get Rich.">
-      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -485,9 +404,8 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/11/14/2019-11-14-end-of-the-world/" class="post-title-link" itemprop="url">世界尽头与冷酷仙境</a>
           
+            <a href="/2019/11/14/2019-11-14-end-of-the-world/" class="post-title-link" itemprop="url">世界尽头与冷酷仙境</a>
         </h1>
 
         <div class="post-meta">
@@ -497,16 +415,8 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              
-                
-              
-
               <time title="创建时间：2019-11-14 19:00:00" itemprop="dateCreated datePublished" datetime="2019-11-14T19:00:00+08:00">2019-11-14</time>
             </span>
-          
-            
-
-            
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
@@ -514,21 +424,17 @@
                 <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2019-11-19 08:15:53" itemprop="dateModified" datetime="2019-11-19T08:15:53+08:00">2019-11-19</time>
               </span>
-            
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a></span>
-
-                
-                
-              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Report/" itemprop="url" rel="index">
+                    <span itemprop="name">Report</span>
+                  </a>
+                </span>
             </span>
-          
 
           
 
@@ -546,13 +452,11 @@
 <p>前一段时间双瞳同学的文章讲了环保问题和瑞典圣少女，最近没有什么别的事情值得一提，所以今天我们来炒一炒冷饭，我们从另外一个角度来对这个问题进行一点补充。</p>
 <p>环境保护这个议题，其实并不算新鲜，早在七、八十年代就已经有了。地球是否在变暖这个问题，本身也没有什么好争论的，异常气候越来越多，北极冰盖正在融化这些都属于客观事实；对于所有人来说，气候异常都是将来必须要面对的一个挑战。而为什么气候异常会成为一个问题，才是今天我们需要讨论的主要内容。</p>
           <!--noindex-->
-          
-            <div class="post-button text-center">
+            <div class="post-button">
               <a class="btn" href="/2019/11/14/2019-11-14-end-of-the-world/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
-          
           <!--/noindex-->
         
       
@@ -562,27 +466,23 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block home">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yxiao.org/2019/11/12/2019-11-12-shandong-factory/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="Abraham Xiao">
       <meta itemprop="description" content="Shut Up and Get Rich.">
-      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -590,9 +490,8 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/11/12/2019-11-12-shandong-factory/" class="post-title-link" itemprop="url">如何评价 Netflix 原创纪录片《美国工厂》？</a>
           
+            <a href="/2019/11/12/2019-11-12-shandong-factory/" class="post-title-link" itemprop="url">如何评价 Netflix 原创纪录片《美国工厂》？</a>
         </h1>
 
         <div class="post-meta">
@@ -602,16 +501,8 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              
-                
-              
-
               <time title="创建时间：2019-11-12 19:00:00" itemprop="dateCreated datePublished" datetime="2019-11-12T19:00:00+08:00">2019-11-12</time>
             </span>
-          
-            
-
-            
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
@@ -619,21 +510,17 @@
                 <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2019-11-14 16:08:24" itemprop="dateModified" datetime="2019-11-14T16:08:24+08:00">2019-11-14</time>
               </span>
-            
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a></span>
-
-                
-                
-              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Report/" itemprop="url" rel="index">
+                    <span itemprop="name">Report</span>
+                  </a>
+                </span>
             </span>
-          
 
           
 
@@ -648,13 +535,11 @@
       
           <p>在B站上看完了《美国工厂》，感觉真是相当普通的片子……我也可以扛个摄像头去拍山东歌尔的人跑到苏北，跑去我妈的公司里，商量在公交和出租车上贴招工广告；</p>
           <!--noindex-->
-          
-            <div class="post-button text-center">
+            <div class="post-button">
               <a class="btn" href="/2019/11/12/2019-11-12-shandong-factory/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
-          
           <!--/noindex-->
         
       
@@ -664,27 +549,23 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block home">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yxiao.org/2019/11/11/2019-11-11-consuming-loan/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="Abraham Xiao">
       <meta itemprop="description" content="Shut Up and Get Rich.">
-      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -692,9 +573,8 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/11/11/2019-11-11-consuming-loan/" class="post-title-link" itemprop="url">1962年人民日报：消费贷 ——垄断资本家套在劳动人民身上的镣铐</a>
           
+            <a href="/2019/11/11/2019-11-11-consuming-loan/" class="post-title-link" itemprop="url">1962年人民日报：消费贷 ——垄断资本家套在劳动人民身上的镣铐</a>
         </h1>
 
         <div class="post-meta">
@@ -704,16 +584,8 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              
-                
-              
-
               <time title="创建时间：2019-11-11 19:00:00" itemprop="dateCreated datePublished" datetime="2019-11-11T19:00:00+08:00">2019-11-11</time>
             </span>
-          
-            
-
-            
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
@@ -721,21 +593,17 @@
                 <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2019-11-12 09:30:43" itemprop="dateModified" datetime="2019-11-12T09:30:43+08:00">2019-11-12</time>
               </span>
-            
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a></span>
-
-                
-                
-              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Report/" itemprop="url" rel="index">
+                    <span itemprop="name">Report</span>
+                  </a>
+                </span>
             </span>
-          
 
           
 
@@ -751,13 +619,11 @@
           <p>激流按：消费主义大行其道的今天，各路商家的手段可谓层出不穷，蚂蚁花呗，满减红包，分享提现。然而这一切不过是穿新鞋走老路罢了，背后的逻辑在57年前就被人民日报一语道破——买买买。消费者的购买力越萎靡，商家的手段就越刺激。电商盛宴越是轰轰烈烈，那它的惨淡收场也就越来越近了。</p>
 <p>资本主义国家的消费信贷，是由银行、专业金融机构、商业资本家或其它社会组织，提供给消费者或提供给出售消费资料的商业组织的一种信用，以便消费者购买消费资料或作为各种生活开支之用。在美国，这种制度已有多年历史，但是它的特别发展还是在第二次世界大战之后。这是有其客观原因的。战后，资本主义总危机进入了第二阶段，美国经济愈来愈动荡不定，劳动人民有支付能力的需求不断缩小，经济危机一次又一次爆发，国内市场萎缩，垄断组织企业普遍感觉销售困难。在这样尖锐的资本主义矛盾之下，垄断资本就尽量利用消费信贷来推销滞销商品，制造经济上的虚假“繁荣”。消费信贷侵占到劳动人民的未来收入，它既为资本家开辟新的利润源泉，同时又恶毒地使劳动人民奴役于这个或那个资本主义企业之下。</p>
           <!--noindex-->
-          
-            <div class="post-button text-center">
+            <div class="post-button">
               <a class="btn" href="/2019/11/11/2019-11-11-consuming-loan/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
-          
           <!--/noindex-->
         
       
@@ -767,27 +633,23 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block home">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yxiao.org/2019/10/26/2019-10-26-smart-contract/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="Abraham Xiao">
       <meta itemprop="description" content="Shut Up and Get Rich.">
-      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -795,9 +657,8 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/10/26/2019-10-26-smart-contract/" class="post-title-link" itemprop="url">为什么我说智能合约不靠谱</a>
           
+            <a href="/2019/10/26/2019-10-26-smart-contract/" class="post-title-link" itemprop="url">为什么我说智能合约不靠谱</a>
         </h1>
 
         <div class="post-meta">
@@ -806,31 +667,21 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-
-              
-                
               
 
               <time title="创建时间：2019-10-26 19:00:00 / 修改时间：18:41:32" itemprop="dateCreated datePublished" datetime="2019-10-26T19:00:00+08:00">2019-10-26</time>
             </span>
-          
-            
-
-            
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a></span>
-
-                
-                
-              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Report/" itemprop="url" rel="index">
+                    <span itemprop="name">Report</span>
+                  </a>
+                </span>
             </span>
-          
 
           
 
@@ -846,13 +697,11 @@
           <p>好久没有写专栏了。<br>今天我在知乎和微博说，智能合约3年内能得到大规模应用，我直播吃土。那里篇幅有限，就在这儿写篇文章，描述一下为什么我做出这种判断，也是自己记录下来看看会不会被打脸，然后可以反思一下自己的思维模式。</p>
 <p><strong>我的结论是，区块链作为分布式账本有一些应用场景，但是不会太大范围的应用。智能合约则非常不靠谱，最多能在彩票、地下赌场有些半黑半白的应用。而那些币，除了黑市洗钱、违法交易以外没有任何价值。</strong></p>
           <!--noindex-->
-          
-            <div class="post-button text-center">
+            <div class="post-button">
               <a class="btn" href="/2019/10/26/2019-10-26-smart-contract/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
-          
           <!--/noindex-->
         
       
@@ -862,27 +711,23 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block home">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yxiao.org/2019/10/26/2019-10-27-lao-gan-ma/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="Abraham Xiao">
       <meta itemprop="description" content="Shut Up and Get Rich.">
-      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -890,9 +735,8 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/10/26/2019-10-27-lao-gan-ma/" class="post-title-link" itemprop="url">「老干妈」配方泄密是怎么回事？</a>
           
+            <a href="/2019/10/26/2019-10-27-lao-gan-ma/" class="post-title-link" itemprop="url">「老干妈」配方泄密是怎么回事？</a>
         </h1>
 
         <div class="post-meta">
@@ -902,16 +746,8 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              
-                
-              
-
               <time title="创建时间：2019-10-26 19:00:00" itemprop="dateCreated datePublished" datetime="2019-10-26T19:00:00+08:00">2019-10-26</time>
             </span>
-          
-            
-
-            
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
@@ -919,21 +755,17 @@
                 <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2019-10-28 10:44:40" itemprop="dateModified" datetime="2019-10-28T10:44:40+08:00">2019-10-28</time>
               </span>
-            
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a></span>
-
-                
-                
-              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Report/" itemprop="url" rel="index">
+                    <span itemprop="name">Report</span>
+                  </a>
+                </span>
             </span>
-          
 
           
 
@@ -950,13 +782,11 @@
 <p>作为一个对贵州很多杂事还算熟悉的人，说点与老干妈有关的真事以及传闻：</p>
 <p>1、老干妈还没有到如日中天营收仅仅15亿的时候，就被几乎全部大鳄看中了。</p>
           <!--noindex-->
-          
-            <div class="post-button text-center">
+            <div class="post-button">
               <a class="btn" href="/2019/10/26/2019-10-27-lao-gan-ma/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
-          
           <!--/noindex-->
         
       
@@ -966,27 +796,23 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block home">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yxiao.org/2019/10/23/2019-10-22-a-conversation-with-nwpu-alumni/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="Abraham Xiao">
       <meta itemprop="description" content="Shut Up and Get Rich.">
-      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -994,9 +820,8 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/10/23/2019-10-22-a-conversation-with-nwpu-alumni/" class="post-title-link" itemprop="url">An Unforgettable Conversation with Kimi</a>
           
+            <a href="/2019/10/23/2019-10-22-a-conversation-with-nwpu-alumni/" class="post-title-link" itemprop="url">An Unforgettable Conversation with Kimi</a>
         </h1>
 
         <div class="post-meta">
@@ -1005,31 +830,21 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-
-              
-                
               
 
               <time title="创建时间：2019-10-23 10:13:51 / 修改时间：10:15:00" itemprop="dateCreated datePublished" datetime="2019-10-23T10:13:51+08:00">2019-10-23</time>
             </span>
-          
-            
-
-            
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a></span>
-
-                
-                
-              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Report/" itemprop="url" rel="index">
+                    <span itemprop="name">Report</span>
+                  </a>
+                </span>
             </span>
-          
 
           
 
@@ -1044,7 +859,6 @@
       
           <p>TO BE FINISHED.</p>
 
-        
       
     </div>
 
@@ -1052,27 +866,23 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block home">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yxiao.org/2019/10/22/2019-10-22-china-rise-up/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="Abraham Xiao">
       <meta itemprop="description" content="Shut Up and Get Rich.">
-      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1080,9 +890,8 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/10/22/2019-10-22-china-rise-up/" class="post-title-link" itemprop="url">如何看待勃学？</a>
           
+            <a href="/2019/10/22/2019-10-22-china-rise-up/" class="post-title-link" itemprop="url">如何看待勃学？</a>
         </h1>
 
         <div class="post-meta">
@@ -1092,16 +901,8 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              
-                
-              
-
               <time title="创建时间：2019-10-22 19:00:00" itemprop="dateCreated datePublished" datetime="2019-10-22T19:00:00+08:00">2019-10-22</time>
             </span>
-          
-            
-
-            
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
@@ -1109,21 +910,17 @@
                 <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2019-10-26 18:13:55" itemprop="dateModified" datetime="2019-10-26T18:13:55+08:00">2019-10-26</time>
               </span>
-            
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a></span>
-
-                
-                
-              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Report/" itemprop="url" rel="index">
+                    <span itemprop="name">Report</span>
+                  </a>
+                </span>
             </span>
-          
 
           
 
@@ -1139,13 +936,11 @@
           <p>我认为“勃学”是浅薄的，因为其核心就是一山望着一山高，只要我没得到最好的，那我就一哭二闹三上吊，像个小孩子。</p>
 <p>事实上，我非常理解曾博，至少比绝大多数的逼乎用户都理解，因为我高考后也傻逼地报错了学校，也傻逼地学错了专业，也傻逼地读了博，最后终于拒绝继续当傻逼，吃力地转了行，结果发现跟科班出身的phd们相比，自己浪费了太多的时间，转了一圈，还是傻逼，于是在一个我看人人皆傻逼、人人看我亦如是的城市里继续着我傻逼的人生。</p>
           <!--noindex-->
-          
-            <div class="post-button text-center">
+            <div class="post-button">
               <a class="btn" href="/2019/10/22/2019-10-22-china-rise-up/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
-          
           <!--/noindex-->
         
       
@@ -1155,27 +950,23 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block home">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yxiao.org/2019/10/20/2019-10-20-monkey-king/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="Abraham Xiao">
       <meta itemprop="description" content="Shut Up and Get Rich.">
-      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1183,9 +974,8 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/10/20/2019-10-20-monkey-king/" class="post-title-link" itemprop="url">如何评价游戏《大圣归来》？</a>
           
+            <a href="/2019/10/20/2019-10-20-monkey-king/" class="post-title-link" itemprop="url">如何评价游戏《大圣归来》？</a>
         </h1>
 
         <div class="post-meta">
@@ -1195,16 +985,8 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              
-                
-              
-
               <time title="创建时间：2019-10-20 19:00:00" itemprop="dateCreated datePublished" datetime="2019-10-20T19:00:00+08:00">2019-10-20</time>
             </span>
-          
-            
-
-            
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
@@ -1212,21 +994,17 @@
                 <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2019-10-24 14:24:25" itemprop="dateModified" datetime="2019-10-24T14:24:25+08:00">2019-10-24</time>
               </span>
-            
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a></span>
-
-                
-                
-              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Report/" itemprop="url" rel="index">
+                    <span itemprop="name">Report</span>
+                  </a>
+                </span>
             </span>
-          
 
           
 
@@ -1245,13 +1023,11 @@
 <p>07年高考，我分数够广院，但进不了想进的广告系。那时候广告专业是文科里少有“听上去能赚钱还挺文学挺帅气”的专业，分数高的吓人。</p>
 <p>广院一个老师说，调剂到公共关系吧，很近的，也在广告学院，学的东西差不多。</p>
           <!--noindex-->
-          
-            <div class="post-button text-center">
+            <div class="post-button">
               <a class="btn" href="/2019/10/20/2019-10-20-monkey-king/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
-          
           <!--/noindex-->
         
       
@@ -1261,22 +1037,20 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-    
   </div>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/2/">&lt;i class=&quot;fa fa-angle-right&quot; aria-label=&quot;下一页&quot;&gt;&lt;&#x2F;i&gt;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
+
 
 
           </div>
@@ -1285,12 +1059,10 @@
         </div>
           
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
   <aside class="sidebar">
@@ -1312,666 +1084,46 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image"
-      src="/images/avatar.jpg"
-      alt="Abraham Xiao">
+    <img class="site-author-image" itemprop="image" alt="Abraham Xiao"
+      src="/images/avatar.jpg">
   <p class="site-author-name" itemprop="name">Abraham Xiao</p>
   <div class="site-description" itemprop="description">Shut Up and Get Rich.</div>
 </div>
-  <nav class="site-state motion-element">
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
       <div class="site-state-item site-state-posts">
-        
-          <a href="/archives/%20%7C%7C%20archive">
+          <a href="/archives/">
         
           <span class="site-state-item-count">159</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
-    
-      
-      
       <div class="site-state-item site-state-categories">
-        
+            <a href="/categories/">
           
-            <a href="/categories/%20%7C%7C%20th">
-          
-        
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
         <span class="site-state-item-count">12</span>
-        <span class="site-state-item-name">分类</span>
-        </a>
+        <span class="site-state-item-name">分类</span></a>
       </div>
-    
-      
-      
       <div class="site-state-item site-state-tags">
-        
+            <a href="/tags/">
           
-            <a href="/tags/%20%7C%7C%20tags">
-          
-        
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
         <span class="site-state-item-count">283</span>
-        <span class="site-state-item-name">标签</span>
-        </a>
+        <span class="site-state-item-name">标签</span></a>
       </div>
-    
   </nav>
+</div>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-      
-      
-        
-      
-      
-        
-      
-        <a href="https://github.com/ProfessorX" title="GitHub &rarr; https://github.com/ProfessorX" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+        <a href="https://github.com/ProfessorX" title="GitHub → https://github.com/ProfessorX" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
       </span>
-    
       <span class="links-of-author-item">
-      
-      
-        
-      
-      
-        
-      
-        <a href="/mailto:q289196573@gmail.com" title="E-Mail &rarr; mailto:q289196573@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+        <a href="/mailto:q289196573@gmail.com" title="E-Mail → mailto:q289196573@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
       </span>
-    
   </div>
 
 
@@ -1986,17 +1138,24 @@
       </div>
     </main>
 
-    <footer id="footer" class="footer">
+    <footer class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2013 – <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
+        
+
+<div class="copyright">
+  
+  &copy; 2013 – 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Abraham Xiao</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.0.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.0.0
+  </div>
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.4.0</div>
+  <div class="theme-info">主题 – <a href="https://muse.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.5.0
+  </div>
 
         
 
@@ -2017,14 +1176,12 @@
   </div>
 
   
-
-
-  <script src="/lib/anime.min.js?v=3.1.0"></script>
-  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-<script src="/js/utils.js?v=7.4.0"></script><script src="/js/motion.js?v=7.4.0"></script>
-<script src="/js/schemes/muse.js?v=7.4.0"></script>
-<script src="/js/next-boot.js?v=7.4.0"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script>
 
 
 
@@ -2042,12 +1199,7 @@
 
 
 
-
-
-
-
-  <script src="/js/local-search.js?v=7.4.0"></script>
-
+  <script src="/js/local-search.js"></script>
 
 
 
@@ -2064,8 +1216,16 @@
   
 
   
-
-  
+  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
+  <script>
+      window.addEventListener('load', () => {
+      quicklink({
+        timeout: 3000,
+        priority: true,
+        ignores: [uri => uri.includes('#'),uri => uri == 'http://yxiao.org/',]
+      });
+      });
+  </script>
 
 </body>
 </html>
