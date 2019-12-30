@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="alternate" href="/atom.xml" title="Masdar Wireless" type="application/atom+xml">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://yxiao.org').hostname,
+    root: '/',
+    scheme: 'Muse',
+    version: '7.5.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="首先是单病种付费的概念：单病种付费_百度百科 划重点：医疗机构的收入仅与每个病例及其诊断有关，而与医疗机构治疗该病例所花费的实际成本无关。 郭嘉任务，2020年105个单病种收费全面铺开。 105个病种涵盖了市级医院收入的半壁江山。 2019年1月，某地多家大医院汇总了过去一年的经营数据，去主管部门开会。 各家医院表示，如果严格执行105个单病种收费标准，各家医院普遍将损失6%以上的毛收入，全面面">
+<meta name="keywords" content="China,Medicine,Doctor,Insurance,Welfare">
+<meta property="og:type" content="article">
+<meta property="og:title" content="单病种付费">
+<meta property="og:url" content="http:&#x2F;&#x2F;yxiao.org&#x2F;2019&#x2F;12&#x2F;30&#x2F;2019-12-30-charge-by-disease&#x2F;index.html">
+<meta property="og:site_name" content="Masdar Wireless">
+<meta property="og:description" content="首先是单病种付费的概念：单病种付费_百度百科 划重点：医疗机构的收入仅与每个病例及其诊断有关，而与医疗机构治疗该病例所花费的实际成本无关。 郭嘉任务，2020年105个单病种收费全面铺开。 105个病种涵盖了市级医院收入的半壁江山。 2019年1月，某地多家大医院汇总了过去一年的经营数据，去主管部门开会。 各家医院表示，如果严格执行105个单病种收费标准，各家医院普遍将损失6%以上的毛收入，全面面">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-12-30T09:19:52.221Z">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yxiao.org/2019/12/30/2019-12-30-charge-by-disease/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>单病种付费 | Masdar Wireless</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Masdar Wireless</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <h1 class="site-subtitle" itemprop="description">多吃肉，多运动！</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-study">
+
+    <a href="/study/" rel="section"><i class="fa fa-fw fa-book"></i>Study</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yxiao.org/2019/12/30/2019-12-30-charge-by-disease/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Abraham Xiao">
+      <meta itemprop="description" content="Shut Up and Get Rich.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Masdar Wireless">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          单病种付费
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-12-30 19:00:00 / 修改时间：17:19:52" itemprop="dateCreated datePublished" datetime="2019-12-30T19:00:00+08:00">2019-12-30</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Report/" itemprop="url" rel="index">
+                    <span itemprop="name">Report</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>首先是单病种付费的概念：单病种付费_百度百科</p>
+<p>划重点：医疗机构的收入仅与每个病例及其诊断有关，而与医疗机构治疗该病例所花费的实际成本无关。</p>
+<p>郭嘉任务，2020年105个单病种收费全面铺开。</p>
+<p>105个病种涵盖了市级医院收入的半壁江山。</p>
+<p>2019年1月，某地多家大医院汇总了过去一年的经营数据，去主管部门开会。</p>
+<p>各家医院表示，如果严格执行105个单病种收费标准，各家医院普遍将损失6%以上的毛收入，全面面临入不敷出和大额亏损。有的手术只要开展，医院每做一台就要赔5万元左右。</p>
+<p>会议持续了一天。至晚八点，风暴中心的会议主持人又饿又累，情绪激动的表示：“同志们，你们这样诉苦，我们的会议开到春节都开不完！就这样跟你们讲吧，105个单病种是郭嘉任务，你们只有适者生存的义务，没有任何讨价还价的余地！散会！”</p>
+<a id="more"></a>
+
+<p>一位与会的医院负责人回到单位，立即召开扩大会议：“同志们，我们现在药占比、耗占比很高啊！这里边，有多少是调节医院收入用的！有多少是调节高年资医生收入用的！这是有违新时代精神的灰色地带！我们务必要把‘两比’降下来，大家不要顾虑医院和个人一时的收入下降，只有亏损，我们才有资格跟上峰要求调整服务价格！不然，等到单病种全面铺开，医院会亏损到休克的！”</p>
+<p>此前，领导的口径通常是：“同志们，现在都十一月份了，我看今年的医保限额还有富余。大家不要有顾虑，该开展的业务一定要开展，一定要方便病人就医。医保限额超标不要紧，医院有了亏损，我们可以向上峰争取，增加明年的医保限额。”</p>
+<p>单病种让这一代的医院管理者空前注重医疗技术服务的“含金量”。因为以后出售药品和耗材不仅不会让医院和医生赚钱，还有可能带来亏损。医院的价值取向必须调整到依赖医疗技术服务的收入上来。</p>
+<p>此前，出于“调节医院收入”和“调节高年资医生收入”的考虑，很多医院明里暗里倾向采购价格更昂贵的药品和耗材，纵容主要的现金流部门——检验、影像，为病人提供“全家桶”套餐。为了适应单病种，各医院积极回应“带量采购”带来的药品价格下降，期盼“带量采购”和“零差价改革”推行到耗材领域。</p>
+<p>为了适应单病种，肿瘤科出身的院长说辅助药可以减一半，做介入出身的院长骂人说“两万元的支架到底比一万元的高级在哪里？我怎么不知道！”拿手术刀的院长骂人说“两千元的补片能干得了的活，谁用一万元的谁喝茶！”医院开始限制“全家桶”，甚至有的领导面谈现金流奶牛：</p>
+<p>“700元全家桶就能解决的，就别用2000元全家桶了。基因检测对临床的意义有限，以后谨慎开展。你不是病理和影像，医生们自己会看化验单，以后AI都能干这活，你没有核心竞争力。老子不怕你亏损，大不了医院只保留检验科的基本业务。药房不让外包，独立检验中心可是有政策支持。”</p>
+<p>药品“带量采购”之后，药品平均中标价降低52%，最高价格降低96%。药品降价96%，厂商还有利可图，那么以前价格虚高的时候，钱都到哪里去了？显然，“单病种”刺激医院追随医改，必然会导致医生脱离灰色收入，在知乎和其他交流场合底气十足。</p>
+<p>啥？有的医生还是喜欢“堤内损失堤外补”的模式？单病种限价亏了钱，从“灰色收入”上找回来？首先，“带量采购”降低了厂商的利润空间，厂商没钱给你“补”。其次，种种禁止利益输出的禁令和措施，掐断了“补”的途径。“大数据反l腐”其实一直在搞。更重要的，有条件“补”的医生是一小撮人，他找机会“补”了，他的同事就要受连累扣奖金。那么，他的同事们就会阻止这种找补。举报科主任、举报院长的技术门槛很低。</p>
+<p>单病种收费对病人的影响也是显然的。我们的医保还很年轻，基金积累较少，几乎是“现收现支”，从健康的在职人员那里收钱补贴退休多病的老人。几年后，随着“婴儿潮”一代人步入退休年龄，就业人口总数就要下降。再过几年，人口拐点就会降临。医保资金来源少了，医保资金支出多了。因此，患者比以往任何时候都需要医保支付的可持续性。医保资金要省着花。</p>
+<p>作者：邓铂鋆<br>链接：<a href="https://www.zhihu.com/question/328115299/answer/804022209" target="_blank" rel="noopener">https://www.zhihu.com/question/328115299/answer/804022209</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h2 id="新中国自成立以来有哪些翻天覆地的变化？"><a href="#新中国自成立以来有哪些翻天覆地的变化？" class="headerlink" title="新中国自成立以来有哪些翻天覆地的变化？"></a>新中国自成立以来有哪些翻天覆地的变化？</h2><p>作者：邓铂鋆<br>链接：<a href="https://www.zhihu.com/question/270393195/answer/953532363" target="_blank" rel="noopener">https://www.zhihu.com/question/270393195/answer/953532363</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>爸妈1980年结婚，婚后两人住在奶奶家，同时向单位提出了宿舍申请。按照当时的规定，结婚才可以向单位申请宿舍，否则就是住集体宿舍的上下铺，但是青年职工一结婚就要退出集体宿舍，导致新婚夫妻面临住房空窗期。</p>
+<p>那时侯正赶上知青大返城，城市里的住房非常紧张。当时没有商品房，社会上虽然有私人房产租售以及多种形式的有偿“换房”，但是跟99.9%的社会成员无关。爸爸单位原本用来接待客户的招待所改成了青年工人的集体宿舍，客户来了住在文哥时候挖的防空洞里。上级号召各单位兴建“鸳鸯楼”解决新婚职工的居住问题。爸爸的单位条件有限盖不了楼，只能在招待所隔壁的蓝球场上修了几排平房（篮球场下方就是改做招待所的防空洞），每间十二平方米，安置了许多拖家带口的已婚职工。“鸳鸯房”没有上下水和厨卫，做饭在门前生煤炉，用水和如厕去招待所一楼。</p>
+<p>奶奶家里当时住着爸爸大平、叔叔二平两对新婚夫妻，还有一个没出嫁的姑姑小贤，生活很不方便。妈妈是护士，常年值夜班。从奶奶家到妈妈工作的卫生院没有直达的公交车，她一直想搬到距离单位比较近的地方。按照当时的原则，夫妻住房由丈夫单位解决，父母各自的单位距离倒是不远，比夫妻二人的单位宿舍入住资格近多了。妈妈托了自己单位房管科的老同学，讲明特殊情况，才有资格在卫生院排队等候一栋老屋的某间小阁楼——卫生院那边的等房队伍更长。这栋无数青年才俊牵挂的老屋在新世纪被郭嘉文物局评上了重点文物保护单位，改建成了留学生宿舍，本地很多婚纱摄影公司喜欢在此取景。但是在八十年代，老屋的住户们常年要踩着半浸在污水中的砖头出入老屋的公厕。</p>
+<p>后来，跟爸爸要好的同事要调到外地。那位同事调离之前找到爸爸，让他把家具直接搬进自己的那间“鸳鸯房”宣示主权。强行占房在申请住房需要漫长等候的年代中是司空见惯的。爸爸老实人，居然一本正经的请示房管负责人。好在爸爸已经排在分房候选名单的前排了，房管的头头当场嘲笑“你个大傻子”，给爸爸开具了入住手续。</p>
+<p>搬进了朝思暮想的“鸳鸯房”，爸妈才意识到什么叫“距离产生美”。“鸳鸯房”理应是临时周转，按照当年的计划经济思路，用料和设计都非常简陋。爸妈的隔壁住着一位未来的巡抚（已经落马）。爸妈能够通过隔壁的水声判断出现在使用尿盆的是未来的巡抚还是未来的巡抚夫人。每逢下雨，“屋外大雨、屋里小雨”，爸妈一边收拾着瓶瓶罐罐接水，一边互相安慰“这比我下乡插队时村里的大队部都强”，“当兵拉练的时候房东大娘家最好的房子也没这么好啊，就差热炕头了”。以当时的条件，爸妈真的找不到挑剔的理由。</p>
+<p>“鸳鸯房”鼠患严重，外婆送给妈妈的饼干装在铁皮盒子里， 居然能被老鼠啃破盒子偷吃。那时候食物是很珍贵的，妈妈护理了一位旧社会过来的资本家，看到家属送的病号饭，才知道炖肉除了放酱油、盐、土豆，还要放香料，还可以放山药、红枣等药膳材料。那时候的北方，冬天没有蔬菜供应。各个单位和各家各户每年秋天都有“冬储菜”的习惯。家里买到要吃一冬天的大白菜，怕失窃和老鼠糟蹋，每棵都挂在房梁上。然而这一措施能防贼却防不了鼠，老鼠钻进白菜专啃菜心，在白菜外边露出大尾巴洋洋得意的甩来甩去，边啃边往外排泄大小便，洒到桌子上、被褥上都是。妈妈气愤的从同事那里请来一只橘猫。然而这猫相对“鸳鸯房”里横行的那种学名叫“黑姬鼠”的硕鼠，在体格上并不占优势，连基本的战略威慑能力都不具备。妈妈奉养大橘几个月，家里鼠患不减，于是妈妈把大橘装进鞋盒，送到三十公里外的娘家。大橘抵达外婆家不出三天就走失了，过了一个月，又脏又瘦的大橘蹲在爸妈的小屋门前喵喵叫。</p>
+<p>于是，当俄国电影《办公室的故事》在国内上映的时候，观众们受到了极大的心理冲击。比看美国电影的冲击还大。毕竟当时美国电影只敢放映查理·卓别林和秀兰·邓波在大萧条时的作品，吸取俄国教训，不放映《愤怒的葡萄》。啥？俄国的落魄小职员住在一套小小的单元房里？上下水！浴室！暖气！啊！女局长同志的豪宅真的不是克里姆林宫么？看那水晶灯！电影里充当反派的副局长是留洋回来的，一口一个“电子计算机”，这是什么东西啊。长得像蔡明的女秘书穿时装、烫发，抽进口香烟！剧中被误传丧事的工会干部的追悼会，看季节像是冬天，但是同事们拿着一束束鲜花前来追思！当时，只有尚书同志能配有专车和专任司机，侍郎领导的用车都是跟同级同事拼车（现在也是这政策）。这部俄国喜剧里的女局长自己有专车和专任司机！贫穷不是杜会主乂，老毛子才是真正的杜会主乂！所以老毛子红旗落地这事日后还是很有冲击力的。</p>
+<p>附一张爸爸当年的相亲照。该照片除了展示爸爸的形象，通过拍摄的构思技巧很好的解答了今天的相亲活动各种关于工作、收入、不良生活习惯的提问。拍照时还要确保《人间指南》编辑部发福利台灯的时候牛大姐争着要的可调光台灯入镜，炫耀办公环境。可能有的朋友熟悉一张风格近似的照片。其实爸爸单位在当时的社会上条件不差，他一个小职员跑到上司工位上摆拍（手中有笔，桌上没纸），弄出了河北县官水准的办公照。然而，爸妈当年经历的80年代“小康生活”，放在四十年后的今天，恐怕会让今天的一些人觉得宛如身在“万恶的旧社会”。尽管日后爸爸遭遇了中年失业，仍然觉得今天的生活远胜当年。几年前，爸妈去社区老年人活动中心看反应河南大饥荒的电影《1942》，回来之后吐槽，说以后演灾民要专门培养特型演员。电影里的河南饥民群众演员的气色和体格放在九十年代一看就是万元户。</p>
+<h2 id="2000块的事业编有人挤破头进去，请问进去的目的是什么？"><a href="#2000块的事业编有人挤破头进去，请问进去的目的是什么？" class="headerlink" title="2000块的事业编有人挤破头进去，请问进去的目的是什么？"></a>2000块的事业编有人挤破头进去，请问进去的目的是什么？</h2><p><a href="https://www.zhihu.com/question/347753071/answer/952373333" target="_blank" rel="noopener">https://www.zhihu.com/question/347753071/answer/952373333</a></p>
+<p>因为事业单位待遇好啊！</p>
+<p>就说收入。</p>
+<p>每次要哭穷的时候，我就说月薪3500，每月到手工资，童叟无欺。</p>
+<p>要是出去吃饭，和一些普通朋友，为了面子，一般得报税前工资，月薪5000。</p>
+<p>和好兄弟吃饭的时候，会把绩效奖金值班费什么的也加上，每个月少的时候500多的时候2000，为了面子，那就按每个月2000管上，月薪7000。</p>
+<p>回家跟爸妈吃饭，为了让他们开心开心，年终奖还有1w，得嘞，7*12+10，年薪9W4，四舍五入，年薪十万！</p>
+<p>到了中学同学聚会，男同学们各行各业，都是事业有成，金融IT行业的大佬们财务自由，开着保时捷带着沛纳海，公务员们都是这个长那个长的，穿着衬衫西裤人模狗样。</p>
+<p>那怎么办，虽然我骑的是电动车，但是气势不能输啊，怎么着也是当年高考前三，要是让别人知道混的这么差，还有脸活不？还怎么面对越来越漂亮的女同学们？</p>
+<p>咬咬牙，拉扯着嘴角，咬牙蹦出几个字：现在年薪二十万，还行，能过。</p>
+<p>再对比下体制外的同学：</p>
+<p>比如上面的IT大佬，本科毕业进了BAT，我毕业工作貌似已经是中层了，现在早就年薪百万了。</p>
+<p>但是年薪百万有啥用啊，我给你们算算。</p>
+<p>年薪百万，税后也就70万。</p>
+<p>听说在上海买了大平层，这小子我知道，从小跟我住一起，就我们那破小区砸锅卖铁他家也凑不了几个钱，这么奢侈，哪像我合租老破小每个月才一千块！贷款至少700万，每年得有40万还贷，只剩30万。</p>
+<p>剩下的吃吃喝喝，一年10万至少吧，还剩20万。</p>
+<p>搞IT的都是青春饭，35岁就失业，20万还得留着以后还贷，相当于一分钱也存不下来！</p>
+<p>啥？你说股票期权？这是什么我们没文化的没听说过！</p>
+<p>一想到自己比他们更优越更有面子，忍不住嘴角又微微上扬，赶紧多吃了两块牛仔骨，肚子塞得满满的，面带不屑的看了一眼被漂亮女同学们围着的金融IT大佬们，趁着还没到买单的时候，赶紧借口医院有急诊手术，在大家目送中出门，骑上小牛电动车，扬长而去。</p>
+<p>好久没来这么个高端的餐厅了，好像人均要一百多，太奢侈了！不过也好，吃这么饱，明天的早饭钱也能省下来了呢……</p>
+<h2 id="任正非表示美国在-5G-判断上有失误，你如何理解？"><a href="#任正非表示美国在-5G-判断上有失误，你如何理解？" class="headerlink" title="任正非表示美国在 5G 判断上有失误，你如何理解？"></a>任正非表示美国在 5G 判断上有失误，你如何理解？</h2><p>字面意思说的很明白了</p>
+<p>1、美国根本没想到中国在移动通信领域能进步这么快。</p>
+<p>2、当美国发觉竞争力出现问题后，不是强化投资以科技与资本自由竞争，而是先拿制裁中兴做个抗压实验，然后高调打击华为、海康等行业带头大哥，以及实行几十年的对华裔、跨境中国科学家的迫害/挤压/歧视待遇……形成全面阻碍国内科研、人才培养和供应链与产能升级的“我不行你也别行”的体系战。</p>
+<p>3、重点精准扶持联想小米阿里等企业，是挤压中国本土科技进步空间的重点专项。</p>
+<p>作者：松云<br>链接：<a href="https://www.zhihu.com/question/363764872/answer/956217622" target="_blank" rel="noopener">https://www.zhihu.com/question/363764872/answer/956217622</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h2 id="《随机漫步的傻瓜》是怎样的一本书？"><a href="#《随机漫步的傻瓜》是怎样的一本书？" class="headerlink" title="《随机漫步的傻瓜》是怎样的一本书？"></a>《随机漫步的傻瓜》是怎样的一本书？</h2><p>《随机漫步的傻瓜》这本书是纳西姆·塔勒布（Nassim Taleb）在《黑天鹅》之前的作品。《随》书比《黑天鹅》薄，但却是塔勒布这位神人很多有趣理念的集和，「黑天鹅」概念就是在这本书中提出来的，后来单独扩成了一本书，其他值得注意的观点还包括「存活者偏差」（我个人超爱使用这个 idea）。</p>
+<p>这本书英文版《Fooled by Randomness》出版于 2001 年，中信出版社 2007 年引进，当时的中译名是《随机致富的傻瓜》，今天的再版改名为《随机漫步的傻瓜》。我 2007 年给一本杂志写过该书书评，之后至今经常在自己的回答中引用这本书里的概念，但在网上搜索，发现该杂志竟然没有将当年这份书评放到网上，特此在知乎上通过自问自答的方式贴出。文章写于 6 年前，今天读来可能有不合时宜之处，但应该影响不大。请各位老师斧正。</p>
+<p>作者：黄继新<br>链接：<a href="https://www.zhihu.com/question/20951240/answer/16699613" target="_blank" rel="noopener">https://www.zhihu.com/question/20951240/answer/16699613</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>随机致富的傻瓜<br>文 黄继新</p>
+<p>鉴于国内股市近来红火异常，我想如下比方您也许会感兴趣读上一读——</p>
+<p>如果我昨天进入股市，花 1000 元买了几支股票，今天赚了 1 万元，没有人会觉得我在股票交易上技术过人，而是运气使然。</p>
+<p>但如果我三年前投入 1000 元进入股市，到今天已经增值为 10 万元，可能就很少有人觉得我只是运气好了，我甚至可能会被人称为股神，亲友同事可能会争相向我请教投资秘诀。</p>
+<p>吊诡之处正在于此。第一，没有人追究三年前进入股市的人当中有多少人得到了这样的成功；第二，三年的成功就足以对我的实力进行判断吗？</p>
+<p>关于第一个问题，作家兼哲学家兼数学家兼金融交易员纳西姆·塔勒布（Nassim Taleb）指出，我们只看到成功者，是因为被「存活者偏差」蒙蔽了眼睛。「存活者偏差」（Survivor Bias），最简单的解释就是，能被我们看到并知道的，都是活下来了的人，那些失败者早已被抛离了我们的视野——或者说，他们压根儿还没被看见就已经死掉了。从统计样本上来说，我们去总结这些「成功者」——或称「存活者」——的成功原因基本上来说，是不靠谱的。因为很有可能有 1 万个人采用了同样的操作手法，可是只有 1 个人赚了钱，其他的都完蛋了。</p>
+<p>对此，塔勒布打了一个很简单的比方：我们通常都认为，漂亮的人总能在职场中左右逢源。我们会这样想，是因为我们看到了漂亮的成功者，而漂亮的失败者已经被排出在了统计样本之外。</p>
+<p>因此，关于第二个问题的答案，就很简单了：除非你四十年都在赚钱，或者说，你过去四十年平均下来都在大赚其钱。真正被广泛誉为股神的沃伦·巴菲特就是这样一个经典例子，他成名不是靠单比投资的回报，而是靠他过去四十年来的总体投资回报率高出了大盘的三倍。</p>
+<p>但是我们仍然急于去总结成功的经验和失败的教训，其结果就是我们常常顾不得去分析这个成功或失败的原因是否存在。让我们如此着急的，是因为我们万事都需要一个解释，以获得内心的宁静。没有解释的事情会让人茶饭不思、寝卧难安。你创办的公司为什么迟迟不能盈利？或者，你的老板怎么总是不给你加薪？或者，你的销售技巧娴熟无比，可就是卖不出产品？或者，你给楼上办公室的女孩子送了花，可她为什么就不回你的短信？世上一切事情都需要有一个解释，很少会有人因为爱人不见了而不会去喊冤。</p>
+<p>所以，这本书多少有一点虚无主义色彩。你没有什么可以相信的，如果有人因为努力而获得了巨大成就，要相信，事情没有那么复杂——大部分时候，都是运气使然。你以为努力工作、足够聪明就应该能够成功？错。你以为不努力工作、长个猪脑子就注定碌碌终生？也错。虚无主义的意思是，没有什么是确定的，或者说，没有什么会找到确定的原因，一切都是不确定的。女强人卡莉·费奥瑞娜在惠普不体面地结束了她星光灿烂的职业生涯，所有的商业杂志、报纸、咨询公司分析师、证券投资者、传记作者、以及闲着没事的企业家，都在忙不迭地分析其原因，比如她过于强势、不在乎别人的意见，又比如她过度关注远景而忽略了能够鼓舞志气的短期收益。凡此种种，不一而足，但她到底因为什么失败？当然有原因，问题在于，你知道哪些原因是引爆点？大多数人会找到一个（貌似）合理的解释，因为这是符合逻辑的，是符合我们的理性预期的，是能让我们在事物之间分清谁是因谁是果的。</p>
+<p>但常常我么也会找不到确定的因果，于是我们只好迷信。正如作者在某天某个错误的路口下了车，他当日的业务实现了巨幅攀升，于是他也忍不住要每天在那个路口下车。作者指出，这完全是我们从先古部落首领那里传承下来的习惯，比如他们采用了某种祭拜姿势就可以求得龙王降雨。</p>
+<p>从我的话中你可以听出来，这本书同时也是一本心理治疗书。你可以把它当成《心灵鸡汤》一类的读物。它让你接受现实——当然，前提是你足够理性，同时足够努力和聪明。不过，准确地说，这不过是一本写给迷失在财富追求的过程之中的人们，换言之，是写给有点钱、有点追求、但是钱又不太多的人们看的。很重要的一个提示是：不要老看着多少人比你强，要看到多少人比你差。只要在全部人口样本中，你的收入能占到高收入的那 10%，就可以了。是的，你说的没错，如果你现在月收入 3000 元人民币，艰苦地居住在北京或者上海这样生活压力巨大的城市，你应该感觉到幸福。</p>
+<p>尽管作者有时会犯上罗嗦的毛病，但总的来说，这本书读起来趣味盎然，警句妙语随处可见。作者的自以为是也会常常从字里行间流露出来，他不时将自己与伟大的文学家和哲学大师作比，谈及他的大多数金融界同行——索罗斯除外——时充满了冷嘲热讽。不过我们得承认，他对那些毫不引人同情的股票交易员大加讽刺时，读起来也不禁让人抚掌大笑。事实上，这本书被美国《财富》杂志评为商务人士必读的 75 本书之一，2001 年出版后，也成为了华尔街的经典读物。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/China/" rel="tag"># China</a>
+              <a href="/tags/Medicine/" rel="tag"># Medicine</a>
+              <a href="/tags/Doctor/" rel="tag"># Doctor</a>
+              <a href="/tags/Insurance/" rel="tag"># Insurance</a>
+              <a href="/tags/Welfare/" rel="tag"># Welfare</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/12/20/2019-12-20-usa-falling-behind/" rel="prev" title="周围不少到过美国的朋友说，美国现在很“落后”。这是真的吗？">
+      <i class="fa fa-chevron-left"></i> 周围不少到过美国的朋友说，美国现在很“落后”。这是真的吗？
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#新中国自成立以来有哪些翻天覆地的变化？"><span class="nav-number">1.</span> <span class="nav-text">新中国自成立以来有哪些翻天覆地的变化？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2000块的事业编有人挤破头进去，请问进去的目的是什么？"><span class="nav-number">2.</span> <span class="nav-text">2000块的事业编有人挤破头进去，请问进去的目的是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#任正非表示美国在-5G-判断上有失误，你如何理解？"><span class="nav-number">3.</span> <span class="nav-text">任正非表示美国在 5G 判断上有失误，你如何理解？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#《随机漫步的傻瓜》是怎样的一本书？"><span class="nav-number">4.</span> <span class="nav-text">《随机漫步的傻瓜》是怎样的一本书？</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Abraham Xiao"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Abraham Xiao</p>
+  <div class="site-description" itemprop="description">Shut Up and Get Rich.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">171</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">296</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/ProfessorX" title="GitHub → https://github.com/ProfessorX" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/mailto:admin@yxiao.org" title="E-Mail → mailto:admin@yxiao.org"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 2013 – 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Abraham Xiao</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.0.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://muse.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.5.0
+  </div>
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
