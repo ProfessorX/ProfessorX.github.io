@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.yxiao.org","root":"/","scheme":"Muse","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"path":"search.xml","motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="企业要练好内功，建立个性，信息化是必不可少的工具。从信息化的角度，企业管理可以划分为三个层次，一是数字化管理，二是基础管理，三是绩效管理。 数字化管理就是一定要用数字说话，注重数字的变化。 所谓基础管理包括企业的基础数据、基本流程、内部控制、知识管理和员工行为规范。 所谓绩效管理，就是通过PDCA的循环，将企业的战略决策、业务运营、管理监控等联系起来，实现企业的动态优化。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ERP系统的集成应用">
+<meta property="og:url" content="https://www.yxiao.org/2020/03/30/2020-03-30-erp-system-integration/index.html">
+<meta property="og:site_name" content="Masdar Wireless">
+<meta property="og:description" content="企业要练好内功，建立个性，信息化是必不可少的工具。从信息化的角度，企业管理可以划分为三个层次，一是数字化管理，二是基础管理，三是绩效管理。 数字化管理就是一定要用数字说话，注重数字的变化。 所谓基础管理包括企业的基础数据、基本流程、内部控制、知识管理和员工行为规范。 所谓绩效管理，就是通过PDCA的循环，将企业的战略决策、业务运营、管理监控等联系起来，实现企业的动态优化。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-03-30T10:00:00.000Z">
+<meta property="article:modified_time" content="2020-03-30T03:03:49.648Z">
+<meta property="article:author" content="Abraham Xiao">
+<meta property="article:tag" content="Management">
+<meta property="article:tag" content="ERP">
+<meta property="article:tag" content="SAP">
+<meta property="article:tag" content="System">
+<meta property="article:tag" content="Enterprise">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://www.yxiao.org/2020/03/30/2020-03-30-erp-system-integration/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>ERP系统的集成应用 | Masdar Wireless</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Masdar Wireless</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <h1 class="site-subtitle" itemprop="description">MORE MEAT MORE EXERCISE!</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-study">
+
+    <a href="/study/" rel="section"><i class="fa fa-fw fa-book"></i>study</a>
+
+  </li>
+        <li class="menu-item menu-item-reading">
+
+    <a href="/reading/" rel="section"><i class="fa fa-fw fa-snapchat"></i>reading</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.yxiao.org/2020/03/30/2020-03-30-erp-system-integration/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Abraham Xiao">
+      <meta itemprop="description" content="Shut Up and Get Rich.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Masdar Wireless">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          ERP系统的集成应用
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-03-30 18:00:00 / 修改时间：11:03:49" itemprop="dateCreated datePublished" datetime="2020-03-30T18:00:00+08:00">2020-03-30</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Report/" itemprop="url" rel="index">
+                    <span itemprop="name">Report</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>企业要练好内功，建立个性，信息化是必不可少的工具。从信息化的角度，企业管理可以划分为三个层次，一是数字化管理，二是基础管理，三是绩效管理。</p>
+<p>数字化管理就是一定要用数字说话，注重数字的变化。</p>
+<p>所谓基础管理包括企业的基础数据、基本流程、内部控制、知识管理和员工行为规范。</p>
+<p>所谓绩效管理，就是通过PDCA的循环，将企业的战略决策、业务运营、管理监控等联系起来，实现企业的动态优化。</p>
+<a id="more"></a>
+
+
+<h2 id="ERP系统实施方法论"><a href="#ERP系统实施方法论" class="headerlink" title="ERP系统实施方法论"></a>ERP系统实施方法论</h2><h3 id="Kingdee-Way方法论概述"><a href="#Kingdee-Way方法论概述" class="headerlink" title="Kingdee Way方法论概述"></a>Kingdee Way方法论概述</h3><h3 id="六阶段实施要点"><a href="#六阶段实施要点" class="headerlink" title="六阶段实施要点"></a>六阶段实施要点</h3><h4 id="项目定义阶段"><a href="#项目定义阶段" class="headerlink" title="项目定义阶段"></a>项目定义阶段</h4><h4 id="业务蓝图阶段"><a href="#业务蓝图阶段" class="headerlink" title="业务蓝图阶段"></a>业务蓝图阶段</h4><p>Who What Where When Why and How</p>
+<p>业务蓝图是国际ERP界通用的一种企业建模方法。业务蓝图用一种企业可以理解的方式来说明负责的过程，它是一种清晰而又简单的描述方法，只用少量不同的符号，以集合的方式进行组织，定义了<strong>什么人必须在什么时候，采用什么方法去做什么事情</strong>，这种描述方法使得非专业人员也可以理解复杂的业务过程。</p>
+<p>业务蓝图阶段是ERP实施过程中关键的环节，蓝图定义的过程就是企业将自身业务流程转化为新系统业务流程的过程。在这个转化过程中，势必会遇到很大的阻力，甚至会在此阶段出现相当大的冲突。因此，**必须给予相当的重视，采用适当的策略，保证项目的总体目标。</p>
+<p>确切地说，企业业务蓝图由以下三部分组成：</p>
+<ul>
+<li>第一，现行业务流程直接在系统中通过标准流程实行；</li>
+<li>第二，现行业务改善或修正，即用行业规程（可以是顾问方提供的插件，也可以是系统标准流程）来替代企业先行的业务流程；</li>
+<li>第三，客户化定制策略。可以通过二次开发来实现，也可以通过变通法来实现企业的业务要求。</li>
+</ul>
+<p>业务蓝图阶段的主要任务：</p>
+<ul>
+<li>由实施顾问对企业进行ERP理论及标准产品培训</li>
+<li>在顾问的指导下，进行经典规程学习、研究</li>
+<li>在顾问的指导下，进行<strong>现行业务流程整理</strong></li>
+<li>根据业务流程整理的结果，分别对现行业务流程与系统流程（注，此处讨论为已有系统集成应用，与从头开发不一样，从头开发以及工业互联网项目建议参考产品经理书籍）对应的结果进行记录；</li>
+<li>根据现行业务流程对应的结果，制定企业新系统业务蓝图草案。</li>
+</ul>
+<p>阶段成果与项目里程碑：</p>
+<ul>
+<li>标准培训确认单</li>
+<li><strong>确定的业务蓝图草案</strong>（Milestone)</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Management/" rel="tag"># Management</a>
+              <a href="/tags/ERP/" rel="tag"># ERP</a>
+              <a href="/tags/SAP/" rel="tag"># SAP</a>
+              <a href="/tags/System/" rel="tag"># System</a>
+              <a href="/tags/Enterprise/" rel="tag"># Enterprise</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/03/25/2020-03-25-chinese-media-war-with-wetsern-world/" rel="prev" title="与西方媒体开展舆论战是否必要？">
+      <i class="fa fa-chevron-left"></i> 与西方媒体开展舆论战是否必要？
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ERP系统实施方法论"><span class="nav-number">1.</span> <span class="nav-text">ERP系统实施方法论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Kingdee-Way方法论概述"><span class="nav-number">1.1.</span> <span class="nav-text">Kingdee Way方法论概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#六阶段实施要点"><span class="nav-number">1.2.</span> <span class="nav-text">六阶段实施要点</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#项目定义阶段"><span class="nav-number">1.2.1.</span> <span class="nav-text">项目定义阶段</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#业务蓝图阶段"><span class="nav-number">1.2.2.</span> <span class="nav-text">业务蓝图阶段</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Abraham Xiao"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Abraham Xiao</p>
+  <div class="site-description" itemprop="description">Shut Up and Get Rich.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">194</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">332</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/ProfessorX" title="GitHub → https://github.com/ProfessorX" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:admin@yxiao.org" title="E-Mail → mailto:admin@yxiao.org" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 2013 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Abraham Xiao</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://muse.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.7.1
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
