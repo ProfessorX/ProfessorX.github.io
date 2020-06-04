@@ -29,7 +29,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://www.yxiao.org/images/2020051301.jpeg">
 <meta property="article:published_time" content="2020-05-12T04:00:00.000Z">
-<meta property="article:modified_time" content="2020-05-15T07:58:21.429Z">
+<meta property="article:modified_time" content="2020-06-03T08:15:49.164Z">
 <meta property="article:author" content="Abraham Xiao">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="Security">
@@ -232,7 +232,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-15 15:58:21" itemprop="dateModified" datetime="2020-05-15T15:58:21+08:00">2020-05-15</time>
+                <time title="修改时间：2020-06-03 16:15:49" itemprop="dateModified" datetime="2020-06-03T16:15:49+08:00">2020-06-03</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -330,6 +330,37 @@
 <p>If you want to make modifications to an existing role, make a copy of it and modify this.</p>
 <p>If you do not find suitable roles, write job descriptions before beginning your work in role administration (see also Initial Installation Procedure).</p>
 <p>Either have all tasks performed centrally by a single superuser, or divide the tasks among several users in order to increase system security. For more information, see Organization of the Authorization Administration.</p>
+<h2 id="SAP－客户主数据维护"><a href="#SAP－客户主数据维护" class="headerlink" title="SAP－客户主数据维护"></a>SAP－客户主数据维护</h2><p>客户主数据是销售与分销模块中最重要的主数据，是指将各种商业伙伴的相关信息以主数据的形式在系统中建立，并以唯一的代码进行标识。维护客户主数据的主要作用是在进行销售与分销业务的各个阶段明确业务对象，并按照业务对象的客户主数据中维护的控制信息指导系统完成相应的业务处理。<br>客户主数据中的一般数据是对整个集团有效的数据，对任何公司代码和销售区域都有效，是客户的基本信息。<br>客户主数据中的公司代码数据是基于公司代码有效的数据，是客户的财务信息。<br>客户主数据中的销售区域数据是基于销售区域有效的数据，是客户的销售、发运和销售开票信息。</p>
+<p>1：创建客户主数据一般数据视图<br>主数据维护人员按照创建客户主数据请求，在系统中确认是新客户之后，创建客户的一般数据视图，为客户选择帐户组和建立唯一的代码标识。<br>步骤：（事务代码：VD01/XD01）</p>
+<ol>
+<li>输入客户帐户组，它有以下作用：<br>1）确定客户主数据的编码范围，确定使用内部编码还是外部编码（若使用外部编码，还需要手动输入客户编码）<br>2）确定客户主数据中各个字段的维护状态（显示、可选输入或强制输入）<br>3）是否是一次性客户<br>4）影响销售视图中的合作伙伴功能确定<br>5）影响输出确定<br>选定客户帐户组（如果是外部编码需输入客户编码）之后，维护一般视图。</li>
+<li>可以在一般数据视图中维护下列信息：<br>1）地址信息（如名称、地址、国家、城市、邮编、联系电话、传真号码等）<br>2）控制数据（如税务信息、权限组、对应供应商编码等）<br>3）付款业务（如银行信息等）<br>4）市场信息（如行业、客户分类等）<br>5）卸货点信息（如收货时间等）<br>6）出口数据（如出口控制数据等）<br>7）联系人（如商业伙伴地址等）</li>
+<li>保存客户主数据。</li>
+</ol>
+<p>2：创建客户主数据公司代码数据<br>创建客户的财务相关信息。<br>步骤：（事务代码：VD01/XD01）</p>
+<ol>
+<li>可以在公司代码数据视图中维护下列信息：<br>1）帐户管理（如统驭科目等）<br>2）付款业务（如付款方式、付款冻结等）<br>3）联系（如职员等）<br>4）保险（如投保金额等）</li>
+<li>保存客户主数据。</li>
+</ol>
+<p>3：创建客户主数据销售区域数据<br>创建客户销售、发运及销售开票的相关数据。<br>步骤：（事务代码：VD01/XD01）</p>
+<ol>
+<li>可以在销售区域数据视图中维护下列信息：<br>1）订单数据（如销售办公室、货币、销售组、销售区域、价格组等）<br>2）发运数据（如发运条件、交货工厂、运输区域等）<br>3）发票数据（如销项税分类、付款条件等）<br>4）合作伙伴功能（如售达方、送达方、付款方、开票方等）</li>
+<li>保存客户主数据。</li>
+</ol>
+<p>4：更改客户主数据<br>步骤：（事务代码：VD02/XD02）</p>
+<ol>
+<li>输入组织结构：<br>1）客户编码<br>2）如更改公司代码数据，需输入公司代码<br>3）如更改销售区域数据，需输入销售区域</li>
+<li>更改相应信息并保存。</li>
+</ol>
+<p>5：显示客户主数据<br>步骤：（事务代码：VD03/XD03）</p>
+<ol>
+<li>输入组织结构并显示：<br>1）客户编码<br>2）如显示公司代码数据，需输入公司代码<br>3）如显示销售区域数据，需输入销售区域</li>
+</ol>
+<p>收到客户创建申请<br>系统中没有创建过相同客户的主数据<br>对要创建的客户各种信息都已收集审核完毕<br>明确创建客户主数据的组织结构数据（公司代码和销售区域）</p>
+<p>维护客户帐户组及其编码范围</p>
+<p>维护各个控制字段的选择值配置<br>维护其合作伙伴功能的后台配置及前台主数据</p>
+<p>一次性客户：<br>可以在客户帐户组中控制是否为一次性客户，如果是一次性客户，那么在每次使用这个客户创建销售凭证时都要重新维护其地址等基本信息。</p>
+<p>通用分销渠道和通用产品组：<br>可以为几个分销渠道或产品组设置通用分销渠道和通用产品组。那么在创建客户主数据的销售区域数据视图时，如果采用通用渠道或产品组，则维护的数据对其它分销渠道或产品组同样适用。<br>————————————————<br>版权声明：本文为CSDN博主「wtxhai」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a href="https://blog.csdn.net/wtxhai/java/article/details/72356426" target="_blank" rel="noopener">https://blog.csdn.net/wtxhai/java/article/details/72356426</a></p>
 
     </div>
 
@@ -418,7 +449,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Managing-Roles"><span class="nav-number">1.</span> <span class="nav-text">Managing Roles</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#有赞权限系统-SAM"><span class="nav-number"></span> <span class="nav-text">有赞权限系统(SAM)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#RBAC"><span class="nav-number">1.</span> <span class="nav-text">RBAC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#权限系统SAM"><span class="nav-number">2.</span> <span class="nav-text">权限系统SAM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SAM权限系统抽象模型"><span class="nav-number">3.</span> <span class="nav-text">SAM权限系统抽象模型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SAP-Security-System-Authorization-Concept"><span class="nav-number"></span> <span class="nav-text">SAP Security - System Authorization Concept</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#PFCG-Role-Maintenance"><span class="nav-number">1.</span> <span class="nav-text">PFCG Role Maintenance</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Role-Administration"><span class="nav-number">2.</span> <span class="nav-text">Role Administration</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Managing-Roles"><span class="nav-number">1.</span> <span class="nav-text">Managing Roles</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#有赞权限系统-SAM"><span class="nav-number"></span> <span class="nav-text">有赞权限系统(SAM)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#RBAC"><span class="nav-number">1.</span> <span class="nav-text">RBAC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#权限系统SAM"><span class="nav-number">2.</span> <span class="nav-text">权限系统SAM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SAM权限系统抽象模型"><span class="nav-number">3.</span> <span class="nav-text">SAM权限系统抽象模型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SAP-Security-System-Authorization-Concept"><span class="nav-number"></span> <span class="nav-text">SAP Security - System Authorization Concept</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#PFCG-Role-Maintenance"><span class="nav-number">1.</span> <span class="nav-text">PFCG Role Maintenance</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Role-Administration"><span class="nav-number">2.</span> <span class="nav-text">Role Administration</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SAP－客户主数据维护"><span class="nav-number"></span> <span class="nav-text">SAP－客户主数据维护</span></a></div>
       </div>
       <!--/noindex-->
 
@@ -434,7 +465,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">207</span>
+          <span class="site-state-item-count">208</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -447,7 +478,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">347</span>
+        <span class="site-state-item-count">349</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
