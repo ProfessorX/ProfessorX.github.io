@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -13,39 +13,40 @@
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
-<script id="hexo-configurations">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"www.yxiao.org","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"8.0.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="Shut Up and Get Rich.">
-<meta property="og:type" content="website">
+  <meta property="og:type" content="website">
 <meta property="og:title" content="tags">
-<meta property="og:url" content="https://www.yxiao.org/tags/index.html">
-<meta property="og:site_name" content="Masdar Wireless">
-<meta property="og:description" content="Shut Up and Get Rich.">
-<meta property="og:locale" content="zh_CN">
+<meta property="og:url" content="http://yoursite.com/tags/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-06-11T08:46:03.000Z">
-<meta property="article:modified_time" content="2019-09-16T02:32:45.104Z">
-<meta property="article:author" content="Abraham Xiao">
+<meta property="article:modified_time" content="2020-08-17T16:55:15.429Z">
+<meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://www.yxiao.org/tags/">
+
+<link rel="canonical" href="http://yoursite.com/tags/">
 
 
-<script id="page-configurations">
+<script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
     isHome : false,
     isPost : false,
-    lang   : 'zh-CN'
+    lang   : 'en'
   };
 </script>
 
-  <title>tags | Masdar Wireless
+  <title>tags | Hexo
 </title>
   
 
@@ -56,51 +57,62 @@
 
   <noscript>
   <style>
-  .use-motion .brand,
+  body { margin-top: 2rem; }
+
   .use-motion .menu-item,
-  .sidebar-inner,
+  .use-motion .sidebar,
   .use-motion .post-block,
   .use-motion .pagination,
   .use-motion .comments,
   .use-motion .post-header,
   .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
 
   .use-motion .site-title,
-  .use-motion .site-subtitle {
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
     opacity: initial;
     top: initial;
   }
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
   </style>
 </noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
+  <main class="main">
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
   <div class="site-meta">
 
     <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Masdar Wireless</h1>
-      <span class="logo-line-after"><i></i></span>
+      <i class="logo-line"></i>
+      <h1 class="site-title">Hexo</h1>
+      <i class="logo-line"></i>
     </a>
-      <p class="site-subtitle" itemprop="description">MORE MEAT MORE EXERCISE!</p>
   </div>
 
   <div class="site-nav-right">
@@ -112,32 +124,31 @@
 
 
 
-
 <nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
+  <ul class="main-menu menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
 
   </li>
         <li class="menu-item menu-item-about">
 
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
 
   </li>
         <li class="menu-item menu-item-study">
@@ -151,7 +162,7 @@
 
   </li>
       <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
       </li>
   </ul>
@@ -166,17 +177,17 @@
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
-           placeholder="搜索..." spellcheck="false"
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
            type="search" class="search-input">
   </div>
   <span class="popup-btn-close">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
   </div>
 </div>
 
@@ -184,6 +195,78 @@
   </div>
 
 </div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="John Doe"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">226</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">370</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/ProfessorX" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ProfessorX" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:admin@yxiao.org" title="E-Mail → mailto:admin@yxiao.org" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </section>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
     </header>
 
     
@@ -192,27 +275,28 @@
     <span>0%</span>
   </div>
 
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
 
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
+
+    <div class="main-inner page posts-expand">
+      
   
   
 
-          <div class="content page posts-expand">
-            
+      
 
     
     
     
-    <div class="post-block" lang="zh-CN">
+    <div class="post-block" lang="en">
       <header class="post-header">
 
 <h1 class="post-title" itemprop="name headline">tags
 </h1>
 
-<div class="post-meta">
+<div class="post-meta-container">
   
 
 </div>
@@ -224,13 +308,14 @@
       
       <div class="post-body">
           <div class="tag-cloud">
-            <div class="tag-cloud-title">
-              目前共计 369 个标签
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/996/" style="font-size: 12px; color: #ccc">996</a> <a href="/tags/AI/" style="font-size: 12px; color: #ccc">AI</a> <a href="/tags/APP/" style="font-size: 12px; color: #ccc">APP</a> <a href="/tags/AVIC/" style="font-size: 12px; color: #ccc">AVIC</a> <a href="/tags/Academia/" style="font-size: 12px; color: #ccc">Academia</a> <a href="/tags/Accurate/" style="font-size: 12px; color: #ccc">Accurate</a> <a href="/tags/Administration/" style="font-size: 13.2px; color: #c0c0c0">Administration</a> <a href="/tags/Admission/" style="font-size: 12px; color: #ccc">Admission</a> <a href="/tags/Ads/" style="font-size: 12px; color: #ccc">Ads</a> <a href="/tags/Advisor/" style="font-size: 12px; color: #ccc">Advisor</a> <a href="/tags/Africa/" style="font-size: 12px; color: #ccc">Africa</a> <a href="/tags/African/" style="font-size: 13.2px; color: #c0c0c0">African</a> <a href="/tags/Age/" style="font-size: 13.2px; color: #c0c0c0">Age</a> <a href="/tags/AirForce/" style="font-size: 13.2px; color: #c0c0c0">AirForce</a> <a href="/tags/Airplane/" style="font-size: 12px; color: #ccc">Airplane</a> <a href="/tags/Algorithm/" style="font-size: 12px; color: #ccc">Algorithm</a> <a href="/tags/Algorithms/" style="font-size: 12px; color: #ccc">Algorithms</a> <a href="/tags/Alibaba/" style="font-size: 12px; color: #ccc">Alibaba</a> <a href="/tags/Alumni/" style="font-size: 13.2px; color: #c0c0c0">Alumni</a> <a href="/tags/America/" style="font-size: 12px; color: #ccc">America</a> <a href="/tags/Android/" style="font-size: 14.4px; color: #b3b3b3">Android</a> <a href="/tags/Annual/" style="font-size: 14.4px; color: #b3b3b3">Annual</a> <a href="/tags/Answers/" style="font-size: 15.6px; color: #a7a7a7">Answers</a> <a href="/tags/Apache/" style="font-size: 13.2px; color: #c0c0c0">Apache</a> <a href="/tags/Apple/" style="font-size: 12px; color: #ccc">Apple</a> <a href="/tags/Application/" style="font-size: 13.2px; color: #c0c0c0">Application</a> <a href="/tags/Asia/" style="font-size: 13.2px; color: #c0c0c0">Asia</a> <a href="/tags/AutoChess/" style="font-size: 12px; color: #ccc">AutoChess</a> <a href="/tags/Baby/" style="font-size: 12px; color: #ccc">Baby</a> <a href="/tags/Baidu/" style="font-size: 12px; color: #ccc">Baidu</a> <a href="/tags/Bank/" style="font-size: 12px; color: #ccc">Bank</a> <a href="/tags/Belarus/" style="font-size: 12px; color: #ccc">Belarus</a> <a href="/tags/Bible/" style="font-size: 12px; color: #ccc">Bible</a> <a href="/tags/BigData/" style="font-size: 12px; color: #ccc">BigData</a> <a href="/tags/Birthday/" style="font-size: 12px; color: #ccc">Birthday</a> <a href="/tags/Blockchain/" style="font-size: 12px; color: #ccc">Blockchain</a> <a href="/tags/Bomb/" style="font-size: 12px; color: #ccc">Bomb</a> <a href="/tags/Britain/" style="font-size: 12px; color: #ccc">Britain</a> <a href="/tags/Broadband/" style="font-size: 12px; color: #ccc">Broadband</a> <a href="/tags/Bubble/" style="font-size: 12px; color: #ccc">Bubble</a> <a href="/tags/Business/" style="font-size: 14.4px; color: #b3b3b3">Business</a> <a href="/tags/CAT/" style="font-size: 12px; color: #ccc">CAT</a> <a href="/tags/CEO/" style="font-size: 13.2px; color: #c0c0c0">CEO</a> <a href="/tags/CH-3/" style="font-size: 12px; color: #ccc">CH-3</a> <a href="/tags/CIA/" style="font-size: 12px; color: #ccc">CIA</a> <a href="/tags/COVID/" style="font-size: 13.2px; color: #c0c0c0">COVID</a> <a href="/tags/CPC/" style="font-size: 13.2px; color: #c0c0c0">CPC</a> <a href="/tags/CPS/" style="font-size: 12px; color: #ccc">CPS</a> <a href="/tags/CSMU/" style="font-size: 12px; color: #ccc">CSMU</a> <a href="/tags/Cape-Town/" style="font-size: 12px; color: #ccc">Cape_Town</a> <a href="/tags/Capitalism/" style="font-size: 25.2px; color: #434343">Capitalism</a> <a href="/tags/Car/" style="font-size: 13.2px; color: #c0c0c0">Car</a> <a href="/tags/Career/" style="font-size: 21.6px; color: #686868">Career</a> <a href="/tags/Caterpillar/" style="font-size: 14.4px; color: #b3b3b3">Caterpillar</a> <a href="/tags/Central/" style="font-size: 12px; color: #ccc">Central</a> <a href="/tags/Chengdu/" style="font-size: 12px; color: #ccc">Chengdu</a> <a href="/tags/Children/" style="font-size: 12px; color: #ccc">Children</a> <a href="/tags/China/" style="font-size: 30px; color: #111">China</a> <a href="/tags/Chinese/" style="font-size: 13.2px; color: #c0c0c0">Chinese</a> <a href="/tags/Christ/" style="font-size: 12px; color: #ccc">Christ</a> <a href="/tags/City/" style="font-size: 13.2px; color: #c0c0c0">City</a> <a href="/tags/Civil/" style="font-size: 12px; color: #ccc">Civil</a> <a href="/tags/Class/" style="font-size: 14.4px; color: #b3b3b3">Class</a> <a href="/tags/Climbing/" style="font-size: 12px; color: #ccc">Climbing</a> <a href="/tags/Cloud/" style="font-size: 12px; color: #ccc">Cloud</a> <a href="/tags/Collapse/" style="font-size: 12px; color: #ccc">Collapse</a> <a href="/tags/Commercial/" style="font-size: 12px; color: #ccc">Commercial</a> <a href="/tags/Communication/" style="font-size: 14.4px; color: #b3b3b3">Communication</a> <a href="/tags/Communist/" style="font-size: 12px; color: #ccc">Communist</a> <a href="/tags/Company/" style="font-size: 12px; color: #ccc">Company</a> <a href="/tags/Competition/" style="font-size: 13.2px; color: #c0c0c0">Competition</a> <a href="/tags/Computer/" style="font-size: 20.4px; color: #757575">Computer</a> <a href="/tags/Congress/" style="font-size: 14.4px; color: #b3b3b3">Congress</a> <a href="/tags/Control/" style="font-size: 12px; color: #ccc">Control</a> <a href="/tags/Cost/" style="font-size: 12px; color: #ccc">Cost</a> <a href="/tags/Course/" style="font-size: 13.2px; color: #c0c0c0">Course</a> <a href="/tags/Coursera/" style="font-size: 12px; color: #ccc">Coursera</a> <a href="/tags/Credit/" style="font-size: 12px; color: #ccc">Credit</a> <a href="/tags/Crisis/" style="font-size: 12px; color: #ccc">Crisis</a> <a href="/tags/Cuckold/" style="font-size: 12px; color: #ccc">Cuckold</a> <a href="/tags/Cyber/" style="font-size: 12px; color: #ccc">Cyber</a> <a href="/tags/Cycle/" style="font-size: 12px; color: #ccc">Cycle</a> <a href="/tags/Data/" style="font-size: 14.4px; color: #b3b3b3">Data</a> <a href="/tags/DataLink/" style="font-size: 14.4px; color: #b3b3b3">DataLink</a> <a href="/tags/Democracy/" style="font-size: 13.2px; color: #c0c0c0">Democracy</a> <a href="/tags/Depreciation/" style="font-size: 12px; color: #ccc">Depreciation</a> <a href="/tags/Design/" style="font-size: 13.2px; color: #c0c0c0">Design</a> <a href="/tags/Develop/" style="font-size: 12px; color: #ccc">Develop</a> <a href="/tags/Development/" style="font-size: 18px; color: #8e8e8e">Development</a> <a href="/tags/Diligent/" style="font-size: 12px; color: #ccc">Diligent</a> <a href="/tags/Disease/" style="font-size: 12px; color: #ccc">Disease</a> <a href="/tags/Doctor/" style="font-size: 12px; color: #ccc">Doctor</a> <a href="/tags/Dollar/" style="font-size: 12px; color: #ccc">Dollar</a> <a href="/tags/Dota/" style="font-size: 12px; color: #ccc">Dota</a> <a href="/tags/Dragon/" style="font-size: 12px; color: #ccc">Dragon</a> <a href="/tags/Drones/" style="font-size: 14.4px; color: #b3b3b3">Drones</a> <a href="/tags/Dynamic/" style="font-size: 12px; color: #ccc">Dynamic</a> <a href="/tags/ERP/" style="font-size: 20.4px; color: #757575">ERP</a> <a href="/tags/Economics/" style="font-size: 13.2px; color: #c0c0c0">Economics</a> <a href="/tags/Economy/" style="font-size: 25.2px; color: #434343">Economy</a> <a href="/tags/Education/" style="font-size: 27.6px; color: #2a2a2a">Education</a> <a href="/tags/Efficiency/" style="font-size: 12px; color: #ccc">Efficiency</a> <a href="/tags/Electric/" style="font-size: 12px; color: #ccc">Electric</a> <a href="/tags/Energy/" style="font-size: 12px; color: #ccc">Energy</a> <a href="/tags/Engineer/" style="font-size: 12px; color: #ccc">Engineer</a> <a href="/tags/Engineering/" style="font-size: 16.8px; color: #9a9a9a">Engineering</a> <a href="/tags/English/" style="font-size: 19.2px; color: #818181">English</a> <a href="/tags/Enterprise/" style="font-size: 12px; color: #ccc">Enterprise</a> <a href="/tags/Era/" style="font-size: 12px; color: #ccc">Era</a> <a href="/tags/Estate/" style="font-size: 19.2px; color: #818181">Estate</a> <a href="/tags/Europe/" style="font-size: 13.2px; color: #c0c0c0">Europe</a> <a href="/tags/Evolution/" style="font-size: 15.6px; color: #a7a7a7">Evolution</a> <a href="/tags/Exam/" style="font-size: 12px; color: #ccc">Exam</a> <a href="/tags/Excel/" style="font-size: 13.2px; color: #c0c0c0">Excel</a> <a href="/tags/Export/" style="font-size: 19.2px; color: #818181">Export</a> <a href="/tags/Facebook/" style="font-size: 12px; color: #ccc">Facebook</a> <a href="/tags/Facism/" style="font-size: 13.2px; color: #c0c0c0">Facism</a> <a href="/tags/Factory/" style="font-size: 13.2px; color: #c0c0c0">Factory</a> <a href="/tags/Family/" style="font-size: 13.2px; color: #c0c0c0">Family</a> <a href="/tags/Feedback/" style="font-size: 12px; color: #ccc">Feedback</a> <a href="/tags/Finance/" style="font-size: 15.6px; color: #a7a7a7">Finance</a> <a href="/tags/Financial/" style="font-size: 12px; color: #ccc">Financial</a> <a href="/tags/Food/" style="font-size: 12px; color: #ccc">Food</a> <a href="/tags/Foreigner/" style="font-size: 12px; color: #ccc">Foreigner</a> <a href="/tags/Fortune/" style="font-size: 24px; color: #4f4f4f">Fortune</a> <a href="/tags/France/" style="font-size: 12px; color: #ccc">France</a> <a href="/tags/Fraud/" style="font-size: 13.2px; color: #c0c0c0">Fraud</a> <a href="/tags/Fraudulent/" style="font-size: 12px; color: #ccc">Fraudulent</a> <a href="/tags/Freedom/" style="font-size: 12px; color: #ccc">Freedom</a> <a href="/tags/Friends/" style="font-size: 12px; color: #ccc">Friends</a> <a href="/tags/Future/" style="font-size: 28.8px; color: #1d1d1d">Future</a> <a href="/tags/GDP/" style="font-size: 12px; color: #ccc">GDP</a> <a href="/tags/Game/" style="font-size: 12px; color: #ccc">Game</a> <a href="/tags/Gaokao/" style="font-size: 12px; color: #ccc">Gaokao</a> <a href="/tags/Germany/" style="font-size: 12px; color: #ccc">Germany</a> <a href="/tags/Government/" style="font-size: 15.6px; color: #a7a7a7">Government</a> <a href="/tags/Graduate/" style="font-size: 12px; color: #ccc">Graduate</a> <a href="/tags/Guizhou/" style="font-size: 12px; color: #ccc">Guizhou</a> <a href="/tags/HANA/" style="font-size: 12px; color: #ccc">HANA</a> <a href="/tags/HBKU/" style="font-size: 12px; color: #ccc">HBKU</a> <a href="/tags/Habit/" style="font-size: 12px; color: #ccc">Habit</a> <a href="/tags/Happy/" style="font-size: 12px; color: #ccc">Happy</a> <a href="/tags/HateSpeech/" style="font-size: 12px; color: #ccc">HateSpeech</a> <a href="/tags/Health/" style="font-size: 12px; color: #ccc">Health</a> <a href="/tags/Hidden/" style="font-size: 12px; color: #ccc">Hidden</a> <a href="/tags/History/" style="font-size: 14.4px; color: #b3b3b3">History</a> <a href="/tags/Hongkong/" style="font-size: 16.8px; color: #9a9a9a">Hongkong</a> <a href="/tags/Hospital/" style="font-size: 13.2px; color: #c0c0c0">Hospital</a> <a href="/tags/Hotel/" style="font-size: 16.8px; color: #9a9a9a">Hotel</a> <a href="/tags/House/" style="font-size: 13.2px; color: #c0c0c0">House</a> <a href="/tags/Housing/" style="font-size: 12px; color: #ccc">Housing</a> <a href="/tags/Huawei/" style="font-size: 13.2px; color: #c0c0c0">Huawei</a> <a href="/tags/Human/" style="font-size: 13.2px; color: #c0c0c0">Human</a> <a href="/tags/Humanity/" style="font-size: 14.4px; color: #b3b3b3">Humanity</a> <a href="/tags/Hunan/" style="font-size: 13.2px; color: #c0c0c0">Hunan</a> <a href="/tags/ICT/" style="font-size: 13.2px; color: #c0c0c0">ICT</a> <a href="/tags/IOT/" style="font-size: 13.2px; color: #c0c0c0">IOT</a> <a href="/tags/Ideas/" style="font-size: 26.4px; color: #363636">Ideas</a> <a href="/tags/Immigration/" style="font-size: 13.2px; color: #c0c0c0">Immigration</a> <a href="/tags/India/" style="font-size: 12px; color: #ccc">India</a> <a href="/tags/Industry/" style="font-size: 15.6px; color: #a7a7a7">Industry</a> <a href="/tags/Inflation/" style="font-size: 12px; color: #ccc">Inflation</a> <a href="/tags/Information/" style="font-size: 15.6px; color: #a7a7a7">Information</a> <a href="/tags/Infrastructure/" style="font-size: 12px; color: #ccc">Infrastructure</a> <a href="/tags/Initial/" style="font-size: 12px; color: #ccc">Initial</a> <a href="/tags/Insurance/" style="font-size: 12px; color: #ccc">Insurance</a> <a href="/tags/Interaction/" style="font-size: 12px; color: #ccc">Interaction</a> <a href="/tags/International/" style="font-size: 13.2px; color: #c0c0c0">International</a> <a href="/tags/Internationalization/" style="font-size: 12px; color: #ccc">Internationalization</a> <a href="/tags/Internet/" style="font-size: 12px; color: #ccc">Internet</a> <a href="/tags/Investment/" style="font-size: 14.4px; color: #b3b3b3">Investment</a> <a href="/tags/Investor/" style="font-size: 14.4px; color: #b3b3b3">Investor</a> <a href="/tags/Iraq/" style="font-size: 12px; color: #ccc">Iraq</a> <a href="/tags/Israel/" style="font-size: 15.6px; color: #a7a7a7">Israel</a> <a href="/tags/Japan/" style="font-size: 13.2px; color: #c0c0c0">Japan</a> <a href="/tags/Java/" style="font-size: 24px; color: #4f4f4f">Java</a> <a href="/tags/Jesus/" style="font-size: 12px; color: #ccc">Jesus</a> <a href="/tags/Job/" style="font-size: 16.8px; color: #9a9a9a">Job</a> <a href="/tags/KAUST/" style="font-size: 13.2px; color: #c0c0c0">KAUST</a> <a href="/tags/Kill/" style="font-size: 12px; color: #ccc">Kill</a> <a href="/tags/Kingdee/" style="font-size: 12px; color: #ccc">Kingdee</a> <a href="/tags/Komatsu/" style="font-size: 12px; color: #ccc">Komatsu</a> <a href="/tags/Korea/" style="font-size: 12px; color: #ccc">Korea</a> <a href="/tags/Labour/" style="font-size: 14.4px; color: #b3b3b3">Labour</a> <a href="/tags/Language/" style="font-size: 12px; color: #ccc">Language</a> <a href="/tags/Languages/" style="font-size: 12px; color: #ccc">Languages</a> <a href="/tags/LaoGanma/" style="font-size: 12px; color: #ccc">LaoGanma</a> <a href="/tags/Learning/" style="font-size: 12px; color: #ccc">Learning</a> <a href="/tags/Lecture/" style="font-size: 12px; color: #ccc">Lecture</a> <a href="/tags/Leijun/" style="font-size: 12px; color: #ccc">Leijun</a> <a href="/tags/Liberation/" style="font-size: 12px; color: #ccc">Liberation</a> <a href="/tags/Life/" style="font-size: 24px; color: #4f4f4f">Life</a> <a href="/tags/Loan/" style="font-size: 13.2px; color: #c0c0c0">Loan</a> <a href="/tags/Love/" style="font-size: 14.4px; color: #b3b3b3">Love</a> <a href="/tags/LvYue/" style="font-size: 18px; color: #8e8e8e">LvYue</a> <a href="/tags/Maintenance/" style="font-size: 12px; color: #ccc">Maintenance</a> <a href="/tags/Major/" style="font-size: 12px; color: #ccc">Major</a> <a href="/tags/Make/" style="font-size: 12px; color: #ccc">Make</a> <a href="/tags/Man/" style="font-size: 12px; color: #ccc">Man</a> <a href="/tags/Management/" style="font-size: 22.8px; color: #5c5c5c">Management</a>
-            </div>
-          </div>
+  <div class="tag-cloud-title">
+    370 tags in total
+  </div>
+  <div class="tag-cloud-tags">
+    <a href="/tags/996/" style="font-size: 12px;" class="tag-cloud-0">996</a> <a href="/tags/AI/" style="font-size: 12px;" class="tag-cloud-0">AI</a> <a href="/tags/APP/" style="font-size: 12px;" class="tag-cloud-0">APP</a> <a href="/tags/AVIC/" style="font-size: 12px;" class="tag-cloud-0">AVIC</a> <a href="/tags/Academia/" style="font-size: 12px;" class="tag-cloud-0">Academia</a> <a href="/tags/Accurate/" style="font-size: 12px;" class="tag-cloud-0">Accurate</a> <a href="/tags/Administration/" style="font-size: 13.2px;" class="tag-cloud-1">Administration</a> <a href="/tags/Admission/" style="font-size: 12px;" class="tag-cloud-0">Admission</a> <a href="/tags/Ads/" style="font-size: 12px;" class="tag-cloud-0">Ads</a> <a href="/tags/Advisor/" style="font-size: 12px;" class="tag-cloud-0">Advisor</a> <a href="/tags/Africa/" style="font-size: 12px;" class="tag-cloud-0">Africa</a> <a href="/tags/African/" style="font-size: 13.2px;" class="tag-cloud-1">African</a> <a href="/tags/Age/" style="font-size: 13.2px;" class="tag-cloud-1">Age</a> <a href="/tags/AirForce/" style="font-size: 13.2px;" class="tag-cloud-1">AirForce</a> <a href="/tags/Airplane/" style="font-size: 12px;" class="tag-cloud-0">Airplane</a> <a href="/tags/Algorithm/" style="font-size: 12px;" class="tag-cloud-0">Algorithm</a> <a href="/tags/Algorithms/" style="font-size: 12px;" class="tag-cloud-0">Algorithms</a> <a href="/tags/Alibaba/" style="font-size: 12px;" class="tag-cloud-0">Alibaba</a> <a href="/tags/Alumni/" style="font-size: 13.2px;" class="tag-cloud-1">Alumni</a> <a href="/tags/America/" style="font-size: 12px;" class="tag-cloud-0">America</a> <a href="/tags/Android/" style="font-size: 14.4px;" class="tag-cloud-1">Android</a> <a href="/tags/Annual/" style="font-size: 14.4px;" class="tag-cloud-1">Annual</a> <a href="/tags/Answers/" style="font-size: 15.6px;" class="tag-cloud-2">Answers</a> <a href="/tags/Apache/" style="font-size: 13.2px;" class="tag-cloud-1">Apache</a> <a href="/tags/Apple/" style="font-size: 12px;" class="tag-cloud-0">Apple</a> <a href="/tags/Application/" style="font-size: 13.2px;" class="tag-cloud-1">Application</a> <a href="/tags/Asia/" style="font-size: 13.2px;" class="tag-cloud-1">Asia</a> <a href="/tags/AutoChess/" style="font-size: 12px;" class="tag-cloud-0">AutoChess</a> <a href="/tags/Baby/" style="font-size: 12px;" class="tag-cloud-0">Baby</a> <a href="/tags/Baidu/" style="font-size: 12px;" class="tag-cloud-0">Baidu</a> <a href="/tags/Bank/" style="font-size: 12px;" class="tag-cloud-0">Bank</a> <a href="/tags/Belarus/" style="font-size: 13.2px;" class="tag-cloud-1">Belarus</a> <a href="/tags/Bible/" style="font-size: 12px;" class="tag-cloud-0">Bible</a> <a href="/tags/BigData/" style="font-size: 12px;" class="tag-cloud-0">BigData</a> <a href="/tags/Birthday/" style="font-size: 12px;" class="tag-cloud-0">Birthday</a> <a href="/tags/Blockchain/" style="font-size: 12px;" class="tag-cloud-0">Blockchain</a> <a href="/tags/Bomb/" style="font-size: 12px;" class="tag-cloud-0">Bomb</a> <a href="/tags/Britain/" style="font-size: 12px;" class="tag-cloud-0">Britain</a> <a href="/tags/Broadband/" style="font-size: 12px;" class="tag-cloud-0">Broadband</a> <a href="/tags/Bubble/" style="font-size: 12px;" class="tag-cloud-0">Bubble</a> <a href="/tags/Business/" style="font-size: 14.4px;" class="tag-cloud-1">Business</a> <a href="/tags/CAT/" style="font-size: 12px;" class="tag-cloud-0">CAT</a> <a href="/tags/CEO/" style="font-size: 13.2px;" class="tag-cloud-1">CEO</a> <a href="/tags/CH-3/" style="font-size: 12px;" class="tag-cloud-0">CH-3</a> <a href="/tags/CIA/" style="font-size: 12px;" class="tag-cloud-0">CIA</a> <a href="/tags/COVID/" style="font-size: 13.2px;" class="tag-cloud-1">COVID</a> <a href="/tags/CPC/" style="font-size: 13.2px;" class="tag-cloud-1">CPC</a> <a href="/tags/CPS/" style="font-size: 12px;" class="tag-cloud-0">CPS</a> <a href="/tags/CSMU/" style="font-size: 12px;" class="tag-cloud-0">CSMU</a> <a href="/tags/Cape-Town/" style="font-size: 12px;" class="tag-cloud-0">Cape_Town</a> <a href="/tags/Capitalism/" style="font-size: 25.2px;" class="tag-cloud-7">Capitalism</a> <a href="/tags/Car/" style="font-size: 13.2px;" class="tag-cloud-1">Car</a> <a href="/tags/Career/" style="font-size: 21.6px;" class="tag-cloud-5">Career</a> <a href="/tags/Caterpillar/" style="font-size: 14.4px;" class="tag-cloud-1">Caterpillar</a> <a href="/tags/Central/" style="font-size: 12px;" class="tag-cloud-0">Central</a> <a href="/tags/Chengdu/" style="font-size: 12px;" class="tag-cloud-0">Chengdu</a> <a href="/tags/Children/" style="font-size: 12px;" class="tag-cloud-0">Children</a> <a href="/tags/China/" style="font-size: 30px;" class="tag-cloud-10">China</a> <a href="/tags/Chinese/" style="font-size: 13.2px;" class="tag-cloud-1">Chinese</a> <a href="/tags/Christ/" style="font-size: 12px;" class="tag-cloud-0">Christ</a> <a href="/tags/City/" style="font-size: 13.2px;" class="tag-cloud-1">City</a> <a href="/tags/Civil/" style="font-size: 12px;" class="tag-cloud-0">Civil</a> <a href="/tags/Class/" style="font-size: 14.4px;" class="tag-cloud-1">Class</a> <a href="/tags/Climbing/" style="font-size: 12px;" class="tag-cloud-0">Climbing</a> <a href="/tags/Cloud/" style="font-size: 12px;" class="tag-cloud-0">Cloud</a> <a href="/tags/Collapse/" style="font-size: 12px;" class="tag-cloud-0">Collapse</a> <a href="/tags/Commercial/" style="font-size: 12px;" class="tag-cloud-0">Commercial</a> <a href="/tags/Communication/" style="font-size: 14.4px;" class="tag-cloud-1">Communication</a> <a href="/tags/Communist/" style="font-size: 12px;" class="tag-cloud-0">Communist</a> <a href="/tags/Company/" style="font-size: 12px;" class="tag-cloud-0">Company</a> <a href="/tags/Competition/" style="font-size: 13.2px;" class="tag-cloud-1">Competition</a> <a href="/tags/Computer/" style="font-size: 20.4px;" class="tag-cloud-5">Computer</a> <a href="/tags/Congress/" style="font-size: 14.4px;" class="tag-cloud-1">Congress</a> <a href="/tags/Control/" style="font-size: 12px;" class="tag-cloud-0">Control</a> <a href="/tags/Cost/" style="font-size: 12px;" class="tag-cloud-0">Cost</a> <a href="/tags/Course/" style="font-size: 13.2px;" class="tag-cloud-1">Course</a> <a href="/tags/Coursera/" style="font-size: 12px;" class="tag-cloud-0">Coursera</a> <a href="/tags/Credit/" style="font-size: 12px;" class="tag-cloud-0">Credit</a> <a href="/tags/Crisis/" style="font-size: 12px;" class="tag-cloud-0">Crisis</a> <a href="/tags/Cuckold/" style="font-size: 12px;" class="tag-cloud-0">Cuckold</a> <a href="/tags/Cyber/" style="font-size: 12px;" class="tag-cloud-0">Cyber</a> <a href="/tags/Cycle/" style="font-size: 12px;" class="tag-cloud-0">Cycle</a> <a href="/tags/Data/" style="font-size: 14.4px;" class="tag-cloud-1">Data</a> <a href="/tags/DataLink/" style="font-size: 14.4px;" class="tag-cloud-1">DataLink</a> <a href="/tags/Democracy/" style="font-size: 13.2px;" class="tag-cloud-1">Democracy</a> <a href="/tags/Depreciation/" style="font-size: 12px;" class="tag-cloud-0">Depreciation</a> <a href="/tags/Design/" style="font-size: 13.2px;" class="tag-cloud-1">Design</a> <a href="/tags/Develop/" style="font-size: 12px;" class="tag-cloud-0">Develop</a> <a href="/tags/Development/" style="font-size: 18px;" class="tag-cloud-3">Development</a> <a href="/tags/Diligent/" style="font-size: 12px;" class="tag-cloud-0">Diligent</a> <a href="/tags/Disease/" style="font-size: 12px;" class="tag-cloud-0">Disease</a> <a href="/tags/Doctor/" style="font-size: 12px;" class="tag-cloud-0">Doctor</a> <a href="/tags/Dollar/" style="font-size: 12px;" class="tag-cloud-0">Dollar</a> <a href="/tags/Dota/" style="font-size: 12px;" class="tag-cloud-0">Dota</a> <a href="/tags/Dragon/" style="font-size: 12px;" class="tag-cloud-0">Dragon</a> <a href="/tags/Drones/" style="font-size: 14.4px;" class="tag-cloud-1">Drones</a> <a href="/tags/Dynamic/" style="font-size: 12px;" class="tag-cloud-0">Dynamic</a> <a href="/tags/ERP/" style="font-size: 20.4px;" class="tag-cloud-5">ERP</a> <a href="/tags/Economics/" style="font-size: 13.2px;" class="tag-cloud-1">Economics</a> <a href="/tags/Economy/" style="font-size: 25.2px;" class="tag-cloud-7">Economy</a> <a href="/tags/Education/" style="font-size: 27.6px;" class="tag-cloud-9">Education</a> <a href="/tags/Efficiency/" style="font-size: 12px;" class="tag-cloud-0">Efficiency</a> <a href="/tags/Electric/" style="font-size: 12px;" class="tag-cloud-0">Electric</a> <a href="/tags/Energy/" style="font-size: 12px;" class="tag-cloud-0">Energy</a> <a href="/tags/Engineer/" style="font-size: 12px;" class="tag-cloud-0">Engineer</a> <a href="/tags/Engineering/" style="font-size: 16.8px;" class="tag-cloud-3">Engineering</a> <a href="/tags/English/" style="font-size: 19.2px;" class="tag-cloud-4">English</a> <a href="/tags/Enterprise/" style="font-size: 12px;" class="tag-cloud-0">Enterprise</a> <a href="/tags/Era/" style="font-size: 13.2px;" class="tag-cloud-1">Era</a> <a href="/tags/Estate/" style="font-size: 19.2px;" class="tag-cloud-4">Estate</a> <a href="/tags/Europe/" style="font-size: 14.4px;" class="tag-cloud-1">Europe</a> <a href="/tags/Evolution/" style="font-size: 15.6px;" class="tag-cloud-2">Evolution</a> <a href="/tags/Exam/" style="font-size: 12px;" class="tag-cloud-0">Exam</a> <a href="/tags/Excel/" style="font-size: 13.2px;" class="tag-cloud-1">Excel</a> <a href="/tags/Export/" style="font-size: 19.2px;" class="tag-cloud-4">Export</a> <a href="/tags/Facebook/" style="font-size: 12px;" class="tag-cloud-0">Facebook</a> <a href="/tags/Facism/" style="font-size: 13.2px;" class="tag-cloud-1">Facism</a> <a href="/tags/Factory/" style="font-size: 13.2px;" class="tag-cloud-1">Factory</a> <a href="/tags/Family/" style="font-size: 13.2px;" class="tag-cloud-1">Family</a> <a href="/tags/Feedback/" style="font-size: 12px;" class="tag-cloud-0">Feedback</a> <a href="/tags/Finance/" style="font-size: 15.6px;" class="tag-cloud-2">Finance</a> <a href="/tags/Financial/" style="font-size: 12px;" class="tag-cloud-0">Financial</a> <a href="/tags/Food/" style="font-size: 12px;" class="tag-cloud-0">Food</a> <a href="/tags/Foreigner/" style="font-size: 12px;" class="tag-cloud-0">Foreigner</a> <a href="/tags/Fortune/" style="font-size: 24px;" class="tag-cloud-7">Fortune</a> <a href="/tags/France/" style="font-size: 12px;" class="tag-cloud-0">France</a> <a href="/tags/Fraud/" style="font-size: 13.2px;" class="tag-cloud-1">Fraud</a> <a href="/tags/Fraudulent/" style="font-size: 12px;" class="tag-cloud-0">Fraudulent</a> <a href="/tags/Freedom/" style="font-size: 12px;" class="tag-cloud-0">Freedom</a> <a href="/tags/Friends/" style="font-size: 12px;" class="tag-cloud-0">Friends</a> <a href="/tags/Future/" style="font-size: 28.8px;" class="tag-cloud-9">Future</a> <a href="/tags/GDP/" style="font-size: 12px;" class="tag-cloud-0">GDP</a> <a href="/tags/Game/" style="font-size: 12px;" class="tag-cloud-0">Game</a> <a href="/tags/Gaokao/" style="font-size: 12px;" class="tag-cloud-0">Gaokao</a> <a href="/tags/Germany/" style="font-size: 12px;" class="tag-cloud-0">Germany</a> <a href="/tags/Government/" style="font-size: 15.6px;" class="tag-cloud-2">Government</a> <a href="/tags/Graduate/" style="font-size: 12px;" class="tag-cloud-0">Graduate</a> <a href="/tags/Guizhou/" style="font-size: 12px;" class="tag-cloud-0">Guizhou</a> <a href="/tags/HANA/" style="font-size: 12px;" class="tag-cloud-0">HANA</a> <a href="/tags/HBKU/" style="font-size: 12px;" class="tag-cloud-0">HBKU</a> <a href="/tags/Habit/" style="font-size: 12px;" class="tag-cloud-0">Habit</a> <a href="/tags/Happy/" style="font-size: 12px;" class="tag-cloud-0">Happy</a> <a href="/tags/HateSpeech/" style="font-size: 12px;" class="tag-cloud-0">HateSpeech</a> <a href="/tags/Health/" style="font-size: 12px;" class="tag-cloud-0">Health</a> <a href="/tags/Hidden/" style="font-size: 12px;" class="tag-cloud-0">Hidden</a> <a href="/tags/History/" style="font-size: 14.4px;" class="tag-cloud-1">History</a> <a href="/tags/Hongkong/" style="font-size: 16.8px;" class="tag-cloud-3">Hongkong</a> <a href="/tags/Hospital/" style="font-size: 13.2px;" class="tag-cloud-1">Hospital</a> <a href="/tags/Hotel/" style="font-size: 16.8px;" class="tag-cloud-3">Hotel</a> <a href="/tags/House/" style="font-size: 13.2px;" class="tag-cloud-1">House</a> <a href="/tags/Housing/" style="font-size: 12px;" class="tag-cloud-0">Housing</a> <a href="/tags/Huawei/" style="font-size: 13.2px;" class="tag-cloud-1">Huawei</a> <a href="/tags/Human/" style="font-size: 13.2px;" class="tag-cloud-1">Human</a> <a href="/tags/Humanity/" style="font-size: 14.4px;" class="tag-cloud-1">Humanity</a> <a href="/tags/Hunan/" style="font-size: 13.2px;" class="tag-cloud-1">Hunan</a> <a href="/tags/ICT/" style="font-size: 13.2px;" class="tag-cloud-1">ICT</a> <a href="/tags/IOT/" style="font-size: 13.2px;" class="tag-cloud-1">IOT</a> <a href="/tags/Ideas/" style="font-size: 26.4px;" class="tag-cloud-8">Ideas</a> <a href="/tags/Immigration/" style="font-size: 13.2px;" class="tag-cloud-1">Immigration</a> <a href="/tags/India/" style="font-size: 12px;" class="tag-cloud-0">India</a> <a href="/tags/Industry/" style="font-size: 15.6px;" class="tag-cloud-2">Industry</a> <a href="/tags/Inflation/" style="font-size: 12px;" class="tag-cloud-0">Inflation</a> <a href="/tags/Information/" style="font-size: 15.6px;" class="tag-cloud-2">Information</a> <a href="/tags/Infrastructure/" style="font-size: 12px;" class="tag-cloud-0">Infrastructure</a> <a href="/tags/Initial/" style="font-size: 12px;" class="tag-cloud-0">Initial</a> <a href="/tags/Insurance/" style="font-size: 12px;" class="tag-cloud-0">Insurance</a> <a href="/tags/Interaction/" style="font-size: 12px;" class="tag-cloud-0">Interaction</a> <a href="/tags/International/" style="font-size: 13.2px;" class="tag-cloud-1">International</a> <a href="/tags/Internationalization/" style="font-size: 12px;" class="tag-cloud-0">Internationalization</a> <a href="/tags/Internet/" style="font-size: 12px;" class="tag-cloud-0">Internet</a> <a href="/tags/Investment/" style="font-size: 14.4px;" class="tag-cloud-1">Investment</a> <a href="/tags/Investor/" style="font-size: 14.4px;" class="tag-cloud-1">Investor</a> <a href="/tags/Iraq/" style="font-size: 12px;" class="tag-cloud-0">Iraq</a> <a href="/tags/Israel/" style="font-size: 15.6px;" class="tag-cloud-2">Israel</a> <a href="/tags/Japan/" style="font-size: 13.2px;" class="tag-cloud-1">Japan</a> <a href="/tags/Java/" style="font-size: 24px;" class="tag-cloud-7">Java</a> <a href="/tags/Jesus/" style="font-size: 12px;" class="tag-cloud-0">Jesus</a> <a href="/tags/Job/" style="font-size: 16.8px;" class="tag-cloud-3">Job</a> <a href="/tags/KAUST/" style="font-size: 13.2px;" class="tag-cloud-1">KAUST</a> <a href="/tags/Kill/" style="font-size: 12px;" class="tag-cloud-0">Kill</a> <a href="/tags/Kingdee/" style="font-size: 12px;" class="tag-cloud-0">Kingdee</a> <a href="/tags/Komatsu/" style="font-size: 12px;" class="tag-cloud-0">Komatsu</a> <a href="/tags/Korea/" style="font-size: 12px;" class="tag-cloud-0">Korea</a> <a href="/tags/Labour/" style="font-size: 14.4px;" class="tag-cloud-1">Labour</a> <a href="/tags/Language/" style="font-size: 12px;" class="tag-cloud-0">Language</a> <a href="/tags/Languages/" style="font-size: 12px;" class="tag-cloud-0">Languages</a> <a href="/tags/LaoGanma/" style="font-size: 12px;" class="tag-cloud-0">LaoGanma</a> <a href="/tags/Learning/" style="font-size: 12px;" class="tag-cloud-0">Learning</a> <a href="/tags/Lecture/" style="font-size: 12px;" class="tag-cloud-0">Lecture</a> <a href="/tags/Leijun/" style="font-size: 12px;" class="tag-cloud-0">Leijun</a> <a href="/tags/Liberation/" style="font-size: 12px;" class="tag-cloud-0">Liberation</a> <a href="/tags/Life/" style="font-size: 24px;" class="tag-cloud-7">Life</a> <a href="/tags/Loan/" style="font-size: 13.2px;" class="tag-cloud-1">Loan</a> <a href="/tags/Love/" style="font-size: 14.4px;" class="tag-cloud-1">Love</a> <a href="/tags/LvYue/" style="font-size: 18px;" class="tag-cloud-3">LvYue</a> <a href="/tags/Maintenance/" style="font-size: 12px;" class="tag-cloud-0">Maintenance</a> <a href="/tags/Major/" style="font-size: 12px;" class="tag-cloud-0">Major</a> <a href="/tags/Make/" style="font-size: 12px;" class="tag-cloud-0">Make</a> <a href="/tags/Man/" style="font-size: 12px;" class="tag-cloud-0">Man</a> <a href="/tags/Management/" style="font-size: 22.8px;" class="tag-cloud-6">Management</a>
+  </div>
+</div>
+
         
       </div>
       
@@ -244,8 +329,7 @@
     
 
 
-          </div>
-          
+      
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -254,7 +338,7 @@
       activeClass = localStorage.getItem('comments_active') || activeClass;
     }
     if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
       if (activeTab) {
         activeTab.click();
       }
@@ -263,94 +347,20 @@
   if (CONFIG.comments.storage) {
     window.addEventListener('tabs:click', event => {
       if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
+      const commentClass = event.target.classList[1];
       localStorage.setItem('comments_active', commentClass);
     });
   }
 </script>
 
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Abraham Xiao"
-      src="/images/avatar.jpg">
-  <p class="site-author-name" itemprop="name">Abraham Xiao</p>
-  <div class="site-description" itemprop="description">Shut Up and Get Rich.</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">224</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">12</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">369</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/ProfessorX" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ProfessorX" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:admin@yxiao.org" title="E-Mail → mailto:admin@yxiao.org" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
-      </span>
-  </div>
-
-
-
-      </div>
-
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
+  </main>
 
+  <footer class="footer">
+    <div class="footer-inner">
+      
 
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
+      
 
 <div class="copyright">
   
@@ -359,79 +369,37 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Abraham Xiao</span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
 
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
 
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
+  
 
 
-<script src="/js/schemes/muse.js"></script>
 
 
-<script src="/js/next-boot.js"></script>
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
 
 
 
 
   
-  <script>
-    (function(){
-      var canonicalURL, curProtocol;
-      //Get the <link> tag
-      var x=document.getElementsByTagName("link");
-		//Find the last canonical URL
-		if(x.length > 0){
-			for (i=0;i<x.length;i++){
-				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
-					canonicalURL=x[i].href;
-				}
-			}
-		}
-    //Get protocol
-	    if (!canonicalURL){
-	    	curProtocol = window.location.protocol.split(':')[0];
-	    }
-	    else{
-	    	curProtocol = canonicalURL.split(':')[0];
-	    }
-      //Get current URL if the canonical URL does not exist
-	    if (!canonicalURL) canonicalURL = window.location.href;
-	    //Assign script content. Replace current URL with the canonical URL
-      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
-  </script>
-
-
-
-
-  
-<script src="/js/local-search.js"></script>
-
-
-
-
-
 
 
 

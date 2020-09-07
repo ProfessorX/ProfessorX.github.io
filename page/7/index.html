@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -13,37 +13,38 @@
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
-<script id="hexo-configurations">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"www.yxiao.org","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"8.0.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="Shut Up and Get Rich.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Masdar Wireless">
-<meta property="og:url" content="https://www.yxiao.org/page/7/index.html">
-<meta property="og:site_name" content="Masdar Wireless">
-<meta property="og:description" content="Shut Up and Get Rich.">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="Abraham Xiao">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/page/7/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://www.yxiao.org/page/7/">
+
+<link rel="canonical" href="http://yoursite.com/page/7/">
 
 
-<script id="page-configurations">
+<script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
     isHome : true,
     isPost : false,
-    lang   : 'zh-CN'
+    lang   : 'en'
   };
 </script>
 
-  <title>Masdar Wireless</title>
+  <title>Hexo</title>
   
 
 
@@ -53,51 +54,62 @@
 
   <noscript>
   <style>
-  .use-motion .brand,
+  body { margin-top: 2rem; }
+
   .use-motion .menu-item,
-  .sidebar-inner,
+  .use-motion .sidebar,
   .use-motion .post-block,
   .use-motion .pagination,
   .use-motion .comments,
   .use-motion .post-header,
   .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
 
   .use-motion .site-title,
-  .use-motion .site-subtitle {
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
     opacity: initial;
     top: initial;
   }
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
   </style>
 </noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
+  <main class="main">
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
   <div class="site-meta">
 
     <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Masdar Wireless</h1>
-      <span class="logo-line-after"><i></i></span>
+      <i class="logo-line"></i>
+      <h1 class="site-title">Hexo</h1>
+      <i class="logo-line"></i>
     </a>
-      <p class="site-subtitle" itemprop="description">MORE MEAT MORE EXERCISE!</p>
   </div>
 
   <div class="site-nav-right">
@@ -109,32 +121,31 @@
 
 
 
-
 <nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
+  <ul class="main-menu menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
 
   </li>
         <li class="menu-item menu-item-about">
 
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
 
   </li>
         <li class="menu-item menu-item-study">
@@ -148,7 +159,7 @@
 
   </li>
       <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
       </li>
   </ul>
@@ -163,17 +174,17 @@
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
-           placeholder="搜索..." spellcheck="false"
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
            type="search" class="search-input">
   </div>
   <span class="popup-btn-close">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
   </div>
 </div>
 
@@ -181,939 +192,62 @@
   </div>
 
 </div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content index posts-expand">
-            
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.yxiao.org/2019/12/09/2019-12-09-politburo-dec-meeting/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Abraham Xiao">
-      <meta itemprop="description" content="Shut Up and Get Rich.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Masdar Wireless">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/12/09/2019-12-09-politburo-dec-meeting/" class="post-title-link" itemprop="url">习近平主持召开中共中央政治局会议</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2019-12-09 19:00:00" itemprop="dateCreated datePublished" datetime="2019-12-09T19:00:00+08:00">2019-12-09</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-10 21:37:46" itemprop="dateModified" datetime="2019-12-10T21:37:46+08:00">2019-12-10</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>新华社</p>
-<p>中共中央政治局召开会议</p>
-<p>分析研究2020年经济工作</p>
-<p>研究部署党风廉政建设和反腐败工作</p>
-<p>中共中央总书记习近平主持会议</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/12/09/2019-12-09-politburo-dec-meeting/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.yxiao.org/2019/12/04/2019-12-04-251-public-administration-and-people-democracy/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Abraham Xiao">
-      <meta itemprop="description" content="Shut Up and Get Rich.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Masdar Wireless">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/12/04/2019-12-04-251-public-administration-and-people-democracy/" class="post-title-link" itemprop="url">姬喵：251，社会治理与人民民主</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2019-12-04 19:00:00 / 修改时间：11:40:38" itemprop="dateCreated datePublished" datetime="2019-12-04T19:00:00+08:00">2019-12-04</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>全文转载自微信公众号 新潮沉思录。</p>
-<p>本文观点不代表本人观点，与本人所在单位无关。</p>
-<p>文 | 姬轩亦</p>
-<p>岁末。在去年的悼词里，2018年底的旋涡震撼着世界，中美如巨兽一样，在历史的荒野上对垒。大食蚁兽曹操和另一只大食蚁兽刘备，则在我们的悼词中向世界告别——他们在世的时候，是帝国最后的君王，那个时候他们备受诅咒，身心煎熬，而对于在乱世中挣扎的蝼蚁来说，笑眯眯的司马懿毕竟要更好一些，虽然，蝼蚁并不知道，最后的君主一旦离世，新世界的八魔王就要苏醒。一年之后，悼词变成了庆典。我隆重地相信，爱好和平的中美人民希望谈成，但是显然，爱女子与和平并不是什么性格优点，哀嚎与核平才是，事实上，哀嚎的蜉蝣已经长大，西斜的太阳让他们朝生暮死，对于蜉蝣来说，他们最辉煌的时候就是现在了，不能在现在解决问题，那么很快，夜晚即将来临。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/12/04/2019-12-04-251-public-administration-and-people-democracy/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.yxiao.org/2019/11/30/2019-11-30-chinese-education-and-weekly-reflections/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Abraham Xiao">
-      <meta itemprop="description" content="Shut Up and Get Rich.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Masdar Wireless">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/11/30/2019-11-30-chinese-education-and-weekly-reflections/" class="post-title-link" itemprop="url">如何评价《BBC纪录片中没敢讲的故事：西方宽松的教育在偷偷地完成社会分层》？</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2019-11-30 19:00:00" itemprop="dateCreated datePublished" datetime="2019-11-30T19:00:00+08:00">2019-11-30</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-02 21:03:51" itemprop="dateModified" datetime="2019-12-02T21:03:51+08:00">2019-12-02</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>这话说的，当初我读书的时候可没有宽松教育，我这种国企工人的孩子也是随便碾压绝大多数农村孩子的。进了重点高中后同学成群的干部子弟，官最大的是副市长儿子，高考成绩更是随便碾压其他中学。96年全班55人过三本线的有52（那时候的三本学校放现在差不多都快一本了，而且是在湖北），教育就是阶级再生产，什么教育都是的。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/11/30/2019-11-30-chinese-education-and-weekly-reflections/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.yxiao.org/2019/11/26/2019-11-26-east-asia-industrialization/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Abraham Xiao">
-      <meta itemprop="description" content="Shut Up and Get Rich.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Masdar Wireless">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/11/26/2019-11-26-east-asia-industrialization/" class="post-title-link" itemprop="url">东亚为什么只能选择工业化?</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2019-11-26 19:00:00" itemprop="dateCreated datePublished" datetime="2019-11-26T19:00:00+08:00">2019-11-26</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-11-28 15:09:58" itemprop="dateModified" datetime="2019-11-28T15:09:58+08:00">2019-11-28</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>本文全文转载自微信公众号<strong>新潮沉思录</strong>。原创： 潮思  新潮沉思录</p>
-<p>本文观点不代表本人观点，本网站内容与作者所在单位无关。</p>
-<p>文 | 陈露</p>
-<p>最近有一篇讲述香港问题与世界真相的文章很火。正所谓人红是非多，批判的文章自然也很多。这里就顺着这个话题再讲一讲。</p>
-<p>这篇文章使用的核心理论实际上是一种世界体系理论。这种理论是大家耳熟能详的。从列宁使用的帝国主义—半殖民地—殖民地的三分法，到毛泽东开创并被我们广泛使用的超级大国—发达国家—发展中国家的“三个世界”理论，再到拉美流行的中心—外围的“依附论”以及沃勒斯坦的中心——半边缘——边缘的世界体系理论，无论是哪一种分法，基本上都是将我们生活的世界划分为三个层级，居于顶端的是美国，居于底层的是无数不发达国家。这显然是符合实情的。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/11/26/2019-11-26-east-asia-industrialization/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.yxiao.org/2019/11/25/2019-11-25-zoomlion-semi-annual-report/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Abraham Xiao">
-      <meta itemprop="description" content="Shut Up and Get Rich.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Masdar Wireless">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/11/25/2019-11-25-zoomlion-semi-annual-report/" class="post-title-link" itemprop="url">Zoomlion 2019 Semi-Annual Report Research (Excerpt)</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2019-11-25 18:00:00 / 修改时间：15:16:14" itemprop="dateCreated datePublished" datetime="2019-11-25T18:00:00+08:00">2019-11-25</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Business/" itemprop="url" rel="index"><span itemprop="name">Business</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="公司业务概要"><a href="#公司业务概要" class="headerlink" title="公司业务概要"></a>公司业务概要</h2><h3 id="报告期内公司从事的主要业务"><a href="#报告期内公司从事的主要业务" class="headerlink" title="报告期内公司从事的主要业务"></a>报告期内公司从事的主要业务</h3><p>公司主要从事工程机械和农业机械的研发、制造、销售和服务。工程机械包括混凝土机<br>械、起重机械、土石方施工机械、桩工机械、高空作业机械、消防机械、筑养路设备和叉车<br>等，主要为基础设施及房地产建设服务；农业机械包括耕作机械、收获机械、烘干机械、农<br>业机具等，主要为农业生产提供育种、整地、播种、田间管理、收割、烘干储存等生产全过<br>程服务。</p>
-<p>工程机械行业属于高技术壁垒与资金、劳动力密集型行业，生产制造呈现多品种、小批<br>量、零部件多、制造工艺复杂等特点，行业进入门槛较高，行业景气度与宏观经济及固定资<br>产投资、基础设施投资、房地产投资密切相关，属于周期性行业，当前行业已进入相对成熟<br>的发展阶段，主要呈现以下特点：一是随着国家持续推进“供给侧结构性改革”，行业进入提<br>质增效、转型升级发展的机遇期，竞争较为激烈，行业整合兼并加速，主要产品市场需求向<br>龙头企业集中趋势明显；二是“一带一路”对工程机械带出效应显著，加速了行业国际化发<br>展进程；三是由于互联网、人工智能时代的到来，工程机械正朝着信息化、智能化等方向发<br>展。经过深化调整后行业将实现高质量、可持续发展。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/11/25/2019-11-25-zoomlion-semi-annual-report/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.yxiao.org/2019/11/24/2019-11-24-I-was-laid-by-netease/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Abraham Xiao">
-      <meta itemprop="description" content="Shut Up and Get Rich.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Masdar Wireless">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/11/24/2019-11-24-I-was-laid-by-netease/" class="post-title-link" itemprop="url">如果经济危机全面爆发，货币贬值百分之99  那么我欠银行的100万房贷是还100万，还是100亿？</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2019-11-24 19:00:00" itemprop="dateCreated datePublished" datetime="2019-11-24T19:00:00+08:00">2019-11-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-10 14:42:24" itemprop="dateModified" datetime="2020-02-10T14:42:24+08:00">2020-02-10</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>根据经验，出现这种恶性通货膨胀，往往是经济危机和政治危机祸不单行。假如政府还在勉力维持秩序，贷款利率会维持在一个银行和你都可以勉强接受的程度。银行倒闭或是你上吊都不利于已经严重恶化的局势，但是你也别指望只需还一百万了。如果政府难以控制局面，银行会把债权转让给黑社会，黑社会说还多少就是多少。此时社会治安崩溃，请自行评估自身抗风险能力。</p>
-<p><strong>我是不相信一个盘剥猿工的老板唯独对顾客厚道。能为了利润伤害猿工，就能为利润伤害顾客。</strong></p>
-<p><strong>韭菜红利快结束了。没见现在用“环保”等理由对一些落后产能机枪扫射么。</strong></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/11/24/2019-11-24-I-was-laid-by-netease/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.yxiao.org/2019/11/21/2019-11-21-oh-chinese-academia/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Abraham Xiao">
-      <meta itemprop="description" content="Shut Up and Get Rich.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Masdar Wireless">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/11/21/2019-11-21-oh-chinese-academia/" class="post-title-link" itemprop="url">如何看待 11 月 18 日曹雪涛团队再发 Nature 子刊论文，立即被指出涉嫌数据造假？</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2019-11-21 19:00:00" itemprop="dateCreated datePublished" datetime="2019-11-21T19:00:00+08:00">2019-11-21</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-11-22 18:19:43" itemprop="dateModified" datetime="2019-11-22T18:19:43+08:00">2019-11-22</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>这个问题我有发言权</p>
-<p>我就是从这种环境里出来的</p>
-<p>当然我是主动跳出来的</p>
-<p>我之前硕士的那个课题组</p>
-<p>在论文造假这一块可谓是可劲造</p>
-<p>导师年纪很大了</p>
-<p>但疯狂揽项目（横向）</p>
-<p><strong>普通人要进高级阶层还能有啥办法?要不看看克莱武的自传，新西班牙征服史，印加征服史，达伽玛的自传，</strong></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/11/21/2019-11-21-oh-chinese-academia/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.yxiao.org/2019/11/19/2019-11-19-I-am-fourty-years-old/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Abraham Xiao">
-      <meta itemprop="description" content="Shut Up and Get Rich.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Masdar Wireless">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/11/19/2019-11-19-I-am-fourty-years-old/" class="post-title-link" itemprop="url">【戒Dota40天了】帝都 40岁老电工 月薪4k，有机会工资翻翻，重启嘛？</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2019-11-19 19:00:00" itemprop="dateCreated datePublished" datetime="2019-11-19T19:00:00+08:00">2019-11-19</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-10 10:34:19" itemprop="dateModified" datetime="2020-02-10T10:34:19+08:00">2020-02-10</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>HiPDA论坛看到的，实在是太他妈惨了。转过来不断警醒和鞭策自己。</p>
-<p>看着小宝的小脸蛋，他说想和同班同学一样去三亚玩，而老爸没钱带他出去旅游，所以十一假期结束，我决心戒掉Dota了。</p>
-<p>至今再没打Dota了，虽然这是我唯一的爱好 (打了7年了，不喜烟酒，也不出门，生活半径200米，商场也不去，西单都不去，五棵松最远了)。</p>
-<p>工作内容没有重启。还是运维，信息化之类的，只是换个私企。。。</p>
-<p>哎，有的hper一直以为我4k月薪是骗人的，但是真的没有，数字姐那种福利国企（吃喝不要钱，闲的飞起，福利大把，钱又多。），不是我所在的国企。</p>
-<p>脸红的说，马上就40岁了，其实都是啃老+贷款+刷信用卡度日，</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/11/19/2019-11-19-I-am-fourty-years-old/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.yxiao.org/2019/11/14/2019-11-14-end-of-the-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Abraham Xiao">
-      <meta itemprop="description" content="Shut Up and Get Rich.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Masdar Wireless">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/11/14/2019-11-14-end-of-the-world/" class="post-title-link" itemprop="url">世界尽头与冷酷仙境</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2019-11-14 19:00:00" itemprop="dateCreated datePublished" datetime="2019-11-14T19:00:00+08:00">2019-11-14</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-10 10:51:57" itemprop="dateModified" datetime="2020-02-10T10:51:57+08:00">2020-02-10</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>原创： 潮思  新潮沉思录  10月30日<br><a href="https://mp.weixin.qq.com/s/s2nfNr1E3-wtgsDa6tsFiA" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/s2nfNr1E3-wtgsDa6tsFiA</a></p>
-<p>文 | 黄三思</p>
-<p>前一段时间双瞳同学的文章讲了环保问题和瑞典圣少女，最近没有什么别的事情值得一提，所以今天我们来炒一炒冷饭，我们从另外一个角度来对这个问题进行一点补充。</p>
-<p>环境保护这个议题，其实并不算新鲜，早在七、八十年代就已经有了。地球是否在变暖这个问题，本身也没有什么好争论的，异常气候越来越多，北极冰盖正在融化这些都属于客观事实；对于所有人来说，气候异常都是将来必须要面对的一个挑战。而为什么气候异常会成为一个问题，才是今天我们需要讨论的主要内容。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/11/14/2019-11-14-end-of-the-world/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.yxiao.org/2019/11/12/2019-11-12-shandong-factory/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Abraham Xiao">
-      <meta itemprop="description" content="Shut Up and Get Rich.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Masdar Wireless">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/11/12/2019-11-12-shandong-factory/" class="post-title-link" itemprop="url">如何评价 Netflix 原创纪录片《美国工厂》？</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2019-11-12 19:00:00" itemprop="dateCreated datePublished" datetime="2019-11-12T19:00:00+08:00">2019-11-12</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-11-14 16:08:24" itemprop="dateModified" datetime="2019-11-14T16:08:24+08:00">2019-11-14</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>在B站上看完了《美国工厂》，感觉真是相当普通的片子……我也可以扛个摄像头去拍山东歌尔的人跑到苏北，跑去我妈的公司里，商量在公交和出租车上贴招工广告；</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/11/12/2019-11-12-shandong-factory/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/6/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><a class="extend next" rel="next" href="/page/8/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
   
   <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
   </div>
 
   <aside class="sidebar">
-    <div class="sidebar-inner">
 
-      <ul class="sidebar-nav motion-element">
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
-          文章目录
+          Table of Contents
         </li>
         <li class="sidebar-nav-overview">
-          站点概览
+          Overview
         </li>
       </ul>
 
       <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
+      <section class="post-toc-wrap sidebar-panel">
+      </section>
       <!--/noindex-->
 
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Abraham Xiao"
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="John Doe"
       src="/images/avatar.jpg">
-  <p class="site-author-name" itemprop="name">Abraham Xiao</p>
-  <div class="site-description" itemprop="description">Shut Up and Get Rich.</div>
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
 </div>
-<div class="site-state-wrap motion-element">
+<div class="site-state-wrap animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">224</span>
-          <span class="site-state-item-name">日志</span>
+          <span class="site-state-item-count">226</span>
+          <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
         <span class="site-state-item-count">12</span>
-        <span class="site-state-item-name">分类</span></a>
+        <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">369</span>
-        <span class="site-state-item-name">标签</span></a>
+        <span class="site-state-item-count">370</span>
+        <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
-  <div class="links-of-author motion-element">
+  <div class="links-of-author animated">
       <span class="links-of-author-item">
         <a href="https://github.com/ProfessorX" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ProfessorX" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
       </span>
@@ -1124,21 +258,951 @@
 
 
 
-      </div>
-
+      </section>
     </div>
   </aside>
-  <div id="sidebar-dimmer"></div>
+  <div class="sidebar-dimmer"></div>
 
 
-      </div>
-    </main>
+    </header>
 
-    <footer class="footer">
-      <div class="footer-inner">
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner index posts-expand">
+      
+
+      
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/12/2019-12-12-annual-reflections/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/12/12/2019-12-12-annual-reflections/" class="post-title-link" itemprop="url">2018 Annual Reflections</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2019-12-12 19:00:00" itemprop="dateCreated datePublished" datetime="2019-12-12T19:00:00+08:00">2019-12-12</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2020-08-18 00:55:15" itemprop="dateModified" datetime="2020-08-18T00:55:15+08:00">2020-08-18</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>先开个坑。每周的总结拖了很久了，年度的总结还是抽个时间把今年来回顾一下。</p>
+<p>Time and Tide wait for no man.</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/12/12/2019-12-12-annual-reflections/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
         
+      
+    </div>
 
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/12/2019-12-12-central-economic-meeting/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/12/12/2019-12-12-central-economic-meeting/" class="post-title-link" itemprop="url">中央经济工作会议在北京举行</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2019-12-12 19:00:00" itemprop="dateCreated datePublished" datetime="2019-12-12T19:00:00+08:00">2019-12-12</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2020-08-18 00:55:15" itemprop="dateModified" datetime="2020-08-18T00:55:15+08:00">2020-08-18</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>新华社  今天</p>
+<p>中央经济工作会议在北京举行<br>习近平李克强作重要讲话<br>栗战书汪洋王沪宁赵乐际韩正出席会议</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/12/12/2019-12-12-central-economic-meeting/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
         
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/11/2019-12-11-words-to-pm-2020/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/12/11/2019-12-11-words-to-pm-2020/" class="post-title-link" itemprop="url">2020 年你对你所在的行业和当下的社会生活有哪些建议？</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2019-12-11 19:00:00" itemprop="dateCreated datePublished" datetime="2019-12-11T19:00:00+08:00">2019-12-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2020-08-18 00:55:15" itemprop="dateModified" datetime="2020-08-18T00:55:15+08:00">2020-08-18</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>当前经济面临需求不足和通货紧缩的压力很大，拉动内需是“六稳”的关键。群众需要闲暇消费精神商品，需要房子安置物质商品。必须转变观念，加班常态化导致群众无暇休闲，造成内需萎靡，对经济百害无一利，需要严格限制。同时要保证劳动者的公休假和年假。有条件的地方可以考虑郊区化，利用新农村建设整合出的宅基地，让一部分城市居民在农村住小洋楼；让一部分居住条件优越的新农村居民凭借交通条件改善能够每日通勤进城工作。郊区化既能拉动内需，又能同时提高城乡群众的生活水平。</p>
+<p>2035年建成社会主义现代化强国，届时群众的住房、教育、医疗等基本需求的负担如果还是比较重，社会主义现代化强国就无从谈起。</p>
+<p>请考虑城市居民基本住房。提高富余房产的持有成本，推动不同产权、不同性质的富余房产根据市场规律和政府引导，纳入公租房体系；全面落实“租售同权”，让新市民和低收入群体能够得到基本住房保障。</p>
+<p>请考虑产假与入托衔接，让公立基础教育下伸到幼儿八个月至一周岁。请考虑控制家庭的课外辅导负担，让父母可以在下班后去学校接孩子。请解决双职工家庭的后顾之忧。</p>
+<p>请继续深化当前医改举措，进一步压低医疗物资的渠道成本，以投入推动机制建设，尽快形成完善的分级诊疗体系和按病种付费模式。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/12/11/2019-12-11-words-to-pm-2020/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/10/2019-12-10-china-finance-manufacturing/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/12/10/2019-12-10-china-finance-manufacturing/" class="post-title-link" itemprop="url">为什么中国没有美国那种金融反噬制造业的问题？</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2019-12-10 19:00:00" itemprop="dateCreated datePublished" datetime="2019-12-10T19:00:00+08:00">2019-12-10</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2020-08-18 00:55:15" itemprop="dateModified" datetime="2020-08-18T00:55:15+08:00">2020-08-18</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>我靠，谁说没有反噬？</p>
+<p>我跑工业互联网也有两年了，从一个以前张嘴闭嘴“风口”“颠覆”的互联网装逼犯，到现在跑了几十个工厂，还要配合改造智能产线，满目尽是：</p>
+<p><strong>金融反噬制造业。</strong></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/12/10/2019-12-10-china-finance-manufacturing/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/09/2019-12-09-politburo-dec-meeting/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/12/09/2019-12-09-politburo-dec-meeting/" class="post-title-link" itemprop="url">习近平主持召开中共中央政治局会议</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2019-12-09 19:00:00" itemprop="dateCreated datePublished" datetime="2019-12-09T19:00:00+08:00">2019-12-09</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2020-08-18 00:55:15" itemprop="dateModified" datetime="2020-08-18T00:55:15+08:00">2020-08-18</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>新华社</p>
+<p>中共中央政治局召开会议</p>
+<p>分析研究2020年经济工作</p>
+<p>研究部署党风廉政建设和反腐败工作</p>
+<p>中共中央总书记习近平主持会议</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/12/09/2019-12-09-politburo-dec-meeting/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/04/2019-12-04-251-public-administration-and-people-democracy/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/12/04/2019-12-04-251-public-administration-and-people-democracy/" class="post-title-link" itemprop="url">姬喵：251，社会治理与人民民主</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2019-12-04 19:00:00" itemprop="dateCreated datePublished" datetime="2019-12-04T19:00:00+08:00">2019-12-04</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2020-08-18 00:55:15" itemprop="dateModified" datetime="2020-08-18T00:55:15+08:00">2020-08-18</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>全文转载自微信公众号 新潮沉思录。</p>
+<p>本文观点不代表本人观点，与本人所在单位无关。</p>
+<p>文 | 姬轩亦</p>
+<p>岁末。在去年的悼词里，2018年底的旋涡震撼着世界，中美如巨兽一样，在历史的荒野上对垒。大食蚁兽曹操和另一只大食蚁兽刘备，则在我们的悼词中向世界告别——他们在世的时候，是帝国最后的君王，那个时候他们备受诅咒，身心煎熬，而对于在乱世中挣扎的蝼蚁来说，笑眯眯的司马懿毕竟要更好一些，虽然，蝼蚁并不知道，最后的君主一旦离世，新世界的八魔王就要苏醒。一年之后，悼词变成了庆典。我隆重地相信，爱好和平的中美人民希望谈成，但是显然，爱女子与和平并不是什么性格优点，哀嚎与核平才是，事实上，哀嚎的蜉蝣已经长大，西斜的太阳让他们朝生暮死，对于蜉蝣来说，他们最辉煌的时候就是现在了，不能在现在解决问题，那么很快，夜晚即将来临。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/12/04/2019-12-04-251-public-administration-and-people-democracy/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/30/2019-11-30-chinese-education-and-weekly-reflections/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/30/2019-11-30-chinese-education-and-weekly-reflections/" class="post-title-link" itemprop="url">如何评价《BBC纪录片中没敢讲的故事：西方宽松的教育在偷偷地完成社会分层》？</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2019-11-30 19:00:00" itemprop="dateCreated datePublished" datetime="2019-11-30T19:00:00+08:00">2019-11-30</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2020-08-18 00:55:15" itemprop="dateModified" datetime="2020-08-18T00:55:15+08:00">2020-08-18</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>这话说的，当初我读书的时候可没有宽松教育，我这种国企工人的孩子也是随便碾压绝大多数农村孩子的。进了重点高中后同学成群的干部子弟，官最大的是副市长儿子，高考成绩更是随便碾压其他中学。96年全班55人过三本线的有52（那时候的三本学校放现在差不多都快一本了，而且是在湖北），教育就是阶级再生产，什么教育都是的。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/11/30/2019-11-30-chinese-education-and-weekly-reflections/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/26/2019-11-26-east-asia-industrialization/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/26/2019-11-26-east-asia-industrialization/" class="post-title-link" itemprop="url">东亚为什么只能选择工业化?</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2019-11-26 19:00:00" itemprop="dateCreated datePublished" datetime="2019-11-26T19:00:00+08:00">2019-11-26</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2020-08-18 00:55:15" itemprop="dateModified" datetime="2020-08-18T00:55:15+08:00">2020-08-18</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>本文全文转载自微信公众号<strong>新潮沉思录</strong>。原创： 潮思  新潮沉思录</p>
+<p>本文观点不代表本人观点，本网站内容与作者所在单位无关。</p>
+<p>文 | 陈露</p>
+<p>最近有一篇讲述香港问题与世界真相的文章很火。正所谓人红是非多，批判的文章自然也很多。这里就顺着这个话题再讲一讲。</p>
+<p>这篇文章使用的核心理论实际上是一种世界体系理论。这种理论是大家耳熟能详的。从列宁使用的帝国主义—半殖民地—殖民地的三分法，到毛泽东开创并被我们广泛使用的超级大国—发达国家—发展中国家的“三个世界”理论，再到拉美流行的中心—外围的“依附论”以及沃勒斯坦的中心——半边缘——边缘的世界体系理论，无论是哪一种分法，基本上都是将我们生活的世界划分为三个层级，居于顶端的是美国，居于底层的是无数不发达国家。这显然是符合实情的。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/11/26/2019-11-26-east-asia-industrialization/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/25/2019-11-25-zoomlion-semi-annual-report/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/25/2019-11-25-zoomlion-semi-annual-report/" class="post-title-link" itemprop="url">Zoomlion 2019 Semi-Annual Report Research (Excerpt)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2019-11-25 18:00:00" itemprop="dateCreated datePublished" datetime="2019-11-25T18:00:00+08:00">2019-11-25</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2020-08-18 00:55:15" itemprop="dateModified" datetime="2020-08-18T00:55:15+08:00">2020-08-18</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Business/" itemprop="url" rel="index"><span itemprop="name">Business</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="公司业务概要"><a href="#公司业务概要" class="headerlink" title="公司业务概要"></a>公司业务概要</h2><h3 id="报告期内公司从事的主要业务"><a href="#报告期内公司从事的主要业务" class="headerlink" title="报告期内公司从事的主要业务"></a>报告期内公司从事的主要业务</h3><p>公司主要从事工程机械和农业机械的研发、制造、销售和服务。工程机械包括混凝土机<br>械、起重机械、土石方施工机械、桩工机械、高空作业机械、消防机械、筑养路设备和叉车<br>等，主要为基础设施及房地产建设服务；农业机械包括耕作机械、收获机械、烘干机械、农<br>业机具等，主要为农业生产提供育种、整地、播种、田间管理、收割、烘干储存等生产全过<br>程服务。</p>
+<p>工程机械行业属于高技术壁垒与资金、劳动力密集型行业，生产制造呈现多品种、小批<br>量、零部件多、制造工艺复杂等特点，行业进入门槛较高，行业景气度与宏观经济及固定资<br>产投资、基础设施投资、房地产投资密切相关，属于周期性行业，当前行业已进入相对成熟<br>的发展阶段，主要呈现以下特点：一是随着国家持续推进“供给侧结构性改革”，行业进入提<br>质增效、转型升级发展的机遇期，竞争较为激烈，行业整合兼并加速，主要产品市场需求向<br>龙头企业集中趋势明显；二是“一带一路”对工程机械带出效应显著，加速了行业国际化发<br>展进程；三是由于互联网、人工智能时代的到来，工程机械正朝着信息化、智能化等方向发<br>展。经过深化调整后行业将实现高质量、可持续发展。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/11/25/2019-11-25-zoomlion-semi-annual-report/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/24/2019-11-24-I-was-laid-by-netease/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/24/2019-11-24-I-was-laid-by-netease/" class="post-title-link" itemprop="url">如果经济危机全面爆发，货币贬值百分之99  那么我欠银行的100万房贷是还100万，还是100亿？</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2019-11-24 19:00:00" itemprop="dateCreated datePublished" datetime="2019-11-24T19:00:00+08:00">2019-11-24</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2020-08-18 00:55:15" itemprop="dateModified" datetime="2020-08-18T00:55:15+08:00">2020-08-18</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>根据经验，出现这种恶性通货膨胀，往往是经济危机和政治危机祸不单行。假如政府还在勉力维持秩序，贷款利率会维持在一个银行和你都可以勉强接受的程度。银行倒闭或是你上吊都不利于已经严重恶化的局势，但是你也别指望只需还一百万了。如果政府难以控制局面，银行会把债权转让给黑社会，黑社会说还多少就是多少。此时社会治安崩溃，请自行评估自身抗风险能力。</p>
+<p><strong>我是不相信一个盘剥猿工的老板唯独对顾客厚道。能为了利润伤害猿工，就能为利润伤害顾客。</strong></p>
+<p><strong>韭菜红利快结束了。没见现在用“环保”等理由对一些落后产能机枪扫射么。</strong></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/11/24/2019-11-24-I-was-laid-by-netease/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/6/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><a class="extend next" rel="next" href="/page/8/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+  </nav>
+
+
+
+      
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
 
 <div class="copyright">
   
@@ -1147,79 +1211,37 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Abraham Xiao</span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
 
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
 
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
+  
 
 
-<script src="/js/schemes/muse.js"></script>
 
 
-<script src="/js/next-boot.js"></script>
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
 
 
 
 
   
-  <script>
-    (function(){
-      var canonicalURL, curProtocol;
-      //Get the <link> tag
-      var x=document.getElementsByTagName("link");
-		//Find the last canonical URL
-		if(x.length > 0){
-			for (i=0;i<x.length;i++){
-				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
-					canonicalURL=x[i].href;
-				}
-			}
-		}
-    //Get protocol
-	    if (!canonicalURL){
-	    	curProtocol = window.location.protocol.split(':')[0];
-	    }
-	    else{
-	    	curProtocol = canonicalURL.split(':')[0];
-	    }
-      //Get current URL if the canonical URL does not exist
-	    if (!canonicalURL) canonicalURL = window.location.href;
-	    //Assign script content. Replace current URL with the canonical URL
-      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
-  </script>
-
-
-
-
-  
-<script src="/js/local-search.js"></script>
-
-
-
-
-
 
 
 

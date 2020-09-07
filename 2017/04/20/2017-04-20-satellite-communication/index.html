@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -13,43 +13,46 @@
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
-<script id="hexo-configurations">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"www.yxiao.org","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"8.0.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
   <meta name="description" content="卫星通信：利用人造地球卫星作为中继站来转发无线电波，从而实现两个或多个地球站之间的通信。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Satellite Communication">
-<meta property="og:url" content="https://www.yxiao.org/2017/04/20/2017-04-20-satellite-communication/index.html">
-<meta property="og:site_name" content="Masdar Wireless">
+<meta property="og:url" content="http://yoursite.com/2017/04/20/2017-04-20-satellite-communication/index.html">
+<meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="卫星通信：利用人造地球卫星作为中继站来转发无线电波，从而实现两个或多个地球站之间的通信。">
-<meta property="og:locale" content="zh_CN">
+<meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2017-04-20T10:00:00.000Z">
-<meta property="article:modified_time" content="2019-09-16T02:32:44.484Z">
-<meta property="article:author" content="Abraham Xiao">
+<meta property="article:modified_time" content="2020-08-17T16:55:15.128Z">
+<meta property="article:author" content="John Doe">
 <meta property="article:tag" content="UAV">
-<meta property="article:tag" content="Satellite">
 <meta property="article:tag" content="DataLink">
 <meta property="article:tag" content="Communication">
+<meta property="article:tag" content="Satellite">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://www.yxiao.org/2017/04/20/2017-04-20-satellite-communication/">
+
+<link rel="canonical" href="http://yoursite.com/2017/04/20/2017-04-20-satellite-communication/">
 
 
-<script id="page-configurations">
+<script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
     isHome : false,
     isPost : true,
-    lang   : 'zh-CN'
+    lang   : 'en'
   };
 </script>
 
-  <title>Satellite Communication | Masdar Wireless</title>
+  <title>Satellite Communication | Hexo</title>
   
 
 
@@ -59,51 +62,62 @@
 
   <noscript>
   <style>
-  .use-motion .brand,
+  body { margin-top: 2rem; }
+
   .use-motion .menu-item,
-  .sidebar-inner,
+  .use-motion .sidebar,
   .use-motion .post-block,
   .use-motion .pagination,
   .use-motion .comments,
   .use-motion .post-header,
   .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
 
   .use-motion .site-title,
-  .use-motion .site-subtitle {
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
     opacity: initial;
     top: initial;
   }
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
   </style>
 </noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
+  <main class="main">
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
   <div class="site-meta">
 
     <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Masdar Wireless</h1>
-      <span class="logo-line-after"><i></i></span>
+      <i class="logo-line"></i>
+      <h1 class="site-title">Hexo</h1>
+      <i class="logo-line"></i>
     </a>
-      <p class="site-subtitle" itemprop="description">MORE MEAT MORE EXERCISE!</p>
   </div>
 
   <div class="site-nav-right">
@@ -115,32 +129,31 @@
 
 
 
-
 <nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
+  <ul class="main-menu menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
 
   </li>
         <li class="menu-item menu-item-about">
 
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
 
   </li>
         <li class="menu-item menu-item-study">
@@ -154,7 +167,7 @@
 
   </li>
       <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
       </li>
   </ul>
@@ -169,17 +182,17 @@
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
-           placeholder="搜索..." spellcheck="false"
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
            type="search" class="search-input">
   </div>
   <span class="popup-btn-close">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
   </div>
 </div>
 
@@ -187,6 +200,79 @@
   </div>
 
 </div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#What-is-a-relay-satellite"><span class="nav-number">1.</span> <span class="nav-text">What is a relay satellite?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#What-kind-of-communications-do-NASA-missions-require"><span class="nav-number">2.</span> <span class="nav-text">What kind of communications do NASA missions require?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%AB%E6%98%9F%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F"><span class="nav-number">3.</span> <span class="nav-text">卫星通信方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%B9%E7%82%B9"><span class="nav-number">4.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%AB%E6%98%9F%E9%80%9A%E4%BF%A1%E7%9A%84%E7%BC%BA%E7%82%B9"><span class="nav-number">5.</span> <span class="nav-text">卫星通信的缺点</span></a></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="John Doe"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">226</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">370</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/ProfessorX" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ProfessorX" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:admin@yxiao.org" title="E-Mail → mailto:admin@yxiao.org" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </section>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
     </header>
 
     
@@ -195,62 +281,68 @@
     <span>0%</span>
   </div>
 
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
 
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
 
-          <div class="content post posts-expand">
-            
+    <div class="main-inner post posts-expand">
+      
+
+      
 
     
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.yxiao.org/2017/04/20/2017-04-20-satellite-communication/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/20/2017-04-20-satellite-communication/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Abraham Xiao">
-      <meta itemprop="description" content="Shut Up and Get Rich.">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Masdar Wireless">
+      <meta itemprop="name" content="Hexo">
     </span>
+
+    
+    
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           Satellite Communication
         </h1>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
 
-              <time title="创建时间：2017-04-20 18:00:00" itemprop="dateCreated datePublished" datetime="2017-04-20T18:00:00+08:00">2017-04-20</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-09-16 10:32:44" itemprop="dateModified" datetime="2019-09-16T10:32:44+08:00">2019-09-16</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Information/" itemprop="url" rel="index"><span itemprop="name">Information</span></a>
-                </span>
-            </span>
+      <time title="Created: 2017-04-20 18:00:00" itemprop="dateCreated datePublished" datetime="2017-04-20T18:00:00+08:00">2017-04-20</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2020-08-18 00:55:15" itemprop="dateModified" datetime="2020-08-18T00:55:15+08:00">2020-08-18</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Information/" itemprop="url" rel="index"><span itemprop="name">Information</span></a>
+        </span>
+    </span>
 
-          
+  
+</div>
 
         </div>
       </header>
@@ -259,8 +351,6 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
         <p>卫星通信：利用人造地球卫星作为中继站来转发无线电波，从而实现两个或多个<br>地球站之间的通信。</p>
 <a id="more"></a>
 
@@ -296,12 +386,14 @@
 <p>在<strong>微波频带</strong>，整个通信卫星的工作频带约有<strong>500MHz宽度</strong>，为了便于放大和发射及<br>减少变调干扰，一般在卫星上设置若干个转发器。每个转发器的工作频带宽度为<br><strong>36MHz或72MHz</strong>的卫星通信多采用<strong>频分多址技术</strong>，不同的地球站占用不同的频率，<br>即采用不同的载波。它对于<strong>点对点大容量</strong>的通信比较适合。已逐渐采用时分多址<br>技术，即每一地球站占用同一频带，但占用不同的时隙，它比频分多址有一系列<br>优点，如不会产生互调干扰，不需用上下变频把各地球站信号分开，适合数字通<br>信，可根据业务量的变化按需分配，可采用数字话音插空等新技术，使容量增加<br>5倍。另一种多址技术使码分多址（CDMA），即不同的地球站占用同一频率和同<br>一时间，但有<strong>不同的随机码</strong>来区分不同的地址。它采用了扩展频谱通信技术，具<br>有抗干扰能力强，有较好的保密通信能力，可灵活调度话路等优点。其缺点频<br>谱利用率较低。它比较适合于容量小，分布广，有一定保密要求的系统使用。</p>
 <p>20世纪末或21世纪初，<strong>C和Ku频段将出现拥挤</strong>，FSS将在20GHz～30GHz的Ka频段开<br>发业务，其频率为：</p>
 <pre><code>* 上行（GHz） 29.5～30 带宽500MHz
-* 下行（GHz） 19.7～20.2 带宽500MHz</code></pre><h2 id="卫星通信方式"><a href="#卫星通信方式" class="headerlink" title="卫星通信方式"></a>卫星通信方式</h2><p>国内卫星通信方式大体仿效国际卫星通信用C频段和<strong>Ku频段</strong>，也有用<strong>Ka频段</strong>的。<br>一般的TDMA方式为<strong>60Mbit/s以下速率</strong>，还有SS-TDMA和转发器跳频的TDMA方式，<br>有加数字电路复用设备的卫星数字信道（IDR/DCME）方式，也有自适差分脉冲编<br>码的卫星数字信道（IDR/ADPCM）方式。因模拟<strong>频分多址（FDMA）</strong>方式技术成<br>熟，仍有使用。国内范围的以通话为主的稀路由（VISTA）方式用得较多，有单<br>载波单信道/音节压扩频率调制/按需分配多址（SCPC/CFM/DAMA）方式和单载波<br>单信道/4相移相键控/按需分配多址（SCPC/QPSK/DAMA）方式以及较低速率的<br>TDMA方式。甚小天线地球站系统的市场很大，它是以数据传输为主兼有话音传输<br>的星状网，其制式和速率有多种，可供用户选用。国内卫星通信的极化方式一般<br>为线极化，个别也有用圆极化的。</p>
+* 下行（GHz） 19.7～20.2 带宽500MHz</code></pre>
+<h2 id="卫星通信方式"><a href="#卫星通信方式" class="headerlink" title="卫星通信方式"></a>卫星通信方式</h2><p>国内卫星通信方式大体仿效国际卫星通信用C频段和<strong>Ku频段</strong>，也有用<strong>Ka频段</strong>的。<br>一般的TDMA方式为<strong>60Mbit/s以下速率</strong>，还有SS-TDMA和转发器跳频的TDMA方式，<br>有加数字电路复用设备的卫星数字信道（IDR/DCME）方式，也有自适差分脉冲编<br>码的卫星数字信道（IDR/ADPCM）方式。因模拟<strong>频分多址（FDMA）</strong>方式技术成<br>熟，仍有使用。国内范围的以通话为主的稀路由（VISTA）方式用得较多，有单<br>载波单信道/音节压扩频率调制/按需分配多址（SCPC/CFM/DAMA）方式和单载波<br>单信道/4相移相键控/按需分配多址（SCPC/QPSK/DAMA）方式以及较低速率的<br>TDMA方式。甚小天线地球站系统的市场很大，它是以数据传输为主兼有话音传输<br>的星状网，其制式和速率有多种，可供用户选用。国内卫星通信的极化方式一般<br>为线极化，个别也有用圆极化的。</p>
 <h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><ul>
 <li>通信距离远，且费用与通信距离无关。从图16.2中可见，利用<strong>静止卫星</strong>，<br>最大的通信距离达18100km左右。而且建站费用和运行费用不因通信站之间<br>的距离远近、两通信站之间<strong>地面上的自然条件恶劣程度</strong>(However,<br>nothing is perfect, nothing.)而变化。这在远距离通信上，比微波接力、<br>电缆、光缆、短波通信有明显的优势。</li>
 <li>广播方式工作，可以进行<strong>多址通信</strong>。通常，其他类型的通信手段只能实现<br>点对点通信，而卫星是以广播方式进行工作的，在卫星天线波束覆盖的整<br>个区域内的<strong>任何一点</strong>(理论上来说是这样的)都可以设置地球站，这些<br>地球站可共用一颗通信卫星来实现<strong>双边或多边通信</strong>，即进行多址通信。<br>另外，一颗在轨卫星，相当于在一定区域内铺设了可以到达任何一点的无<br>数条无形电路（Haskell is the best language?），它为通信网络的组成，<br>提供了高效率和灵活性。</li>
-<li>通信容量大，适用多种业务传输。卫星通信使用微波频段，可以使用<pre><code>的频带**很宽**。一般C和Ku频段的卫星带宽可达500～800MHz，而Ka
-频段可达几个GHz。</code></pre></li>
+<li>通信容量大，适用多种业务传输。卫星通信使用微波频段，可以使用<pre><code> 的频带**很宽**。一般C和Ku频段的卫星带宽可达500～800MHz，而Ka
+ 频段可达几个GHz。</code></pre>
+</li>
 <li>可以自发自收进行监测。一般，发信端地球站同样可以接收到自己发出的<br>信号，从而可以监视本站所发消息是否正确，以及传输质量的优劣。</li>
 <li>无缝覆盖能力。利用卫星移动通信，可以不受地理环境、气候条件和时间的<br>限制，建立覆盖全球性的海、陆、空一体化通信系统。 (全球通：喵喵喵？)</li>
 <li>广域<strong>复杂</strong>网络拓扑构成能力。卫星通信的高功率密度与灵活的多点波束能力<br>加上星上交换处理技术，可按优良的价格性能比提供宽广地域范围的点对点<br>与多点对多点的复杂的网络拓扑构成能力。</li>
@@ -320,7 +412,7 @@
 <blockquote>
 <p>太空垃圾，卫星杀手怎么办？安理会五大流氓：关我P事。</p>
 </blockquote>
-<p>Reference:<br><a href="https://www.nasa.gov/directorates/heo/scan/communications/outreach/funfacts/txt_relay_satellite.html" target="_blank" rel="noopener">NASA Satellite Communications</a></p>
+<p>Reference:<br><a target="_blank" rel="noopener" href="https://www.nasa.gov/directorates/heo/scan/communications/outreach/funfacts/txt_relay_satellite.html">NASA Satellite Communications</a></p>
 
     </div>
 
@@ -328,30 +420,29 @@
     
     
 
-      <footer class="post-footer">
+    <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/UAV/" rel="tag"># UAV</a>
-              <a href="/tags/Satellite/" rel="tag"># Satellite</a>
               <a href="/tags/DataLink/" rel="tag"># DataLink</a>
               <a href="/tags/Communication/" rel="tag"># Communication</a>
+              <a href="/tags/Satellite/" rel="tag"># Satellite</a>
           </div>
 
         
 
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2017/04/20/2017-04-20-microwave-link.networks/" rel="prev" title="Microwave Link Networks">
-      <i class="fa fa-chevron-left"></i> Microwave Link Networks
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2017/04/21/2017-04-21-unmanned-aerial-vehicle/" rel="next" title="Unmanned Aerial Vehicles">
-      Unmanned Aerial Vehicles <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2017/04/20/2017-04-20-microwave-link.networks/" rel="prev" title="Microwave Link Networks">
+                  <i class="fa fa-chevron-left"></i> Microwave Link Networks
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2017/04/21/2017-04-21-unmanned-aerial-vehicle/" rel="next" title="Unmanned Aerial Vehicles">
+                  Unmanned Aerial Vehicles <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
   </article>
   
   
@@ -359,8 +450,7 @@
 
 
 
-          </div>
-          
+      
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -369,7 +459,7 @@
       activeClass = localStorage.getItem('comments_active') || activeClass;
     }
     if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
       if (activeTab) {
         activeTab.click();
       }
@@ -378,95 +468,20 @@
   if (CONFIG.comments.storage) {
     window.addEventListener('tabs:click', event => {
       if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
+      const commentClass = event.target.classList[1];
       localStorage.setItem('comments_active', commentClass);
     });
   }
 </script>
 
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#What-is-a-relay-satellite"><span class="nav-number">1.</span> <span class="nav-text">What is a relay satellite?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#What-kind-of-communications-do-NASA-missions-require"><span class="nav-number">2.</span> <span class="nav-text">What kind of communications do NASA missions require?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%AB%E6%98%9F%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F"><span class="nav-number">3.</span> <span class="nav-text">卫星通信方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%B9%E7%82%B9"><span class="nav-number">4.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%AB%E6%98%9F%E9%80%9A%E4%BF%A1%E7%9A%84%E7%BC%BA%E7%82%B9"><span class="nav-number">5.</span> <span class="nav-text">卫星通信的缺点</span></a></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Abraham Xiao"
-      src="/images/avatar.jpg">
-  <p class="site-author-name" itemprop="name">Abraham Xiao</p>
-  <div class="site-description" itemprop="description">Shut Up and Get Rich.</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">224</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">12</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">369</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/ProfessorX" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ProfessorX" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:admin@yxiao.org" title="E-Mail → mailto:admin@yxiao.org" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
-      </span>
-  </div>
-
-
-
-      </div>
-
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
+  </main>
 
+  <footer class="footer">
+    <div class="footer-inner">
+      
 
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
+      
 
 <div class="copyright">
   
@@ -475,79 +490,37 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Abraham Xiao</span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
 
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
 
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
+  
 
 
-<script src="/js/schemes/muse.js"></script>
 
 
-<script src="/js/next-boot.js"></script>
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
 
 
 
 
   
-  <script>
-    (function(){
-      var canonicalURL, curProtocol;
-      //Get the <link> tag
-      var x=document.getElementsByTagName("link");
-		//Find the last canonical URL
-		if(x.length > 0){
-			for (i=0;i<x.length;i++){
-				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
-					canonicalURL=x[i].href;
-				}
-			}
-		}
-    //Get protocol
-	    if (!canonicalURL){
-	    	curProtocol = window.location.protocol.split(':')[0];
-	    }
-	    else{
-	    	curProtocol = canonicalURL.split(':')[0];
-	    }
-      //Get current URL if the canonical URL does not exist
-	    if (!canonicalURL) canonicalURL = window.location.href;
-	    //Assign script content. Replace current URL with the canonical URL
-      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
-  </script>
-
-
-
-
-  
-<script src="/js/local-search.js"></script>
-
-
-
-
-
 
 
 

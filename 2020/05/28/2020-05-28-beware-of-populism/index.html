@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -13,23 +13,25 @@
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
-<script id="hexo-configurations">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"www.yxiao.org","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"8.0.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
   <meta name="description" content="谢邀。 因为民粹主义不是一个有效的长期动员体制。 大众需要精英的领导，而没有大众的支持，精英的领导一文不值。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="为什么现在主流媒体常说 警惕民粹主义？民粹主义具体是什么有什么危害?">
-<meta property="og:url" content="https://www.yxiao.org/2020/05/28/2020-05-28-beware-of-populism/index.html">
-<meta property="og:site_name" content="Masdar Wireless">
+<meta property="og:url" content="http://yoursite.com/2020/05/28/2020-05-28-beware-of-populism/index.html">
+<meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="谢邀。 因为民粹主义不是一个有效的长期动员体制。 大众需要精英的领导，而没有大众的支持，精英的领导一文不值。">
-<meta property="og:locale" content="zh_CN">
+<meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-05-28T10:00:00.000Z">
-<meta property="article:modified_time" content="2020-05-29T01:22:12.530Z">
-<meta property="article:author" content="Abraham Xiao">
+<meta property="article:modified_time" content="2020-08-17T16:55:15.234Z">
+<meta property="article:author" content="John Doe">
 <meta property="article:tag" content="China">
 <meta property="article:tag" content="US">
 <meta property="article:tag" content="Facism">
@@ -37,20 +39,21 @@
 <meta property="article:tag" content="Kill">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://www.yxiao.org/2020/05/28/2020-05-28-beware-of-populism/">
+
+<link rel="canonical" href="http://yoursite.com/2020/05/28/2020-05-28-beware-of-populism/">
 
 
-<script id="page-configurations">
+<script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
     isHome : false,
     isPost : true,
-    lang   : 'zh-CN'
+    lang   : 'en'
   };
 </script>
 
-  <title>为什么现在主流媒体常说 警惕民粹主义？民粹主义具体是什么有什么危害? | Masdar Wireless</title>
+  <title>为什么现在主流媒体常说 警惕民粹主义？民粹主义具体是什么有什么危害? | Hexo</title>
   
 
 
@@ -60,51 +63,62 @@
 
   <noscript>
   <style>
-  .use-motion .brand,
+  body { margin-top: 2rem; }
+
   .use-motion .menu-item,
-  .sidebar-inner,
+  .use-motion .sidebar,
   .use-motion .post-block,
   .use-motion .pagination,
   .use-motion .comments,
   .use-motion .post-header,
   .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
 
   .use-motion .site-title,
-  .use-motion .site-subtitle {
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
     opacity: initial;
     top: initial;
   }
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
   </style>
 </noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
+  <main class="main">
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
   <div class="site-meta">
 
     <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Masdar Wireless</h1>
-      <span class="logo-line-after"><i></i></span>
+      <i class="logo-line"></i>
+      <h1 class="site-title">Hexo</h1>
+      <i class="logo-line"></i>
     </a>
-      <p class="site-subtitle" itemprop="description">MORE MEAT MORE EXERCISE!</p>
   </div>
 
   <div class="site-nav-right">
@@ -116,32 +130,31 @@
 
 
 
-
 <nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
+  <ul class="main-menu menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
 
   </li>
         <li class="menu-item menu-item-about">
 
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
 
   </li>
         <li class="menu-item menu-item-study">
@@ -155,7 +168,7 @@
 
   </li>
       <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
       </li>
   </ul>
@@ -170,17 +183,17 @@
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
-           placeholder="搜索..." spellcheck="false"
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
            type="search" class="search-input">
   </div>
   <span class="popup-btn-close">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
   </div>
 </div>
 
@@ -188,6 +201,79 @@
   </div>
 
 </div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E4%BA%BA%E9%98%B6%E7%BA%A7%E6%8A%B5%E5%88%B6996%EF%BC%8C%E4%BD%86%E7%AB%9E%E4%BA%89%E5%8A%9B%E4%B8%8A%E4%B8%8D%E5%8E%BB%EF%BC%8C%E4%B8%AD%E5%9B%BD%E5%A6%82%E4%BD%95%E5%9C%A8%E5%90%84%E8%A1%8C%E4%B8%9A%E9%A2%86%E5%85%88%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">工人阶级抵制996，但竞争力上不去，中国如何在各行业领先？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%85%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%E6%96%B0%E9%97%BB%E4%B8%8E%E4%BC%A0%E6%92%AD%E5%AD%A6%E9%99%A2-2020-%E5%B9%B4%E8%B5%B7%EF%BC%8C%E5%B0%86%E5%8F%96%E6%B6%88%E6%9C%AC%E7%A7%91%E6%8B%9B%E7%94%9F%EF%BC%8C%E6%89%A9%E5%A4%A7%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E8%A7%84%E6%A8%A1%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">如何看待清华大学新闻与传播学院 2020 年起，将取消本科招生，扩大研究生招生规模？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%85-2020-%E5%B9%B4%E4%B8%AD%E5%9B%BD%E7%A7%BB%E5%8A%A8%E5%81%9C%E8%96%AA%E7%95%99%E8%81%8C%E9%BC%93%E5%8A%B1%E5%91%98%E5%B7%A5%E5%88%9B%E4%B8%9A%EF%BC%9F"><span class="nav-number">3.</span> <span class="nav-text">如何看待 2020 年中国移动停薪留职鼓励员工创业？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%85%E7%BE%8E%E5%9B%BD%E7%96%91%E4%BC%BC%E5%BD%BB%E5%BA%95%E5%B0%81%E6%9D%80%E5%8D%8E%E4%B8%BA%EF%BC%8C%E5%85%AC%E5%8F%B8%E5%8F%AA%E8%A6%81%E7%94%A8%E7%BE%8E%E5%9B%BD%E8%AE%BE%E5%A4%87%E9%80%A0%E8%8A%AF%E7%89%87%E5%8D%96%E5%8D%8E%E4%B8%BA%E5%B0%B1%E8%A6%81%E8%A2%AB%E9%99%90%E5%88%B6%EF%BC%9F"><span class="nav-number">4.</span> <span class="nav-text">如何看待美国疑似彻底封杀华为，公司只要用美国设备造芯片卖华为就要被限制？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%85%E6%9D%AD%E5%B7%9E%E5%8F%8C%E8%AF%AD%E7%A1%95%E5%A3%AB%E5%9B%9E%E5%BA%94%E3%80%8C%E6%94%BE%E5%BC%83-30-%E4%B8%87%E5%B9%B4%E8%96%AA%E5%81%9A%E4%BF%9D%E5%A7%86%E3%80%8D%EF%BC%9A%E6%80%9D%E6%83%B3%E8%A6%81%E5%8F%98%EF%BC%8C%E6%9C%89%E4%BA%BA%E5%BC%80-2-%E4%B8%87%E6%9C%88%E8%96%AA%EF%BC%9F"><span class="nav-number">5.</span> <span class="nav-text">如何看待杭州双语硕士回应「放弃 30 万年薪做保姆」：思想要变，有人开 2 万月薪？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7%E6%98%8E%E5%B0%BC%E8%8B%8F%E8%BE%BE%E5%B7%9E%E5%9B%A0%E8%AD%A6%E5%AF%9F%E6%89%93%E6%AD%BB%E9%BB%91%E4%BA%BA%E7%88%86%E5%8F%91%E6%8A%97%E8%AE%AE%E6%B4%BB%E5%8A%A8%EF%BC%8C%E4%B8%80%E4%BA%9B%E4%BA%BA%E6%8A%97%E8%AE%AE%E5%8D%8A%E8%B7%AF%E5%BC%80%E5%A7%8B%E6%8A%A2%E5%8A%AB%E8%B6%85%E5%B8%82"><span class="nav-number">6.</span> <span class="nav-text">如何评价明尼苏达州因警察打死黑人爆发抗议活动，一些人抗议半路开始抢劫超市?</span></a></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="John Doe"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">226</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">370</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/ProfessorX" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ProfessorX" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:admin@yxiao.org" title="E-Mail → mailto:admin@yxiao.org" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </section>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
     </header>
 
     
@@ -196,62 +282,68 @@
     <span>0%</span>
   </div>
 
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
 
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
 
-          <div class="content post posts-expand">
-            
+    <div class="main-inner post posts-expand">
+      
+
+      
 
     
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.yxiao.org/2020/05/28/2020-05-28-beware-of-populism/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/28/2020-05-28-beware-of-populism/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Abraham Xiao">
-      <meta itemprop="description" content="Shut Up and Get Rich.">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Masdar Wireless">
+      <meta itemprop="name" content="Hexo">
     </span>
+
+    
+    
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           为什么现在主流媒体常说 警惕民粹主义？民粹主义具体是什么有什么危害?
         </h1>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
 
-              <time title="创建时间：2020-05-28 18:00:00" itemprop="dateCreated datePublished" datetime="2020-05-28T18:00:00+08:00">2020-05-28</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-29 09:22:12" itemprop="dateModified" datetime="2020-05-29T09:22:12+08:00">2020-05-29</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a>
-                </span>
-            </span>
+      <time title="Created: 2020-05-28 18:00:00" itemprop="dateCreated datePublished" datetime="2020-05-28T18:00:00+08:00">2020-05-28</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2020-08-18 00:55:15" itemprop="dateModified" datetime="2020-08-18T00:55:15+08:00">2020-08-18</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a>
+        </span>
+    </span>
 
-          
+  
+</div>
 
         </div>
       </header>
@@ -260,8 +352,6 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
         <p>谢邀。</p>
 <p>因为民粹主义不是一个有效的长期动员体制。</p>
 <p>大众需要精英的领导，而没有大众的支持，精英的领导一文不值。</p>
@@ -290,8 +380,8 @@
 <p>所以在根本上，还是要保证精英主义的边界。</p>
 <p>民粹主义在严重反噬后会回归集体理性，这在历史上有先例；而精英主义不断自我固化最后走向一场总崩溃，这在历史上是常态。</p>
 <p>民粹主义总是被精英的傲慢而召唤出来的。</p>
-<p>作者：王子君<br>链接：<a href="https://www.zhihu.com/question/21839457/answer/1250095276" target="_blank" rel="noopener">https://www.zhihu.com/question/21839457/answer/1250095276</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
-<h2 id="工人阶级抵制996，但竞争力上不去，中国如何在各行业领先？"><a href="#工人阶级抵制996，但竞争力上不去，中国如何在各行业领先？" class="headerlink" title="工人阶级抵制996，但竞争力上不去，中国如何在各行业领先？"></a>工人阶级抵制996，但竞争力上不去，中国如何在各行业领先？</h2><p>作者：王子君<br>链接：<a href="https://www.zhihu.com/question/394046154/answer/1215731826" target="_blank" rel="noopener">https://www.zhihu.com/question/394046154/answer/1215731826</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>作者：王子君<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/21839457/answer/1250095276">https://www.zhihu.com/question/21839457/answer/1250095276</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h2 id="工人阶级抵制996，但竞争力上不去，中国如何在各行业领先？"><a href="#工人阶级抵制996，但竞争力上不去，中国如何在各行业领先？" class="headerlink" title="工人阶级抵制996，但竞争力上不去，中国如何在各行业领先？"></a>工人阶级抵制996，但竞争力上不去，中国如何在各行业领先？</h2><p>作者：王子君<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/394046154/answer/1215731826">https://www.zhihu.com/question/394046154/answer/1215731826</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <p>谢邀。</p>
 <p>懂，现在就去恢复奴隶制。</p>
 <p>很多人没搞懂一件事：为什么以前大家那么热爱996？</p>
@@ -321,7 +411,7 @@
 <p>足够多的铁，足够热的火，就能打出足够好的刀。</p>
 <p>现在铁是够的，火在哪里？这把火只能由国家点起来。</p>
 <p>国家不点火，大家一堆铁矿石互相谴责彼此纯度不够，没意思。</p>
-<h2 id="如何看待清华大学新闻与传播学院-2020-年起，将取消本科招生，扩大研究生招生规模？"><a href="#如何看待清华大学新闻与传播学院-2020-年起，将取消本科招生，扩大研究生招生规模？" class="headerlink" title="如何看待清华大学新闻与传播学院 2020 年起，将取消本科招生，扩大研究生招生规模？"></a>如何看待清华大学新闻与传播学院 2020 年起，将取消本科招生，扩大研究生招生规模？</h2><p>作者：王子君<br>链接：<a href="https://www.zhihu.com/question/394929921/answer/1224732344" target="_blank" rel="noopener">https://www.zhihu.com/question/394929921/answer/1224732344</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h2 id="如何看待清华大学新闻与传播学院-2020-年起，将取消本科招生，扩大研究生招生规模？"><a href="#如何看待清华大学新闻与传播学院-2020-年起，将取消本科招生，扩大研究生招生规模？" class="headerlink" title="如何看待清华大学新闻与传播学院 2020 年起，将取消本科招生，扩大研究生招生规模？"></a>如何看待清华大学新闻与传播学院 2020 年起，将取消本科招生，扩大研究生招生规模？</h2><p>作者：王子君<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/394929921/answer/1224732344">https://www.zhihu.com/question/394929921/answer/1224732344</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <p>谢邀。</p>
 <p>资瓷。</p>
 <p>互联网媒体不懂互联网，这已经是圈子里老常态了。</p>
@@ -352,7 +442,7 @@
 <p>总之，既然知识分子技工化是不可逆的趋势，那就老老实实配合这个趋势改造，不要让学生四年六年下来，和路人甲一样还是行业小白。</p>
 <p>写到这里，想起昨天和经济观察报的一位朋友聊现在的媒体趋势，我说了一句“媒介即信息”，我俩相视一笑。</p>
 <p>希望这个进程中，这些知识不要被稀释得太厉害了。这些知识不能指导你开公众号，但却是知识本身。</p>
-<h2 id="如何看待-2020-年中国移动停薪留职鼓励员工创业？"><a href="#如何看待-2020-年中国移动停薪留职鼓励员工创业？" class="headerlink" title="如何看待 2020 年中国移动停薪留职鼓励员工创业？"></a>如何看待 2020 年中国移动停薪留职鼓励员工创业？</h2><p>作者：王子君<br>链接：<a href="https://www.zhihu.com/question/394817654/answer/1225182428" target="_blank" rel="noopener">https://www.zhihu.com/question/394817654/answer/1225182428</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h2 id="如何看待-2020-年中国移动停薪留职鼓励员工创业？"><a href="#如何看待-2020-年中国移动停薪留职鼓励员工创业？" class="headerlink" title="如何看待 2020 年中国移动停薪留职鼓励员工创业？"></a>如何看待 2020 年中国移动停薪留职鼓励员工创业？</h2><p>作者：王子君<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/394817654/answer/1225182428">https://www.zhihu.com/question/394817654/answer/1225182428</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <p>谢邀。</p>
 <p>也不知道说点啥，找了点当年亲历者的回忆。</p>
 <p>在抚顺市望花区街头的零工市场一位下岗的钢厂选料工人这样介绍他的就业困难：</p>
@@ -381,7 +471,7 @@
 <p>“……现在老板太黑，人有的是，400一个月你干不干？你不干，农民工干。就这价，农民工干也不容易。”</p>
 <p>不是一码事啊，当年是下岗再就业，如今叫停薪留职鼓励创业。时代不同，仅作参考。</p>
 <p>原文出自《铁饭碗消失之后——东北三省四市国企职工生活、就业状况调查》，感谢负责调查的吉林大学与负责发表的《南风窗》。</p>
-<h2 id="如何看待美国疑似彻底封杀华为，公司只要用美国设备造芯片卖华为就要被限制？"><a href="#如何看待美国疑似彻底封杀华为，公司只要用美国设备造芯片卖华为就要被限制？" class="headerlink" title="如何看待美国疑似彻底封杀华为，公司只要用美国设备造芯片卖华为就要被限制？"></a>如何看待美国疑似彻底封杀华为，公司只要用美国设备造芯片卖华为就要被限制？</h2><p>作者：王子君<br>链接：<a href="https://www.zhihu.com/question/395075061/answer/1226708615" target="_blank" rel="noopener">https://www.zhihu.com/question/395075061/answer/1226708615</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h2 id="如何看待美国疑似彻底封杀华为，公司只要用美国设备造芯片卖华为就要被限制？"><a href="#如何看待美国疑似彻底封杀华为，公司只要用美国设备造芯片卖华为就要被限制？" class="headerlink" title="如何看待美国疑似彻底封杀华为，公司只要用美国设备造芯片卖华为就要被限制？"></a>如何看待美国疑似彻底封杀华为，公司只要用美国设备造芯片卖华为就要被限制？</h2><p>作者：王子君<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/395075061/answer/1226708615">https://www.zhihu.com/question/395075061/answer/1226708615</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <p>谢邀。</p>
 <p>大选年嘛。一个最懂谈判的大统领，一个国力停滞的美帝，一场瘟疫，都撞在了这个大选年。</p>
 <p>很多事大家很熟就跳过了，聊点新的：</p>
@@ -430,7 +520,7 @@
 <p>这不是一家公司的事，这是接下来的时代中美主基调。叫脱钩也好去全球化也好去中国化也好，反正，就是不带你玩了，就是要把你从群里踢出去了。</p>
 <p>美帝内部还能阻滞川皇的，就剩下民主党的一部分。他们也反华，但是他们有和我朝直接相关的贸易及投资利益，他们还要反川皇，所以暂时能拦一下。</p>
 <p>等到川皇胜选，国内使绊子的力量彻底式微，好戏才算刚刚开始。</p>
-<h2 id="如何看待杭州双语硕士回应「放弃-30-万年薪做保姆」：思想要变，有人开-2-万月薪？"><a href="#如何看待杭州双语硕士回应「放弃-30-万年薪做保姆」：思想要变，有人开-2-万月薪？" class="headerlink" title="如何看待杭州双语硕士回应「放弃 30 万年薪做保姆」：思想要变，有人开 2 万月薪？"></a>如何看待杭州双语硕士回应「放弃 30 万年薪做保姆」：思想要变，有人开 2 万月薪？</h2><p>作者：王子君<br>链接：<a href="https://www.zhihu.com/question/397911848/answer/1252126038" target="_blank" rel="noopener">https://www.zhihu.com/question/397911848/answer/1252126038</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h2 id="如何看待杭州双语硕士回应「放弃-30-万年薪做保姆」：思想要变，有人开-2-万月薪？"><a href="#如何看待杭州双语硕士回应「放弃-30-万年薪做保姆」：思想要变，有人开-2-万月薪？" class="headerlink" title="如何看待杭州双语硕士回应「放弃 30 万年薪做保姆」：思想要变，有人开 2 万月薪？"></a>如何看待杭州双语硕士回应「放弃 30 万年薪做保姆」：思想要变，有人开 2 万月薪？</h2><p>作者：王子君<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/397911848/answer/1252126038">https://www.zhihu.com/question/397911848/answer/1252126038</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <p>谢邀。</p>
 <p>部分产业无法提供足够的有效就业。</p>
 <p>我们也有菲律宾化的迹象。</p>
@@ -489,7 +579,7 @@
 <p>什么时候美国黑人能意识到议会政治，或者选一个黑人总统永远都不能改变自己的命运，什么时候黑人才算是开始觉醒。所谓种族歧视，只是稻草人，障眼法，为的是遮掩黑人在这个体制中永为贱民的事实。只要我永远旗帜鲜明的高喊反对歧视，就永远没有人探究那个深不可测的“体制问题”。</p>
 <p>2000年前的中国农民都能喊出苍天已死黄天当立，300多年前的中国失业邮递员都能想出均田免粮的口号。而美国的黑人们，还是只能一口一个黑命贵，以为他们所有的不幸仅仅只是来自他人的“歧视”。</p>
 <p>他们太缺少一个像样的领袖了，也许永远不会有。</p>
-<p>作者：古青<br>链接：<a href="https://www.zhihu.com/question/397905351/answer/1251614623" target="_blank" rel="noopener">https://www.zhihu.com/question/397905351/answer/1251614623</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>作者：古青<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/397905351/answer/1251614623">https://www.zhihu.com/question/397905351/answer/1251614623</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 
     </div>
 
@@ -497,7 +587,7 @@
     
     
 
-      <footer class="post-footer">
+    <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/China/" rel="tag"># China</a>
               <a href="/tags/US/" rel="tag"># US</a>
@@ -508,20 +598,19 @@
 
         
 
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2020/05/24/2020-05-24-chinese-yearly-gdp-goal/" rel="prev" title="全球疫情危机下，中国经济基础依然牢固，如何看待政府工作报告没有提出全年经济增速具体目标？">
-      <i class="fa fa-chevron-left"></i> 全球疫情危机下，中国经济基础依然牢固，如何看待政府工作报告没有提出全年经济增速具体目标？
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/06/01/2020-06-01-usa-exit-who/" rel="next" title="如何看待特朗普宣布美国将退出世界卫生组织?">
-      如何看待特朗普宣布美国将退出世界卫生组织? <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/05/24/2020-05-24-chinese-yearly-gdp-goal/" rel="prev" title="全球疫情危机下，中国经济基础依然牢固，如何看待政府工作报告没有提出全年经济增速具体目标？">
+                  <i class="fa fa-chevron-left"></i> 全球疫情危机下，中国经济基础依然牢固，如何看待政府工作报告没有提出全年经济增速具体目标？
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2020/06/01/2020-06-01-usa-exit-who/" rel="next" title="如何看待特朗普宣布美国将退出世界卫生组织?">
+                  如何看待特朗普宣布美国将退出世界卫生组织? <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
   </article>
   
   
@@ -529,8 +618,7 @@
 
 
 
-          </div>
-          
+      
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -539,7 +627,7 @@
       activeClass = localStorage.getItem('comments_active') || activeClass;
     }
     if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
       if (activeTab) {
         activeTab.click();
       }
@@ -548,95 +636,20 @@
   if (CONFIG.comments.storage) {
     window.addEventListener('tabs:click', event => {
       if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
+      const commentClass = event.target.classList[1];
       localStorage.setItem('comments_active', commentClass);
     });
   }
 </script>
 
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E4%BA%BA%E9%98%B6%E7%BA%A7%E6%8A%B5%E5%88%B6996%EF%BC%8C%E4%BD%86%E7%AB%9E%E4%BA%89%E5%8A%9B%E4%B8%8A%E4%B8%8D%E5%8E%BB%EF%BC%8C%E4%B8%AD%E5%9B%BD%E5%A6%82%E4%BD%95%E5%9C%A8%E5%90%84%E8%A1%8C%E4%B8%9A%E9%A2%86%E5%85%88%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">工人阶级抵制996，但竞争力上不去，中国如何在各行业领先？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%85%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%E6%96%B0%E9%97%BB%E4%B8%8E%E4%BC%A0%E6%92%AD%E5%AD%A6%E9%99%A2-2020-%E5%B9%B4%E8%B5%B7%EF%BC%8C%E5%B0%86%E5%8F%96%E6%B6%88%E6%9C%AC%E7%A7%91%E6%8B%9B%E7%94%9F%EF%BC%8C%E6%89%A9%E5%A4%A7%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8B%9B%E7%94%9F%E8%A7%84%E6%A8%A1%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">如何看待清华大学新闻与传播学院 2020 年起，将取消本科招生，扩大研究生招生规模？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%85-2020-%E5%B9%B4%E4%B8%AD%E5%9B%BD%E7%A7%BB%E5%8A%A8%E5%81%9C%E8%96%AA%E7%95%99%E8%81%8C%E9%BC%93%E5%8A%B1%E5%91%98%E5%B7%A5%E5%88%9B%E4%B8%9A%EF%BC%9F"><span class="nav-number">3.</span> <span class="nav-text">如何看待 2020 年中国移动停薪留职鼓励员工创业？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%85%E7%BE%8E%E5%9B%BD%E7%96%91%E4%BC%BC%E5%BD%BB%E5%BA%95%E5%B0%81%E6%9D%80%E5%8D%8E%E4%B8%BA%EF%BC%8C%E5%85%AC%E5%8F%B8%E5%8F%AA%E8%A6%81%E7%94%A8%E7%BE%8E%E5%9B%BD%E8%AE%BE%E5%A4%87%E9%80%A0%E8%8A%AF%E7%89%87%E5%8D%96%E5%8D%8E%E4%B8%BA%E5%B0%B1%E8%A6%81%E8%A2%AB%E9%99%90%E5%88%B6%EF%BC%9F"><span class="nav-number">4.</span> <span class="nav-text">如何看待美国疑似彻底封杀华为，公司只要用美国设备造芯片卖华为就要被限制？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%85%E6%9D%AD%E5%B7%9E%E5%8F%8C%E8%AF%AD%E7%A1%95%E5%A3%AB%E5%9B%9E%E5%BA%94%E3%80%8C%E6%94%BE%E5%BC%83-30-%E4%B8%87%E5%B9%B4%E8%96%AA%E5%81%9A%E4%BF%9D%E5%A7%86%E3%80%8D%EF%BC%9A%E6%80%9D%E6%83%B3%E8%A6%81%E5%8F%98%EF%BC%8C%E6%9C%89%E4%BA%BA%E5%BC%80-2-%E4%B8%87%E6%9C%88%E8%96%AA%EF%BC%9F"><span class="nav-number">5.</span> <span class="nav-text">如何看待杭州双语硕士回应「放弃 30 万年薪做保姆」：思想要变，有人开 2 万月薪？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7%E6%98%8E%E5%B0%BC%E8%8B%8F%E8%BE%BE%E5%B7%9E%E5%9B%A0%E8%AD%A6%E5%AF%9F%E6%89%93%E6%AD%BB%E9%BB%91%E4%BA%BA%E7%88%86%E5%8F%91%E6%8A%97%E8%AE%AE%E6%B4%BB%E5%8A%A8%EF%BC%8C%E4%B8%80%E4%BA%9B%E4%BA%BA%E6%8A%97%E8%AE%AE%E5%8D%8A%E8%B7%AF%E5%BC%80%E5%A7%8B%E6%8A%A2%E5%8A%AB%E8%B6%85%E5%B8%82"><span class="nav-number">6.</span> <span class="nav-text">如何评价明尼苏达州因警察打死黑人爆发抗议活动，一些人抗议半路开始抢劫超市?</span></a></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Abraham Xiao"
-      src="/images/avatar.jpg">
-  <p class="site-author-name" itemprop="name">Abraham Xiao</p>
-  <div class="site-description" itemprop="description">Shut Up and Get Rich.</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">224</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">12</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">369</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/ProfessorX" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ProfessorX" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:admin@yxiao.org" title="E-Mail → mailto:admin@yxiao.org" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
-      </span>
-  </div>
-
-
-
-      </div>
-
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
+  </main>
 
+  <footer class="footer">
+    <div class="footer-inner">
+      
 
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
+      
 
 <div class="copyright">
   
@@ -645,79 +658,37 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Abraham Xiao</span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
 
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
 
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
+  
 
 
-<script src="/js/schemes/muse.js"></script>
 
 
-<script src="/js/next-boot.js"></script>
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
 
 
 
 
   
-  <script>
-    (function(){
-      var canonicalURL, curProtocol;
-      //Get the <link> tag
-      var x=document.getElementsByTagName("link");
-		//Find the last canonical URL
-		if(x.length > 0){
-			for (i=0;i<x.length;i++){
-				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
-					canonicalURL=x[i].href;
-				}
-			}
-		}
-    //Get protocol
-	    if (!canonicalURL){
-	    	curProtocol = window.location.protocol.split(':')[0];
-	    }
-	    else{
-	    	curProtocol = canonicalURL.split(':')[0];
-	    }
-      //Get current URL if the canonical URL does not exist
-	    if (!canonicalURL) canonicalURL = window.location.href;
-	    //Assign script content. Replace current URL with the canonical URL
-      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
-  </script>
-
-
-
-
-  
-<script src="/js/local-search.js"></script>
-
-
-
-
-
 
 
 

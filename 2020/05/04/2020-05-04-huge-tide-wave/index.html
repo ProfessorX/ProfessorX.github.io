@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -13,24 +13,26 @@
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
-<script id="hexo-configurations">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"www.yxiao.org","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"8.0.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
   <meta name="description" content="谢邀。 热度下来了，闲扯一下。 虽然很多人能看出来，这房子不是她的，她是包租。不过这个故事还是让我想起了一些读过的片段：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何看待 93 年女生拥有 400 栋楼这件事，是真是假？">
-<meta property="og:url" content="https://www.yxiao.org/2020/05/04/2020-05-04-huge-tide-wave/index.html">
-<meta property="og:site_name" content="Masdar Wireless">
+<meta property="og:url" content="http://yoursite.com/2020/05/04/2020-05-04-huge-tide-wave/index.html">
+<meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="谢邀。 热度下来了，闲扯一下。 虽然很多人能看出来，这房子不是她的，她是包租。不过这个故事还是让我想起了一些读过的片段：">
-<meta property="og:locale" content="zh_CN">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.yxiao.org/images/2020050501.jpg">
 <meta property="article:published_time" content="2020-05-04T10:00:00.000Z">
-<meta property="article:modified_time" content="2020-05-08T00:54:38.604Z">
-<meta property="article:author" content="Abraham Xiao">
+<meta property="article:modified_time" content="2020-08-17T16:55:15.231Z">
+<meta property="article:author" content="John Doe">
 <meta property="article:tag" content="China">
 <meta property="article:tag" content="Money">
 <meta property="article:tag" content="People">
@@ -39,20 +41,21 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://www.yxiao.org/images/2020050501.jpg">
 
-<link rel="canonical" href="https://www.yxiao.org/2020/05/04/2020-05-04-huge-tide-wave/">
+
+<link rel="canonical" href="http://yoursite.com/2020/05/04/2020-05-04-huge-tide-wave/">
 
 
-<script id="page-configurations">
+<script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
     isHome : false,
     isPost : true,
-    lang   : 'zh-CN'
+    lang   : 'en'
   };
 </script>
 
-  <title>如何看待 93 年女生拥有 400 栋楼这件事，是真是假？ | Masdar Wireless</title>
+  <title>如何看待 93 年女生拥有 400 栋楼这件事，是真是假？ | Hexo</title>
   
 
 
@@ -62,51 +65,62 @@
 
   <noscript>
   <style>
-  .use-motion .brand,
+  body { margin-top: 2rem; }
+
   .use-motion .menu-item,
-  .sidebar-inner,
+  .use-motion .sidebar,
   .use-motion .post-block,
   .use-motion .pagination,
   .use-motion .comments,
   .use-motion .post-header,
   .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
 
   .use-motion .site-title,
-  .use-motion .site-subtitle {
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
     opacity: initial;
     top: initial;
   }
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
   </style>
 </noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
+  <main class="main">
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
   <div class="site-meta">
 
     <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Masdar Wireless</h1>
-      <span class="logo-line-after"><i></i></span>
+      <i class="logo-line"></i>
+      <h1 class="site-title">Hexo</h1>
+      <i class="logo-line"></i>
     </a>
-      <p class="site-subtitle" itemprop="description">MORE MEAT MORE EXERCISE!</p>
   </div>
 
   <div class="site-nav-right">
@@ -118,32 +132,31 @@
 
 
 
-
 <nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
+  <ul class="main-menu menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
 
   </li>
         <li class="menu-item menu-item-about">
 
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
 
   </li>
         <li class="menu-item menu-item-study">
@@ -157,7 +170,7 @@
 
   </li>
       <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
       </li>
   </ul>
@@ -172,17 +185,17 @@
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
-           placeholder="搜索..." spellcheck="false"
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
            type="search" class="search-input">
   </div>
   <span class="popup-btn-close">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
   </div>
 </div>
 
@@ -190,6 +203,79 @@
   </div>
 
 </div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7%E6%9C%B1%E4%B8%80%E6%97%A6%E5%9B%A2%E9%98%9F%E6%89%80%E5%88%9B%E4%BD%9C%E7%9A%84%E8%A7%86%E9%A2%91%E3%80%8A%E9%9D%9E%E6%B5%AA%E3%80%8B"><span class="nav-number">1.</span> <span class="nav-text">如何评价朱一旦团队所创作的视频《非浪》?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A0%E9%80%9F%E4%B8%BB%E4%B9%89%E6%98%AF%E7%9B%AE%E5%89%8D%E7%BD%91%E7%BB%9C%E4%B8%8A%E7%9A%84%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0%E5%90%97%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">加速主义是目前网络上的最大公约数吗？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%85-B-%E7%AB%99%E3%80%8A%E5%90%8E%E6%B5%AA%E3%80%8B%E5%9C%A8%E7%9F%A5%E4%B9%8E%E7%BF%BB%E8%BD%A6%E7%9A%84%E6%83%85%E5%86%B5%EF%BC%9F"><span class="nav-number">3.</span> <span class="nav-text">如何看待 B 站《后浪》在知乎翻车的情况？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E3%80%8A%E5%90%8E%E6%B5%AA%E3%80%8B%E5%9C%A8%E7%9F%A5%E4%B9%8E%E5%92%8CB%E7%AB%99%E8%AF%84%E4%BB%B7%E5%AD%98%E5%9C%A8%E4%B8%A4%E6%9E%81%E5%88%86%E5%8C%96%EF%BC%9F"><span class="nav-number">4.</span> <span class="nav-text">为什么《后浪》在知乎和B站评价存在两极分化？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7-B-%E7%AB%99-2020-%E5%B9%B4%E4%BA%94%E5%9B%9B%E9%9D%92%E5%B9%B4%E8%8A%82%E5%AE%A3%E4%BC%A0%E7%9F%AD%E7%89%87%E3%80%8A%E5%90%8E%E6%B5%AA%E3%80%8B%EF%BC%9F"><span class="nav-number">5.</span> <span class="nav-text">如何评价 B 站 2020 年五四青年节宣传短片《后浪》？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%85%E6%9C%89%E4%BA%BA%E5%B0%86%E6%B0%91%E6%97%8F%E4%B8%BB%E4%B9%89%E5%92%8C%E6%9E%81%E7%AB%AF%E6%B0%91%E6%97%8F%E4%B8%BB%E4%B9%89%E7%B2%97%E6%9A%B4%E5%9C%B0%E5%88%92%E7%AD%89%E5%8F%B7%EF%BC%9F"><span class="nav-number">6.</span> <span class="nav-text">如何看待有人将民族主义和极端民族主义粗暴地划等号？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%85%E6%AF%94%E5%B0%94%E7%9B%96%E8%8C%A8%E7%A7%B0%E7%BE%8E%E5%9B%BD%E4%BD%8E%E6%94%B6%E5%85%A5%E8%80%85%E5%BE%97%E4%B8%8D%E5%88%B0%E6%96%B0%E5%86%A0%E7%97%85%E6%AF%92%E6%A3%80%E6%B5%8B%EF%BC%8C%E6%9C%89%E9%92%B1%E4%BA%BA%E5%8F%AF%E4%BB%A5%E6%A3%80%E6%B5%8B%E5%A4%9A%E6%AC%A1%EF%BC%9F"><span class="nav-number">7.</span> <span class="nav-text">如何看待比尔盖茨称美国低收入者得不到新冠病毒检测，有钱人可以检测多次？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%A0%E4%B8%BA%E4%BB%80%E4%B9%88%E6%94%AF%E6%8C%81%E4%BB%A3%E5%AD%95%E5%90%88%E6%B3%95%E5%8C%96%EF%BC%9F"><span class="nav-number">8.</span> <span class="nav-text">你为什么支持代孕合法化？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7%E4%BF%84%E7%BD%97%E6%96%AF%E7%B1%8D%E4%B8%AD%E5%9B%BD%E7%BD%91%E7%BA%A2%E4%BC%8F%E6%8B%89%E5%A4%AB%EF%BC%9F"><span class="nav-number">9.</span> <span class="nav-text">如何评价俄罗斯籍中国网红伏拉夫？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7%E6%9C%80%E8%BF%91%E7%AA%81%E7%84%B6%E6%B5%81%E8%A1%8C%E8%B5%B7%E6%9D%A5%E7%9A%84%E5%8A%A0%E9%80%9F%E4%B8%BB%E4%B9%89%E6%80%9D%E6%BD%AE%EF%BC%9F"><span class="nav-number">10.</span> <span class="nav-text">如何评价最近突然流行起来的加速主义思潮？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%8F%8D%E9%A9%B3%E2%80%9C%E6%89%B9%E8%AF%84%E4%B8%8D%E8%87%AA%E7%94%B1%EF%BC%8C%E5%88%99%E8%B5%9E%E7%BE%8E%E6%97%A0%E6%84%8F%E4%B9%89%E2%80%9D%EF%BC%9F"><span class="nav-number">11.</span> <span class="nav-text">如何反驳“批评不自由，则赞美无意义”？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B5%B7%E7%82%B9%E4%B8%AD%E6%96%87%E7%BD%91-%E9%98%85%E6%96%87%E9%9B%86%E5%9B%A2-%E6%96%B0%E5%90%88%E5%90%8C%E6%98%AF%E4%B8%8D%E6%98%AF%E8%B5%84%E6%9C%AC%E4%B8%BB%E4%B9%89%E5%89%A5%E5%89%8A%E6%9C%AC%E8%B4%A8%E7%9A%84%E5%AE%8C%E7%BE%8E%E4%BD%93%E7%8E%B0"><span class="nav-number">12.</span> <span class="nav-text">起点中文网(阅文集团)新合同是不是资本主义剥削本质的完美体现?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AD%E5%9B%BD%E4%B8%BA%E4%BD%95%E5%9C%A8%E5%9B%BD%E9%99%85%E7%A4%BE%E4%BC%9A%E4%B8%8A%E7%BC%BA%E4%B9%8F%E7%9B%9F%E5%8F%8B%EF%BC%9F"><span class="nav-number">13.</span> <span class="nav-text">中国为何在国际社会上缺乏盟友？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E7%BD%91%E4%B8%8A%E6%9C%89%E4%BA%BA%E5%8F%8D%E5%AF%B9%E6%96%B0%E5%9F%BA%E5%BB%BA%EF%BC%9F"><span class="nav-number">14.</span> <span class="nav-text">为什么网上有人反对新基建？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%85%E5%90%84%E5%A4%A7%E9%93%B6%E8%A1%8C%E7%BA%B7%E7%BA%B7%E6%88%90%E7%AB%8B%E7%A7%91%E6%8A%80%E5%85%AC%E5%8F%B8%EF%BC%9F"><span class="nav-number">15.</span> <span class="nav-text">如何看待各大银行纷纷成立科技公司？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2020%E5%B9%B4%E6%96%B0%E7%94%9F%E4%BA%BA%E5%8F%A3%E4%BC%9A%E8%B7%8C%E7%A0%B41000%E4%B8%87%E5%90%97%EF%BC%9F"><span class="nav-number">16.</span> <span class="nav-text">2020年新生人口会跌破1000万吗？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9D%A3%E5%85%AC%E6%8F%90%E5%80%A1%E6%B6%88%E7%81%AD%E5%B0%8F%E5%86%9C%E7%BB%8F%E6%B5%8E%EF%BC%8C%E9%99%88%E5%B9%B3%E6%8F%90%E5%80%A1%E4%BF%9D%E7%95%99%E5%B0%8F%E5%86%9C%E7%BB%8F%E6%B5%8E%EF%BC%8C%E6%B8%A9%E9%93%81%E5%86%9B%E6%8F%90%E5%80%A1%E5%8F%91%E5%B1%95%E4%B8%89%E5%86%9C%E7%BB%8F%E6%B5%8E%E3%80%82%E4%BD%A0%E4%BB%AC%E6%9C%89%E4%BB%80%E4%B9%88%E7%9C%8B%E6%B3%95-%EF%BC%9F"><span class="nav-number">17.</span> <span class="nav-text">督公提倡消灭小农经济，陈平提倡保留小农经济，温铁军提倡发展三农经济。你们有什么看法 ？</span></a></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="John Doe"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">226</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">370</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/ProfessorX" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ProfessorX" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:admin@yxiao.org" title="E-Mail → mailto:admin@yxiao.org" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </section>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
     </header>
 
     
@@ -198,62 +284,68 @@
     <span>0%</span>
   </div>
 
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
 
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
 
-          <div class="content post posts-expand">
-            
+    <div class="main-inner post posts-expand">
+      
+
+      
 
     
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.yxiao.org/2020/05/04/2020-05-04-huge-tide-wave/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/04/2020-05-04-huge-tide-wave/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Abraham Xiao">
-      <meta itemprop="description" content="Shut Up and Get Rich.">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Masdar Wireless">
+      <meta itemprop="name" content="Hexo">
     </span>
+
+    
+    
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           如何看待 93 年女生拥有 400 栋楼这件事，是真是假？
         </h1>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
 
-              <time title="创建时间：2020-05-04 18:00:00" itemprop="dateCreated datePublished" datetime="2020-05-04T18:00:00+08:00">2020-05-04</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-08 08:54:38" itemprop="dateModified" datetime="2020-05-08T08:54:38+08:00">2020-05-08</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a>
-                </span>
-            </span>
+      <time title="Created: 2020-05-04 18:00:00" itemprop="dateCreated datePublished" datetime="2020-05-04T18:00:00+08:00">2020-05-04</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2020-08-18 00:55:15" itemprop="dateModified" datetime="2020-08-18T00:55:15+08:00">2020-08-18</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a>
+        </span>
+    </span>
 
-          
+  
+</div>
 
         </div>
       </header>
@@ -262,8 +354,6 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
         <p>谢邀。</p>
 <p>热度下来了，闲扯一下。</p>
 <p>虽然很多人能看出来，这房子不是她的，她是包租。不过这个故事还是让我想起了一些读过的片段：</p>
@@ -312,8 +402,8 @@
 <p>不写了，越写越烦。</p>
 <p>就问你一句话：</p>
 <p>还好意思乳法么？</p>
-<p>作者：王子君<br>链接：<a href="https://www.zhihu.com/question/392381606/answer/1200641654" target="_blank" rel="noopener">https://www.zhihu.com/question/392381606/answer/1200641654</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
-<h2 id="如何评价朱一旦团队所创作的视频《非浪》"><a href="#如何评价朱一旦团队所创作的视频《非浪》" class="headerlink" title="如何评价朱一旦团队所创作的视频《非浪》?"></a>如何评价朱一旦团队所创作的视频《非浪》?</h2><p>作者：王子君<br>链接：<a href="https://www.zhihu.com/question/392615150/answer/1200166855" target="_blank" rel="noopener">https://www.zhihu.com/question/392615150/answer/1200166855</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>作者：王子君<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/392381606/answer/1200641654">https://www.zhihu.com/question/392381606/answer/1200641654</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h2 id="如何评价朱一旦团队所创作的视频《非浪》"><a href="#如何评价朱一旦团队所创作的视频《非浪》" class="headerlink" title="如何评价朱一旦团队所创作的视频《非浪》?"></a>如何评价朱一旦团队所创作的视频《非浪》?</h2><p>作者：王子君<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/392615150/answer/1200166855">https://www.zhihu.com/question/392615150/answer/1200166855</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <p>谢邀。</p>
 <p>好作品，年轻人你们真正的出路在非洲，听朱总的话，走出去。</p>
 <p>去学法语、英语、斯瓦西里语、南非语；</p>
@@ -346,7 +436,7 @@
 <p>人喷你来你喷人，加速主义不用吵。</p>
 <p>左壬批斗我支持，右壬清洗我种草。</p>
 <p>待到矛盾总爆发，再来看看谁最屌。</p>
-<p>作者：王子君<br>链接：<a href="https://www.zhihu.com/question/392448314/answer/1199955658" target="_blank" rel="noopener">https://www.zhihu.com/question/392448314/answer/1199955658</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>作者：王子君<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/392448314/answer/1199955658">https://www.zhihu.com/question/392448314/answer/1199955658</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <h2 id="如何看待-B-站《后浪》在知乎翻车的情况？"><a href="#如何看待-B-站《后浪》在知乎翻车的情况？" class="headerlink" title="如何看待 B 站《后浪》在知乎翻车的情况？"></a>如何看待 B 站《后浪》在知乎翻车的情况？</h2><p>谢邀。</p>
 <p>空。</p>
 <p>打鸡血也得有诚意不是？</p>
@@ -357,7 +447,7 @@
 <p>现在这玩意看来看去，就是寄望年轻人去996。改变是没啥机会了，继续消费，继续加班，这就是新时代的后浪。</p>
 <p><strong>那这后浪，谁爱当谁当。</strong></p>
 <p>哪里是知乎翻车，处处翻车。要不是B站评论区大清洗了一把，B站本阵已经翻了。</p>
-<p>作者：王子君<br>链接：<a href="https://www.zhihu.com/question/392465962/answer/1199731606" target="_blank" rel="noopener">https://www.zhihu.com/question/392465962/answer/1199731606</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>作者：王子君<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/392465962/answer/1199731606">https://www.zhihu.com/question/392465962/answer/1199731606</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <h2 id="为什么《后浪》在知乎和B站评价存在两极分化？"><a href="#为什么《后浪》在知乎和B站评价存在两极分化？" class="headerlink" title="为什么《后浪》在知乎和B站评价存在两极分化？"></a>为什么《后浪》在知乎和B站评价存在两极分化？</h2><p>谢邀</p>
 <p>对浪的理解不一样，知乎对浪的理解是这个：</p>
 <p>巨浪，巨浪，不断地增长。</p>
@@ -371,8 +461,8 @@
 <p>不过再这么下去，就有点日本圣诞节的意思了：很重要，很热闹，但已经有一半日本年轻人不知道这是个和基督教相关的节日了。</p>
 <p>反正我认为，五四青年节最该年年朗诵的，就这句：</p>
 <p>外争国权，内除国贼。</p>
-<p>作者：王子君<br>链接：<a href="https://www.zhihu.com/question/392359306/answer/1199270857" target="_blank" rel="noopener">https://www.zhihu.com/question/392359306/answer/1199270857</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
-<h2 id="如何看待有人将民族主义和极端民族主义粗暴地划等号？"><a href="#如何看待有人将民族主义和极端民族主义粗暴地划等号？" class="headerlink" title="如何看待有人将民族主义和极端民族主义粗暴地划等号？"></a>如何看待有人将民族主义和极端民族主义粗暴地划等号？</h2><p>作者：王子君<br>链接：<a href="https://www.zhihu.com/question/390853298/answer/1199221992" target="_blank" rel="noopener">https://www.zhihu.com/question/390853298/answer/1199221992</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>作者：王子君<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/392359306/answer/1199270857">https://www.zhihu.com/question/392359306/answer/1199270857</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h2 id="如何看待有人将民族主义和极端民族主义粗暴地划等号？"><a href="#如何看待有人将民族主义和极端民族主义粗暴地划等号？" class="headerlink" title="如何看待有人将民族主义和极端民族主义粗暴地划等号？"></a>如何看待有人将民族主义和极端民族主义粗暴地划等号？</h2><p>作者：王子君<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/390853298/answer/1199221992">https://www.zhihu.com/question/390853298/answer/1199221992</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <p>谢邀。</p>
 <p>因为极端民族主义在伪装成温和民族主义。</p>
 <p>有点耳熟哈。</p>
@@ -399,7 +489,7 @@
 <p>你再回头看看现在这些，啥玩意儿。</p>
 <p>现在的极端民族主义言论很猥琐，薛定谔，老躲在正常民族感情的背后。</p>
 <p>那就躲着吧，继续猥琐下去。</p>
-<h2 id="如何看待比尔盖茨称美国低收入者得不到新冠病毒检测，有钱人可以检测多次？"><a href="#如何看待比尔盖茨称美国低收入者得不到新冠病毒检测，有钱人可以检测多次？" class="headerlink" title="如何看待比尔盖茨称美国低收入者得不到新冠病毒检测，有钱人可以检测多次？"></a>如何看待比尔盖茨称美国低收入者得不到新冠病毒检测，有钱人可以检测多次？</h2><p>作者：王子君<br>链接：<a href="https://www.zhihu.com/question/392274691/answer/1198375622" target="_blank" rel="noopener">https://www.zhihu.com/question/392274691/answer/1198375622</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h2 id="如何看待比尔盖茨称美国低收入者得不到新冠病毒检测，有钱人可以检测多次？"><a href="#如何看待比尔盖茨称美国低收入者得不到新冠病毒检测，有钱人可以检测多次？" class="headerlink" title="如何看待比尔盖茨称美国低收入者得不到新冠病毒检测，有钱人可以检测多次？"></a>如何看待比尔盖茨称美国低收入者得不到新冠病毒检测，有钱人可以检测多次？</h2><p>作者：王子君<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/392274691/answer/1198375622">https://www.zhihu.com/question/392274691/answer/1198375622</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <p>谢邀。</p>
 <p>我一直觉得比尔盖茨有着科技乌托邦的信仰。对于任何不看数据不讲逻辑的治理行为，他大概都是很看不上的。</p>
 <p>比尔盖茨06年就全身心投入了比尔梅琳达基金会。如果要窥视他对社会治理的态度，基金会的规划大概能反映一二。</p>
@@ -449,7 +539,7 @@
 <p>就这样，比尔盖茨已经是美帝红脖子心中的国家公敌了：病毒是你造的，疫苗是你卖的，你接下来是不是要用疫情把大好美帝送入军管？改造成你们硅谷左翼梦想的集权国家？</p>
 <p>别笑，在病毒是“中国制造”还是“比尔盖茨制造”这个问题上，MAGA们已经分裂了。</p>
 <p>我想，等十年二十年后盖茨出自传时，这段历史读起来一定非常精彩。</p>
-<h2 id="你为什么支持代孕合法化？"><a href="#你为什么支持代孕合法化？" class="headerlink" title="你为什么支持代孕合法化？"></a>你为什么支持代孕合法化？</h2><p>作者：王子君<br>链接：<a href="https://www.zhihu.com/question/55452098/answer/1198344472" target="_blank" rel="noopener">https://www.zhihu.com/question/55452098/answer/1198344472</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h2 id="你为什么支持代孕合法化？"><a href="#你为什么支持代孕合法化？" class="headerlink" title="你为什么支持代孕合法化？"></a>你为什么支持代孕合法化？</h2><p>作者：王子君<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/55452098/answer/1198344472">https://www.zhihu.com/question/55452098/answer/1198344472</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <p>谢邀。</p>
 <p>代孕恐怕是个无法避免的未来，这个未来不在乎个体的意志。</p>
 <p>真正的有效讨论，是思考如何能够找出一条对社会精神伤害最小的道路。</p>
@@ -510,7 +600,7 @@
 <p>PS：这也是我为什么对国家主义既接受又畏惧。因当国家主义成为彻底主导时，国家决定要做什么，那国家真的会做，哪怕这事普通人难以想象。</p>
 <h2 id="如何评价俄罗斯籍中国网红伏拉夫？"><a href="#如何评价俄罗斯籍中国网红伏拉夫？" class="headerlink" title="如何评价俄罗斯籍中国网红伏拉夫？"></a>如何评价俄罗斯籍中国网红伏拉夫？</h2><p>谢邀。</p>
 <p>这叫白猴子，white monkey。</p>
-<p>作者：王子君<br>链接：<a href="https://www.zhihu.com/question/334923127/answer/1197926830" target="_blank" rel="noopener">https://www.zhihu.com/question/334923127/answer/1197926830</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>作者：王子君<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/334923127/answer/1197926830">https://www.zhihu.com/question/334923127/answer/1197926830</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <p>这些人的工作内容就是在中国当个白人。对，就这样，没别的技能要求。</p>
 <p>从白人自身视角来看，就像动物园里供人观赏的猴子，所以被称为白猴子。</p>
 <p>这种白人我还真认识很多，我20岁出头时兼职过英语培训，和一个在北京开雅思托福培训的香港人大叔比较熟。</p>
@@ -537,7 +627,7 @@
 <p>至于伏拉夫，给没有余力出国的大众提供一点心理优越感，这就是他最大的价值。</p>
 <p>这没什么可以谴责的，这只是一种买卖。</p>
 <p>至于对伏拉夫有什么民族自豪感上的寄望，我觉得还是别了。这不是民族自豪感，这是深深的自卑。</p>
-<h2 id="如何评价最近突然流行起来的加速主义思潮？"><a href="#如何评价最近突然流行起来的加速主义思潮？" class="headerlink" title="如何评价最近突然流行起来的加速主义思潮？"></a>如何评价最近突然流行起来的加速主义思潮？</h2><p>作者：王子君<br>链接：<a href="https://www.zhihu.com/question/390868593/answer/1196221040" target="_blank" rel="noopener">https://www.zhihu.com/question/390868593/answer/1196221040</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h2 id="如何评价最近突然流行起来的加速主义思潮？"><a href="#如何评价最近突然流行起来的加速主义思潮？" class="headerlink" title="如何评价最近突然流行起来的加速主义思潮？"></a>如何评价最近突然流行起来的加速主义思潮？</h2><p>作者：王子君<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/390868593/answer/1196221040">https://www.zhihu.com/question/390868593/answer/1196221040</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <p>谢邀。</p>
 <p>因为堵车了。</p>
 <p>我之前提到工业党时有个观点：工业党成分复杂，很多人的政见几乎是背道而驰。只是因为大家都遇到了同样的僵局，都堵在了一个路口，所以被视为一党。</p>
@@ -587,8 +677,8 @@
 <p>所以，如果在辩论中有人引用这句话，那与其去花时间尝试驳倒一句具有复杂历史沉淀的名句，不如以这句话为切入点，问清楚对方：</p>
 <p>我们这次讨论中，哪些批评没有自由？又导致哪些赞美失去意义？这些批评与赞美是否对应？是否形成关系？</p>
 <p>就事论事，简单得多。</p>
-<p>作者：王子君<br>链接：<a href="https://www.zhihu.com/question/363637389/answer/1196167380" target="_blank" rel="noopener">https://www.zhihu.com/question/363637389/answer/1196167380</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
-<h2 id="起点中文网-阅文集团-新合同是不是资本主义剥削本质的完美体现"><a href="#起点中文网-阅文集团-新合同是不是资本主义剥削本质的完美体现" class="headerlink" title="起点中文网(阅文集团)新合同是不是资本主义剥削本质的完美体现?"></a>起点中文网(阅文集团)新合同是不是资本主义剥削本质的完美体现?</h2><p>作者：王子君<br>链接：<a href="https://www.zhihu.com/question/391948718/answer/1195432194" target="_blank" rel="noopener">https://www.zhihu.com/question/391948718/answer/1195432194</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>作者：王子君<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/363637389/answer/1196167380">https://www.zhihu.com/question/363637389/answer/1196167380</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h2 id="起点中文网-阅文集团-新合同是不是资本主义剥削本质的完美体现"><a href="#起点中文网-阅文集团-新合同是不是资本主义剥削本质的完美体现" class="headerlink" title="起点中文网(阅文集团)新合同是不是资本主义剥削本质的完美体现?"></a>起点中文网(阅文集团)新合同是不是资本主义剥削本质的完美体现?</h2><p>作者：王子君<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/391948718/answer/1195432194">https://www.zhihu.com/question/391948718/answer/1195432194</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <p>谢邀。</p>
 <p>是的。</p>
 <p>一个细节：有没有发现很多已经成名成腕的写手，在这次风波中，口密如墙。</p>
@@ -605,7 +695,7 @@
 <p>像阅文这种打着一堆新奇概念，真正干的勾当不过就是消灭人。消灭人的独立价值，将人固化为一颗螺丝钉，实现最高的资本变现效率。</p>
 <p>而阅文这种毫无底线的底气，来源于阅文背后的垄断。</p>
 <p>我寻思《反垄断法》是要一直这么摆着吃灰么？</p>
-<h2 id="中国为何在国际社会上缺乏盟友？"><a href="#中国为何在国际社会上缺乏盟友？" class="headerlink" title="中国为何在国际社会上缺乏盟友？"></a>中国为何在国际社会上缺乏盟友？</h2><p>作者：王子君<br>链接：<a href="https://www.zhihu.com/question/28372962/answer/1195076022" target="_blank" rel="noopener">https://www.zhihu.com/question/28372962/answer/1195076022</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h2 id="中国为何在国际社会上缺乏盟友？"><a href="#中国为何在国际社会上缺乏盟友？" class="headerlink" title="中国为何在国际社会上缺乏盟友？"></a>中国为何在国际社会上缺乏盟友？</h2><p>作者：王子君<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/28372962/answer/1195076022">https://www.zhihu.com/question/28372962/answer/1195076022</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <p>没有敌人，没有盟友。</p>
 <p>巴基斯坦能算半个盟友，是因为中巴都有印度这个共同的敌人。但面对中美对峙时，巴基斯坦能维系中立就很不错了。</p>
 <p>如果我们要获得真正的盟友，就必须形成真正的共同敌人。但在没有建立独立的国际分工体系前，我们不能对抗现行国际秩序，因此还无法指认公开的敌人。</p>
@@ -622,7 +712,7 @@
 <p>军事霸权、金融霸权获得盟友是简单的，唯独工业霸权要在崛起中获得盟友最为困难。前者是压力与收买，后者是国际分工。</p>
 <p>而国际分工是所有国家国运的根本。</p>
 <p>我们的剧本一定不是登山一呼群山应，而是百川不得不入海。</p>
-<h2 id="为什么网上有人反对新基建？"><a href="#为什么网上有人反对新基建？" class="headerlink" title="为什么网上有人反对新基建？"></a>为什么网上有人反对新基建？</h2><p>作者：塔斯马尼亚雨林<br>链接：<a href="https://www.zhihu.com/question/387317367/answer/1200122014" target="_blank" rel="noopener">https://www.zhihu.com/question/387317367/answer/1200122014</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h2 id="为什么网上有人反对新基建？"><a href="#为什么网上有人反对新基建？" class="headerlink" title="为什么网上有人反对新基建？"></a>为什么网上有人反对新基建？</h2><p>作者：塔斯马尼亚雨林<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/387317367/answer/1200122014">https://www.zhihu.com/question/387317367/answer/1200122014</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <p>利益相关：前地方政府融资平台顾问，前前地方政府智库研究员，前前前法定机构合同公务员。一个基建党党组成员。</p>
 <p>简而言之，新基建就是胡闹。</p>
 <p>1，效率不足。</p>
@@ -656,7 +746,7 @@
 <p>业务和产品?还是拿平安科技为例，和平安证券平安银行的一比算啥?做ficc的领航系统和平安科技有关系吗？做出来的东西，自家都未必乐意用，更别说竞争对手了。领航那么屌，卖出去几套?友商敢用吗？</p>
 <p>这还是拿券商和你们比，拿买方自研的系统一比就更弱了。</p>
 <p>留在甲方里，碰上行情好，本着国企大锅饭原则，公司还能给个三瓜两枣，丢去乙方后呢？</p>
-<p>作者：低端叫兽<br>链接：<a href="https://www.zhihu.com/question/280643384/answer/1206099132" target="_blank" rel="noopener">https://www.zhihu.com/question/280643384/answer/1206099132</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>作者：低端叫兽<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/280643384/answer/1206099132">https://www.zhihu.com/question/280643384/answer/1206099132</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <h2 id="2020年新生人口会跌破1000万吗？"><a href="#2020年新生人口会跌破1000万吗？" class="headerlink" title="2020年新生人口会跌破1000万吗？"></a>2020年新生人口会跌破1000万吗？</h2><p>肯定不会。</p>
 <p>因为十三五计划里，明确提出要在2020年将总和生育率稳定在1.8。</p>
 <p>这个指标实际上从2007年就开始提了，当年的《国家人口发展战略研究报告》就强调，要在未来30年里，把全国总和生育率维持在1.8，2020年是一个关键节点。</p>
@@ -670,8 +760,8 @@
 <p><strong>我们这个节点上病起来，简直了。</strong></p>
 <p>咱就问一个问题吧：</p>
 <p>现有的闲置房，要多少新生儿家庭才能消化完？</p>
-<p>作者：王子君<br>链接：<a href="https://www.zhihu.com/question/366659582/answer/1207838409" target="_blank" rel="noopener">https://www.zhihu.com/question/366659582/answer/1207838409</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
-<h2 id="督公提倡消灭小农经济，陈平提倡保留小农经济，温铁军提倡发展三农经济。你们有什么看法-？"><a href="#督公提倡消灭小农经济，陈平提倡保留小农经济，温铁军提倡发展三农经济。你们有什么看法-？" class="headerlink" title="督公提倡消灭小农经济，陈平提倡保留小农经济，温铁军提倡发展三农经济。你们有什么看法 ？"></a>督公提倡消灭小农经济，陈平提倡保留小农经济，温铁军提倡发展三农经济。你们有什么看法 ？</h2><p>作者：王子君<br>链接：<a href="https://www.zhihu.com/question/391545924/answer/1206972985" target="_blank" rel="noopener">https://www.zhihu.com/question/391545924/answer/1206972985</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>作者：王子君<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/366659582/answer/1207838409">https://www.zhihu.com/question/366659582/answer/1207838409</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h2 id="督公提倡消灭小农经济，陈平提倡保留小农经济，温铁军提倡发展三农经济。你们有什么看法-？"><a href="#督公提倡消灭小农经济，陈平提倡保留小农经济，温铁军提倡发展三农经济。你们有什么看法-？" class="headerlink" title="督公提倡消灭小农经济，陈平提倡保留小农经济，温铁军提倡发展三农经济。你们有什么看法 ？"></a>督公提倡消灭小农经济，陈平提倡保留小农经济，温铁军提倡发展三农经济。你们有什么看法 ？</h2><p>作者：王子君<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/391545924/answer/1206972985">https://www.zhihu.com/question/391545924/answer/1206972985</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <p>这要大体解释一遍，那至少得几万字。说点核心的吧：1.农业现代化是必然的；2.农业现代化有两条主路径：A）以城市为核心规划农村，产能、资本、劳动力高度集中于城市，农村从属于城市。B）以国家意志规划城市与农村，产能、资本、劳动力依然以城市为主体，但农村拥有独立体系。前者是工业化与现代化的常态，后者是人为逆周期调整；3.选择A道路的话，农村资产定价权掌握在城市手中，会形成严重的买方市场，导致农村资产贬值，农民陷入赤贫。选择B道路，农村在自身资产定价权上有议价能力，能够保证大部分持有资产的农民阶层身份稳定，甚至有望增值。还有其他一大堆利弊分析，太多了，不展开。但保证我朝绝大多数人是有产者，这是一切政策的核心。因此虽然我朝上上下下，看着城市化都眼红疯了，还是咬着牙走了B道路。理解这点，才能理解为什么消灭小农经济与农村百业兴盛可以并行不悖。前者是生产技术角度，后者是资产所有权及资产价值角度。督工、陈平、温铁军三人看的角度不一样。督工的角度是老工业党，大家很熟悉；陈平的角度是从稳态结构来看，觉得底座不能没有。看到了问题，但是实际操作并不是他所擅长的，所以他把警告发出来，让大家别城市化得太high，把底座给废了；温铁军的角度是把这个稳态结构落地，怎么样既能实现农村现代化，又能让大多数人农民还能保持有产者身份。而且是真正的有产者，不是拿着一张没人买的地契，那还是赤贫。因为常态下，农村的现代化就是农民贱卖资产成为城市产线工人，城市获得廉价劳动力与土地资产后形成高增长。让多数人保持有产者的身份下完成现代化，（而且又没有海外势力范围）是一件人为逆周期的操作，不容易。因此温铁军的很多言行看起来会很矛盾：一边强调小农经济的稳态，一边主张市场要素的统一化，并且着重强调农村资产的金融化。如果不了解实际操作，温铁军的读者自己就能裂成好几派。我的建议很简单：温铁军已经搞了那么多实验区，大家搜一搜，看一看，看看这些实验区里对现代农业技术、产权整合、金融结构设计是什么思路。真的，看了就懂。当然，这话我说了好几次了，估计还是没人去看温铁军的那些现成案例，我来个瞎几把精简版：大山里住着好多人。督工：把他们迁移到城里，拿他们的地来换城里的房。这样他们能过上更好的日子，国家也能省下往山里修路通电的钱；陈平：这些山里没产业，地不值钱，他们的地换不了城里的房，他们拿的钱不足以在城市里安身立命。要是全中国山里的农村都这么迁徙，城市最后就会多出一大批失业底层，这后果谁担？温铁军：那我们把山里的地做得值钱不就行了吗？注意啊，这是我民科版的解释。但这确实符合城镇化和新农村建设的趋势，就是要把农村做起来。插一句。很多人是不是看《生态文明》那个视频入的坑？记不记得视频里温铁军批评了一通德先生和赛先生？尤其是赛先生？国内的氛围，德先生可以批评，赛先生不行，所以很多人到今天还是不能理解温铁军这番言论。人家说的是“科学至上主义”。什么是“科学至上主义”？城市是先进的，农村是落后的，所以农村要消灭，农民要进城，农业要大规模化。有错吗？说实话从最终结果来看，可能真差不多。但是科学至上主义最大的弱点，就是忽视人的精神，而人的精神会改变你走向结果的路径。中间的波动和反复，很可能是大数据完全无法预判的。所以温铁军强调“生态文明建设”，每次一讲，微微一笑，这是个理论上的扣。生态文明强调科学、环境、心理、经济等多个层面的有机统一。先不先进，要看条件，要看时机，还要看人心。你觉得让农民进县城农民就该感恩戴德了，搞不好人家就想去北京呢？有了“生态文明”这个扣子，就能顶住很多大资本的压力。因为资本高度数据化，高度反人性，极其热爱纸面上的科学。按照纸面上的科学，那中国相当多农民的土地可以说是一文不值，农村没有投资的必要，通通进城当工人就好啦。不是说好入关吗？怎么入拉美了？在“生态文明”下，什么机械化大农场啊产权整合啊都不是事。具体问题具体分析嘛。东北能搞，搞呀；河南不少地方农民成批出去打工，地抛荒了，国家接手搞呀；浙江丘陵山地不好搞，进城成本高，当地农村条件也很好，那去干三产呀；西南山地，农村条件差，人也搬不动，那就去做一二三产呀。国家帮你当地搞产业，搞起产业再拿去换钱嘛。科学只要不至上，那就能实事求是，因地制宜，因人施政。在这个过程中，不值钱的三农资产做得值钱，消化城市过剩资本，缓解就业，吸纳过剩产能，形成一个庞大的经济纵深。还要保持多数人走完全程，依然是个有产者。不是靠算数就能搞定滴。</p>
 
     </div>
@@ -680,7 +770,7 @@
     
     
 
-      <footer class="post-footer">
+    <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/China/" rel="tag"># China</a>
               <a href="/tags/Money/" rel="tag"># Money</a>
@@ -691,20 +781,19 @@
 
         
 
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2020/04/30/2020-04-30-chinese-netizens-over-nine-yi/" rel="prev" title="如何看待中国网民规模破 9 亿，其中七成月收入不足 5000 元，八成学历在专科以下 ？">
-      <i class="fa fa-chevron-left"></i> 如何看待中国网民规模破 9 亿，其中七成月收入不足 5000 元，八成学历在专科以下 ？
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/05/11/2020-05-11-life-is-a-relay-race/" rel="next" title="如何看待知乎版后浪的言论“人生是一场接力赛”？">
-      如何看待知乎版后浪的言论“人生是一场接力赛”？ <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/04/30/2020-04-30-chinese-netizens-over-nine-yi/" rel="prev" title="如何看待中国网民规模破 9 亿，其中七成月收入不足 5000 元，八成学历在专科以下 ？">
+                  <i class="fa fa-chevron-left"></i> 如何看待中国网民规模破 9 亿，其中七成月收入不足 5000 元，八成学历在专科以下 ？
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2020/05/11/2020-05-11-life-is-a-relay-race/" rel="next" title="如何看待知乎版后浪的言论“人生是一场接力赛”？">
+                  如何看待知乎版后浪的言论“人生是一场接力赛”？ <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
   </article>
   
   
@@ -712,8 +801,7 @@
 
 
 
-          </div>
-          
+      
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -722,7 +810,7 @@
       activeClass = localStorage.getItem('comments_active') || activeClass;
     }
     if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
       if (activeTab) {
         activeTab.click();
       }
@@ -731,95 +819,20 @@
   if (CONFIG.comments.storage) {
     window.addEventListener('tabs:click', event => {
       if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
+      const commentClass = event.target.classList[1];
       localStorage.setItem('comments_active', commentClass);
     });
   }
 </script>
 
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7%E6%9C%B1%E4%B8%80%E6%97%A6%E5%9B%A2%E9%98%9F%E6%89%80%E5%88%9B%E4%BD%9C%E7%9A%84%E8%A7%86%E9%A2%91%E3%80%8A%E9%9D%9E%E6%B5%AA%E3%80%8B"><span class="nav-number">1.</span> <span class="nav-text">如何评价朱一旦团队所创作的视频《非浪》?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A0%E9%80%9F%E4%B8%BB%E4%B9%89%E6%98%AF%E7%9B%AE%E5%89%8D%E7%BD%91%E7%BB%9C%E4%B8%8A%E7%9A%84%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0%E5%90%97%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">加速主义是目前网络上的最大公约数吗？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%85-B-%E7%AB%99%E3%80%8A%E5%90%8E%E6%B5%AA%E3%80%8B%E5%9C%A8%E7%9F%A5%E4%B9%8E%E7%BF%BB%E8%BD%A6%E7%9A%84%E6%83%85%E5%86%B5%EF%BC%9F"><span class="nav-number">3.</span> <span class="nav-text">如何看待 B 站《后浪》在知乎翻车的情况？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E3%80%8A%E5%90%8E%E6%B5%AA%E3%80%8B%E5%9C%A8%E7%9F%A5%E4%B9%8E%E5%92%8CB%E7%AB%99%E8%AF%84%E4%BB%B7%E5%AD%98%E5%9C%A8%E4%B8%A4%E6%9E%81%E5%88%86%E5%8C%96%EF%BC%9F"><span class="nav-number">4.</span> <span class="nav-text">为什么《后浪》在知乎和B站评价存在两极分化？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7-B-%E7%AB%99-2020-%E5%B9%B4%E4%BA%94%E5%9B%9B%E9%9D%92%E5%B9%B4%E8%8A%82%E5%AE%A3%E4%BC%A0%E7%9F%AD%E7%89%87%E3%80%8A%E5%90%8E%E6%B5%AA%E3%80%8B%EF%BC%9F"><span class="nav-number">5.</span> <span class="nav-text">如何评价 B 站 2020 年五四青年节宣传短片《后浪》？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%85%E6%9C%89%E4%BA%BA%E5%B0%86%E6%B0%91%E6%97%8F%E4%B8%BB%E4%B9%89%E5%92%8C%E6%9E%81%E7%AB%AF%E6%B0%91%E6%97%8F%E4%B8%BB%E4%B9%89%E7%B2%97%E6%9A%B4%E5%9C%B0%E5%88%92%E7%AD%89%E5%8F%B7%EF%BC%9F"><span class="nav-number">6.</span> <span class="nav-text">如何看待有人将民族主义和极端民族主义粗暴地划等号？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%85%E6%AF%94%E5%B0%94%E7%9B%96%E8%8C%A8%E7%A7%B0%E7%BE%8E%E5%9B%BD%E4%BD%8E%E6%94%B6%E5%85%A5%E8%80%85%E5%BE%97%E4%B8%8D%E5%88%B0%E6%96%B0%E5%86%A0%E7%97%85%E6%AF%92%E6%A3%80%E6%B5%8B%EF%BC%8C%E6%9C%89%E9%92%B1%E4%BA%BA%E5%8F%AF%E4%BB%A5%E6%A3%80%E6%B5%8B%E5%A4%9A%E6%AC%A1%EF%BC%9F"><span class="nav-number">7.</span> <span class="nav-text">如何看待比尔盖茨称美国低收入者得不到新冠病毒检测，有钱人可以检测多次？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%A0%E4%B8%BA%E4%BB%80%E4%B9%88%E6%94%AF%E6%8C%81%E4%BB%A3%E5%AD%95%E5%90%88%E6%B3%95%E5%8C%96%EF%BC%9F"><span class="nav-number">8.</span> <span class="nav-text">你为什么支持代孕合法化？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7%E4%BF%84%E7%BD%97%E6%96%AF%E7%B1%8D%E4%B8%AD%E5%9B%BD%E7%BD%91%E7%BA%A2%E4%BC%8F%E6%8B%89%E5%A4%AB%EF%BC%9F"><span class="nav-number">9.</span> <span class="nav-text">如何评价俄罗斯籍中国网红伏拉夫？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7%E6%9C%80%E8%BF%91%E7%AA%81%E7%84%B6%E6%B5%81%E8%A1%8C%E8%B5%B7%E6%9D%A5%E7%9A%84%E5%8A%A0%E9%80%9F%E4%B8%BB%E4%B9%89%E6%80%9D%E6%BD%AE%EF%BC%9F"><span class="nav-number">10.</span> <span class="nav-text">如何评价最近突然流行起来的加速主义思潮？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%8F%8D%E9%A9%B3%E2%80%9C%E6%89%B9%E8%AF%84%E4%B8%8D%E8%87%AA%E7%94%B1%EF%BC%8C%E5%88%99%E8%B5%9E%E7%BE%8E%E6%97%A0%E6%84%8F%E4%B9%89%E2%80%9D%EF%BC%9F"><span class="nav-number">11.</span> <span class="nav-text">如何反驳“批评不自由，则赞美无意义”？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B5%B7%E7%82%B9%E4%B8%AD%E6%96%87%E7%BD%91-%E9%98%85%E6%96%87%E9%9B%86%E5%9B%A2-%E6%96%B0%E5%90%88%E5%90%8C%E6%98%AF%E4%B8%8D%E6%98%AF%E8%B5%84%E6%9C%AC%E4%B8%BB%E4%B9%89%E5%89%A5%E5%89%8A%E6%9C%AC%E8%B4%A8%E7%9A%84%E5%AE%8C%E7%BE%8E%E4%BD%93%E7%8E%B0"><span class="nav-number">12.</span> <span class="nav-text">起点中文网(阅文集团)新合同是不是资本主义剥削本质的完美体现?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AD%E5%9B%BD%E4%B8%BA%E4%BD%95%E5%9C%A8%E5%9B%BD%E9%99%85%E7%A4%BE%E4%BC%9A%E4%B8%8A%E7%BC%BA%E4%B9%8F%E7%9B%9F%E5%8F%8B%EF%BC%9F"><span class="nav-number">13.</span> <span class="nav-text">中国为何在国际社会上缺乏盟友？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E7%BD%91%E4%B8%8A%E6%9C%89%E4%BA%BA%E5%8F%8D%E5%AF%B9%E6%96%B0%E5%9F%BA%E5%BB%BA%EF%BC%9F"><span class="nav-number">14.</span> <span class="nav-text">为什么网上有人反对新基建？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%85%E5%90%84%E5%A4%A7%E9%93%B6%E8%A1%8C%E7%BA%B7%E7%BA%B7%E6%88%90%E7%AB%8B%E7%A7%91%E6%8A%80%E5%85%AC%E5%8F%B8%EF%BC%9F"><span class="nav-number">15.</span> <span class="nav-text">如何看待各大银行纷纷成立科技公司？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2020%E5%B9%B4%E6%96%B0%E7%94%9F%E4%BA%BA%E5%8F%A3%E4%BC%9A%E8%B7%8C%E7%A0%B41000%E4%B8%87%E5%90%97%EF%BC%9F"><span class="nav-number">16.</span> <span class="nav-text">2020年新生人口会跌破1000万吗？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9D%A3%E5%85%AC%E6%8F%90%E5%80%A1%E6%B6%88%E7%81%AD%E5%B0%8F%E5%86%9C%E7%BB%8F%E6%B5%8E%EF%BC%8C%E9%99%88%E5%B9%B3%E6%8F%90%E5%80%A1%E4%BF%9D%E7%95%99%E5%B0%8F%E5%86%9C%E7%BB%8F%E6%B5%8E%EF%BC%8C%E6%B8%A9%E9%93%81%E5%86%9B%E6%8F%90%E5%80%A1%E5%8F%91%E5%B1%95%E4%B8%89%E5%86%9C%E7%BB%8F%E6%B5%8E%E3%80%82%E4%BD%A0%E4%BB%AC%E6%9C%89%E4%BB%80%E4%B9%88%E7%9C%8B%E6%B3%95-%EF%BC%9F"><span class="nav-number">17.</span> <span class="nav-text">督公提倡消灭小农经济，陈平提倡保留小农经济，温铁军提倡发展三农经济。你们有什么看法 ？</span></a></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Abraham Xiao"
-      src="/images/avatar.jpg">
-  <p class="site-author-name" itemprop="name">Abraham Xiao</p>
-  <div class="site-description" itemprop="description">Shut Up and Get Rich.</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">224</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">12</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">369</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/ProfessorX" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ProfessorX" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:admin@yxiao.org" title="E-Mail → mailto:admin@yxiao.org" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
-      </span>
-  </div>
-
-
-
-      </div>
-
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
+  </main>
 
+  <footer class="footer">
+    <div class="footer-inner">
+      
 
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
+      
 
 <div class="copyright">
   
@@ -828,79 +841,37 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Abraham Xiao</span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
 
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
 
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
+  
 
 
-<script src="/js/schemes/muse.js"></script>
 
 
-<script src="/js/next-boot.js"></script>
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
 
 
 
 
   
-  <script>
-    (function(){
-      var canonicalURL, curProtocol;
-      //Get the <link> tag
-      var x=document.getElementsByTagName("link");
-		//Find the last canonical URL
-		if(x.length > 0){
-			for (i=0;i<x.length;i++){
-				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
-					canonicalURL=x[i].href;
-				}
-			}
-		}
-    //Get protocol
-	    if (!canonicalURL){
-	    	curProtocol = window.location.protocol.split(':')[0];
-	    }
-	    else{
-	    	curProtocol = canonicalURL.split(':')[0];
-	    }
-      //Get current URL if the canonical URL does not exist
-	    if (!canonicalURL) canonicalURL = window.location.href;
-	    //Assign script content. Replace current URL with the canonical URL
-      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
-  </script>
-
-
-
-
-  
-<script src="/js/local-search.js"></script>
-
-
-
-
-
 
 
 

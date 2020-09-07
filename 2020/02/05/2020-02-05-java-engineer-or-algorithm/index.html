@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -13,23 +13,25 @@
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
-<script id="hexo-configurations">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"www.yxiao.org","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"8.0.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
   <meta name="description" content="年轻人想太多了，以大部分人的技术水平，都谈不上选择技术方向，出去都是被社会艹的。 大部分人，能够选择一个价值观和你 match，给你机会发展的公司，已经是人生高光时刻了，做啥技术真的不重要。 打个蹭热点的比方，你要是憧憬生物学，去了武汉病毒所，除非你心黑，喜欢靠院士升职器当所长，这我无话可说，年轻人心不够脏的，你选择生物学方向，却屁颠颠去了这种机构，方向还重要吗？ 像我们一些垃圾群里面">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java工程师还是算法工程师">
-<meta property="og:url" content="https://www.yxiao.org/2020/02/05/2020-02-05-java-engineer-or-algorithm/index.html">
-<meta property="og:site_name" content="Masdar Wireless">
+<meta property="og:url" content="http://yoursite.com/2020/02/05/2020-02-05-java-engineer-or-algorithm/index.html">
+<meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="年轻人想太多了，以大部分人的技术水平，都谈不上选择技术方向，出去都是被社会艹的。 大部分人，能够选择一个价值观和你 match，给你机会发展的公司，已经是人生高光时刻了，做啥技术真的不重要。 打个蹭热点的比方，你要是憧憬生物学，去了武汉病毒所，除非你心黑，喜欢靠院士升职器当所长，这我无话可说，年轻人心不够脏的，你选择生物学方向，却屁颠颠去了这种机构，方向还重要吗？ 像我们一些垃圾群里面">
-<meta property="og:locale" content="zh_CN">
+<meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-02-05T10:00:00.000Z">
-<meta property="article:modified_time" content="2020-02-06T03:15:09.672Z">
-<meta property="article:author" content="Abraham Xiao">
+<meta property="article:modified_time" content="2020-08-17T16:55:15.211Z">
+<meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="Programming">
 <meta property="article:tag" content="Computer">
@@ -37,20 +39,21 @@
 <meta property="article:tag" content="Algorithm">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://www.yxiao.org/2020/02/05/2020-02-05-java-engineer-or-algorithm/">
+
+<link rel="canonical" href="http://yoursite.com/2020/02/05/2020-02-05-java-engineer-or-algorithm/">
 
 
-<script id="page-configurations">
+<script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
     isHome : false,
     isPost : true,
-    lang   : 'zh-CN'
+    lang   : 'en'
   };
 </script>
 
-  <title>Java工程师还是算法工程师 | Masdar Wireless</title>
+  <title>Java工程师还是算法工程师 | Hexo</title>
   
 
 
@@ -60,51 +63,62 @@
 
   <noscript>
   <style>
-  .use-motion .brand,
+  body { margin-top: 2rem; }
+
   .use-motion .menu-item,
-  .sidebar-inner,
+  .use-motion .sidebar,
   .use-motion .post-block,
   .use-motion .pagination,
   .use-motion .comments,
   .use-motion .post-header,
   .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
 
   .use-motion .site-title,
-  .use-motion .site-subtitle {
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
     opacity: initial;
     top: initial;
   }
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
   </style>
 </noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
+  <main class="main">
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
   <div class="site-meta">
 
     <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Masdar Wireless</h1>
-      <span class="logo-line-after"><i></i></span>
+      <i class="logo-line"></i>
+      <h1 class="site-title">Hexo</h1>
+      <i class="logo-line"></i>
     </a>
-      <p class="site-subtitle" itemprop="description">MORE MEAT MORE EXERCISE!</p>
   </div>
 
   <div class="site-nav-right">
@@ -116,32 +130,31 @@
 
 
 
-
 <nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
+  <ul class="main-menu menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
 
   </li>
         <li class="menu-item menu-item-about">
 
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
 
   </li>
         <li class="menu-item menu-item-study">
@@ -155,7 +168,7 @@
 
   </li>
       <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
       </li>
   </ul>
@@ -170,17 +183,17 @@
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
-           placeholder="搜索..." spellcheck="false"
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
            type="search" class="search-input">
   </div>
   <span class="popup-btn-close">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
   </div>
 </div>
 
@@ -188,6 +201,79 @@
   </div>
 
 </div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%88%E5%A4%9A%E7%A8%8B%E5%BA%8F%E5%91%98%E9%83%BD%E8%AF%B4-35-%E5%B2%81%E8%81%8C%E4%B8%9A%E5%8D%B1%E6%9C%BA%EF%BC%8C%E9%82%A3%E4%B9%88%E4%B8%BA%E4%BB%80%E4%B9%88%E5%81%9A%E5%BC%80%E5%8F%91%E7%9A%84-35-%E5%B2%81%E7%A8%8B%E5%BA%8F%E5%91%98%E4%B8%8D%E8%BD%AC%E5%81%9A%E6%B5%8B%E8%AF%95%E5%91%A2%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">很多程序员都说 35 岁职业危机，那么为什么做开发的 35 岁程序员不转做测试呢？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%92%E8%81%94%E7%BD%91%E7%9A%84%E7%AE%A1%E7%90%86%E5%B1%82%E4%BA%BA%E5%91%98%E9%9C%80%E8%A6%81%E5%85%B7%E5%A4%87%E4%BB%80%E4%B9%88%E8%83%BD%E5%8A%9B%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">互联网的管理层人员需要具备什么能力？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AD%E5%8F%B0%E5%92%8C%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="nav-number">3.</span> <span class="nav-text">中台和微服务有什么区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A0%94%E7%A9%B6%E7%94%9F%E5%AF%BC%E5%B8%88%E6%9B%B4%E5%96%9C%E6%AC%A2%E5%89%A5%E5%89%8A%E5%AF%92%E9%97%A8%E5%AD%A6%E5%AD%90%E5%90%97%EF%BC%9F"><span class="nav-number">4.</span> <span class="nav-text">研究生导师更喜欢剥削寒门学子吗？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%82%93%E9%93%82%E9%8B%86%EF%BC%9A%E6%96%B0%E5%86%A0%E8%82%BA%E7%82%8E%E6%B5%81%E8%A1%8C%EF%BC%8C%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E6%B2%A1%E5%81%9A%E2%80%9C%E7%88%86%E6%96%99%E5%A4%A7V%E2%80%9D%EF%BC%9F"><span class="nav-number">5.</span> <span class="nav-text">邓铂鋆：新冠肺炎流行，我为什么没做“爆料大V”？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7%E6%AD%A6%E6%B1%89%E5%B8%82%E5%A7%94%E4%B9%A6%E8%AE%B0%E8%A1%A8%E7%A4%BA%E8%87%AA%E8%B4%A3%EF%BC%8C%E7%A7%B0%E5%A6%82%E6%9E%9C%E6%97%A9%E9%87%87%E5%8F%96%E4%B8%A5%E5%8E%89%E7%9A%84%E7%AE%A1%E6%8E%A7%E6%8E%AA%E6%96%BD%EF%BC%8C%E7%BB%93%E6%9E%9C%E4%BC%9A%E6%AF%94%E7%8E%B0%E5%9C%A8%E5%A5%BD%EF%BC%9F"><span class="nav-number">6.</span> <span class="nav-text">如何评价武汉市委书记表示自责，称如果早采取严厉的管控措施，结果会比现在好？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%BB%91%E4%BA%BA%E7%9A%84%E7%8E%B0%E4%BB%A3%E6%96%87%E6%98%8E%E6%88%90%E6%9E%9C%E9%82%A3%E4%B9%88%E5%B7%AE"><span class="nav-number">7.</span> <span class="nav-text">为什么黑人的现代文明成果那么差?</span></a></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="John Doe"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">226</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">370</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/ProfessorX" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ProfessorX" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:admin@yxiao.org" title="E-Mail → mailto:admin@yxiao.org" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </section>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
     </header>
 
     
@@ -196,62 +282,68 @@
     <span>0%</span>
   </div>
 
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
 
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
 
-          <div class="content post posts-expand">
-            
+    <div class="main-inner post posts-expand">
+      
+
+      
 
     
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.yxiao.org/2020/02/05/2020-02-05-java-engineer-or-algorithm/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/05/2020-02-05-java-engineer-or-algorithm/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Abraham Xiao">
-      <meta itemprop="description" content="Shut Up and Get Rich.">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Masdar Wireless">
+      <meta itemprop="name" content="Hexo">
     </span>
+
+    
+    
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           Java工程师还是算法工程师
         </h1>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
 
-              <time title="创建时间：2020-02-05 18:00:00" itemprop="dateCreated datePublished" datetime="2020-02-05T18:00:00+08:00">2020-02-05</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-06 11:15:09" itemprop="dateModified" datetime="2020-02-06T11:15:09+08:00">2020-02-06</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a>
-                </span>
-            </span>
+      <time title="Created: 2020-02-05 18:00:00" itemprop="dateCreated datePublished" datetime="2020-02-05T18:00:00+08:00">2020-02-05</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2020-08-18 00:55:15" itemprop="dateModified" datetime="2020-08-18T00:55:15+08:00">2020-08-18</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a>
+        </span>
+    </span>
 
-          
+  
+</div>
 
         </div>
       </header>
@@ -260,8 +352,6 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
         <p>年轻人想太多了，以大部分人的技术水平，都谈不上选择技术方向，出去都是被社会艹的。</p>
 <p>大部分人，能够选择一个价值观和你 match，给你机会发展的公司，已经是人生高光时刻了，做啥技术真的不重要。</p>
 <p>打个蹭热点的比方，你要是憧憬生物学，去了武汉病毒所，除非你心黑，喜欢靠院士升职器当所长，这我无话可说，年轻人心不够脏的，你选择生物学方向，却屁颠颠去了这种机构，方向还重要吗？</p>
@@ -278,10 +368,10 @@
 <p>你真的倔的不肯承认，活该被全球 quant 顺着网线过来打你。</p>
 <p><strong>支撑一个人走下去的，从来不是你手头那点杂耍，而是你内心相信未来是啥，是信仰让你坚强，不是高空走钢丝赢来的廉价掌声。</strong></p>
 <p>少年，你从现在开始，应该努力思考，我该如何做，才能更加接近未来互联网的新形态和新的渗透模式。</p>
-<p>作者：纳米酱<br>链接：<a href="https://www.zhihu.com/question/264499347/answer/999590739" target="_blank" rel="noopener">https://www.zhihu.com/question/264499347/answer/999590739</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
-<h2 id="很多程序员都说-35-岁职业危机，那么为什么做开发的-35-岁程序员不转做测试呢？"><a href="#很多程序员都说-35-岁职业危机，那么为什么做开发的-35-岁程序员不转做测试呢？" class="headerlink" title="很多程序员都说 35 岁职业危机，那么为什么做开发的 35 岁程序员不转做测试呢？"></a>很多程序员都说 35 岁职业危机，那么为什么做开发的 35 岁程序员不转做测试呢？</h2><p>作者：硅谷IT胖子<br>链接：<a href="https://www.zhihu.com/question/366571406/answer/988915732" target="_blank" rel="noopener">https://www.zhihu.com/question/366571406/answer/988915732</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>作者：纳米酱<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/264499347/answer/999590739">https://www.zhihu.com/question/264499347/answer/999590739</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h2 id="很多程序员都说-35-岁职业危机，那么为什么做开发的-35-岁程序员不转做测试呢？"><a href="#很多程序员都说-35-岁职业危机，那么为什么做开发的-35-岁程序员不转做测试呢？" class="headerlink" title="很多程序员都说 35 岁职业危机，那么为什么做开发的 35 岁程序员不转做测试呢？"></a>很多程序员都说 35 岁职业危机，那么为什么做开发的 35 岁程序员不转做测试呢？</h2><p>作者：硅谷IT胖子<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/366571406/answer/988915732">https://www.zhihu.com/question/366571406/answer/988915732</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <p>这个非常支持轮子哥的答案。职业危机的本质是什么？本质是不需要那么多有经验的工程师，如何拿五个人的饭喂饱十个人？答案是，怎么分配都有人吃不饱。所以，这不是个人选择问题，而是市场问题、需求问题。比如一个老兵，会用迫击炮，会叫空中支援，懂无线电通讯，会火力压制，但是在岛主手下当兵，发一杆中正式，50发子弹，10个手榴弹，就这点东西，吃不饱饭还用绳子牵着防止逃跑去上战场跟穷凶极恶的鬼子拼命，那未必比得过战友那些文盲出身的士兵。因为，岛主的需求和市场和成本，不足以支撑美式老兵。难道，30多岁软工多年的老工程师，真的不如20多岁的新人？我30多岁写代码的能力比20多岁时不知道强了多少。关键在于就业市场和公司强调的，是什么竞争力。国内码工市场显然强调的是工作时间和耐劳易使。35岁的人其实技艺更精湛，但耐不住精力衰退，家庭分心，所以工作时间下降了不少；加上老油条好多时候想得多见得多，更不容易被情怀忽悠，滑得很。以前我觉得，这种跟西方的差别，是效率和技术水平导致的；现在又觉得，这也许是文化导致的，是思路不一样导致的。东方的思路本身就是强调人本身的能力，把“人”的潜力发挥到最大，是主观性的；西方的思路是强调“流程”，尽可能地消除“人”之间的差异，是客观性的。这是两种不同的思潮和习惯。测试职位回到正题，测试本身就是软件开发下的一个分支，既然软件开发都有市场带来的35岁危机，那么转测试并不能从根本上解决问题。当然，单分析测试和开发这两个方向的话，可以说测试更不乐观了。提到测试历史，必须说“陆奇改革”事件。长话短说，就是陆奇在微软时将自己部门SDET全部改为SDE，最后推广到全公司。这种带阵痛的改革非常成功，使得微软大大提高了开发效率。我先前听说一个SDET的Manager，在微软17年，从SDET1一路升上来，一行code没写过，是不是舒服得有些过分了？陆奇改革后，这人后来转成了SDE2，当然，人早就不差钱了。测试分为两种：手动测试的严格来说不算测试，跟Engineering不搭边，在如今的环境下，大公司基本上都是外包这种手动测试（中国和印度）；一般软工说的“测试”应该指的是“测试工程师”，是知道如何写code的人，写测试用例和框架。然而，测试工程师最大的问题就在于，他们的工作内容只是软件工程师的一个子集。这些code，完全可以交给软工来写，并且软工还更了解一个系统的弱点和细节。这就导致，测试工程师的职位，也被逐渐削减或是外包到更便宜的公司和国家去。我不是说测试框架在软工中不重要，而是说那种传统的微软式的开发、测试成双成对的做法，逐渐转变为全开发职位，部分人或是部分精力维护测试框架，偶尔一个部门下有一两个专精测试框架的专家（亚马逊这样做）即可。所以， 我个人认为，跟十几年前流行的工作方式比，其实对软工的要求更高了，活更重了，整个环节也更简单了。这就带来，软工职位不断增加，而测试、DBA等职位不断被削减，公司的效率和收益更高。从前，软工只是被认为是软件开发的一个环节，虽然也是最重要的；如今，软工的职责范围其实是扩大了。甚至，在很多快节奏，更现代化的大公司，软工还管项目进度和人员协调，以及项目报告等很多活，部分替代了PM/TPM/Manager的职责。有时候manager跑了、被开了，甚至还有“码工自治联盟”状态出现，没人管，几个码工自己商量做什么，也见过。这也部分解释了，软工需求大而且工资在过去10年间慢慢上涨的原因。很多公司之所以难面，不光是算法题的问题，还有承压、交流和设计等很多指标。要求高了，自然难招人，公司也不在乎钱多给点，因为巴不得进来的都是多面手。行业兴衰个人的努力虽然能够减缓、但是还是很难摆脱行业兴衰的。一个行业，享受它的福利，就必然承受它的规律和残酷。软工，无论国内外，最大的特征还是高强度的智力输出。而人的思维活跃和精力，无疑是一直随着时间而衰退的，有些衰退是因为要考虑的事情更多（比如身体状况，家庭等），哪怕30多岁更聪明了更努力了，也不行。此外，软工的行业跟总经济形式特别相关。你可以看出，各国的软工待遇，跟其GDP是非常相关的。中美IT之所以厉害，你当然可以吹说中美两国人聪明、能吃苦、自主研发，但说穿了还是因为两国GDP世界第一第二，有的是钱和市场，随便给点投资就雇得起码工去造东西，然后在本来已经非常巨大的市场上获得更多回报，良性循环。比如某些垃圾国家，饭都吃不饱，肉都不敢大口吃，穷得叮当乱响，你做外卖软件给谁用？在这种情况下，我倒是觉得，应该心平气和： 自己赚钱，是因为踏上行业的快车；自己失业，是因为行业或是经济下行。个人的能力和选择，倒没必要那么焦虑。</p>
-<h2 id="互联网的管理层人员需要具备什么能力？"><a href="#互联网的管理层人员需要具备什么能力？" class="headerlink" title="互联网的管理层人员需要具备什么能力？"></a>互联网的管理层人员需要具备什么能力？</h2><p>作者：纳米酱<br>链接：<a href="https://www.zhihu.com/question/24760263/answer/987571545" target="_blank" rel="noopener">https://www.zhihu.com/question/24760263/answer/987571545</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h2 id="互联网的管理层人员需要具备什么能力？"><a href="#互联网的管理层人员需要具备什么能力？" class="headerlink" title="互联网的管理层人员需要具备什么能力？"></a>互联网的管理层人员需要具备什么能力？</h2><p>作者：纳米酱<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/24760263/answer/987571545">https://www.zhihu.com/question/24760263/answer/987571545</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <p>如果是技术类型管理的话，说几点：</p>
 <p><strong>最重要的，明确组里在公司的地位，聪明地接活，合理的安排活</strong></p>
 <p>业务过于琐碎和繁重会压垮组里成员，接着压垮你，要懂得抢做重要的活，为组里的整体绩效做精细化打算。</p>
@@ -311,9 +401,9 @@
 <p>咋办呢，导师心里一横，把几个技术好的高年级博士叫过来，画了一个大饼，说你们前途无亮，让他们把整个组的项目都整和梳理一遍，把里面共同，且通用的东西都抽离出来，做了沉淀，让以后新来的师弟能够快速完成横向项目。</p>
 <p>这几位博士不负众望，高质量地完成了导师的任务，让新来师弟调包溜得飞起，小小小师弟很快地解决了导师的横向项目，迅速毕业，走向人生巅峰。</p>
 <p>而这几位博士，却因为没有直接完成导师的横向项目，被导师延期了。。。</p>
-<p>作者：纳米酱<br>链接：<a href="https://www.zhihu.com/question/366731124/answer/982928786" target="_blank" rel="noopener">https://www.zhihu.com/question/366731124/answer/982928786</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>作者：纳米酱<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/366731124/answer/982928786">https://www.zhihu.com/question/366731124/answer/982928786</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <h2 id="研究生导师更喜欢剥削寒门学子吗？"><a href="#研究生导师更喜欢剥削寒门学子吗？" class="headerlink" title="研究生导师更喜欢剥削寒门学子吗？"></a>研究生导师更喜欢剥削寒门学子吗？</h2><p>我的理解不是导师更加喜欢压榨寒门学子，而是寒门学子缺乏必要的斗争手段，以及家庭基础对抗无良博导。打个比方，我出身的家庭，父母对创造知识无感，对我读书有没有文凭压根不关心，至少我自己吃饱，父母饿不着。所以我对抗无良教授，手段可能比一般生性怯弱的贫寒博士更加有勇气，该丢的绝不心软。他们就算敢压制我毕业，我大不了逼急了就退学。历史证明无数次，我相信我无论换到任何行业，换多少方向，我都能生存下来。人要有这种心灵基础和物质基础，才不会因为某几个错误的人，把自己一身搭了进去。</p>
-<p>作者：纳米酱<br>链接：<a href="https://www.zhihu.com/question/353730142/answer/971930025" target="_blank" rel="noopener">https://www.zhihu.com/question/353730142/answer/971930025</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>作者：纳米酱<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/353730142/answer/971930025">https://www.zhihu.com/question/353730142/answer/971930025</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <h2 id="邓铂鋆：新冠肺炎流行，我为什么没做“爆料大V”？"><a href="#邓铂鋆：新冠肺炎流行，我为什么没做“爆料大V”？" class="headerlink" title="邓铂鋆：新冠肺炎流行，我为什么没做“爆料大V”？"></a>邓铂鋆：新冠肺炎流行，我为什么没做“爆料大V”？</h2><p>（文/观察者网专栏作者 邓铂鋆）</p>
 <p>承蒙观察者网和各位读者多年厚爱，我在医疗话题上的创作吸引了一些业内朋友的关注，近年来有了“粉丝投稿”。</p>
 <p>1月中旬，新型冠状病毒病人确诊数量及开始增多。武汉的一位医生，即接受《中国新闻周刊》采访的“林羽医生”（化名），开始向我介绍武汉的情况。同时，我的另一位朋友，北京的一位微生物专家，参与了北京市1月20日公布病人的诊治，他也向我透露了一些情况。得到这些消息后，我开始寻找各地业内人士核实。</p>
@@ -346,13 +436,13 @@
 <p>我认为，只要防控措施得当，新型冠状病毒肺炎这个“废物”传染病，应当能够尽早攻克。</p>
 <p>本文系观察者网独家稿件，文章内容纯属作者个人观点，不代表平台观点，未经授权，不得转载，否则将追究法律责任。关注观察者网微信guanchacn，每日阅读趣味文章。</p>
 <h2 id="如何评价武汉市委书记表示自责，称如果早采取严厉的管控措施，结果会比现在好？"><a href="#如何评价武汉市委书记表示自责，称如果早采取严厉的管控措施，结果会比现在好？" class="headerlink" title="如何评价武汉市委书记表示自责，称如果早采取严厉的管控措施，结果会比现在好？"></a>如何评价武汉市委书记表示自责，称如果早采取严厉的管控措施，结果会比现在好？</h2><p>平行宇宙，山南道F4拿到了重启2020的按钮。</p>
-<p>作者：邓铂鋆<br>链接：<a href="https://www.zhihu.com/question/368888469/answer/1000024938" target="_blank" rel="noopener">https://www.zhihu.com/question/368888469/answer/1000024938</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>作者：邓铂鋆<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/368888469/answer/1000024938">https://www.zhihu.com/question/368888469/answer/1000024938</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <p>2020年1月1日，汉京府颁布《关于加强流感防控工作的实施意见》。《意见》指出，2019年以来，本地干旱少雨，流感暴发，各医疗机构发热病人接诊压力非常大，一些老年人和慢性病人因流感导致的肺炎面临生命危险，已经构成公共卫生安全的严重挑战。为了减少流感发病，汉京府决定倡议市民出门戴口罩，取消群众聚集活动，并免费为市民注射流感疫苗。从即日起，分批次为医护人员、中小学幼儿园教师、公交地铁司乘人员、政府窗口办事人员等易感易传人群免费注射流感疫苗，为儿童、中小学生、孕产妇、老年人免费注射流感疫苗，其他市民可以自愿预约注射疫苗。在强制注射流感疫苗减少一般发热病人数量的同时，汉京府强化了当地各主要医院的发热门诊建设，加强医务人员防护水平。</p>
 <p>1月8日，鉴于流感流行水平仍然较高，医疗机构发热门诊就诊人员集中，有院内交叉感染风险，颁布《关于发热病人网格化管理的实施意见》。《意见》要求发热病人必须先和社区网格员联系，在网格员安排下先前往社区诊所就医，根据社区诊所对病情的判断，由社区预约前往大医院发热门诊就诊。此举遭到了群众的不理解和反对，在医疗机构出现了一些无预约病人与医务人员的冲突。很多市民都认为这样做是多此一举：“我就想找同济的专家看看，多排队老子愿意！社区看不了还是要去同济，折腾老百姓啊！我同学的亲戚的同事的朋友上次就让社区诊所误诊了艾滋病，我能相信社区么？”</p>
 <p>1月20日，新冠肺炎如期进入公众视野。2月5日，马道台在接受记者采访时自责：“花了这么多钱，动员了这么多人力防控流感，用意之一就是控制新冠肺炎。然而本地仍然有两百多例新冠肺炎病人，并感染了高级专家组的王教授……”（本时空，很早就报告了医务人员感染的事例，没有见到“广州的二代病人”的钟南山院士仍然及时判断出新冠的传染性。）上峰问责：“2019年贵宝地的大型活动多，财力人力消耗较大。前阵子天天有人告状说你们防治流感是劳民伤财，现在则是告状说你们的流感疫苗接种和网格化管理导致肺炎疫情扩大。请看有关部门采集的网络谣言，攻击注射流感疫苗导致交叉感染的，捏造疫苗被新冠病毒污染的……”</p>
 <p>为官三思。思危：花了这么多钱搞管制措施，危机控制住了，大家不理解这样做的必要性怎么办？思退：我拍的板，到时候啥事没有，问责怎么办？思变：既然大家都不想背锅，那就通过集体决策和请示上级把责任甩出去！集体讨论和请示行文一来一回耽误的时间，那是必（别）要（人）的付（代）出（价）。</p>
 <h2 id="为什么黑人的现代文明成果那么差"><a href="#为什么黑人的现代文明成果那么差" class="headerlink" title="为什么黑人的现代文明成果那么差?"></a>为什么黑人的现代文明成果那么差?</h2><p>饭要一口一口吃，钱要一块一块赚，官要一级一级升，这是最最基本的历史唯物主义对吧！我这边原始部落征伐万把年完成了奴隶主义革命，血流得把黄河都染红了建立的四级复杂酋邦。然后邦国改朝换代千把年完成的封建主义革命，血把长江都染红了建立的大一统王朝。然后又被人撞开国门按在地上摩擦了一百多年完成的民主主义和社会主义革命，血把整个东亚都染红了建立的新中国。建成了之后仍然屁嘛没有，花了不知道多少钱多少资源多少人命完成的工业化，这才勉强走到社会主义初级阶段，民族矛盾，阶级矛盾，整天在tm三个鸡蛋上跳舞，这也就是刚刚摆脱了挨打和挨饿两个问题，每天每夜仍然在持续不断地挨草。然后你昨天还在树下晒几把，今天就跑步进入文明高级阶段？你tm在逗我？？？你这是跑步吗，你这是坐火箭吧？凡事得讲道理啊，饭要一口一口吃，钱要一块一块赚，官要一级一级升，这是最最基本的历史唯物主义对吧！</p>
-<p>作者：寒冰射手曹草草<br>链接：<a href="https://www.zhihu.com/question/361759738/answer/998491681" target="_blank" rel="noopener">https://www.zhihu.com/question/361759738/answer/998491681</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>作者：寒冰射手曹草草<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/361759738/answer/998491681">https://www.zhihu.com/question/361759738/answer/998491681</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 
     </div>
 
@@ -360,7 +450,7 @@
     
     
 
-      <footer class="post-footer">
+    <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/Java/" rel="tag"># Java</a>
               <a href="/tags/Programming/" rel="tag"># Programming</a>
@@ -371,20 +461,19 @@
 
         
 
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2020/01/29/2020-01-29-ncov/" rel="prev" title="23日起武汉城市公交、地铁、轮渡、长途客运暂停，机场、火车站离汉通道暂时关闭，各方该怎样一起渡过难关？">
-      <i class="fa fa-chevron-left"></i> 23日起武汉城市公交、地铁、轮渡、长途客运暂停，机场、火车站离汉通道暂时关闭，各方该怎样一起渡过难关？
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/02/06/2020-02-06-god-and-money/" rel="next" title="基督教如何解释几乎与上帝毫不相干的古中国?">
-      基督教如何解释几乎与上帝毫不相干的古中国? <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/01/29/2020-01-29-ncov/" rel="prev" title="23日起武汉城市公交、地铁、轮渡、长途客运暂停，机场、火车站离汉通道暂时关闭，各方该怎样一起渡过难关？">
+                  <i class="fa fa-chevron-left"></i> 23日起武汉城市公交、地铁、轮渡、长途客运暂停，机场、火车站离汉通道暂时关闭，各方该怎样一起渡过难关？
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2020/02/06/2020-02-06-god-and-money/" rel="next" title="基督教如何解释几乎与上帝毫不相干的古中国?">
+                  基督教如何解释几乎与上帝毫不相干的古中国? <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
   </article>
   
   
@@ -392,8 +481,7 @@
 
 
 
-          </div>
-          
+      
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -402,7 +490,7 @@
       activeClass = localStorage.getItem('comments_active') || activeClass;
     }
     if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
       if (activeTab) {
         activeTab.click();
       }
@@ -411,95 +499,20 @@
   if (CONFIG.comments.storage) {
     window.addEventListener('tabs:click', event => {
       if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
+      const commentClass = event.target.classList[1];
       localStorage.setItem('comments_active', commentClass);
     });
   }
 </script>
 
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%88%E5%A4%9A%E7%A8%8B%E5%BA%8F%E5%91%98%E9%83%BD%E8%AF%B4-35-%E5%B2%81%E8%81%8C%E4%B8%9A%E5%8D%B1%E6%9C%BA%EF%BC%8C%E9%82%A3%E4%B9%88%E4%B8%BA%E4%BB%80%E4%B9%88%E5%81%9A%E5%BC%80%E5%8F%91%E7%9A%84-35-%E5%B2%81%E7%A8%8B%E5%BA%8F%E5%91%98%E4%B8%8D%E8%BD%AC%E5%81%9A%E6%B5%8B%E8%AF%95%E5%91%A2%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">很多程序员都说 35 岁职业危机，那么为什么做开发的 35 岁程序员不转做测试呢？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%92%E8%81%94%E7%BD%91%E7%9A%84%E7%AE%A1%E7%90%86%E5%B1%82%E4%BA%BA%E5%91%98%E9%9C%80%E8%A6%81%E5%85%B7%E5%A4%87%E4%BB%80%E4%B9%88%E8%83%BD%E5%8A%9B%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">互联网的管理层人员需要具备什么能力？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AD%E5%8F%B0%E5%92%8C%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="nav-number">3.</span> <span class="nav-text">中台和微服务有什么区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A0%94%E7%A9%B6%E7%94%9F%E5%AF%BC%E5%B8%88%E6%9B%B4%E5%96%9C%E6%AC%A2%E5%89%A5%E5%89%8A%E5%AF%92%E9%97%A8%E5%AD%A6%E5%AD%90%E5%90%97%EF%BC%9F"><span class="nav-number">4.</span> <span class="nav-text">研究生导师更喜欢剥削寒门学子吗？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%82%93%E9%93%82%E9%8B%86%EF%BC%9A%E6%96%B0%E5%86%A0%E8%82%BA%E7%82%8E%E6%B5%81%E8%A1%8C%EF%BC%8C%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E6%B2%A1%E5%81%9A%E2%80%9C%E7%88%86%E6%96%99%E5%A4%A7V%E2%80%9D%EF%BC%9F"><span class="nav-number">5.</span> <span class="nav-text">邓铂鋆：新冠肺炎流行，我为什么没做“爆料大V”？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7%E6%AD%A6%E6%B1%89%E5%B8%82%E5%A7%94%E4%B9%A6%E8%AE%B0%E8%A1%A8%E7%A4%BA%E8%87%AA%E8%B4%A3%EF%BC%8C%E7%A7%B0%E5%A6%82%E6%9E%9C%E6%97%A9%E9%87%87%E5%8F%96%E4%B8%A5%E5%8E%89%E7%9A%84%E7%AE%A1%E6%8E%A7%E6%8E%AA%E6%96%BD%EF%BC%8C%E7%BB%93%E6%9E%9C%E4%BC%9A%E6%AF%94%E7%8E%B0%E5%9C%A8%E5%A5%BD%EF%BC%9F"><span class="nav-number">6.</span> <span class="nav-text">如何评价武汉市委书记表示自责，称如果早采取严厉的管控措施，结果会比现在好？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%BB%91%E4%BA%BA%E7%9A%84%E7%8E%B0%E4%BB%A3%E6%96%87%E6%98%8E%E6%88%90%E6%9E%9C%E9%82%A3%E4%B9%88%E5%B7%AE"><span class="nav-number">7.</span> <span class="nav-text">为什么黑人的现代文明成果那么差?</span></a></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Abraham Xiao"
-      src="/images/avatar.jpg">
-  <p class="site-author-name" itemprop="name">Abraham Xiao</p>
-  <div class="site-description" itemprop="description">Shut Up and Get Rich.</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">224</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">12</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">369</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/ProfessorX" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ProfessorX" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:admin@yxiao.org" title="E-Mail → mailto:admin@yxiao.org" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
-      </span>
-  </div>
-
-
-
-      </div>
-
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
+  </main>
 
+  <footer class="footer">
+    <div class="footer-inner">
+      
 
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
+      
 
 <div class="copyright">
   
@@ -508,79 +521,37 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Abraham Xiao</span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
 
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
 
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
+  
 
 
-<script src="/js/schemes/muse.js"></script>
 
 
-<script src="/js/next-boot.js"></script>
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
 
 
 
 
   
-  <script>
-    (function(){
-      var canonicalURL, curProtocol;
-      //Get the <link> tag
-      var x=document.getElementsByTagName("link");
-		//Find the last canonical URL
-		if(x.length > 0){
-			for (i=0;i<x.length;i++){
-				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
-					canonicalURL=x[i].href;
-				}
-			}
-		}
-    //Get protocol
-	    if (!canonicalURL){
-	    	curProtocol = window.location.protocol.split(':')[0];
-	    }
-	    else{
-	    	curProtocol = canonicalURL.split(':')[0];
-	    }
-      //Get current URL if the canonical URL does not exist
-	    if (!canonicalURL) canonicalURL = window.location.href;
-	    //Assign script content. Replace current URL with the canonical URL
-      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
-  </script>
-
-
-
-
-  
-<script src="/js/local-search.js"></script>
-
-
-
-
-
 
 
 

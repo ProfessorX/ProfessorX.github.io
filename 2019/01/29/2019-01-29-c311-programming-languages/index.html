@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -13,23 +13,25 @@
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
-<script id="hexo-configurations">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"www.yxiao.org","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"8.0.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
   <meta name="description" content="The official course description is as follows, Systematic approach toprogramming languages. Relationships among languages, properties andfeatures of languages, and the computer environment necessary t">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Indiana University C311 Programming Languages">
-<meta property="og:url" content="https://www.yxiao.org/2019/01/29/2019-01-29-c311-programming-languages/index.html">
-<meta property="og:site_name" content="Masdar Wireless">
+<meta property="og:url" content="http://yoursite.com/2019/01/29/2019-01-29-c311-programming-languages/index.html">
+<meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="The official course description is as follows, Systematic approach toprogramming languages. Relationships among languages, properties andfeatures of languages, and the computer environment necessary t">
-<meta property="og:locale" content="zh_CN">
+<meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-01-29T03:00:00.000Z">
-<meta property="article:modified_time" content="2019-09-16T02:32:44.754Z">
-<meta property="article:author" content="Abraham Xiao">
+<meta property="article:modified_time" content="2020-08-17T16:55:15.149Z">
+<meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Programming">
 <meta property="article:tag" content="Computer">
 <meta property="article:tag" content="Science">
@@ -37,20 +39,21 @@
 <meta property="article:tag" content="Languages">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://www.yxiao.org/2019/01/29/2019-01-29-c311-programming-languages/">
+
+<link rel="canonical" href="http://yoursite.com/2019/01/29/2019-01-29-c311-programming-languages/">
 
 
-<script id="page-configurations">
+<script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
     isHome : false,
     isPost : true,
-    lang   : 'zh-CN'
+    lang   : 'en'
   };
 </script>
 
-  <title>Indiana University C311 Programming Languages | Masdar Wireless</title>
+  <title>Indiana University C311 Programming Languages | Hexo</title>
   
 
 
@@ -60,51 +63,62 @@
 
   <noscript>
   <style>
-  .use-motion .brand,
+  body { margin-top: 2rem; }
+
   .use-motion .menu-item,
-  .sidebar-inner,
+  .use-motion .sidebar,
   .use-motion .post-block,
   .use-motion .pagination,
   .use-motion .comments,
   .use-motion .post-header,
   .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
 
   .use-motion .site-title,
-  .use-motion .site-subtitle {
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
     opacity: initial;
     top: initial;
   }
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
   </style>
 </noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
+  <main class="main">
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
   <div class="site-meta">
 
     <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Masdar Wireless</h1>
-      <span class="logo-line-after"><i></i></span>
+      <i class="logo-line"></i>
+      <h1 class="site-title">Hexo</h1>
+      <i class="logo-line"></i>
     </a>
-      <p class="site-subtitle" itemprop="description">MORE MEAT MORE EXERCISE!</p>
   </div>
 
   <div class="site-nav-right">
@@ -116,32 +130,31 @@
 
 
 
-
 <nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
+  <ul class="main-menu menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
 
   </li>
         <li class="menu-item menu-item-about">
 
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
 
   </li>
         <li class="menu-item menu-item-study">
@@ -155,7 +168,7 @@
 
   </li>
       <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
       </li>
   </ul>
@@ -170,17 +183,17 @@
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
-           placeholder="搜索..." spellcheck="false"
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
            type="search" class="search-input">
   </div>
   <span class="popup-btn-close">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
   </div>
 </div>
 
@@ -188,6 +201,79 @@
   </div>
 
 </div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Assignments"><span class="nav-number">1.</span> <span class="nav-text">Assignments</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Assignment-1"><span class="nav-number">1.1.</span> <span class="nav-text">Assignment 1</span></a></li></ol></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="John Doe"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">226</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">370</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/ProfessorX" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ProfessorX" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:admin@yxiao.org" title="E-Mail → mailto:admin@yxiao.org" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </section>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
     </header>
 
     
@@ -196,62 +282,68 @@
     <span>0%</span>
   </div>
 
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
 
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
 
-          <div class="content post posts-expand">
-            
+    <div class="main-inner post posts-expand">
+      
+
+      
 
     
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.yxiao.org/2019/01/29/2019-01-29-c311-programming-languages/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/29/2019-01-29-c311-programming-languages/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Abraham Xiao">
-      <meta itemprop="description" content="Shut Up and Get Rich.">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Masdar Wireless">
+      <meta itemprop="name" content="Hexo">
     </span>
+
+    
+    
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           Indiana University C311 Programming Languages
         </h1>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
 
-              <time title="创建时间：2019-01-29 11:00:00" itemprop="dateCreated datePublished" datetime="2019-01-29T11:00:00+08:00">2019-01-29</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-09-16 10:32:44" itemprop="dateModified" datetime="2019-09-16T10:32:44+08:00">2019-09-16</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Science/" itemprop="url" rel="index"><span itemprop="name">Science</span></a>
-                </span>
-            </span>
+      <time title="Created: 2019-01-29 11:00:00" itemprop="dateCreated datePublished" datetime="2019-01-29T11:00:00+08:00">2019-01-29</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2020-08-18 00:55:15" itemprop="dateModified" datetime="2020-08-18T00:55:15+08:00">2020-08-18</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Science/" itemprop="url" rel="index"><span itemprop="name">Science</span></a>
+        </span>
+    </span>
 
-          
+  
+</div>
 
         </div>
       </header>
@@ -260,8 +352,6 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
         <p>The official course description is as follows, Systematic approach to<br>programming languages. Relationships among languages, properties and<br>features of languages, and the computer environment necessary to use<br>languages. Lecture and laboratory.</p>
 <a id="more"></a>
 
@@ -274,126 +364,65 @@
 </li>
 </ol>
 <blockquote>
-<p>(countdown 5)<br>(5 4 3 2 1 0)</p>
-<ol start="2">
-<li>Define and test a procedure insertR that takes two symbols and a list and returns a new list with the second symbol inserted after each occurrence of the first symbol. For this and later questions, these functions need only hold over eqv?-comparable structures.</li>
-</ol>
+<p>(countdown 5)<br>(5 4 3 2 1 0)<br>2. Define and test a procedure insertR that takes two symbols and a list and returns a new list with the second symbol inserted after each occurrence of the first symbol. For this and later questions, these functions need only hold over eqv?-comparable structures.</p>
 </blockquote>
 <blockquote>
-<p>(insertR ‘x ‘y ‘(x z z x y x))<br>(x y z z x y y x y)</p>
-<ol start="3">
-<li>Define and test a procedure remv-1st that takes a a symbol and a list and returns a new list with the first occurrence of the symbol removed.</li>
-</ol>
+<p>(insertR ‘x ‘y ‘(x z z x y x))<br>(x y z z x y y x y)<br>3. Define and test a procedure remv-1st that takes a a symbol and a list and returns a new list with the first occurrence of the symbol removed.</p>
 </blockquote>
 <blockquote>
-<p>(remv-1st ‘x ‘(x y z x))<br>(y z x)<br>(remv-1st ‘y ‘(x y z y x))<br>(x z y x)</p>
-<ol start="4">
-<li>Define and test a procedure list-index-ofv? that takes an element and a list and returns the (base 0) index of that element in the list. A list missing that element will be considered bad data.</li>
-</ol>
+<p>(remv-1st ‘x ‘(x y z x))<br>(y z x)<br>(remv-1st ‘y ‘(x y z y x))<br>(x z y x)<br>4. Define and test a procedure list-index-ofv? that takes an element and a list and returns the (base 0) index of that element in the list. A list missing that element will be considered bad data.</p>
 </blockquote>
 <blockquote>
-<p>(list-index-ofv? ‘x ‘(x y z x x))<br>0<br>(list-index-ofv? ‘x ‘(y z x x))<br>2</p>
-<ol start="5">
-<li>Define and test a procedure filter that takes a predicate and a list and returns a new list containing the elements that satisfy the predicate. A predicate is a procedure that takes a single argument and returns either #t or #f. The number? predicate, for example, returns #t if its argument is a number and #f otherwise. The argument satisfies the predicate, then, if the predicate returns #t for that argument.</li>
-</ol>
+<p>(list-index-ofv? ‘x ‘(x y z x x))<br>0<br>(list-index-ofv? ‘x ‘(y z x x))<br>2<br>5. Define and test a procedure filter that takes a predicate and a list and returns a new list containing the elements that satisfy the predicate. A predicate is a procedure that takes a single argument and returns either #t or #f. The number? predicate, for example, returns #t if its argument is a number and #f otherwise. The argument satisfies the predicate, then, if the predicate returns #t for that argument.</p>
 </blockquote>
 <blockquote>
-<p>(filter even? ‘(1 2 3 4 5 6))<br>(2 4 6)</p>
-<ol start="6">
-<li>Define and test a procedure zip that takes two lists and forms a new list, each element of which is a pair formed by combining the corresponding elements of the two input lists. If the two lists are of uneven length, then drop the tail of the longer one.</li>
-</ol>
+<p>(filter even? ‘(1 2 3 4 5 6))<br>(2 4 6)<br>6. Define and test a procedure zip that takes two lists and forms a new list, each element of which is a pair formed by combining the corresponding elements of the two input lists. If the two lists are of uneven length, then drop the tail of the longer one.</p>
 </blockquote>
 <blockquote>
-<p>(zip ‘(1 2 3) ‘(a b c))<br>((1 . a) (2 . b) (3 . c))<br>(zip ‘(1 2 3 4 5 6) ‘(a b c))<br>((1 . a) (2 . b) (3 . c))<br>(zip ‘(1 2 3) ‘(a b c d e f))<br>((1 . a) (2 . b) (3 . c))</p>
-<ol start="7">
-<li>Define and test a procedure map that takes a procedure p of one argument and a list ls and returns a new list containing the results of applying p to the elements of ls. Do not use Racket’s built-in map in your definition.</li>
-</ol>
+<p>(zip ‘(1 2 3) ‘(a b c))<br>((1 . a) (2 . b) (3 . c))<br>(zip ‘(1 2 3 4 5 6) ‘(a b c))<br>((1 . a) (2 . b) (3 . c))<br>(zip ‘(1 2 3) ‘(a b c d e f))<br>((1 . a) (2 . b) (3 . c))<br>7. Define and test a procedure map that takes a procedure p of one argument and a list ls and returns a new list containing the results of applying p to the elements of ls. Do not use Racket’s built-in map in your definition.</p>
 </blockquote>
 <blockquote>
-<p>(map add1 ‘(1 2 3 4))<br>(2 3 4 5)</p>
-<ol start="8">
-<li>Define and test a procedure append that takes two lists, ls1 and ls2, and appends ls1 to ls2.</li>
-</ol>
+<p>(map add1 ‘(1 2 3 4))<br>(2 3 4 5)<br>8. Define and test a procedure append that takes two lists, ls1 and ls2, and appends ls1 to ls2.</p>
 </blockquote>
 <blockquote>
-<p>(append ‘(a b c) ‘(1 2 3))<br>(a b c 1 2 3)</p>
-<ol start="9">
-<li>Define and test a procedure reverse that takes a list and returns the reverse of that list.</li>
-</ol>
+<p>(append ‘(a b c) ‘(1 2 3))<br>(a b c 1 2 3)<br>9. Define and test a procedure reverse that takes a list and returns the reverse of that list.</p>
 </blockquote>
 <blockquote>
-<p>(reverse ‘(a 3 x))<br>(x 3 a)</p>
-<ol start="10">
-<li>Define and test a procedure fact that takes a natural number and computes the factorial of that number. The factorial of a number is computed by multiplying it by the factorial of its predecessor. The factorial of 0 is defined to be 1.</li>
-</ol>
+<p>(reverse ‘(a 3 x))<br>(x 3 a)<br>10. Define and test a procedure fact that takes a natural number and computes the factorial of that number. The factorial of a number is computed by multiplying it by the factorial of its predecessor. The factorial of 0 is defined to be 1.</p>
 </blockquote>
 <blockquote>
-<p>(fact 0)<br>1<br>(fact 5)<br>120</p>
-<ol start="11">
-<li>Define and test a procedure memv that takes an element and a list and returns the first sublist whose car is eqv? to the element, or #f if the element is absent from the list.</li>
-</ol>
+<p>(fact 0)<br>1<br>(fact 5)<br>120<br>11. Define and test a procedure memv that takes an element and a list and returns the first sublist whose car is eqv? to the element, or #f if the element is absent from the list.</p>
 </blockquote>
 <blockquote>
-<p>(memv ‘a ‘(a b c))<br>(a b c)<br>(memv ‘b ‘(a ? c))</p>
-</blockquote>
-<p>#f</p>
-<blockquote>
-<p>(memv ‘b ‘(a b c b))<br>(b c b)</p>
-<ol start="12">
-<li>Define and test a procedure fib that takes a natural number n as input and computes the nth number, starting from zero, in the Fibonacci sequence (0, 1, 1, 2, 3, 5, 8, 13, 21, …). Each number in the sequence is computed by adding the two previous numbers.</li>
-</ol>
+<p>(memv ‘a ‘(a b c))<br>(a b c)<br>(memv ‘b ‘(a ? c))<br>#f<br>(memv ‘b ‘(a b c b))<br>(b c b)<br>12. Define and test a procedure fib that takes a natural number n as input and computes the nth number, starting from zero, in the Fibonacci sequence (0, 1, 1, 2, 3, 5, 8, 13, 21, …). Each number in the sequence is computed by adding the two previous numbers.</p>
 </blockquote>
 <blockquote>
-<p>(fib 0)<br>0<br>(fib 1)<br>1<br>(fib 7)<br>13</p>
-<ol start="13">
-<li>The expressions (a b) and (a . (b . ())) are equivalent. Using this knowledge, rewrite the expression ((w x) y (z)) using as many dots as possible. Be sure to test your solution using Racket’s equal? predicate. (You do not have to define a rewrite procedure; just rewrite the given expression by hand and place it in a comment.)</li>
-</ol>
+<p>(fib 0)<br>0<br>(fib 1)<br>1<br>(fib 7)<br>13<br>13. The expressions (a b) and (a . (b . ())) are equivalent. Using this knowledge, rewrite the expression ((w x) y (z)) using as many dots as possible. Be sure to test your solution using Racket’s equal? predicate. (You do not have to define a rewrite procedure; just rewrite the given expression by hand and place it in a comment.)</p>
 </blockquote>
 <ol start="14">
 <li>Define and test a procedure binary-&gt;natural that takes a flat list of 0s and 1s representing an unsigned binary number in reverse bit order and returns that number. For example:</li>
 </ol>
 <blockquote>
-<p>(binary-&gt;natural ‘())<br>0<br>(binary-&gt;natural ‘(0 0 1))<br>4<br>(binary-&gt;natural ‘(0 0 1 1))<br>12<br>(binary-&gt;natural ‘(1 1 1 1))<br>15<br>(binary-&gt;natural ‘(1 0 1 0 1))<br>21<br>(binary-&gt;natural ‘(1 1 1 1 1 1 1 1 1 1 1 1 1))<br>8191</p>
-<ol start="15">
-<li>Define subtraction using natural recursion. Your subtraction function, minus, need only take nonnegative inputs where the result will be nonnegative.</li>
-</ol>
+<p>(binary-&gt;natural ‘())<br>0<br>(binary-&gt;natural ‘(0 0 1))<br>4<br>(binary-&gt;natural ‘(0 0 1 1))<br>12<br>(binary-&gt;natural ‘(1 1 1 1))<br>15<br>(binary-&gt;natural ‘(1 0 1 0 1))<br>21<br>(binary-&gt;natural ‘(1 1 1 1 1 1 1 1 1 1 1 1 1))<br>8191<br>15. Define subtraction using natural recursion. Your subtraction function, minus, need only take nonnegative inputs where the result will be nonnegative.</p>
 </blockquote>
 <blockquote>
-<p>(minus 5 3)<br>2<br>(minus 100 50)<br>50</p>
-<ol start="16">
-<li>Define division using natural recursion. Your division function, div, need only work when the second number evenly divides the first. Division by zero is of course bad data.</li>
-</ol>
+<p>(minus 5 3)<br>2<br>(minus 100 50)<br>50<br>16. Define division using natural recursion. Your division function, div, need only work when the second number evenly divides the first. Division by zero is of course bad data.</p>
 </blockquote>
 <blockquote>
-<p>(div 25 5)<br>5<br>(div 36 6)<br>6</p>
-<ol start="17">
-<li>Define a function append-map that, similar to map, takes both a procedure p of one argument a list of inputs ls and applies p to each of the elements of ls. Here, though, we mandate that the result of p on each element of ls is a list, and we append together the intermediate results. Do not use Racket’s built-in append-map in your definition.</li>
-</ol>
+<p>(div 25 5)<br>5<br>(div 36 6)<br>6<br>17. Define a function append-map that, similar to map, takes both a procedure p of one argument a list of inputs ls and applies p to each of the elements of ls. Here, though, we mandate that the result of p on each element of ls is a list, and we append together the intermediate results. Do not use Racket’s built-in append-map in your definition.</p>
 </blockquote>
 <blockquote>
-<p>(append-map countdown (countdown 5))<br>(5 4 3 2 1 0 4 3 2 1 0 3 2 1 0 2 1 0 1 0 0)</p>
-<ol start="18">
-<li>Define a function set-difference that takes two flat sets (lists with no duplicate elements) s1 and s2 and returns a list containing all the elements in s1 that are not in s2.</li>
-</ol>
+<p>(append-map countdown (countdown 5))<br>(5 4 3 2 1 0 4 3 2 1 0 3 2 1 0 2 1 0 1 0 0)<br>18. Define a function set-difference that takes two flat sets (lists with no duplicate elements) s1 and s2 and returns a list containing all the elements in s1 that are not in s2.</p>
 </blockquote>
 <blockquote>
-<p>(set-difference ‘(1 2 3 4 5) ‘(2 4 6 8))<br>(1 3 5)<br>Brainteasers</p>
-<ol start="19">
-<li>In mathematics, the power set of any set S, denoted P(S), is the set of all subsets of S, including the empty set and S itself.</li>
-</ol>
+<p>(set-difference ‘(1 2 3 4 5) ‘(2 4 6 8))<br>(1 3 5)<br>Brainteasers<br>19. In mathematics, the power set of any set S, denoted P(S), is the set of all subsets of S, including the empty set and S itself.</p>
 </blockquote>
 <p>The procedure powerset takes a list and returns the power set of the elements in the list. The exact order of your lists may differ; this is acceptable.</p>
 <blockquote>
-<p>(powerset ‘(3 2 1))<br>((3 2 1) (3 2) (3 1) (3) (2 1) (2) (1) ())<br>(powerset ‘())<br>(())</p>
-<ol start="20">
-<li>The cartesian-product is defined over a list of sets (again simply lists that by our agreed upon convention don’t have duplicates). The result is a list of tuples (i.e. lists). Each tuple has in the first position an element of the first set, in the second position an element of the second set, etc. The output list should contains all such combinations. The exact order of your tuples may differ; this is acceptable.</li>
-</ol>
+<p>(powerset ‘(3 2 1))<br>((3 2 1) (3 2) (3 1) (3) (2 1) (2) (1) ())<br>(powerset ‘())<br>(())<br>20. The cartesian-product is defined over a list of sets (again simply lists that by our agreed upon convention don’t have duplicates). The result is a list of tuples (i.e. lists). Each tuple has in the first position an element of the first set, in the second position an element of the second set, etc. The output list should contains all such combinations. The exact order of your tuples may differ; this is acceptable.</p>
 </blockquote>
 <blockquote>
-<p>(cartesian-product ‘((5 4) (3 2 1)))<br>((5 3) (5 2) (5 1) (4 3) (4 2) (4 1))</p>
-<ol start="21">
-<li>Rewrite some of the natural-recursive programs from above instead using foldr. That is, the bodies of your definitions should not refer to themselves. The names should be the following:</li>
-</ol>
+<p>(cartesian-product ‘((5 4) (3 2 1)))<br>((5 3) (5 2) (5 1) (4 3) (4 2) (4 1))<br>21. Rewrite some of the natural-recursive programs from above instead using foldr. That is, the bodies of your definitions should not refer to themselves. The names should be the following:</p>
 </blockquote>
 <p>insertR-fr<br>filter-fr<br>map-fr<br>append-fr<br>reverse-fr<br>binary-&gt;natural-fr<br>append-map-fr<br>set-difference-fr<br>powerset-fr<br>cartesian-product-fr<br>If you would like, I can recommend a treatise on fold operators containing answers to several of the above sub-problems. It will also teach you about programming with foldr. There are stunningly beautiful definitions of the last two sub-problems. They’re just mind-blowing. And to tease you further, know that some (pretty clever, albeit) folk solved this almost 50 years ago, back when lexical scope wasn’t a thing, higher-order functions weren’t commonplace like they are today, and many of the common programming idioms and that we take for granted just weren’t around. Since I hate to pass up an excuse to show off something cool, I gotta tell you about the derivation and explanation of the last couple of answers here, but you have to promise (1) you’ll try it first on your own, and (2) that if you peek at the answers, you’ll read the whole thing. It’s short, moves quickly, and very high enlightenment/text ratio. That’s my sales pitch.</p>
 <ol start="22">
@@ -403,27 +432,17 @@
 <p>Your task is to, complete the below definition of collatz. collatz should be a function which will, when given a positive integer as an input, operate in a manner similar to the mathematical description above.</p>
 <p>(define collatz<br>  (letrec<br>    ((odd-case<br>       (lambda (recur)<br>         (lambda (x)<br>           (cond<br>            ((and (positive? x) (odd? x)) (collatz (add1 (* x 3))))<br>            (else (recur x))))))<br>     (even-case<br>       (lambda (recur)<br>         (lambda (x)<br>           (cond<br>            ((and (positive? x) (even? x)) (collatz (/ x 2)))<br>            (else (recur x))))))<br>     (one-case<br>       (lambda (recur)<br>         (lambda (x)<br>           (cond<br>            ((zero? (sub1 x)) 1)<br>            (else (recur x))))))<br>     (base<br>       (lambda (x)<br>         (error ‘error “Invalid value <del>s</del>n” x))))<br>    … ;; this should be a single line, without lambda<br>    ))<br>Your completed answer should be very short. It should be no more than one (prettily-indented) line long, and should not use lambda. Your collatz should compute the collatz of positive integers; for non-positive integers, it should signal an error “Invalid value”.</p>
 <blockquote>
-<p>(collatz 12)<br>1<br>(collatz 120)<br>1<br>(collatz 9999)<br>1<br>Just Dessert</p>
-<ol start="21">
-<li>A quine is a program whose output is the listings (i.e. source code) of the original program. In Racket, 5 and #t are both quines.</li>
-</ol>
+<p>(collatz 12)<br>1<br>(collatz 120)<br>1<br>(collatz 9999)<br>1<br>Just Dessert<br>21. A quine is a program whose output is the listings (i.e. source code) of the original program. In Racket, 5 and #t are both quines.</p>
 </blockquote>
 <blockquote>
-<p>5<br>5</p>
-<p>#t</p>
+<p>5<br>5<br>#t<br>#t<br>We will call a quine in Racket that is neither a number nor a boolean an interesting Racket quine. Below is an interesting Racket quine.</p>
 </blockquote>
-<p>#t<br>We will call a quine in Racket that is neither a number nor a boolean an interesting Racket quine. Below is an interesting Racket quine.</p>
 <blockquote>
 <p>((lambda (x) (list x (list ‘quote x)))<br>  ‘(lambda (x) (list x (list ‘quote x))))<br>((lambda (x) (list x (list ‘quote x)))<br>  ‘(lambda (x) (list x (list ‘quote x))))<br>Write your own interesting Racket quine, and define it as quine. The following should then be true.</p>
 </blockquote>
 <blockquote>
-<p>(equal? quine (eval quine))</p>
+<p>(equal? quine (eval quine))<br>#t<br>(equal? quine (eval (eval quine)))<br>#t<br>Not every Racket list is a quine; Racket’s standard printing convention will prepend a quote to a list. Make sure to use the above tests.</p>
 </blockquote>
-<p>#t</p>
-<blockquote>
-<p>(equal? quine (eval (eval quine)))</p>
-</blockquote>
-<p>#t<br>Not every Racket list is a quine; Racket’s standard printing convention will prepend a quote to a list. Make sure to use the above tests.</p>
 
     </div>
 
@@ -431,7 +450,7 @@
     
     
 
-      <footer class="post-footer">
+    <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/Programming/" rel="tag"># Programming</a>
               <a href="/tags/Computer/" rel="tag"># Computer</a>
@@ -442,20 +461,19 @@
 
         
 
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2019/01/24/2019-01-24-android-essential-training/" rel="prev" title="Android Essential Training 2019">
-      <i class="fa fa-chevron-left"></i> Android Essential Training 2019
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2019/02/12/2019-02-12-redemption/" rel="next" title="Reflections 20190212">
-      Reflections 20190212 <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2019/01/24/2019-01-24-android-essential-training/" rel="prev" title="Android Essential Training 2019">
+                  <i class="fa fa-chevron-left"></i> Android Essential Training 2019
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2019/02/12/2019-02-12-redemption/" rel="next" title="Reflections 20190212">
+                  Reflections 20190212 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
   </article>
   
   
@@ -463,8 +481,7 @@
 
 
 
-          </div>
-          
+      
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -473,7 +490,7 @@
       activeClass = localStorage.getItem('comments_active') || activeClass;
     }
     if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
       if (activeTab) {
         activeTab.click();
       }
@@ -482,95 +499,20 @@
   if (CONFIG.comments.storage) {
     window.addEventListener('tabs:click', event => {
       if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
+      const commentClass = event.target.classList[1];
       localStorage.setItem('comments_active', commentClass);
     });
   }
 </script>
 
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Assignments"><span class="nav-number">1.</span> <span class="nav-text">Assignments</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Assignment-1"><span class="nav-number">1.1.</span> <span class="nav-text">Assignment 1</span></a></li></ol></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Abraham Xiao"
-      src="/images/avatar.jpg">
-  <p class="site-author-name" itemprop="name">Abraham Xiao</p>
-  <div class="site-description" itemprop="description">Shut Up and Get Rich.</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">224</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">12</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">369</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/ProfessorX" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ProfessorX" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:admin@yxiao.org" title="E-Mail → mailto:admin@yxiao.org" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
-      </span>
-  </div>
-
-
-
-      </div>
-
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
+  </main>
 
+  <footer class="footer">
+    <div class="footer-inner">
+      
 
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
+      
 
 <div class="copyright">
   
@@ -579,79 +521,37 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Abraham Xiao</span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
 
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
 
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
+  
 
 
-<script src="/js/schemes/muse.js"></script>
 
 
-<script src="/js/next-boot.js"></script>
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
 
 
 
 
   
-  <script>
-    (function(){
-      var canonicalURL, curProtocol;
-      //Get the <link> tag
-      var x=document.getElementsByTagName("link");
-		//Find the last canonical URL
-		if(x.length > 0){
-			for (i=0;i<x.length;i++){
-				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
-					canonicalURL=x[i].href;
-				}
-			}
-		}
-    //Get protocol
-	    if (!canonicalURL){
-	    	curProtocol = window.location.protocol.split(':')[0];
-	    }
-	    else{
-	    	curProtocol = canonicalURL.split(':')[0];
-	    }
-      //Get current URL if the canonical URL does not exist
-	    if (!canonicalURL) canonicalURL = window.location.href;
-	    //Assign script content. Replace current URL with the canonical URL
-      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
-  </script>
-
-
-
-
-  
-<script src="/js/local-search.js"></script>
-
-
-
-
-
 
 
 

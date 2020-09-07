@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -13,23 +13,25 @@
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
-<script id="hexo-configurations">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"www.yxiao.org","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"8.0.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
   <meta name="description" content="美国只是慢，现在还谈不上落后，相反，美国绝大多数人的生活质量是远超中国大部分人的。 中国现在是非常快，发展的速度能甩美国好几条街。 我希望中国能保持这种速度，弯道超车最重要的就是速度。我不希望刚刚进入弯道，就感觉好像已经把对方甩开了，然后还咧着嘴笑话别人。 民族自信的基础是实力，将来某天中国的综合实力全面超越美国的时候（我个人认为这是必然），民族自信会自然流淌出来。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="周围不少到过美国的朋友说，美国现在很“落后”。这是真的吗？">
-<meta property="og:url" content="https://www.yxiao.org/2019/12/20/2019-12-20-usa-falling-behind/index.html">
-<meta property="og:site_name" content="Masdar Wireless">
+<meta property="og:url" content="http://yoursite.com/2019/12/20/2019-12-20-usa-falling-behind/index.html">
+<meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="美国只是慢，现在还谈不上落后，相反，美国绝大多数人的生活质量是远超中国大部分人的。 中国现在是非常快，发展的速度能甩美国好几条街。 我希望中国能保持这种速度，弯道超车最重要的就是速度。我不希望刚刚进入弯道，就感觉好像已经把对方甩开了，然后还咧着嘴笑话别人。 民族自信的基础是实力，将来某天中国的综合实力全面超越美国的时候（我个人认为这是必然），民族自信会自然流淌出来。">
-<meta property="og:locale" content="zh_CN">
+<meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-12-20T11:00:00.000Z">
-<meta property="article:modified_time" content="2019-12-30T09:03:06.323Z">
-<meta property="article:author" content="Abraham Xiao">
+<meta property="article:modified_time" content="2020-08-17T16:55:15.204Z">
+<meta property="article:author" content="John Doe">
 <meta property="article:tag" content="China">
 <meta property="article:tag" content="Future">
 <meta property="article:tag" content="USA">
@@ -37,20 +39,21 @@
 <meta property="article:tag" content="International">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://www.yxiao.org/2019/12/20/2019-12-20-usa-falling-behind/">
+
+<link rel="canonical" href="http://yoursite.com/2019/12/20/2019-12-20-usa-falling-behind/">
 
 
-<script id="page-configurations">
+<script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
     isHome : false,
     isPost : true,
-    lang   : 'zh-CN'
+    lang   : 'en'
   };
 </script>
 
-  <title>周围不少到过美国的朋友说，美国现在很“落后”。这是真的吗？ | Masdar Wireless</title>
+  <title>周围不少到过美国的朋友说，美国现在很“落后”。这是真的吗？ | Hexo</title>
   
 
 
@@ -60,51 +63,62 @@
 
   <noscript>
   <style>
-  .use-motion .brand,
+  body { margin-top: 2rem; }
+
   .use-motion .menu-item,
-  .sidebar-inner,
+  .use-motion .sidebar,
   .use-motion .post-block,
   .use-motion .pagination,
   .use-motion .comments,
   .use-motion .post-header,
   .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
 
   .use-motion .site-title,
-  .use-motion .site-subtitle {
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
     opacity: initial;
     top: initial;
   }
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
   </style>
 </noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
+  <main class="main">
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
   <div class="site-meta">
 
     <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Masdar Wireless</h1>
-      <span class="logo-line-after"><i></i></span>
+      <i class="logo-line"></i>
+      <h1 class="site-title">Hexo</h1>
+      <i class="logo-line"></i>
     </a>
-      <p class="site-subtitle" itemprop="description">MORE MEAT MORE EXERCISE!</p>
   </div>
 
   <div class="site-nav-right">
@@ -116,32 +130,31 @@
 
 
 
-
 <nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
+  <ul class="main-menu menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
 
   </li>
         <li class="menu-item menu-item-about">
 
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
 
   </li>
         <li class="menu-item menu-item-study">
@@ -155,7 +168,7 @@
 
   </li>
       <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
       </li>
   </ul>
@@ -170,17 +183,17 @@
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
-           placeholder="搜索..." spellcheck="false"
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
            type="search" class="search-input">
   </div>
   <span class="popup-btn-close">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
   </div>
 </div>
 
@@ -188,6 +201,79 @@
   </div>
 
 </div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%97%E5%AE%81%E6%98%AF%E4%B8%AA%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%E4%BA%BA%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">列宁是个什么样的人？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BB%A5%E5%A4%A7%E5%A4%9A%E6%95%B0%E6%98%8E%E6%9C%AB%E4%B8%BA%E8%83%8C%E6%99%AF%E7%9A%84%E7%BD%91%E7%BB%9C%E7%A9%BF%E8%B6%8A%E5%B0%8F%E8%AF%B4%E4%B8%AD%E9%97%AF%E5%86%9B%EF%BC%88%E5%A4%A7%E9%A1%BA%E5%86%9B%EF%BC%89%E9%83%BD%E6%98%AF%E5%8F%8D%E6%B4%BE%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">为什么以大多数明末为背景的网络穿越小说中闯军（大顺军）都是反派？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%81%E5%B9%B4%E5%89%8D%E8%AE%A4%E4%B8%BA%E6%88%BF%E4%BB%B7%E4%BC%9A%E8%B7%8C%E7%9A%84%E4%BA%BA%E9%94%99%E5%9C%A8%E4%BA%86%E5%93%AA%E9%87%8C%EF%BC%9F"><span class="nav-number">3.</span> <span class="nav-text">十年前认为房价会跌的人错在了哪里？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%B7%E6%9C%8B%E5%8F%8B%E6%83%B3%E5%8E%BB%E8%AF%BB%E7%A0%94%EF%BC%8C%E6%88%91%E6%83%B3%E8%AE%A9%E4%BB%96%E8%AF%BB%E7%A0%94%E5%92%8C%E6%88%91%E4%BA%8C%E9%80%89%E4%B8%80%EF%BC%8C%E6%88%91%E6%9C%89%E9%94%99%E5%90%97%EF%BC%9F"><span class="nav-number">4.</span> <span class="nav-text">男朋友想去读研，我想让他读研和我二选一，我有错吗？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%A2%E5%AF%B9%E4%B8%8D%E5%8F%AF%E9%80%86%E8%BD%AC%E7%9A%84%E4%BA%BA%E5%8F%A3%E8%80%81%E9%BE%84%E5%8C%96%EF%BC%8C%E6%88%91%E4%BB%AC%E8%BF%99%E4%BB%A3%E5%B9%B4%E8%BD%BB%E4%BA%BA%E5%A6%82%E4%BD%95%E4%BF%9D%E8%AF%81%E8%87%AA%E5%B7%B1%E6%99%9A%E5%B9%B4%E7%94%9F%E6%B4%BB%E4%B8%8D%E8%87%B3%E4%BA%8E%E5%A4%AA%E5%87%84%E6%83%A8%EF%BC%9F"><span class="nav-number">5.</span> <span class="nav-text">面对不可逆转的人口老龄化，我们这代年轻人如何保证自己晚年生活不至于太凄惨？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%852019%E5%B9%B4%E5%87%BA%E7%94%9F%E4%BA%BA%E5%8F%A3%E9%A2%84%E4%BC%B0%E7%BA%A61100%E4%B8%87"><span class="nav-number">6.</span> <span class="nav-text">如何看待2019年出生人口预估约1100万?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E7%9F%A5%E4%B9%8E%E4%BA%BA%E5%9D%87%E5%B9%B4%E8%96%AA%E7%99%BE%E4%B8%87%EF%BC%8C%E7%B2%BE%E8%8B%B1%E6%9C%88%E5%85%A5%E7%99%BE%E4%B8%87%EF%BC%8C%E4%BA%BA%E4%BA%BA985%EF%BC%8C%E4%BD%86%E4%B8%80%E8%B0%88%E5%88%B0%E6%88%BF%E4%BB%B7%E5%8D%B4%E9%83%BD%E6%98%AF%E5%93%80%E9%B8%BF%E9%81%8D%E9%87%8E%EF%BC%8C%E5%8F%AB%E8%8B%A6%E8%BF%9E%E5%A4%A9%EF%BC%9F"><span class="nav-number">7.</span> <span class="nav-text">为什么知乎人均年薪百万，精英月入百万，人人985，但一谈到房价却都是哀鸿遍野，叫苦连天？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B5%A9%E5%AD%A6%E8%9B%AE%E5%A4%B7%E5%85%A5%E5%85%B3%E8%AE%BA%E7%9A%84%E5%86%85%E6%A0%B8%E5%8F%8D%E6%98%A0%E7%9A%84%E6%98%AF%E6%B1%82%E7%94%9F%E6%AC%B2%E8%BF%98%E6%98%AF%E7%A7%B0%E9%9C%B8%E6%80%9D%E6%83%B3%EF%BC%9F"><span class="nav-number">8.</span> <span class="nav-text">嵩学蛮夷入关论的内核反映的是求生欲还是称霸思想？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7%E9%98%BF%E9%87%8C-P10-%E8%B5%B5%E6%B5%B7%E5%B9%B3%E5%AF%B9%E7%8E%8B%E5%9E%A0%E7%9A%84%E9%9D%A2%E8%AF%95%EF%BC%9F"><span class="nav-number">9.</span> <span class="nav-text">如何评价阿里 P10 赵海平对王垠的面试？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%93%AA%E4%BA%9B%E7%9C%81%E7%9A%84%E5%AE%9A%E5%90%91%E9%80%89%E8%B0%83%E7%94%9F%E6%94%BF%E7%AD%96%E9%80%82%E7%94%A8%E4%BA%8E%E6%B5%B7%E5%A4%96%E9%AB%98%E6%A0%A1%EF%BC%9F"><span class="nav-number">10.</span> <span class="nav-text">哪些省的定向选调生政策适用于海外高校？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B8%A9%E5%AE%9D%E7%88%B6%E5%AD%90%E6%80%8E%E6%A0%B7%E4%BB%8E%E5%8D%8E%E9%94%90%E8%B4%AA%E9%92%B1%E7%9A%84%EF%BC%9F"><span class="nav-number">11.</span> <span class="nav-text">温宝父子怎样从华锐贪钱的？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%BA%A6%E5%AE%A2CRM%E6%96%A9%E8%8E%B7%E2%80%9C2019%E4%B8%AD%E5%9B%BD%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E4%BC%98%E7%A7%80%E4%BA%A7%E5%93%81%E2%80%9D%E5%A4%A7%E5%A5%96"><span class="nav-number">12.</span> <span class="nav-text">麦客CRM斩获“2019中国信息技术优秀产品”大奖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%85%E5%8C%97%E4%BA%AC%E8%A2%AB%E6%89%8E%E5%A5%B3%E5%8C%BB%E7%94%9F%E6%8A%A2%E6%95%91%E6%97%A0%E6%95%88%E5%8E%BB%E4%B8%96"><span class="nav-number">13.</span> <span class="nav-text">如何看待北京被扎女医生抢救无效去世?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%BF%E4%BB%B7%E8%AE%A9%E7%8E%B0%E5%9C%A8%E7%9A%84%E5%B9%B4%E8%BD%BB%E4%BA%BA%E6%9C%89%E5%A4%9A%E7%BB%9D%E6%9C%9B%EF%BC%9F"><span class="nav-number">14.</span> <span class="nav-text">房价让现在的年轻人有多绝望？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8C%BB%E9%99%A2%E4%BD%93%E5%88%B6%E9%97%AE%E9%A2%98%E5%88%B0%E5%BA%95%E5%87%BA%E5%9C%A8%E5%93%AA%E9%87%8C%EF%BC%9F"><span class="nav-number">15.</span> <span class="nav-text">医院体制问题到底出在哪里？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%A5%E5%85%B3%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%85%A5%E5%85%B3%E9%9C%80%E8%A6%81%E4%BB%98%E5%87%BA%E5%A4%9A%E5%A4%A7%E4%BB%A3%E4%BB%B7%EF%BC%9F%E6%9C%89%E6%97%A0%E4%B8%8A%E9%99%90%E5%92%8C%E4%B8%8B%E9%99%90%EF%BC%9F%E6%97%B6%E9%97%B4%E4%B8%8A%E6%9C%89%E6%97%A0%E6%9C%9F%E9%99%90%EF%BC%9F"><span class="nav-number">16.</span> <span class="nav-text">入关论中的入关需要付出多大代价？有无上限和下限？时间上有无期限？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%85%E6%B8%A9%E5%B7%9E%E5%B8%82%E5%8F%91%E5%B8%83%E6%9C%AC%E7%A7%91%E7%94%9F%E5%8F%AF7%E6%8A%98%E4%B9%B0%E6%88%BF%EF%BC%8C3%E6%8A%98%E7%A7%9F%E6%88%BF%EF%BC%9F"><span class="nav-number">17.</span> <span class="nav-text">如何看待温州市发布本科生可7折买房，3折租房？</span></a></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="John Doe"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">226</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">370</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/ProfessorX" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ProfessorX" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:admin@yxiao.org" title="E-Mail → mailto:admin@yxiao.org" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </section>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
     </header>
 
     
@@ -196,62 +282,68 @@
     <span>0%</span>
   </div>
 
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
 
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
 
-          <div class="content post posts-expand">
-            
+    <div class="main-inner post posts-expand">
+      
+
+      
 
     
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.yxiao.org/2019/12/20/2019-12-20-usa-falling-behind/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/20/2019-12-20-usa-falling-behind/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Abraham Xiao">
-      <meta itemprop="description" content="Shut Up and Get Rich.">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Masdar Wireless">
+      <meta itemprop="name" content="Hexo">
     </span>
+
+    
+    
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           周围不少到过美国的朋友说，美国现在很“落后”。这是真的吗？
         </h1>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
 
-              <time title="创建时间：2019-12-20 19:00:00" itemprop="dateCreated datePublished" datetime="2019-12-20T19:00:00+08:00">2019-12-20</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-30 17:03:06" itemprop="dateModified" datetime="2019-12-30T17:03:06+08:00">2019-12-30</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a>
-                </span>
-            </span>
+      <time title="Created: 2019-12-20 19:00:00" itemprop="dateCreated datePublished" datetime="2019-12-20T19:00:00+08:00">2019-12-20</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2020-08-18 00:55:15" itemprop="dateModified" datetime="2020-08-18T00:55:15+08:00">2020-08-18</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a>
+        </span>
+    </span>
 
-          
+  
+</div>
 
         </div>
       </header>
@@ -260,8 +352,6 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
         <p>美国只是慢，现在还谈不上落后，相反，美国绝大多数人的生活质量是远超中国大部分人的。</p>
 <p>中国现在是非常快，发展的速度能甩美国好几条街。</p>
 <p>我希望中国能保持这种速度，弯道超车最重要的就是速度。我不希望刚刚进入弯道，就感觉好像已经把对方甩开了，然后还咧着嘴笑话别人。</p>
@@ -286,32 +376,32 @@
 <p>人口在落后时期是桎梏，在高科技时代，是第一强的动力。</p>
 <p>所以我敢斩钉截铁地说中国综合国力超过美国是必然，况且目前中国局势稳定，过去被诟病的集体经济因为在发挥正面的作用，而美国对高质量移民的态度是抵触状态。</p>
 <p>我在期待十年或是十五年之后，中国最底层的人，也可以悠闲地吃个晚饭，小孩可以在两三所学校里选择较喜欢的那所就读，中产们可以从容地面对工作和生活，路上的行人和车辆都不会用安全换时间，国家平安政局稳定，到那个时候，我们不会再需要怯怯的问身边的人“美国是不是落后了”，因为那时候，美国人一看就会自己说“我们已经落后了”。</p>
-<p>作者：Shannon<br>链接：<a href="https://www.zhihu.com/question/66665267/answer/892892318" target="_blank" rel="noopener">https://www.zhihu.com/question/66665267/answer/892892318</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>作者：Shannon<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/66665267/answer/892892318">https://www.zhihu.com/question/66665267/answer/892892318</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <h2 id="列宁是个什么样的人？"><a href="#列宁是个什么样的人？" class="headerlink" title="列宁是个什么样的人？"></a>列宁是个什么样的人？</h2><p>伟大的理论家，组织天才，政治天才，先知。在俄罗斯陷入绝望的时候，他硬生生带着布尔什维克党走出一条路来</p>
 <h2 id="为什么以大多数明末为背景的网络穿越小说中闯军（大顺军）都是反派？"><a href="#为什么以大多数明末为背景的网络穿越小说中闯军（大顺军）都是反派？" class="headerlink" title="为什么以大多数明末为背景的网络穿越小说中闯军（大顺军）都是反派？"></a>为什么以大多数明末为背景的网络穿越小说中闯军（大顺军）都是反派？</h2><p>首先，在我的《大明1630》里，李自成虽然和主角刘成是敌对关系，但他不是反派，书中没有丑化李自成，将其描述为一个铁骨铮铮，有勇有谋的豪杰，可能我属于少数派吧。至于大多数明末为背景网络穿越小说把李自成列为反派是因为大多数读者把自己代入了朱明统治者，在他们看来，为了汉人江山，为了中国近代不再忍受西方侵略之辱，为了自己能够像现代欧美发达国家年轻人那样含着金钥匙出生，还是请李自成张献忠们在家乖乖饿死的好。</p>
-<p>作者：韦伯<br>链接：<a href="https://www.zhihu.com/question/345418172/answer/941358827" target="_blank" rel="noopener">https://www.zhihu.com/question/345418172/answer/941358827</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>作者：韦伯<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/345418172/answer/941358827">https://www.zhihu.com/question/345418172/answer/941358827</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <h2 id="十年前认为房价会跌的人错在了哪里？"><a href="#十年前认为房价会跌的人错在了哪里？" class="headerlink" title="十年前认为房价会跌的人错在了哪里？"></a>十年前认为房价会跌的人错在了哪里？</h2><p>十年前我也傻逼了，还好我13年明白过来了。</p>
 <p>十年前错没错不重要，都已经过去了，谁也没后悔药吃。但如果认为我没错，而是世界错了，那可就无可救药了。</p>
 <h2 id="男朋友想去读研，我想让他读研和我二选一，我有错吗？"><a href="#男朋友想去读研，我想让他读研和我二选一，我有错吗？" class="headerlink" title="男朋友想去读研，我想让他读研和我二选一，我有错吗？"></a>男朋友想去读研，我想让他读研和我二选一，我有错吗？</h2><p>我自己毕业也能赚钱，他不能赚钱，那我结婚的目的是啥。</p>
 <p>最后那句话说得好，应该让所有男生都好好看看，铭记在心。女人把你当工具不要紧，自己千万别把自己当工具。</p>
 <h2 id="面对不可逆转的人口老龄化，我们这代年轻人如何保证自己晚年生活不至于太凄惨？"><a href="#面对不可逆转的人口老龄化，我们这代年轻人如何保证自己晚年生活不至于太凄惨？" class="headerlink" title="面对不可逆转的人口老龄化，我们这代年轻人如何保证自己晚年生活不至于太凄惨？"></a>面对不可逆转的人口老龄化，我们这代年轻人如何保证自己晚年生活不至于太凄惨？</h2><p>你现在过得好吗？如果你现在都过不好，就不用考虑老了以后的事情了</p>
-<h2 id="如何看待2019年出生人口预估约1100万"><a href="#如何看待2019年出生人口预估约1100万" class="headerlink" title="如何看待2019年出生人口预估约1100万?"></a>如何看待2019年出生人口预估约1100万?</h2><p>作者：低端叫兽<br>链接：<a href="https://www.zhihu.com/question/356941998/answer/946389671" target="_blank" rel="noopener">https://www.zhihu.com/question/356941998/answer/946389671</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h2 id="如何看待2019年出生人口预估约1100万"><a href="#如何看待2019年出生人口预估约1100万" class="headerlink" title="如何看待2019年出生人口预估约1100万?"></a>如何看待2019年出生人口预估约1100万?</h2><p>作者：低端叫兽<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/356941998/answer/946389671">https://www.zhihu.com/question/356941998/answer/946389671</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <p>数据可能有点误差，比如统计没有包括无当地户籍的新生儿，但不影响出生率崩塌的主旋律。</p>
 <p>布哈林那本《共产主义ABC》有些辱法的桥段，内容如下:</p>
 <p>“法国近几十年来，工人从资产阶级那里学会了人工节制生育：或者完全不生孩子，或者不多于两个。工人们极端贫困。以致很难或者根本不可能养活大的家庭。结果，法国的人口几乎没有增长。法国资产阶级感到兵员不足了。它大声疾呼：“民族要灭亡了！德国人口增长比我们快！他们的士兵要比我们多！”顺便说说，即使参军的那些士兵，也是一年比一年糟糕：身材矮小，肺部虚弱，气力单薄。于是资产阶级“顿时慷慨起来”：亲自起来坚决主张为工人阶级进行某些改善，使之恢复一下元气，多生一些孩子。要知道，如果把母鸡杀了，那它就再也不会生蛋了　　</p>
 <p>从所有这些例子看，资产阶级本身虽然采取了一些有益于工人的措施，但这里却是从自己的利益出发的。常常也有另外一些情况，即这些有益的措施是资产阶级国家在工人阶级的压力下被迫采取的。这样的法律多得很，几乎所有的“工厂法”都是通过这种方式——工人的威胁行动，——得来的。英国每一次缩短工作日——到十小时——是在工人的逼迫下达到的。俄国第一批工厂法，是沙皇政府在工人骚动和罢工的要挟下颁布的。这里，这个工人阶级的敌人的国家，即这个雇主的组织，出于自己的利益盘算着：“与其明天退让两步，或者拿自家性命冒险，倒不如今天先退让一步的好。”工厂主也完全如此，他向罢工者让步，并给工人多加几个微不足道的戈比，这样他仍然还是工厂主；资产阶级国家也完全如此，在工人骚动的威胁下，它会抛出几根小骨头，但这丝毫不会改变它的资产阶级性质。</p>
 <p>——《共产主义ABC》</p>
 <p>现在看来，这个桥段用来辱华一样阔以。过度的压榨导致出生率血崩人口结构崩塌的事儿，一战前的法国就上演了一次了。现在在中国又上演一次。但搞笑的是，至今没有看到这地方采取了什么向劳动者妥协的措施。出生率的两大障碍高房价和996不动如山。当然，即使干掉这两个障碍，人口结构血崩的结局也改变不了，日后的国运，大概可以用悲惨一词形容。搭配中国式资产外逃，我觉得以后的中国，可能会变成一个又老又穷，深度持续衰退，守不住西北的国家。当然，如果大批量引入黑人绿人，或许结果会有所不同。</p>
-<h2 id="为什么知乎人均年薪百万，精英月入百万，人人985，但一谈到房价却都是哀鸿遍野，叫苦连天？"><a href="#为什么知乎人均年薪百万，精英月入百万，人人985，但一谈到房价却都是哀鸿遍野，叫苦连天？" class="headerlink" title="为什么知乎人均年薪百万，精英月入百万，人人985，但一谈到房价却都是哀鸿遍野，叫苦连天？"></a>为什么知乎人均年薪百万，精英月入百万，人人985，但一谈到房价却都是哀鸿遍野，叫苦连天？</h2><p>作者：低端叫兽<br>链接：<a href="https://www.zhihu.com/question/341494565/answer/944320149" target="_blank" rel="noopener">https://www.zhihu.com/question/341494565/answer/944320149</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h2 id="为什么知乎人均年薪百万，精英月入百万，人人985，但一谈到房价却都是哀鸿遍野，叫苦连天？"><a href="#为什么知乎人均年薪百万，精英月入百万，人人985，但一谈到房价却都是哀鸿遍野，叫苦连天？" class="headerlink" title="为什么知乎人均年薪百万，精英月入百万，人人985，但一谈到房价却都是哀鸿遍野，叫苦连天？"></a>为什么知乎人均年薪百万，精英月入百万，人人985，但一谈到房价却都是哀鸿遍野，叫苦连天？</h2><p>作者：低端叫兽<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/341494565/answer/944320149">https://www.zhihu.com/question/341494565/answer/944320149</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <p><strong>其他行业不说，单拿金融行业和IT行业来说吧(纯靠个人能力，这是最有可能年轻时拿到百万年薪的行业)，拿到年薪百万基本都到三十岁以上了。少数人，比如某些固收交易员，期权交易员倒是可以30岁前拿到百万级别的年终，不过人数太少，就不讨论了。至于传统工科基本不用提了。</strong></p>
 <p>即使是百万总包，扣掉税和基本开支，一年最多存五十万，要付一线城市的首付也要存四年。而三十几岁的年纪，结婚，生育，学区房的安排也压过来了，你说压力大不大?</p>
 <p>事实证明，如果你想过得稍微体面点，又没有家里帮忙，诚实努力工作在中国是没有出路的，竭泽而渔捞偏门才是这个地方的正途。为什么我这里用了竭泽而渔这个词呢？因为建立在低人权优势上的本国的压榨模式是不可持续的，<strong>当中国无产阶级因为生活辛苦不愿意生育，出生率暴跌进而人口结构彻底崩塌时，基于低人权优势的压榨也就到头了</strong>(事实上从2012年开始，中国体力劳动者的低人权优势就开始反转了，证据是2012年中国劳动年龄人口数量开始下滑，保姆，建筑工等体力劳动者工资水平持续拉高且高于平均增速，但脑力劳动者的内卷远远没有结束)。</p>
 <p>所以正确的道路，还真就是李嘉诚式的竭泽而渔式捞钱捞偏门捞风口，对于家里没矿的人，去金融地产互联网才是正路。实业报国之类的口号，打个哈哈就好</p>
 <h2 id="嵩学蛮夷入关论的内核反映的是求生欲还是称霸思想？"><a href="#嵩学蛮夷入关论的内核反映的是求生欲还是称霸思想？" class="headerlink" title="嵩学蛮夷入关论的内核反映的是求生欲还是称霸思想？"></a>嵩学蛮夷入关论的内核反映的是求生欲还是称霸思想？</h2><p>在我认识 @寒冰射手曹草草 的那个下午，我意识到过去几十年里大家寻常见惯的人生经验，自由贸易联系起来的美好世界，搭便车遭遇的顺风顺水，舶来的、和我们没有一丝缘分的醉人幻影，以后都没什么参考意义了。嵩县和我们认清现实的时间都远远滞后了。 @吴天微 昨天说事情的转折点发生在2016，我认为是在2012，当然也可能更早，上溯到2008，上溯到微少的生辰年份，上溯到1949，甚至久远到1840、远到马戛尔尼。</p>
-<p>作者：邓铂鋆<br>链接：<a href="https://www.zhihu.com/question/360780863/answer/946070491" target="_blank" rel="noopener">https://www.zhihu.com/question/360780863/answer/946070491</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>作者：邓铂鋆<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/360780863/answer/946070491">https://www.zhihu.com/question/360780863/answer/946070491</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <p>我说的是谁也想不到川普2016上台，但是邓总说的实际上就算他不上，历史趋势不会变。只是我们都以为历史是个连续剧，到川总这里成了快闪</p>
 <p>我出生那年其实也有参考意义，就是我们那个督政府和稀泥装孙子路线竟然只持续了十年就装不下去了</p>
-<h2 id="如何评价阿里-P10-赵海平对王垠的面试？"><a href="#如何评价阿里-P10-赵海平对王垠的面试？" class="headerlink" title="如何评价阿里 P10 赵海平对王垠的面试？"></a>如何评价阿里 P10 赵海平对王垠的面试？</h2><p>作者：匿名用户<br>链接：<a href="https://www.zhihu.com/question/360622233/answer/946502266" target="_blank" rel="noopener">https://www.zhihu.com/question/360622233/answer/946502266</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h2 id="如何评价阿里-P10-赵海平对王垠的面试？"><a href="#如何评价阿里-P10-赵海平对王垠的面试？" class="headerlink" title="如何评价阿里 P10 赵海平对王垠的面试？"></a>如何评价阿里 P10 赵海平对王垠的面试？</h2><p>作者：匿名用户<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/360622233/answer/946502266">https://www.zhihu.com/question/360622233/answer/946502266</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <p>这两天海平的回复时不时的出现在我的feed里, 点赞的人清一色的成功人士.</p>
 <p>作为一个失败人士, 转码已经5年却连E5的影都够不到的人, 我的心情其实是非常沉重的.</p>
 <p>我不是王垠的粉丝, 虽然我也挺喜欢追他的博客的, 看他推荐的design of everyday things. 经常无意识的有if必须补上else, 看他推荐的那本几十年前写的computation theory. 甚至在转码刷题的时候还不忘顺便读了The Little Schemer和SICP.</p>
@@ -344,7 +434,7 @@
 <p>也可能是我以小人之心度君子之腹了. 毕竟成功人士的眼里他可是救Facebook于水火, 官拜director和P10的上古传说, 而我只是无名的E4, 失败人士, 差4级呢.</p>
 <p>我又有什么成就呢?要是我真命好升到E5E6也就算了, 或者平时玩票的东西碰巧火了也就算了. 可是我没有. 所以我没资格.</p>
 <p>我给海平舔鞋都不配, 见到了得下跪磕头, 叫三声爷爷才能对得起这个P10.说到做到.</p>
-<h2 id="哪些省的定向选调生政策适用于海外高校？"><a href="#哪些省的定向选调生政策适用于海外高校？" class="headerlink" title="哪些省的定向选调生政策适用于海外高校？"></a>哪些省的定向选调生政策适用于海外高校？</h2><p>作者：认真工作的小明<br>链接：<a href="https://www.zhihu.com/question/303731184/answer/540341866" target="_blank" rel="noopener">https://www.zhihu.com/question/303731184/answer/540341866</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h2 id="哪些省的定向选调生政策适用于海外高校？"><a href="#哪些省的定向选调生政策适用于海外高校？" class="headerlink" title="哪些省的定向选调生政策适用于海外高校？"></a>哪些省的定向选调生政策适用于海外高校？</h2><p>作者：认真工作的小明<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/303731184/answer/540341866">https://www.zhihu.com/question/303731184/answer/540341866</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <p>中县干部大概是过时材料了。</p>
 <p>11月28日，修改。</p>
 <p>看到这位同学的问题感觉到很亲切，我入职之前也是存在着对选调工作存在各种疑问。此外，知乎上关于选调生的问题很多，但认真提问的人很少，很多人一点功课都不做就来问，大体就是什么好不好，背景写的也不清楚，但题主写的比较认真，是一个好问题。</p>
@@ -414,7 +504,7 @@
 <p>秉承着“做有价值的产品”这一发展理念，未来，麦客CRM将始终不断致力于探索软件产品及服务的新形式、新领域、新边界，用互联网的方式结合AI技术，进一步帮助企业进行信息化转型，真正落实软件产品为企业和个人做出的贡献。</p>
 <p>【关于麦客CRM】</p>
 <p>麦客CRM是国内信息收集和市场营销领域的领导品牌，由福布斯30位30岁以下精英李卉女士于2013年带领一帮极具创造力的年轻人创建，致力于为企业提供最先进的信息收集方式，轻松完成信息收集与整理，实现客户挖掘与消息推送，并开展持续性市场营销。目前已获得云天使基金、伙伴创投以及红杉资本中国的多轮融资，拥有来自于教育、金融、互联网、房地产、医疗、电商、媒体、政府机关等各行各业数百万企业用户，市场排名和产品口碑稳居行业No.1。</p>
-<h2 id="如何看待北京被扎女医生抢救无效去世"><a href="#如何看待北京被扎女医生抢救无效去世" class="headerlink" title="如何看待北京被扎女医生抢救无效去世?"></a>如何看待北京被扎女医生抢救无效去世?</h2><p>作者：邓铂鋆<br>链接：<a href="https://www.zhihu.com/question/362716515/answer/948740748" target="_blank" rel="noopener">https://www.zhihu.com/question/362716515/answer/948740748</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h2 id="如何看待北京被扎女医生抢救无效去世"><a href="#如何看待北京被扎女医生抢救无效去世" class="headerlink" title="如何看待北京被扎女医生抢救无效去世?"></a>如何看待北京被扎女医生抢救无效去世?</h2><p>作者：邓铂鋆<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/362716515/answer/948740748">https://www.zhihu.com/question/362716515/answer/948740748</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <p><strong>此事反应了深度老龄化社会不可回避的严重问题。</strong></p>
 <p>1，民众缺少生命教育、死亡教育，“看不开”。明明是寿终正寝的年龄，九十岁的白事是“喜丧”，老人和家人却还怕死怕的要命，没有饱尝人生美好的无憾自觉，无法坦然面对死亡。大限将至，老人怕、家人急，情绪不冷静。</p>
 <p>2，社会没有相应的临终关怀机构和服务。人们在思想感情上不可能放任患有多种慢性病的老人在痛苦中忍受、等死，只能前往医院。</p>
@@ -435,14 +525,14 @@
 <h2 id="医院体制问题到底出在哪里？"><a href="#医院体制问题到底出在哪里？" class="headerlink" title="医院体制问题到底出在哪里？"></a>医院体制问题到底出在哪里？</h2><p>春运的体制问题到底出在哪里？超员一倍以上的绿皮车，一票难求，乘客没尊严、没质量的抵达目的地。其实春运和医疗的问题是一样的，人太多，资源太少，体制还努力的想做到“有求必应”。于是只能在经济性、安全性、舒适性三个里边挑至少一个牺牲一下了。</p>
 <p>经济性，通过涨价换来更多的资源服务用户，同时用价格杠杆把一些人拦在门外。安全性，降低质量，“萝卜快了不洗泥”，努力服务更多的人。舒适性，如你所见。目前的情况下，“涨价”是天条禁令不能想，当前中国卫生总费用占GDP的比例低于世界均值三分之一，中国的医疗是廉价的；中国的人均寿命等健康指标好于人均GDP和我们相当的其他国家，中国的医疗是物美的。现在能做的主要是牺牲舒适性，捎带影响安全性。</p>
 <p>春运的问题靠高铁和12306解决了不少，医疗行业就没这么幸运了。目前医疗体系的物美价廉是通过全社会压榨医疗行业、医疗行业内部资本压榨员工实现的。医疗行业既没有“高铁”这样迅猛提升效率的工具，又没有足够的情怀和待遇增加人手，未来不乐观。</p>
-<p>作者：邓铂鋆<br>链接：<a href="https://www.zhihu.com/question/362627709/answer/948641355" target="_blank" rel="noopener">https://www.zhihu.com/question/362627709/answer/948641355</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
-<h2 id="入关论中的入关需要付出多大代价？有无上限和下限？时间上有无期限？"><a href="#入关论中的入关需要付出多大代价？有无上限和下限？时间上有无期限？" class="headerlink" title="入关论中的入关需要付出多大代价？有无上限和下限？时间上有无期限？"></a>入关论中的入关需要付出多大代价？有无上限和下限？时间上有无期限？</h2><p>作者：邓铂鋆<br>链接：<a href="https://www.zhihu.com/question/360517751/answer/950033274" target="_blank" rel="noopener">https://www.zhihu.com/question/360517751/answer/950033274</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>作者：邓铂鋆<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/362627709/answer/948641355">https://www.zhihu.com/question/362627709/answer/948641355</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h2 id="入关论中的入关需要付出多大代价？有无上限和下限？时间上有无期限？"><a href="#入关论中的入关需要付出多大代价？有无上限和下限？时间上有无期限？" class="headerlink" title="入关论中的入关需要付出多大代价？有无上限和下限？时间上有无期限？"></a>入关论中的入关需要付出多大代价？有无上限和下限？时间上有无期限？</h2><p>作者：邓铂鋆<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/360517751/answer/950033274">https://www.zhihu.com/question/360517751/answer/950033274</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <p>首先，我反对任何通过一到两次军事冒险和军事冲突颠覆现有国际关系的脑洞。我们拥护和完善联合国框架下的国际秩序。我们保卫世界各国在印度洋、马六甲以及全球其他海域的通行自由。我们支持并愿与世界各国人民一道实现对美好生活的追求。我们做的一切都是为了实现世界人民大团结和人类命运共同体。</p>
 <p>人类命运共同体是解放生产力、迎来下一次工业革命的必经之路。越是复杂的生产力，社会分工越细，产业链越长。种田和打猎的生产与简单再生产一个小家族就能完成，一家机床厂的生产和扩大再生产则需要几百万工业人口的支持。能造火车机头的国家有几十个，能造巡洋舰的国家只有十几个。如今，制造大飞机和大火箭必须集中一个强大国家的科研与制造能力，一个欧盟才能凑出空客和阿丽亚娜火箭。下一次工业革命涉及可控核聚变与更先进的空间技术，需要更多的产业人口，更细的社会分工，更长的产业链，必须由世界各国几十亿人民大团结，实现人类命运共同体，才有可能实现。今后人类几十年的发展，必须有利于世界人民大团结，必须有利于人类命运共同体，必须有利于全生产要素自由的跨国流动。当生产力发展到一定阶段，可以考虑利用区块链和AI技术改进生产关系，实现“需要多少就生产多少”的高度个性化、高度私人定制的市场经济，全面优化资源配置。这个优化产生关系的时点，可能与下一次工业革命契合。为了实现这些宏大设想，我国提出“一路一带”倡议。秉持和平合作、开放包容、互学互鉴、互利共赢的理念，全方位推进务实合作，共商、共建、共享，打造政治互信、经济融合、文化包容的利益共同体、命运共同体和责任共同体。</p>
 <p>人类的命运维系在下一次工业革命之上。中国人民传承数千年的道义感和“天下”精神，让中国人民对构建人类命运共同体的历史使命责无旁待。中国主动担当引领世界人民大团结和构建人类命运共同体的责任，在这一过程中必然要教育阻碍历史进程的组织，同时让我们的理论、道路、制度、文化得到全世界的认可。我们是建设者，我们是追梦人。我们破坏的是阻碍美好生活实现的旧秩序。</p>
 <p>至于代价……代价就是假如我们不这样做，我们的发展被不友好的人遏制，同时受到生产力上限的遏制。如果我们积极拥抱世界，承担历史使命构建新的国际秩序与治理体系和极推动下一次工业革命，我们就不必承受任何主客观遏制的损失。这么一看，完全是无本万利。</p>
 <h2 id="如何看待温州市发布本科生可7折买房，3折租房？"><a href="#如何看待温州市发布本科生可7折买房，3折租房？" class="headerlink" title="如何看待温州市发布本科生可7折买房，3折租房？"></a>如何看待温州市发布本科生可7折买房，3折租房？</h2><p>政府主导、市场运营的经济租赁住房和共同产权房（你跟政府各占部分产权，按照占有产权的比例打折）将成为未来住房市场的主流，占据一半到七成的市场。温州不过是利用引进人才立了一个名目。我之前在知乎说过的，提高存量房屋的持有成本，鼓励各类产权、各类功能的房屋投入政府规范秩序的经济租赁房市场，推行租售同权。这不是我编的，是真有人在策划。</p>
-<p>作者：邓铂鋆<br>链接：<a href="https://www.zhihu.com/question/362924465/answer/950054324" target="_blank" rel="noopener">https://www.zhihu.com/question/362924465/answer/950054324</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>作者：邓铂鋆<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/362924465/answer/950054324">https://www.zhihu.com/question/362924465/answer/950054324</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <p><strong>你用武力把资产阶级消灭之后，发现无产阶级还是一团散沙，依然是人与人之间的战争，无法实现有效的政治自组织。这时候你就要组织一个无产阶级的先锋队，这个先锋队，个人服从集体，下级服从上级，全党服从中央。这就是列宁化。</strong></p>
 <p><strong>列宁化的最大挑战就是无产阶级会反对无产阶级的先锋队。原因就是凭啥你当先锋队。没解决好这个问题的国家都完蛋了。中国解决的好，因为中国有做题秩序。这个先锋队一直是可以快速换血的。</strong></p>
 
@@ -452,7 +542,7 @@
     
     
 
-      <footer class="post-footer">
+    <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/China/" rel="tag"># China</a>
               <a href="/tags/Future/" rel="tag"># Future</a>
@@ -463,20 +553,19 @@
 
         
 
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2019/12/12/2019-12-12-annual-reflections/" rel="prev" title="2018 Annual Reflections">
-      <i class="fa fa-chevron-left"></i> 2018 Annual Reflections
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2019/12/30/2019-12-30-ping-an-technology-lay-off/" rel="next" title="习近平发表二〇二〇年新年贺词：让我们只争朝夕，不负韶华">
-      习近平发表二〇二〇年新年贺词：让我们只争朝夕，不负韶华 <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2019/12/12/2019-12-12-annual-reflections/" rel="prev" title="2018 Annual Reflections">
+                  <i class="fa fa-chevron-left"></i> 2018 Annual Reflections
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2019/12/30/2019-12-30-charge-by-disease/" rel="next" title="单病种付费">
+                  单病种付费 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
   </article>
   
   
@@ -484,8 +573,7 @@
 
 
 
-          </div>
-          
+      
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -494,7 +582,7 @@
       activeClass = localStorage.getItem('comments_active') || activeClass;
     }
     if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
       if (activeTab) {
         activeTab.click();
       }
@@ -503,95 +591,20 @@
   if (CONFIG.comments.storage) {
     window.addEventListener('tabs:click', event => {
       if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
+      const commentClass = event.target.classList[1];
       localStorage.setItem('comments_active', commentClass);
     });
   }
 </script>
 
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%97%E5%AE%81%E6%98%AF%E4%B8%AA%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%E4%BA%BA%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">列宁是个什么样的人？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BB%A5%E5%A4%A7%E5%A4%9A%E6%95%B0%E6%98%8E%E6%9C%AB%E4%B8%BA%E8%83%8C%E6%99%AF%E7%9A%84%E7%BD%91%E7%BB%9C%E7%A9%BF%E8%B6%8A%E5%B0%8F%E8%AF%B4%E4%B8%AD%E9%97%AF%E5%86%9B%EF%BC%88%E5%A4%A7%E9%A1%BA%E5%86%9B%EF%BC%89%E9%83%BD%E6%98%AF%E5%8F%8D%E6%B4%BE%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">为什么以大多数明末为背景的网络穿越小说中闯军（大顺军）都是反派？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%81%E5%B9%B4%E5%89%8D%E8%AE%A4%E4%B8%BA%E6%88%BF%E4%BB%B7%E4%BC%9A%E8%B7%8C%E7%9A%84%E4%BA%BA%E9%94%99%E5%9C%A8%E4%BA%86%E5%93%AA%E9%87%8C%EF%BC%9F"><span class="nav-number">3.</span> <span class="nav-text">十年前认为房价会跌的人错在了哪里？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%B7%E6%9C%8B%E5%8F%8B%E6%83%B3%E5%8E%BB%E8%AF%BB%E7%A0%94%EF%BC%8C%E6%88%91%E6%83%B3%E8%AE%A9%E4%BB%96%E8%AF%BB%E7%A0%94%E5%92%8C%E6%88%91%E4%BA%8C%E9%80%89%E4%B8%80%EF%BC%8C%E6%88%91%E6%9C%89%E9%94%99%E5%90%97%EF%BC%9F"><span class="nav-number">4.</span> <span class="nav-text">男朋友想去读研，我想让他读研和我二选一，我有错吗？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%A2%E5%AF%B9%E4%B8%8D%E5%8F%AF%E9%80%86%E8%BD%AC%E7%9A%84%E4%BA%BA%E5%8F%A3%E8%80%81%E9%BE%84%E5%8C%96%EF%BC%8C%E6%88%91%E4%BB%AC%E8%BF%99%E4%BB%A3%E5%B9%B4%E8%BD%BB%E4%BA%BA%E5%A6%82%E4%BD%95%E4%BF%9D%E8%AF%81%E8%87%AA%E5%B7%B1%E6%99%9A%E5%B9%B4%E7%94%9F%E6%B4%BB%E4%B8%8D%E8%87%B3%E4%BA%8E%E5%A4%AA%E5%87%84%E6%83%A8%EF%BC%9F"><span class="nav-number">5.</span> <span class="nav-text">面对不可逆转的人口老龄化，我们这代年轻人如何保证自己晚年生活不至于太凄惨？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%852019%E5%B9%B4%E5%87%BA%E7%94%9F%E4%BA%BA%E5%8F%A3%E9%A2%84%E4%BC%B0%E7%BA%A61100%E4%B8%87"><span class="nav-number">6.</span> <span class="nav-text">如何看待2019年出生人口预估约1100万?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E7%9F%A5%E4%B9%8E%E4%BA%BA%E5%9D%87%E5%B9%B4%E8%96%AA%E7%99%BE%E4%B8%87%EF%BC%8C%E7%B2%BE%E8%8B%B1%E6%9C%88%E5%85%A5%E7%99%BE%E4%B8%87%EF%BC%8C%E4%BA%BA%E4%BA%BA985%EF%BC%8C%E4%BD%86%E4%B8%80%E8%B0%88%E5%88%B0%E6%88%BF%E4%BB%B7%E5%8D%B4%E9%83%BD%E6%98%AF%E5%93%80%E9%B8%BF%E9%81%8D%E9%87%8E%EF%BC%8C%E5%8F%AB%E8%8B%A6%E8%BF%9E%E5%A4%A9%EF%BC%9F"><span class="nav-number">7.</span> <span class="nav-text">为什么知乎人均年薪百万，精英月入百万，人人985，但一谈到房价却都是哀鸿遍野，叫苦连天？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B5%A9%E5%AD%A6%E8%9B%AE%E5%A4%B7%E5%85%A5%E5%85%B3%E8%AE%BA%E7%9A%84%E5%86%85%E6%A0%B8%E5%8F%8D%E6%98%A0%E7%9A%84%E6%98%AF%E6%B1%82%E7%94%9F%E6%AC%B2%E8%BF%98%E6%98%AF%E7%A7%B0%E9%9C%B8%E6%80%9D%E6%83%B3%EF%BC%9F"><span class="nav-number">8.</span> <span class="nav-text">嵩学蛮夷入关论的内核反映的是求生欲还是称霸思想？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7%E9%98%BF%E9%87%8C-P10-%E8%B5%B5%E6%B5%B7%E5%B9%B3%E5%AF%B9%E7%8E%8B%E5%9E%A0%E7%9A%84%E9%9D%A2%E8%AF%95%EF%BC%9F"><span class="nav-number">9.</span> <span class="nav-text">如何评价阿里 P10 赵海平对王垠的面试？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%93%AA%E4%BA%9B%E7%9C%81%E7%9A%84%E5%AE%9A%E5%90%91%E9%80%89%E8%B0%83%E7%94%9F%E6%94%BF%E7%AD%96%E9%80%82%E7%94%A8%E4%BA%8E%E6%B5%B7%E5%A4%96%E9%AB%98%E6%A0%A1%EF%BC%9F"><span class="nav-number">10.</span> <span class="nav-text">哪些省的定向选调生政策适用于海外高校？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B8%A9%E5%AE%9D%E7%88%B6%E5%AD%90%E6%80%8E%E6%A0%B7%E4%BB%8E%E5%8D%8E%E9%94%90%E8%B4%AA%E9%92%B1%E7%9A%84%EF%BC%9F"><span class="nav-number">11.</span> <span class="nav-text">温宝父子怎样从华锐贪钱的？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%BA%A6%E5%AE%A2CRM%E6%96%A9%E8%8E%B7%E2%80%9C2019%E4%B8%AD%E5%9B%BD%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E4%BC%98%E7%A7%80%E4%BA%A7%E5%93%81%E2%80%9D%E5%A4%A7%E5%A5%96"><span class="nav-number">12.</span> <span class="nav-text">麦客CRM斩获“2019中国信息技术优秀产品”大奖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%85%E5%8C%97%E4%BA%AC%E8%A2%AB%E6%89%8E%E5%A5%B3%E5%8C%BB%E7%94%9F%E6%8A%A2%E6%95%91%E6%97%A0%E6%95%88%E5%8E%BB%E4%B8%96"><span class="nav-number">13.</span> <span class="nav-text">如何看待北京被扎女医生抢救无效去世?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%BF%E4%BB%B7%E8%AE%A9%E7%8E%B0%E5%9C%A8%E7%9A%84%E5%B9%B4%E8%BD%BB%E4%BA%BA%E6%9C%89%E5%A4%9A%E7%BB%9D%E6%9C%9B%EF%BC%9F"><span class="nav-number">14.</span> <span class="nav-text">房价让现在的年轻人有多绝望？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8C%BB%E9%99%A2%E4%BD%93%E5%88%B6%E9%97%AE%E9%A2%98%E5%88%B0%E5%BA%95%E5%87%BA%E5%9C%A8%E5%93%AA%E9%87%8C%EF%BC%9F"><span class="nav-number">15.</span> <span class="nav-text">医院体制问题到底出在哪里？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%A5%E5%85%B3%E8%AE%BA%E4%B8%AD%E7%9A%84%E5%85%A5%E5%85%B3%E9%9C%80%E8%A6%81%E4%BB%98%E5%87%BA%E5%A4%9A%E5%A4%A7%E4%BB%A3%E4%BB%B7%EF%BC%9F%E6%9C%89%E6%97%A0%E4%B8%8A%E9%99%90%E5%92%8C%E4%B8%8B%E9%99%90%EF%BC%9F%E6%97%B6%E9%97%B4%E4%B8%8A%E6%9C%89%E6%97%A0%E6%9C%9F%E9%99%90%EF%BC%9F"><span class="nav-number">16.</span> <span class="nav-text">入关论中的入关需要付出多大代价？有无上限和下限？时间上有无期限？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%85%E6%B8%A9%E5%B7%9E%E5%B8%82%E5%8F%91%E5%B8%83%E6%9C%AC%E7%A7%91%E7%94%9F%E5%8F%AF7%E6%8A%98%E4%B9%B0%E6%88%BF%EF%BC%8C3%E6%8A%98%E7%A7%9F%E6%88%BF%EF%BC%9F"><span class="nav-number">17.</span> <span class="nav-text">如何看待温州市发布本科生可7折买房，3折租房？</span></a></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Abraham Xiao"
-      src="/images/avatar.jpg">
-  <p class="site-author-name" itemprop="name">Abraham Xiao</p>
-  <div class="site-description" itemprop="description">Shut Up and Get Rich.</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">224</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">12</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">369</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/ProfessorX" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ProfessorX" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:admin@yxiao.org" title="E-Mail → mailto:admin@yxiao.org" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
-      </span>
-  </div>
-
-
-
-      </div>
-
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
+  </main>
 
+  <footer class="footer">
+    <div class="footer-inner">
+      
 
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
+      
 
 <div class="copyright">
   
@@ -600,79 +613,37 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Abraham Xiao</span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
 
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
 
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
+  
 
 
-<script src="/js/schemes/muse.js"></script>
 
 
-<script src="/js/next-boot.js"></script>
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
 
 
 
 
   
-  <script>
-    (function(){
-      var canonicalURL, curProtocol;
-      //Get the <link> tag
-      var x=document.getElementsByTagName("link");
-		//Find the last canonical URL
-		if(x.length > 0){
-			for (i=0;i<x.length;i++){
-				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
-					canonicalURL=x[i].href;
-				}
-			}
-		}
-    //Get protocol
-	    if (!canonicalURL){
-	    	curProtocol = window.location.protocol.split(':')[0];
-	    }
-	    else{
-	    	curProtocol = canonicalURL.split(':')[0];
-	    }
-      //Get current URL if the canonical URL does not exist
-	    if (!canonicalURL) canonicalURL = window.location.href;
-	    //Assign script content. Replace current URL with the canonical URL
-      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
-  </script>
-
-
-
-
-  
-<script src="/js/local-search.js"></script>
-
-
-
-
-
 
 
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -13,24 +13,26 @@
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
-<script id="hexo-configurations">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"www.yxiao.org","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"8.0.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
   <meta name="description" content="新年前夕，国家主席习近平通过中央广播电视总台和互联网，发表了二〇二〇年新年贺词。全文如下：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="习近平发表二〇二〇年新年贺词：让我们只争朝夕，不负韶华">
-<meta property="og:url" content="https://www.yxiao.org/2019/12/30/2019-12-30-ping-an-technology-lay-off/index.html">
-<meta property="og:site_name" content="Masdar Wireless">
+<meta property="og:url" content="http://yoursite.com/2019/12/30/2019-12-30-ping-an-technology-lay-off/index.html">
+<meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="新年前夕，国家主席习近平通过中央广播电视总台和互联网，发表了二〇二〇年新年贺词。全文如下：">
-<meta property="og:locale" content="zh_CN">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.yxiao.org/images/2020010201.jpg">
 <meta property="article:published_time" content="2019-12-30T11:00:00.000Z">
-<meta property="article:modified_time" content="2020-01-02T09:01:05.708Z">
-<meta property="article:author" content="Abraham Xiao">
+<meta property="article:modified_time" content="2020-08-17T16:55:15.206Z">
+<meta property="article:author" content="John Doe">
 <meta property="article:tag" content="China">
 <meta property="article:tag" content="Technology">
 <meta property="article:tag" content="Human">
@@ -39,20 +41,21 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://www.yxiao.org/images/2020010201.jpg">
 
-<link rel="canonical" href="https://www.yxiao.org/2019/12/30/2019-12-30-ping-an-technology-lay-off/">
+
+<link rel="canonical" href="http://yoursite.com/2019/12/30/2019-12-30-ping-an-technology-lay-off/">
 
 
-<script id="page-configurations">
+<script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
     isHome : false,
     isPost : true,
-    lang   : 'zh-CN'
+    lang   : 'en'
   };
 </script>
 
-  <title>习近平发表二〇二〇年新年贺词：让我们只争朝夕，不负韶华 | Masdar Wireless</title>
+  <title>习近平发表二〇二〇年新年贺词：让我们只争朝夕，不负韶华 | Hexo</title>
   
 
 
@@ -62,51 +65,62 @@
 
   <noscript>
   <style>
-  .use-motion .brand,
+  body { margin-top: 2rem; }
+
   .use-motion .menu-item,
-  .sidebar-inner,
+  .use-motion .sidebar,
   .use-motion .post-block,
   .use-motion .pagination,
   .use-motion .comments,
   .use-motion .post-header,
   .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
 
   .use-motion .site-title,
-  .use-motion .site-subtitle {
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
     opacity: initial;
     top: initial;
   }
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
   </style>
 </noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
+  <main class="main">
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
   <div class="site-meta">
 
     <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Masdar Wireless</h1>
-      <span class="logo-line-after"><i></i></span>
+      <i class="logo-line"></i>
+      <h1 class="site-title">Hexo</h1>
+      <i class="logo-line"></i>
     </a>
-      <p class="site-subtitle" itemprop="description">MORE MEAT MORE EXERCISE!</p>
   </div>
 
   <div class="site-nav-right">
@@ -118,32 +132,31 @@
 
 
 
-
 <nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
+  <ul class="main-menu menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
 
   </li>
         <li class="menu-item menu-item-about">
 
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
 
   </li>
         <li class="menu-item menu-item-study">
@@ -157,7 +170,7 @@
 
   </li>
       <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
       </li>
   </ul>
@@ -172,17 +185,17 @@
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
-           placeholder="搜索..." spellcheck="false"
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
            type="search" class="search-input">
   </div>
   <span class="popup-btn-close">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
   </div>
 </div>
 
@@ -190,6 +203,79 @@
   </div>
 
 </div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%9E%8D%E5%90%88%E5%85%B1%E7%94%9F-%E6%99%BA%E5%90%91%E6%9C%AA%E6%9D%A5%E2%80%94%E2%80%94%E4%B8%AD%E8%81%94%E9%87%8D%E7%A7%912020%E5%B9%B4%E6%96%B0%E5%B9%B4%E7%8C%AE%E8%AF%8D"><span class="nav-number">1.</span> <span class="nav-text">融合共生 智向未来——中联重科2020年新年献词</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%85%E7%BD%97%E6%8C%AF%E5%AE%872020%E5%B9%B4%E3%80%8A%E6%97%B6%E9%97%B4%E7%9A%84%E6%9C%8B%E5%8F%8B%E3%80%8B%E8%B7%A8%E5%B9%B4%E6%BC%94%E8%AE%B2%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">如何看待罗振宇2020年《时间的朋友》跨年演讲？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%91%E8%A2%AB%E5%B9%B3%E5%AE%89%E7%A7%91%E6%8A%80%E8%A3%81%E5%91%98%E4%BA%86"><span class="nav-number">3.</span> <span class="nav-text">我被平安科技裁员了</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UGPee"><span class="nav-number">4.</span> <span class="nav-text">UGPee</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Deng"><span class="nav-number">5.</span> <span class="nav-text">Deng</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A0%E8%B4%A3%E4%BB%BB%E9%9A%8F%E4%BE%BF%E8%B0%88%EF%BC%8C%E6%88%91%E5%AF%B9%E4%B8%AD%E5%9B%BD%E7%A4%BE%E4%BC%9A%E7%9A%84%E8%BF%9C%E6%9C%9F%E9%A2%84%E6%B5%8B"><span class="nav-number">5.1.</span> <span class="nav-text">无责任随便谈，我对中国社会的远期预测</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%85%BE%E8%AE%AF%E4%BA%92%E5%A8%B1-hr-%E3%80%8C%E7%BF%BB%E5%BD%95%E3%80%8D%E7%9B%91%E6%8E%A7%EF%BC%8C%E4%BB%A5%E5%B7%A5%E4%BD%9C%E4%B8%8D%E8%B6%B3-8-%E5%B0%8F%E6%97%B6%E4%B8%BA%E7%94%B1%E8%BE%9E%E9%80%80-7-%E5%B9%B4%E6%8A%91%E9%83%81%E7%97%87%E8%80%81%E5%91%98%E5%B7%A5%EF%BC%8C%E8%BF%99%E5%B1%9E%E4%BA%8E%E3%80%8C%E6%9A%B4%E5%8A%9B%E8%A3%81%E5%91%98%E3%80%8D%E5%90%97%EF%BC%9F"><span class="nav-number">6.</span> <span class="nav-text">腾讯互娱 hr 「翻录」监控，以工作不足 8 小时为由辞退 7 年抑郁症老员工，这属于「暴力裁员」吗？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7%E8%8B%8F%E8%81%94%E7%9A%84%E5%85%AC%E6%9C%89%E5%88%B6%E5%92%8C%E8%AE%A1%E5%88%92%E7%BB%8F%E6%B5%8E%EF%BC%9F%E8%8B%8F%E8%81%94%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E8%A2%AB%E8%BF%99%E5%A5%97%E7%BB%8F%E6%B5%8E%E4%BD%93%E5%88%B6%E6%8B%96%E5%9E%AE%EF%BC%9F"><span class="nav-number">7.</span> <span class="nav-text">如何评价苏联的公有制和计划经济？苏联为什么会被这套经济体制拖垮？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%80%81%E5%A9%86%E9%AD%94%E9%83%BD985%E7%A1%95%E5%A3%AB%E6%AF%95%E4%B8%9A%EF%BC%8C%E5%8E%BB%E4%BA%8B%E4%B8%9A%E5%8D%95%E4%BD%8D8000%E4%B8%80%E4%B8%AA%E6%9C%88%E6%98%AF%E4%B8%8D%E6%98%AF%E6%9C%89%E7%82%B9%E6%B5%AA%E8%B4%B9%EF%BC%9F"><span class="nav-number">8.</span> <span class="nav-text">老婆魔都985硕士毕业，去事业单位8000一个月是不是有点浪费？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%89%E9%82%A3%E4%B9%88%E5%A4%9A%E4%BA%BA%E8%AE%A8%E5%8E%8C%E8%92%8B%E6%96%B9%E8%88%9F%EF%BC%9F"><span class="nav-number">9.</span> <span class="nav-text">为什么有那么多人讨厌蒋方舟？</span></a></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="John Doe"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">226</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">370</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/ProfessorX" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ProfessorX" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:admin@yxiao.org" title="E-Mail → mailto:admin@yxiao.org" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </section>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
     </header>
 
     
@@ -198,62 +284,68 @@
     <span>0%</span>
   </div>
 
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
 
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
 
-          <div class="content post posts-expand">
-            
+    <div class="main-inner post posts-expand">
+      
+
+      
 
     
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.yxiao.org/2019/12/30/2019-12-30-ping-an-technology-lay-off/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/30/2019-12-30-ping-an-technology-lay-off/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Abraham Xiao">
-      <meta itemprop="description" content="Shut Up and Get Rich.">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Masdar Wireless">
+      <meta itemprop="name" content="Hexo">
     </span>
+
+    
+    
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           习近平发表二〇二〇年新年贺词：让我们只争朝夕，不负韶华
         </h1>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
 
-              <time title="创建时间：2019-12-30 19:00:00" itemprop="dateCreated datePublished" datetime="2019-12-30T19:00:00+08:00">2019-12-30</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-01-02 17:01:05" itemprop="dateModified" datetime="2020-01-02T17:01:05+08:00">2020-01-02</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a>
-                </span>
-            </span>
+      <time title="Created: 2019-12-30 19:00:00" itemprop="dateCreated datePublished" datetime="2019-12-30T19:00:00+08:00">2019-12-30</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2020-08-18 00:55:15" itemprop="dateModified" datetime="2020-08-18T00:55:15+08:00">2020-08-18</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a>
+        </span>
+    </span>
 
-          
+  
+</div>
 
         </div>
       </header>
@@ -262,8 +354,6 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
         <p>新年前夕，国家主席习近平通过中央广播电视总台和互联网，发表了二〇二〇年新年贺词。全文如下：</p>
 <a id="more"></a>
 
@@ -296,7 +386,7 @@
 <p>展望2020年，我们将向着国际化继续迈进。交流互鉴、和谐共赢是融入全球产业生态的本质要求。<strong>中联重科将加速海外业务变革的落地，深化海外基地的拓展与升级，全面统筹国内与国际两个市场，打造国际合作的新典范。</strong></p>
 <p>功崇惟志，业广惟勤。在前所未有的大未来面前，中联重科将心无旁骛地<strong>聚焦智能制造</strong>，心无旁骛地为客户创造价值，心无旁骛地让资源与产业生态链接、共生，助力中国智造的伟大崛起！</p>
 <p>祝福伟大祖国！祝福中联重科！</p>
-<h2 id="如何看待罗振宇2020年《时间的朋友》跨年演讲？"><a href="#如何看待罗振宇2020年《时间的朋友》跨年演讲？" class="headerlink" title="如何看待罗振宇2020年《时间的朋友》跨年演讲？"></a>如何看待罗振宇2020年《时间的朋友》跨年演讲？</h2><p>作者：邓铂鋆<br>链接：<a href="https://www.zhihu.com/question/308014777/answer/958762899" target="_blank" rel="noopener">https://www.zhihu.com/question/308014777/answer/958762899</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h2 id="如何看待罗振宇2020年《时间的朋友》跨年演讲？"><a href="#如何看待罗振宇2020年《时间的朋友》跨年演讲？" class="headerlink" title="如何看待罗振宇2020年《时间的朋友》跨年演讲？"></a>如何看待罗振宇2020年《时间的朋友》跨年演讲？</h2><p>作者：邓铂鋆<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/308014777/answer/958762899">https://www.zhihu.com/question/308014777/answer/958762899</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <p>未来的十几二十年，太平洋两侧的力量此消彼长，崭新的、以多极化和去中心化、各国平等互利为特点人类命运共同体，必将撼动单极化“赢者通吃”的传统秩序格局。阶段性的成功会宣布，时间是我们的朋友。</p>
 <p>我那天对一位给孩子规划了美高、美本人生道路的朋友说，在未来的十几二十年，相对我们现在的时间坐标到前推十年，一些生意可能会不好做，一些钱可能不容易流转，一些人可能不方便进出，这都是可以预计的。朋友觉得我悲观，但是他也承认这个阶段可能持续五到十年。</p>
 <p>身边很多朋友都意识到了这一点，做出了确保自己利益最大化的选择。年轻人适应性最强，大家可以看到有许多年轻人光顾的知名蚌埠籍运动员李毅的百度贴吧，蒸制波谱在2008到2012年间急转一百八十度，成为多年来引领“出征”的策源地，甚至培养出来一些热血的体制内。</p>
@@ -392,8 +482,8 @@
 <p>当然我的很多结论只来自于人口结构，没有考虑其他修正因素，可能有所偏颇。但我认为人口和家庭结构是经济发展的根本推动力，在同一个时代和全球经济环境下，其他修正因素应该不构成本质的影响。</p>
 <p>本帖是远期预测，20年后如果D版还在，我一定来挖坟……</p>
 <h2 id="腾讯互娱-hr-「翻录」监控，以工作不足-8-小时为由辞退-7-年抑郁症老员工，这属于「暴力裁员」吗？"><a href="#腾讯互娱-hr-「翻录」监控，以工作不足-8-小时为由辞退-7-年抑郁症老员工，这属于「暴力裁员」吗？" class="headerlink" title="腾讯互娱 hr 「翻录」监控，以工作不足 8 小时为由辞退 7 年抑郁症老员工，这属于「暴力裁员」吗？"></a>腾讯互娱 hr 「翻录」监控，以工作不足 8 小时为由辞退 7 年抑郁症老员工，这属于「暴力裁员」吗？</h2><p>员工：我病了，工作效率不如以前了，我该怎么办？企鹅HR：出动20+保安把该员工抬出去，个人物品扔出去，执行原因：该员工工作不足八小时，从10-18点期间没有一直在座位上。心想：去TMD弹性工作制，难道心里没有B数吗？！弹性工作制又名没有加班费的996，还没有证据哦，有本事起诉我去呀，哈哈哈……黄易HR：为老板赚钱是你的荣幸，你小心脏竟然敢生病，保安，抬出去，没有N+1，有本事起诉我H为HR：生病了，送你一副神药：251，不用干活还有工资，有饭吃，去休息吧这时候，忽然听到一个声音：你不是我兄弟！！！</p>
-<p>作者：木叶<br>链接：<a href="https://www.zhihu.com/question/363965688/answer/957802697" target="_blank" rel="noopener">https://www.zhihu.com/question/363965688/answer/957802697</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
-<h2 id="如何评价苏联的公有制和计划经济？苏联为什么会被这套经济体制拖垮？"><a href="#如何评价苏联的公有制和计划经济？苏联为什么会被这套经济体制拖垮？" class="headerlink" title="如何评价苏联的公有制和计划经济？苏联为什么会被这套经济体制拖垮？"></a>如何评价苏联的公有制和计划经济？苏联为什么会被这套经济体制拖垮？</h2><p>作者：蒋梦珊<br>链接：<a href="https://www.zhihu.com/question/53477697/answer/945512549" target="_blank" rel="noopener">https://www.zhihu.com/question/53477697/answer/945512549</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>作者：木叶<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/363965688/answer/957802697">https://www.zhihu.com/question/363965688/answer/957802697</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h2 id="如何评价苏联的公有制和计划经济？苏联为什么会被这套经济体制拖垮？"><a href="#如何评价苏联的公有制和计划经济？苏联为什么会被这套经济体制拖垮？" class="headerlink" title="如何评价苏联的公有制和计划经济？苏联为什么会被这套经济体制拖垮？"></a>如何评价苏联的公有制和计划经济？苏联为什么会被这套经济体制拖垮？</h2><p>作者：蒋梦珊<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/53477697/answer/945512549">https://www.zhihu.com/question/53477697/answer/945512549</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <p>苏联经济危机关“计划经济”和“公有制”什么事？明明是戈尔巴乔夫搞所谓“**开放”、“市场经济”（《国营企业法》）、拍脑袋政策（禁酒令）搞砸的好不好？</p>
 <p>如果说要反思苏联的什么问题，首先就是要反思一下这套体制怎么最爱在关键时刻把“三个自信，样样缺失”的“两面人”和拍脑袋大师送上权力宝座（赫鲁晓夫、戈尔巴乔夫），而且法律体系框架下的“常规手段”对各种拍脑袋操作没有制衡作用。</p>
 <p>（特朗普：我觉得你在指桑骂槐）</p>
@@ -406,12 +496,12 @@
 <p>2、所有黑计划经济的，<strong>都是连ERP甚至OA系统都不知道就一味去黑。</strong></p>
 <p>随着算力越来越强，信息系统更大规模替代拍脑瓜和经验值，<strong>计划经济的前途必然优于古典自由主义。</strong></p>
 <p>3、恰恰相反，没有计划经济和公有制，苏联早在20年代就垮了，当下的俄罗斯是德国领土。</p>
-<p>作者：松云<br>链接：<a href="https://www.zhihu.com/question/53477697/answer/957254392" target="_blank" rel="noopener">https://www.zhihu.com/question/53477697/answer/957254392</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>作者：松云<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/53477697/answer/957254392">https://www.zhihu.com/question/53477697/answer/957254392</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <h2 id="老婆魔都985硕士毕业，去事业单位8000一个月是不是有点浪费？"><a href="#老婆魔都985硕士毕业，去事业单位8000一个月是不是有点浪费？" class="headerlink" title="老婆魔都985硕士毕业，去事业单位8000一个月是不是有点浪费？"></a>老婆魔都985硕士毕业，去事业单位8000一个月是不是有点浪费？</h2><p>老婆17年硕士毕业进入一家事业单位，上周某天早晨送她去上班，看到单位门口茫茫多人排队，一问得知是她们单位今年的事业单位招聘考试，我停车送走老婆后去看看究竟，然后吓了一跳！</p>
 <p>单位招聘14人，要求全日制硕士，报名515人！（我突然对老婆产生了敬畏之心）</p>
 <p>回来路上我很想不明白了！老婆一年全部到手10万不到点，收入没啥增幅，职位也没有太大的上升空间。如果是一个二本生、女性、且没啥追求，那去这种单位是很合适的。可一个985的金融学硕士，对得起当年考研时挑灯夜战的自己吗？这帮人是怎么想的。。。</p>
 <p>狗血的在后面，我之前有一天发现老婆通过某渠道赚了600块外快，我觉得她还是有欲望的。我有一个学长，今年34岁，已在一家大型证券公司担任项目负责人，年收入超过100万，正好向内推一个职位，收入到手大概30万到40万。我问老婆想不想去证券公司做，她听听蛮有兴趣的。我赶紧联系学长和老同学聚一聚，6个人喝了两瓶茅台，基本把这事情谈妥了。然后老婆对我说，这工作要加班的，太累了我还是不去了。。。工作奋斗以后就交给老公你了。。。</p>
-<p>作者：匿名用户<br>链接：<a href="https://www.zhihu.com/question/355260920/answer/892949358" target="_blank" rel="noopener">https://www.zhihu.com/question/355260920/answer/892949358</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>作者：匿名用户<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/355260920/answer/892949358">https://www.zhihu.com/question/355260920/answer/892949358</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <p>我和你老婆一样，211＋985本科、硕士毕业，现在在一所普通高校做行政人员。刚开始是助级（专业技能13级），研究生见习期半年。2018年考了中级职称证书，现在是xx师，专业技能10级。每个月到手工资部分6800左右，公积金1500，事业年金100多点。加班费1200左右（基本每个月都有）。全面奖励性绩效5-6万。年收入14-15万。我们单位属于行政单位里面加班比较多的，每学期期末大概加班半个多月，一年加班四五十天（21:00下班那种），平时偶尔加班。</p>
 <p>题主，你只看每个月到手工资，是不合理的。难道你老婆所在单位没半分钱绩效收入，还是说她故意瞒着你不说？</p>
 <p>还有，抛开工作量谈待遇也是不合理的。我第一份工作到手7200元（2014年应届毕业生），加班工资在1500元到6000元不等，年底奖金3万到10万不等，但是几乎没有花钱的时间。如果是男生，要赚钱养家也就罢了。可我是女生，家里买了房子车子，父母不需要我养老，我没有拼命挣钱不花钱的动机和动力。我现在的工作工资虽然低，但每年有两个月带薪假期，生活质量远远比以前高。</p>
@@ -427,7 +517,7 @@
     
     
 
-      <footer class="post-footer">
+    <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/China/" rel="tag"># China</a>
               <a href="/tags/Technology/" rel="tag"># Technology</a>
@@ -438,20 +528,19 @@
 
         
 
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2019/12/20/2019-12-20-usa-falling-behind/" rel="prev" title="周围不少到过美国的朋友说，美国现在很“落后”。这是真的吗？">
-      <i class="fa fa-chevron-left"></i> 周围不少到过美国的朋友说，美国现在很“落后”。这是真的吗？
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2019/12/30/2019-12-30-charge-by-disease/" rel="next" title="单病种付费">
-      单病种付费 <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2019/12/30/2019-12-30-charge-by-disease/" rel="prev" title="单病种付费">
+                  <i class="fa fa-chevron-left"></i> 单病种付费
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2020/01/02/2019-08-30-sap-and-hana-research/" rel="next" title="SPA CRM and Digital Experience">
+                  SPA CRM and Digital Experience <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
   </article>
   
   
@@ -459,8 +548,7 @@
 
 
 
-          </div>
-          
+      
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -469,7 +557,7 @@
       activeClass = localStorage.getItem('comments_active') || activeClass;
     }
     if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
       if (activeTab) {
         activeTab.click();
       }
@@ -478,95 +566,20 @@
   if (CONFIG.comments.storage) {
     window.addEventListener('tabs:click', event => {
       if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
+      const commentClass = event.target.classList[1];
       localStorage.setItem('comments_active', commentClass);
     });
   }
 </script>
 
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%9E%8D%E5%90%88%E5%85%B1%E7%94%9F-%E6%99%BA%E5%90%91%E6%9C%AA%E6%9D%A5%E2%80%94%E2%80%94%E4%B8%AD%E8%81%94%E9%87%8D%E7%A7%912020%E5%B9%B4%E6%96%B0%E5%B9%B4%E7%8C%AE%E8%AF%8D"><span class="nav-number">1.</span> <span class="nav-text">融合共生 智向未来——中联重科2020年新年献词</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%85%E7%BD%97%E6%8C%AF%E5%AE%872020%E5%B9%B4%E3%80%8A%E6%97%B6%E9%97%B4%E7%9A%84%E6%9C%8B%E5%8F%8B%E3%80%8B%E8%B7%A8%E5%B9%B4%E6%BC%94%E8%AE%B2%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">如何看待罗振宇2020年《时间的朋友》跨年演讲？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%91%E8%A2%AB%E5%B9%B3%E5%AE%89%E7%A7%91%E6%8A%80%E8%A3%81%E5%91%98%E4%BA%86"><span class="nav-number">3.</span> <span class="nav-text">我被平安科技裁员了</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UGPee"><span class="nav-number">4.</span> <span class="nav-text">UGPee</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Deng"><span class="nav-number">5.</span> <span class="nav-text">Deng</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A0%E8%B4%A3%E4%BB%BB%E9%9A%8F%E4%BE%BF%E8%B0%88%EF%BC%8C%E6%88%91%E5%AF%B9%E4%B8%AD%E5%9B%BD%E7%A4%BE%E4%BC%9A%E7%9A%84%E8%BF%9C%E6%9C%9F%E9%A2%84%E6%B5%8B"><span class="nav-number">5.1.</span> <span class="nav-text">无责任随便谈，我对中国社会的远期预测</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%85%BE%E8%AE%AF%E4%BA%92%E5%A8%B1-hr-%E3%80%8C%E7%BF%BB%E5%BD%95%E3%80%8D%E7%9B%91%E6%8E%A7%EF%BC%8C%E4%BB%A5%E5%B7%A5%E4%BD%9C%E4%B8%8D%E8%B6%B3-8-%E5%B0%8F%E6%97%B6%E4%B8%BA%E7%94%B1%E8%BE%9E%E9%80%80-7-%E5%B9%B4%E6%8A%91%E9%83%81%E7%97%87%E8%80%81%E5%91%98%E5%B7%A5%EF%BC%8C%E8%BF%99%E5%B1%9E%E4%BA%8E%E3%80%8C%E6%9A%B4%E5%8A%9B%E8%A3%81%E5%91%98%E3%80%8D%E5%90%97%EF%BC%9F"><span class="nav-number">6.</span> <span class="nav-text">腾讯互娱 hr 「翻录」监控，以工作不足 8 小时为由辞退 7 年抑郁症老员工，这属于「暴力裁员」吗？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7%E8%8B%8F%E8%81%94%E7%9A%84%E5%85%AC%E6%9C%89%E5%88%B6%E5%92%8C%E8%AE%A1%E5%88%92%E7%BB%8F%E6%B5%8E%EF%BC%9F%E8%8B%8F%E8%81%94%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E8%A2%AB%E8%BF%99%E5%A5%97%E7%BB%8F%E6%B5%8E%E4%BD%93%E5%88%B6%E6%8B%96%E5%9E%AE%EF%BC%9F"><span class="nav-number">7.</span> <span class="nav-text">如何评价苏联的公有制和计划经济？苏联为什么会被这套经济体制拖垮？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%80%81%E5%A9%86%E9%AD%94%E9%83%BD985%E7%A1%95%E5%A3%AB%E6%AF%95%E4%B8%9A%EF%BC%8C%E5%8E%BB%E4%BA%8B%E4%B8%9A%E5%8D%95%E4%BD%8D8000%E4%B8%80%E4%B8%AA%E6%9C%88%E6%98%AF%E4%B8%8D%E6%98%AF%E6%9C%89%E7%82%B9%E6%B5%AA%E8%B4%B9%EF%BC%9F"><span class="nav-number">8.</span> <span class="nav-text">老婆魔都985硕士毕业，去事业单位8000一个月是不是有点浪费？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%89%E9%82%A3%E4%B9%88%E5%A4%9A%E4%BA%BA%E8%AE%A8%E5%8E%8C%E8%92%8B%E6%96%B9%E8%88%9F%EF%BC%9F"><span class="nav-number">9.</span> <span class="nav-text">为什么有那么多人讨厌蒋方舟？</span></a></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Abraham Xiao"
-      src="/images/avatar.jpg">
-  <p class="site-author-name" itemprop="name">Abraham Xiao</p>
-  <div class="site-description" itemprop="description">Shut Up and Get Rich.</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">224</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">12</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">369</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/ProfessorX" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ProfessorX" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:admin@yxiao.org" title="E-Mail → mailto:admin@yxiao.org" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
-      </span>
-  </div>
-
-
-
-      </div>
-
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
+  </main>
 
+  <footer class="footer">
+    <div class="footer-inner">
+      
 
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
+      
 
 <div class="copyright">
   
@@ -575,79 +588,37 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Abraham Xiao</span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
 
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
 
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
+  
 
 
-<script src="/js/schemes/muse.js"></script>
 
 
-<script src="/js/next-boot.js"></script>
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
 
 
 
 
   
-  <script>
-    (function(){
-      var canonicalURL, curProtocol;
-      //Get the <link> tag
-      var x=document.getElementsByTagName("link");
-		//Find the last canonical URL
-		if(x.length > 0){
-			for (i=0;i<x.length;i++){
-				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
-					canonicalURL=x[i].href;
-				}
-			}
-		}
-    //Get protocol
-	    if (!canonicalURL){
-	    	curProtocol = window.location.protocol.split(':')[0];
-	    }
-	    else{
-	    	curProtocol = canonicalURL.split(':')[0];
-	    }
-      //Get current URL if the canonical URL does not exist
-	    if (!canonicalURL) canonicalURL = window.location.href;
-	    //Assign script content. Replace current URL with the canonical URL
-      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
-  </script>
-
-
-
-
-  
-<script src="/js/local-search.js"></script>
-
-
-
-
-
 
 
 

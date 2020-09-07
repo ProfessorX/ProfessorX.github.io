@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -13,24 +13,26 @@
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
-<script id="hexo-configurations">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"www.yxiao.org","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"8.0.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
   <meta name="description" content="正如冯巩相声中说的，“不想当裁缝的厨师，就不是个好司机”。杉杉股份也有满满的野心，一个做衣服的“裁缝”不仅跨界当上了造新能源汽车的“老司机”，还当上了一家做不良资产管理业务的金融公司的大股东。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="杉杉新能源">
-<meta property="og:url" content="https://www.yxiao.org/2019/08/30/2019-08-30-shan-shan-energy/index.html">
-<meta property="og:site_name" content="Masdar Wireless">
+<meta property="og:url" content="http://yoursite.com/2019/08/30/2019-08-30-shan-shan-energy/index.html">
+<meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="正如冯巩相声中说的，“不想当裁缝的厨师，就不是个好司机”。杉杉股份也有满满的野心，一个做衣服的“裁缝”不仅跨界当上了造新能源汽车的“老司机”，还当上了一家做不良资产管理业务的金融公司的大股东。">
-<meta property="og:locale" content="zh_CN">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://pic4.zhimg.com/v2-b4f1ab28245aecaaa67ae77eb466e467_r.jpg">
 <meta property="article:published_time" content="2019-08-30T01:00:00.000Z">
-<meta property="article:modified_time" content="2019-09-30T00:12:29.578Z">
-<meta property="article:author" content="Abraham Xiao">
+<meta property="article:modified_time" content="2020-08-17T16:55:15.180Z">
+<meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Future">
 <meta property="article:tag" content="Fraud">
 <meta property="article:tag" content="Shanshan">
@@ -39,20 +41,21 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://pic4.zhimg.com/v2-b4f1ab28245aecaaa67ae77eb466e467_r.jpg">
 
-<link rel="canonical" href="https://www.yxiao.org/2019/08/30/2019-08-30-shan-shan-energy/">
+
+<link rel="canonical" href="http://yoursite.com/2019/08/30/2019-08-30-shan-shan-energy/">
 
 
-<script id="page-configurations">
+<script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
     isHome : false,
     isPost : true,
-    lang   : 'zh-CN'
+    lang   : 'en'
   };
 </script>
 
-  <title>杉杉新能源 | Masdar Wireless</title>
+  <title>杉杉新能源 | Hexo</title>
   
 
 
@@ -62,51 +65,62 @@
 
   <noscript>
   <style>
-  .use-motion .brand,
+  body { margin-top: 2rem; }
+
   .use-motion .menu-item,
-  .sidebar-inner,
+  .use-motion .sidebar,
   .use-motion .post-block,
   .use-motion .pagination,
   .use-motion .comments,
   .use-motion .post-header,
   .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
 
   .use-motion .site-title,
-  .use-motion .site-subtitle {
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
     opacity: initial;
     top: initial;
   }
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
   </style>
 </noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
+  <main class="main">
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
   <div class="site-meta">
 
     <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Masdar Wireless</h1>
-      <span class="logo-line-after"><i></i></span>
+      <i class="logo-line"></i>
+      <h1 class="site-title">Hexo</h1>
+      <i class="logo-line"></i>
     </a>
-      <p class="site-subtitle" itemprop="description">MORE MEAT MORE EXERCISE!</p>
   </div>
 
   <div class="site-nav-right">
@@ -118,32 +132,31 @@
 
 
 
-
 <nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
+  <ul class="main-menu menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
 
   </li>
         <li class="menu-item menu-item-about">
 
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
 
   </li>
         <li class="menu-item menu-item-study">
@@ -157,7 +170,7 @@
 
   </li>
       <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
       </li>
   </ul>
@@ -172,17 +185,17 @@
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
-           placeholder="搜索..." spellcheck="false"
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
            type="search" class="search-input">
   </div>
   <span class="popup-btn-close">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
   </div>
 </div>
 
@@ -190,6 +203,79 @@
   </div>
 
 </div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E7%95%B8%E5%BD%A2%E7%9A%84%E8%90%A5%E6%94%B6%E7%BB%93%E6%9E%84"><span class="nav-number">1.</span> <span class="nav-text">1畸形的营收结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E6%96%B0%E8%83%BD%E6%BA%90%E4%B8%9A%E5%8A%A1%E6%83%A8%E6%B7%A1"><span class="nav-number">2.</span> <span class="nav-text">2新能源业务惨淡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E5%88%A9%E7%9B%8A%E8%BE%93%E9%80%81%EF%BC%9F"><span class="nav-number">3.</span> <span class="nav-text">3利益输送？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%95%E8%B5%84%E4%B8%9A%E5%8A%A1%E5%88%A9%E6%B6%A6%E8%B4%A1%E7%8C%AE%E9%AB%98%EF%BC%8C%E8%87%AA%E8%90%A5%E4%B8%9A%E5%8A%A1%E5%BE%85%E5%8A%A0%E5%BC%BA"><span class="nav-number">4.</span> <span class="nav-text">投资业务利润贡献高，自营业务待加强</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B9%96%E5%8D%97%E6%9D%89%E6%9D%89%E8%83%BD%E6%BA%90%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E6%80%8E%E4%B9%88%E6%A0%B7%EF%BC%9F%E6%88%91%E5%BA%94%E8%81%98%E7%9A%84%E6%98%AF%E7%A0%94%E5%8F%91%E5%B2%97"><span class="nav-number">5.</span> <span class="nav-text">湖南杉杉能源科技有限公司怎么样？我应聘的是研发岗</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B9%96%E5%8D%97%E6%9D%89%E6%9D%89%E6%96%B0%E8%83%BD%E6%BA%90%E7%A0%94%E5%8F%91%E5%B2%97%E6%9C%89%E5%89%8D%E9%80%94%E5%90%97%EF%BC%8C%E5%B7%A5%E8%B5%84%E5%BE%85%E9%81%87%EF%BC%8C%E5%8F%91%E5%B1%95%E5%89%8D%E6%99%AF%EF%BC%9F%E5%AE%9E%E9%AA%8C%E6%9D%A1%E4%BB%B6%EF%BC%8C%E5%B7%A5%E4%BD%9C%E6%B0%9B%E5%9B%B4%EF%BC%9F"><span class="nav-number">6.</span> <span class="nav-text">湖南杉杉新能源研发岗有前途吗，工资待遇，发展前景？实验条件，工作氛围？</span></a></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="John Doe"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">226</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">370</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/ProfessorX" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ProfessorX" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:admin@yxiao.org" title="E-Mail → mailto:admin@yxiao.org" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </section>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
     </header>
 
     
@@ -198,62 +284,68 @@
     <span>0%</span>
   </div>
 
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
 
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
 
-          <div class="content post posts-expand">
-            
+    <div class="main-inner post posts-expand">
+      
+
+      
 
     
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.yxiao.org/2019/08/30/2019-08-30-shan-shan-energy/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/30/2019-08-30-shan-shan-energy/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Abraham Xiao">
-      <meta itemprop="description" content="Shut Up and Get Rich.">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Masdar Wireless">
+      <meta itemprop="name" content="Hexo">
     </span>
+
+    
+    
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           杉杉新能源
         </h1>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
 
-              <time title="创建时间：2019-08-30 09:00:00" itemprop="dateCreated datePublished" datetime="2019-08-30T09:00:00+08:00">2019-08-30</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-09-30 08:12:29" itemprop="dateModified" datetime="2019-09-30T08:12:29+08:00">2019-09-30</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a>
-                </span>
-            </span>
+      <time title="Created: 2019-08-30 09:00:00" itemprop="dateCreated datePublished" datetime="2019-08-30T09:00:00+08:00">2019-08-30</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2020-08-18 00:55:15" itemprop="dateModified" datetime="2020-08-18T00:55:15+08:00">2020-08-18</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a>
+        </span>
+    </span>
 
-          
+  
+</div>
 
         </div>
       </header>
@@ -262,8 +354,6 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
         <p>正如冯巩相声中说的，“不想当裁缝的厨师，就不是个好司机”。杉杉股份也有满满的野心，一个做衣服的“裁缝”不仅跨界当上了造新能源汽车的“老司机”，还当上了一家做不良资产管理业务的金融公司的大股东。</p>
 <a id="more"></a>
 
@@ -296,9 +386,9 @@
 <p>其实，杉杉股份之前已经有过利益输送的相关争议。2016年，杉杉股份耗资5.3亿元，从杉杉集团手中收购了一家光伏业务公司——宁波尤利卡太阳能科技发展有限公司80.07%的股权，还收购了14名自然人股东所持有的尤利卡9.965%的股权。</p>
 <p>据花朵财经了解到，对于杉杉股份三番五次地从大股东手里接盘不必要的资产，许多投资者都不淡定了，纷纷向公司董秘提出质疑：“上市公司的利润是属于全体股东的，不是单单属于上市公司的。这几年杉杉股份业绩稍微有些好转，但是利润都用来收购大股东的资产了，前有5亿收购大股东的光伏资产，现在又10亿收购穗甬控股，难道小股东的利益就不是利益吗？！”</p>
 <p>对于投资者的担忧，监管部门再次要求杉杉股份就是否存在输送利益作出说明。截至发稿时，杉杉股份仍未就上述问题作出官方回应。</p>
-<p>作者：花朵财经<br>链接：<a href="https://zhuanlan.zhihu.com/p/68274555" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/68274555</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>作者：花朵财经<br>链接：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/68274555">https://zhuanlan.zhihu.com/p/68274555</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <h2 id="投资业务利润贡献高，自营业务待加强"><a href="#投资业务利润贡献高，自营业务待加强" class="headerlink" title="投资业务利润贡献高，自营业务待加强"></a>投资业务利润贡献高，自营业务待加强</h2><p>事实上，整个杉杉系实控人郑永刚算是资本运作的好手，杉杉控股似乎更倾向于金融牌照的投资，比较知名的就是控股了君康人寿，还有兴业期货的前身正是杉杉股份全资控股公司中衫期货，如今都已转的盆满钵满全身而退。今天主要看的是上市主体杉杉股份板块。目前的现状是参股金融机构+自营类金融的组合打法，他是稠州银行第一大股东，靠卖宁波银行盈利，自身布局类金融分拆独立上市刚刚起步。除了宁波银行，杉杉股份持有浙江稠州商业银行2.4726亿股，与浙江东宇物流並列第一大股东，该行主要服务小微企业，全国设80多家分支行，近几年增长迅速。半年报显示，上半年稠州银行长期股权投资收益（按权益法核算）为5738.17万元，，杉杉收到现金分红2472.60万元。华西股份曾在在互动平台上表示，公司暂未获悉联储证券上市计划，稠州银行IPO目前尚处于筹备阶段。若稠州银行能顺利上市，无疑杉杉股份又可以大赚一笔。</p>
-<p>作者：猫财经<br>链接：<a href="https://zhuanlan.zhihu.com/p/52147194" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/52147194</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>作者：猫财经<br>链接：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/52147194">https://zhuanlan.zhihu.com/p/52147194</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <h2 id="湖南杉杉能源科技有限公司怎么样？我应聘的是研发岗"><a href="#湖南杉杉能源科技有限公司怎么样？我应聘的是研发岗" class="headerlink" title="湖南杉杉能源科技有限公司怎么样？我应聘的是研发岗"></a>湖南杉杉能源科技有限公司怎么样？我应聘的是研发岗</h2><p>年终奖次年5月发；</p>
 <p>每周休1天（周日休），公司会议大都放在晚上和周日开；</p>
 <p>法定节假日必须缩水，国家放七天公司放5天，国家放5天公司放3天，公积金按最低标准交；</p>
@@ -310,7 +400,7 @@
     
     
 
-      <footer class="post-footer">
+    <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/Future/" rel="tag"># Future</a>
               <a href="/tags/Fraud/" rel="tag"># Fraud</a>
@@ -321,20 +411,19 @@
 
         
 
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2019/08/28/2019-08-28-weekly-reflections/" rel="prev" title="Weekly Reflections 20190828">
-      <i class="fa fa-chevron-left"></i> Weekly Reflections 20190828
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2019/09/10/2019-09-10-happy-teachers-day/" rel="next" title="如何看待刘慈欣「未来人类必须改变不劳动者不得食的观念」的观点？">
-      如何看待刘慈欣「未来人类必须改变不劳动者不得食的观念」的观点？ <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2019/08/28/2019-08-28-weekly-reflections/" rel="prev" title="Weekly Reflections 20190828">
+                  <i class="fa fa-chevron-left"></i> Weekly Reflections 20190828
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2019/09/10/2019-09-10-happy-teachers-day/" rel="next" title="如何看待刘慈欣「未来人类必须改变不劳动者不得食的观念」的观点？">
+                  如何看待刘慈欣「未来人类必须改变不劳动者不得食的观念」的观点？ <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
   </article>
   
   
@@ -342,8 +431,7 @@
 
 
 
-          </div>
-          
+      
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -352,7 +440,7 @@
       activeClass = localStorage.getItem('comments_active') || activeClass;
     }
     if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
       if (activeTab) {
         activeTab.click();
       }
@@ -361,95 +449,20 @@
   if (CONFIG.comments.storage) {
     window.addEventListener('tabs:click', event => {
       if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
+      const commentClass = event.target.classList[1];
       localStorage.setItem('comments_active', commentClass);
     });
   }
 </script>
 
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E7%95%B8%E5%BD%A2%E7%9A%84%E8%90%A5%E6%94%B6%E7%BB%93%E6%9E%84"><span class="nav-number">1.</span> <span class="nav-text">1畸形的营收结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E6%96%B0%E8%83%BD%E6%BA%90%E4%B8%9A%E5%8A%A1%E6%83%A8%E6%B7%A1"><span class="nav-number">2.</span> <span class="nav-text">2新能源业务惨淡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E5%88%A9%E7%9B%8A%E8%BE%93%E9%80%81%EF%BC%9F"><span class="nav-number">3.</span> <span class="nav-text">3利益输送？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%95%E8%B5%84%E4%B8%9A%E5%8A%A1%E5%88%A9%E6%B6%A6%E8%B4%A1%E7%8C%AE%E9%AB%98%EF%BC%8C%E8%87%AA%E8%90%A5%E4%B8%9A%E5%8A%A1%E5%BE%85%E5%8A%A0%E5%BC%BA"><span class="nav-number">4.</span> <span class="nav-text">投资业务利润贡献高，自营业务待加强</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B9%96%E5%8D%97%E6%9D%89%E6%9D%89%E8%83%BD%E6%BA%90%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E6%80%8E%E4%B9%88%E6%A0%B7%EF%BC%9F%E6%88%91%E5%BA%94%E8%81%98%E7%9A%84%E6%98%AF%E7%A0%94%E5%8F%91%E5%B2%97"><span class="nav-number">5.</span> <span class="nav-text">湖南杉杉能源科技有限公司怎么样？我应聘的是研发岗</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B9%96%E5%8D%97%E6%9D%89%E6%9D%89%E6%96%B0%E8%83%BD%E6%BA%90%E7%A0%94%E5%8F%91%E5%B2%97%E6%9C%89%E5%89%8D%E9%80%94%E5%90%97%EF%BC%8C%E5%B7%A5%E8%B5%84%E5%BE%85%E9%81%87%EF%BC%8C%E5%8F%91%E5%B1%95%E5%89%8D%E6%99%AF%EF%BC%9F%E5%AE%9E%E9%AA%8C%E6%9D%A1%E4%BB%B6%EF%BC%8C%E5%B7%A5%E4%BD%9C%E6%B0%9B%E5%9B%B4%EF%BC%9F"><span class="nav-number">6.</span> <span class="nav-text">湖南杉杉新能源研发岗有前途吗，工资待遇，发展前景？实验条件，工作氛围？</span></a></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Abraham Xiao"
-      src="/images/avatar.jpg">
-  <p class="site-author-name" itemprop="name">Abraham Xiao</p>
-  <div class="site-description" itemprop="description">Shut Up and Get Rich.</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">224</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">12</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">369</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/ProfessorX" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ProfessorX" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:admin@yxiao.org" title="E-Mail → mailto:admin@yxiao.org" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
-      </span>
-  </div>
-
-
-
-      </div>
-
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
+  </main>
 
+  <footer class="footer">
+    <div class="footer-inner">
+      
 
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
+      
 
 <div class="copyright">
   
@@ -458,79 +471,37 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Abraham Xiao</span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
 
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
 
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
+  
 
 
-<script src="/js/schemes/muse.js"></script>
 
 
-<script src="/js/next-boot.js"></script>
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
 
 
 
 
   
-  <script>
-    (function(){
-      var canonicalURL, curProtocol;
-      //Get the <link> tag
-      var x=document.getElementsByTagName("link");
-		//Find the last canonical URL
-		if(x.length > 0){
-			for (i=0;i<x.length;i++){
-				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
-					canonicalURL=x[i].href;
-				}
-			}
-		}
-    //Get protocol
-	    if (!canonicalURL){
-	    	curProtocol = window.location.protocol.split(':')[0];
-	    }
-	    else{
-	    	curProtocol = canonicalURL.split(':')[0];
-	    }
-      //Get current URL if the canonical URL does not exist
-	    if (!canonicalURL) canonicalURL = window.location.href;
-	    //Assign script content. Replace current URL with the canonical URL
-      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
-  </script>
-
-
-
-
-  
-<script src="/js/local-search.js"></script>
-
-
-
-
-
 
 
 
