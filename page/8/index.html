@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 5.2.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png">
   <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
 <link rel="stylesheet" href="/css/main.css">
@@ -19,7 +19,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"www.yxiao.org","root":"/","scheme":"Muse","version":"8.0.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
+    var CONFIG = {"hostname":"www.yxiao.org","root":"/","scheme":"Muse","version":"8.0.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
   <meta name="description" content="A personal website for recording things">
@@ -99,6 +99,9 @@
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
@@ -114,15 +117,82 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
 
 
 
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-study">
+
+    <a href="/study/" rel="section"><i class="fa fa-book fa-fw"></i>study</a>
+
+  </li>
+        <li class="menu-item menu-item-reading">
+
+    <a href="/reading" rel="section"><i class="fa fa-heartbeat fa-fw"></i>reading</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
         
@@ -152,29 +222,42 @@
 
       <section class="site-overview-wrap sidebar-panel">
         <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Abraham Xiao"
+      src="/images/avatar.gif">
   <p class="site-author-name" itemprop="name">Abraham Xiao</p>
   <div class="site-description" itemprop="description">A personal website for recording things</div>
 </div>
 <div class="site-state-wrap site-overview-item animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives">
-          <span class="site-state-item-count">232</span>
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">234</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
+          
         <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
+          
         <span class="site-state-item-count">374</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/ProfessorX" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ProfessorX" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:q289196573@gmail.com" title="E-Mail → mailto:q289196573@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
 
 
 
@@ -201,6 +284,188 @@
       
 
       
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.yxiao.org/2019/12/11/2019-12-11-words-to-pm-2020/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Abraham Xiao">
+      <meta itemprop="description" content="A personal website for recording things">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Masdar Wireless">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/12/11/2019-12-11-words-to-pm-2020/" class="post-title-link" itemprop="url">2020 年你对你所在的行业和当下的社会生活有哪些建议？</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-12-11 19:00:00" itemprop="dateCreated datePublished" datetime="2019-12-11T19:00:00+08:00">2019-12-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2020-08-18 00:55:15" itemprop="dateModified" datetime="2020-08-18T00:55:15+08:00">2020-08-18</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>当前经济面临需求不足和通货紧缩的压力很大，拉动内需是“六稳”的关键。群众需要闲暇消费精神商品，需要房子安置物质商品。必须转变观念，加班常态化导致群众无暇休闲，造成内需萎靡，对经济百害无一利，需要严格限制。同时要保证劳动者的公休假和年假。有条件的地方可以考虑郊区化，利用新农村建设整合出的宅基地，让一部分城市居民在农村住小洋楼；让一部分居住条件优越的新农村居民凭借交通条件改善能够每日通勤进城工作。郊区化既能拉动内需，又能同时提高城乡群众的生活水平。</p>
+<p>2035年建成社会主义现代化强国，届时群众的住房、教育、医疗等基本需求的负担如果还是比较重，社会主义现代化强国就无从谈起。</p>
+<p>请考虑城市居民基本住房。提高富余房产的持有成本，推动不同产权、不同性质的富余房产根据市场规律和政府引导，纳入公租房体系；全面落实“租售同权”，让新市民和低收入群体能够得到基本住房保障。</p>
+<p>请考虑产假与入托衔接，让公立基础教育下伸到幼儿八个月至一周岁。请考虑控制家庭的课外辅导负担，让父母可以在下班后去学校接孩子。请解决双职工家庭的后顾之忧。</p>
+<p>请继续深化当前医改举措，进一步压低医疗物资的渠道成本，以投入推动机制建设，尽快形成完善的分级诊疗体系和按病种付费模式。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/12/11/2019-12-11-words-to-pm-2020/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.yxiao.org/2019/12/10/2019-12-10-china-finance-manufacturing/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Abraham Xiao">
+      <meta itemprop="description" content="A personal website for recording things">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Masdar Wireless">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/12/10/2019-12-10-china-finance-manufacturing/" class="post-title-link" itemprop="url">为什么中国没有美国那种金融反噬制造业的问题？</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-12-10 19:00:00" itemprop="dateCreated datePublished" datetime="2019-12-10T19:00:00+08:00">2019-12-10</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2020-08-18 00:55:15" itemprop="dateModified" datetime="2020-08-18T00:55:15+08:00">2020-08-18</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>我靠，谁说没有反噬？</p>
+<p>我跑工业互联网也有两年了，从一个以前张嘴闭嘴“风口”“颠覆”的互联网装逼犯，到现在跑了几十个工厂，还要配合改造智能产线，满目尽是：</p>
+<p><strong>金融反噬制造业。</strong></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/12/10/2019-12-10-china-finance-manufacturing/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
     
 
 
@@ -931,185 +1196,6 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.yxiao.org/2019/11/14/2019-11-14-end-of-the-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Abraham Xiao">
-      <meta itemprop="description" content="A personal website for recording things">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Masdar Wireless">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/11/14/2019-11-14-end-of-the-world/" class="post-title-link" itemprop="url">世界尽头与冷酷仙境</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2019-11-14 19:00:00" itemprop="dateCreated datePublished" datetime="2019-11-14T19:00:00+08:00">2019-11-14</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2020-08-18 00:55:15" itemprop="dateModified" datetime="2020-08-18T00:55:15+08:00">2020-08-18</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>原创： 潮思  新潮沉思录  10月30日<br><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/s2nfNr1E3-wtgsDa6tsFiA">https://mp.weixin.qq.com/s/s2nfNr1E3-wtgsDa6tsFiA</a></p>
-<p>文 | 黄三思</p>
-<p>前一段时间双瞳同学的文章讲了环保问题和瑞典圣少女，最近没有什么别的事情值得一提，所以今天我们来炒一炒冷饭，我们从另外一个角度来对这个问题进行一点补充。</p>
-<p>环境保护这个议题，其实并不算新鲜，早在七、八十年代就已经有了。地球是否在变暖这个问题，本身也没有什么好争论的，异常气候越来越多，北极冰盖正在融化这些都属于客观事实；对于所有人来说，气候异常都是将来必须要面对的一个挑战。而为什么气候异常会成为一个问题，才是今天我们需要讨论的主要内容。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/11/14/2019-11-14-end-of-the-world/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.yxiao.org/2019/11/12/2019-11-12-shandong-factory/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Abraham Xiao">
-      <meta itemprop="description" content="A personal website for recording things">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Masdar Wireless">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/11/12/2019-11-12-shandong-factory/" class="post-title-link" itemprop="url">如何评价 Netflix 原创纪录片《美国工厂》？</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2019-11-12 19:00:00" itemprop="dateCreated datePublished" datetime="2019-11-12T19:00:00+08:00">2019-11-12</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2020-08-18 00:55:15" itemprop="dateModified" datetime="2020-08-18T00:55:15+08:00">2020-08-18</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>在B站上看完了《美国工厂》，感觉真是相当普通的片子……我也可以扛个摄像头去拍山东歌尔的人跑到苏北，跑去我妈的公司里，商量在公交和出租车上贴招工广告；</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/11/12/2019-11-12-shandong-factory/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
 
   
   <nav class="pagination">
@@ -1153,7 +1239,7 @@
 
 <div class="copyright">
   
-  &copy; 
+  &copy; 2013 – 
   <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
@@ -1174,6 +1260,8 @@
 
 
 
+
+  <script src="/js/local-search.js"></script>
 
 
 
