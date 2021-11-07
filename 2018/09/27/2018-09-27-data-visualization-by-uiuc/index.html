@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.yxiao.org","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.8.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<meta name="description" content="Right after I made the decision to make a better living and apply forMS&#x2F;PhD track outside China, I signed up for THE specialization onCoursera provided by UIUC. This is a 6-course specilization and it">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Data Visualization by UIUC on Coursera">
+<meta property="og:url" content="http://www.yxiao.org/2018/09/27/2018-09-27-data-visualization-by-uiuc/index.html">
+<meta property="og:site_name" content="Masdar Wireless">
+<meta property="og:description" content="Right after I made the decision to make a better living and apply forMS&#x2F;PhD track outside China, I signed up for THE specialization onCoursera provided by UIUC. This is a 6-course specilization and it">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2018-09-27T04:00:00.000Z">
+<meta property="article:modified_time" content="2021-09-10T03:27:17.812Z">
+<meta property="article:author" content="Abraham Xiao">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="Programming">
+<meta property="article:tag" content="Science">
+<meta property="article:tag" content="Data">
+<meta property="article:tag" content="Visualization">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://www.yxiao.org/2018/09/27/2018-09-27-data-visualization-by-uiuc/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.yxiao.org/2018/09/27/2018-09-27-data-visualization-by-uiuc/","path":"2018/09/27/2018-09-27-data-visualization-by-uiuc/","title":"Data Visualization by UIUC on Coursera"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Data Visualization by UIUC on Coursera | Masdar Wireless</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Masdar Wireless</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Shut Up and Get Rich</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-study"><a href="/study/" rel="section"><i class="fa fa-read fa-fw"></i>study</a></li>
+        <li class="menu-item menu-item-reading"><a href="/reading/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>reading</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Course-Description"><span class="nav-number">1.</span> <span class="nav-text">Course Description</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Course-Goals-and-Objectives"><span class="nav-number">2.</span> <span class="nav-text">Course Goals and Objectives</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Course-Outline"><span class="nav-number">3.</span> <span class="nav-text">Course Outline</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Elements-of-This-Course"><span class="nav-number">4.</span> <span class="nav-text">Elements of This Course</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Week-1"><span class="nav-number">5.</span> <span class="nav-text">Week 1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Tips-for-Success"><span class="nav-number">5.1.</span> <span class="nav-text">Tips for Success</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Notes"><span class="nav-number">5.2.</span> <span class="nav-text">Notes</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Abraham Xiao</p>
+  <div class="site-description" itemprop="description">A personal website with some posts from Zhihu also</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">271</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">410</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.yxiao.org/2018/09/27/2018-09-27-data-visualization-by-uiuc/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Abraham Xiao">
+      <meta itemprop="description" content="A personal website with some posts from Zhihu also">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Masdar Wireless">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Data Visualization by UIUC on Coursera
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2018-09-27 12:00:00" itemprop="dateCreated datePublished" datetime="2018-09-27T12:00:00+08:00">2018-09-27</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-09-10 11:27:17" itemprop="dateModified" datetime="2021-09-10T11:27:17+08:00">2021-09-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Technology/" itemprop="url" rel="index"><span itemprop="name">Technology</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>Right after I made the decision to make a better living and apply for<br>MS/PhD track outside China, I signed up for THE specialization on<br>Coursera provided by UIUC. This is a 6-course specilization and it’s<br>named Data Mining. First of the series is Data Visualization.</p>
+<span id="more"></span>
+<ul>
+<li>content<br>{:toc}</li>
+</ul>
+<h2 id="Course-Description"><a href="#Course-Description" class="headerlink" title="Course Description"></a>Course Description</h2><p>Data Visualization is a course that teaches how to create<br>visualizations that effectively communicate the meaning behind data to<br>an observer through visual perception. We will learn how a computer<br>displays information using computer graphics, and how the human<br>perceives that information visually. We will also study the forms of<br>data, including quantitative and non-quantitative data, and how they<br>are properly mapped to the elements of a visualization to be perceived<br>well by the observer. We will briefly overview some design elements<br>for effective visualization, though we will not focus on the visual<br>design needed to make attractive and artistic visualizations. This<br>course does not require computer programming, but computer programming<br>can be used to complete the exercises. The course will conclude with<br>the integration of visualization into database and data-mining systems<br>to provide support for decision making, and the effective construction<br>of a visualization dashboard.</p>
+<h2 id="Course-Goals-and-Objectives"><a href="#Course-Goals-and-Objectives" class="headerlink" title="Course Goals and Objectives"></a>Course Goals and Objectives</h2><p>Upon successful completion of this course, you will be able to:</p>
+<ul>
+<li><p>Describe how 2-D and 3-D computer graphics are used to visualize data.</p>
+</li>
+<li><p>Describe how an observer perceives and processes information from a visual display.</p>
+</li>
+<li><p>Utilize a wide vocabulary of visualization methods and how best to apply them to different kinds of data.</p>
+</li>
+<li><p>Decide which design styles and colors work best for different visualization situations.</p>
+</li>
+<li><p>Visualize data when it is not numerical.</p>
+</li>
+<li><p>Use techniques for visualizing databases and data mining to help visually sort through massive datasets.</p>
+</li>
+<li><p>Analyze tasks and build visualization dashboards to provide data to support making a decision.</p>
+</li>
+</ul>
+<h2 id="Course-Outline"><a href="#Course-Outline" class="headerlink" title="Course Outline"></a>Course Outline</h2><p>The course consists of 4 weekly modules that focus on the following.</p>
+<p>Week 1: The Computer and the Human<br>Key Concepts:</p>
+<p>Introduction to visualization<br>Using computer graphics to display data<br>The model human processor and Fitts’s law<br>Human visual perception and cognition</p>
+<p>Week 2: Visualization of Numerical Data<br>Key Concepts:</p>
+<p>Different kinds of visualizations and how best to apply them to data<br>Basic charts such as bar charts and scatter plots<br>More advanced visualization techniques, such as streamgraphs and parallel coordinates<br>Some elements of design and color usage<br>Week 3: Visualization of Non-Numerical Data<br>Key Concepts:</p>
+<p>Graphs, networks, and hierarchies<br>Layout of relational and hierarchical data, such as treemaps<br>Methods for visualizing high-dimensional data, such as principal component analysis and multidimensional scaling<br>Week 4: The Visualization Dashboard<br>Key Concepts:</p>
+<p>Visualizing large datasets<br>Visualization of databases and data mining results<br>Visual analytics for decision support<br>Task analysis<br>Visualization dashboards</p>
+<h2 id="Elements-of-This-Course"><a href="#Elements-of-This-Course" class="headerlink" title="Elements of This Course"></a>Elements of This Course</h2><p>The course is comprised of the following elements:</p>
+<ul>
+<li><p>Lecture videos. In each module the concepts you need to know will<br>be presented through a collection of short video lectures. You may<br>stream these videos for playback within the browser by clicking on<br>their titles or download the videos. You may also download the<br>slides that go along with the videos.</p>
+</li>
+<li><p>Quizzes. Week 1 and Week 4 will include a for-credit quiz. You<br>will be allowed 3 attempts at the quiz per every 8 hours. Each<br>attempt may present a different selection of questions to<br>you. Your best score will be used when calculating your final<br>score in the class. There is no time limit on how long you take to<br>complete each attempt at the quiz.</p>
+</li>
+<li><p>Programming assignments. There are two required programming<br>assignments for the class. The first programming assignment is to<br>create a visualization of numerical data, and the second<br>programming assignment is to create a visualization of<br>non-numerical data (e.g., a network or a hierarchy). For each<br>assignment, sample data will be provided, but you are encouraged<br>to find your own data. Your goal will be to present that data in a<br>visualization that helps the observer to better understand what<br>the data represents. The programming assignments will be peer<br>graded based on rubrics that measure how well the course’s methods<br>have been applied to the visualization of the data.</p>
+</li>
+</ul>
+<h2 id="Week-1"><a href="#Week-1" class="headerlink" title="Week 1"></a>Week 1</h2><h3 id="Tips-for-Success"><a href="#Tips-for-Success" class="headerlink" title="Tips for Success"></a>Tips for Success</h3><p>To do well this week, I recommend that you do the following:</p>
+<p>Review the video lectures a number of times to gain a solid understanding of the key questions and concepts introduced this week.<br>When possible, provide tips and suggestions to your peers in this class. As a learning community, we can help each other learn and grow. One way of doing this is by helping to address the questions that your peers pose. By engaging with each other, we閳ユ獟l all learn better.<br>It閳ユ獨 always a good idea to refer to the video lectures and chapter readings we’ve read during this week and reference them in your responses. When appropriate, critique the information presented.<br>Take notes while you read the materials and watch the lectures for this week. By taking notes, you are interacting with the material and will find that it is easier to remember and to understand. With your notes, you閳ユ獟l also find that it閳ユ獨 easier to complete your assignments. So, go ahead, do yourself a favor; take some notes!</p>
+<h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h3><ul>
+<li>Model human processor</li>
+<li></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Java/" rel="tag"># Java</a>
+              <a href="/tags/Programming/" rel="tag"># Programming</a>
+              <a href="/tags/Science/" rel="tag"># Science</a>
+              <a href="/tags/Data/" rel="tag"># Data</a>
+              <a href="/tags/Visualization/" rel="tag"># Visualization</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2018/09/26/2018-09-26-vsrp-of-kaust/" rel="prev" title="Visiting Student Research Program">
+                  <i class="fa fa-chevron-left"></i> Visiting Student Research Program
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2018/10/03/2018-10-03-detecting-fraudulent-messages/" rel="next" title="Detecting Fraudulent Messages with Strong Privacy Protection">
+                  Detecting Fraudulent Messages with Strong Privacy Protection <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Abraham Xiao</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

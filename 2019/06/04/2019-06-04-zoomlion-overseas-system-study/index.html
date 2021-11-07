@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.yxiao.org","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.8.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<meta name="description" content="正所谓好记性不如烂笔头，在这里把目前正在运行的业务管理平台的一些调研分析的心得体会写一下。至诚无息~ 2020年更新，完成全流程业务梳理。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="中联重科海外公司服务平台研究">
+<meta property="og:url" content="http://www.yxiao.org/2019/06/04/2019-06-04-zoomlion-overseas-system-study/index.html">
+<meta property="og:site_name" content="Masdar Wireless">
+<meta property="og:description" content="正所谓好记性不如烂笔头，在这里把目前正在运行的业务管理平台的一些调研分析的心得体会写一下。至诚无息~ 2020年更新，完成全流程业务梳理。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-06-04T04:00:00.000Z">
+<meta property="article:modified_time" content="2021-09-10T03:27:17.838Z">
+<meta property="article:author" content="Abraham Xiao">
+<meta property="article:tag" content="Management">
+<meta property="article:tag" content="Zoomlion">
+<meta property="article:tag" content="ICT">
+<meta property="article:tag" content="Platform">
+<meta property="article:tag" content="Service">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://www.yxiao.org/2019/06/04/2019-06-04-zoomlion-overseas-system-study/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.yxiao.org/2019/06/04/2019-06-04-zoomlion-overseas-system-study/","path":"2019/06/04/2019-06-04-zoomlion-overseas-system-study/","title":"中联重科海外公司服务平台研究"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>中联重科海外公司服务平台研究 | Masdar Wireless</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Masdar Wireless</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Shut Up and Get Rich</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-study"><a href="/study/" rel="section"><i class="fa fa-read fa-fw"></i>study</a></li>
+        <li class="menu-item menu-item-reading"><a href="/reading/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>reading</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Product-Data-Management-PDM"><span class="nav-number">1.</span> <span class="nav-text">Product Data Management (PDM)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Secure-Data-Management"><span class="nav-number">1.1.</span> <span class="nav-text">Secure Data Management</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Process-Enablement"><span class="nav-number">1.2.</span> <span class="nav-text">Process Enablement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Configuration-Management"><span class="nav-number">1.3.</span> <span class="nav-text">Configuration Management</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Benefits-of-PDM"><span class="nav-number">1.4.</span> <span class="nav-text">Benefits of PDM</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AD%E8%81%94%E9%87%8D%E7%A7%912018%E5%B9%B4%E6%8A%A5"><span class="nav-number">2.</span> <span class="nav-text">中联重科2018年报</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Abraham Xiao</p>
+  <div class="site-description" itemprop="description">A personal website with some posts from Zhihu also</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">271</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">410</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.yxiao.org/2019/06/04/2019-06-04-zoomlion-overseas-system-study/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Abraham Xiao">
+      <meta itemprop="description" content="A personal website with some posts from Zhihu also">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Masdar Wireless">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          中联重科海外公司服务平台研究
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-06-04 12:00:00" itemprop="dateCreated datePublished" datetime="2019-06-04T12:00:00+08:00">2019-06-04</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-09-10 11:27:17" itemprop="dateModified" datetime="2021-09-10T11:27:17+08:00">2021-09-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Technology/" itemprop="url" rel="index"><span itemprop="name">Technology</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>正所谓好记性不如烂笔头，在这里把目前正在运行的业务管理平台的一些调研分<br>析的心得体会写一下。至诚无息~</p>
+<p>2020年更新，完成全流程业务梳理。</p>
+<span id="more"></span>
+
+
+<h2 id="Product-Data-Management-PDM"><a href="#Product-Data-Management-PDM" class="headerlink" title="Product Data Management (PDM)"></a>Product Data Management (PDM)</h2><p>Product data management (PDM) is the use of software to manage product<br>data and process-related information in a single, central system. This<br>information includes computer-aided design (CAD) data, models, parts<br>information, manufacturing instructions, requirements, notes and<br>documents.</p>
+<p>The ideal PDM system is accessible by multiple applications and<br>multiple teams across an organization, and supports business-specific<br>needs. Choosing the right PDM software can provide a company in any<br>industry with a solid foundation that can be easily expanded into a<br>full PLM platform.</p>
+<p>At its core, a PDM system provides solutions for secure data<br>management, process enablement, and configuration management.</p>
+<h3 id="Secure-Data-Management"><a href="#Secure-Data-Management" class="headerlink" title="Secure Data Management"></a>Secure Data Management</h3><p>Capture, manage and deliver product information</p>
+<p>PDM systems capture and manage product information, ensuring that<br>information is delivered to users throughout the product lifecycle in<br>the correct context.</p>
+<p>File ownership, version control (check-in and check-out of files),<br>revision management, and release status are all managed by the PDM<br>system.</p>
+<p>Security and administrative functionality protects intellectual<br>property rights through role management, project-based security and<br>associated access privileges.</p>
+<h3 id="Process-Enablement"><a href="#Process-Enablement" class="headerlink" title="Process Enablement"></a>Process Enablement</h3><p>Workflow and process capabilities enable both internal product teams<br>and external partners to participate in the product lifecycle.</p>
+<p>A PDM system can help you establish, manage and execute automated<br>workflow-driven processes that reflect company-specific best practices<br>for change planning (what-if analysis), change incorporation<br>(execution), and change verification and communication.</p>
+<p>A PDM system can also support other established processes, including<br>phase-gate standards.</p>
+<h3 id="Configuration-Management"><a href="#Configuration-Management" class="headerlink" title="Configuration Management"></a>Configuration Management</h3><p>PDM systems provide the visibility necessary for managing and<br>presenting a complete bill of materials (BOM). It facilitates the<br>alignment and synchronization of all sources of BOM data, as well as<br>all lifecycle phases, including the as-designed, as-planned, as-built<br>and as-maintained states.</p>
+<p>PDM systems provide change management capabilities that allow you to<br>see the BOM before and after changes are made.</p>
+<p>Lifecycle visualization provides sharing and on-demand representations<br>of the product and its underlying assemblies and parts, without the<br>need for a CAD authoring tool or special technical knowledge. Digital<br>mockup capabilities can reduce the need for costly physical<br>prototyping.</p>
+<h3 id="Benefits-of-PDM"><a href="#Benefits-of-PDM" class="headerlink" title="Benefits of PDM"></a>Benefits of PDM</h3><ul>
+<li><p>Find the correct data quickly</p>
+</li>
+<li><p>Improve productivity and reduce cycle times</p>
+</li>
+<li><p>Reduce development errors and costs</p>
+</li>
+<li><p>Improve value chain orchestration</p>
+</li>
+<li><p>Meet business and regulatory requirements</p>
+</li>
+<li><p>Optimize operational resources</p>
+</li>
+<li><p>Facilitate collaboration between global teams</p>
+</li>
+<li><p>Provide visibility for better business decision-making</p>
+</li>
+</ul>
+<h2 id="中联重科2018年报"><a href="#中联重科2018年报" class="headerlink" title="中联重科2018年报"></a>中联重科2018年报</h2><p>1、确保完成目标责任制。完善利润中心考核激励模式，健全各级管理人员业绩问责与淘<br>汰机制，加强人才梯队培养，强化全员危机意识和良性竞争氛围，激发持续发展新活力，确<br>保公司战略目标达成和经营质量提升。</p>
+<p>2、<strong>加速数字化转型。</strong>一是以产品智能化为牵引，夯实已有的数据基础，向内<strong>深化公司物<br>流、信息流、资金流的整合提升与应用</strong>，持续推动公司<strong>产品、制造、服务、供应链及管理的<br>智能化和数字化</strong>。二是围绕上下游产业链，依托于物联网、大数据等方面的积淀，向外孵化<br>延展，<strong>为传统制造产业赋能</strong>，驱动传统商业模式变革。</p>
+<p>3、推进国际化突破。一是持续深化<strong>渠道、零件、本土化战略</strong>，进一步赋能海外子公司，<br>实现从走出去到走进去的战略落地。二是加速推进<strong>意大利、白俄罗斯、印度本地化制造项目<br>落地</strong>，建设欧洲、俄语区、南亚的区域性综合制造基地，通过本地制造与本地管理，提高产<br>品综合竞争力，培育海外增长新动能。</p>
+<p>4、持续推进智能制造。一是全面启动中联智慧产业城建设，打造<strong>集高端装备智能制造基<br>地、人工智能研究应用基地为一体的“智慧产业城”</strong>。二是启动公司产品智能化企业标准体<br>系建设工作，强化产品智能化领跑。三是推动产品4.0的持续改进和升级，实现单机智能向机<br>群智能转变、制造流程化向制造可视化转变、数字资源化向数据价值化转变，主导行业产品<br>升级换代。</p>
+<p>5、打造服务核心竞争力。<strong>持续推进服务体系变革，优化资源配置、提升服务技能和配件<br>供应能力</strong>，依托工业互联网技术及移动端APP应用推广，不断为用户提供更加<strong>便捷化、个性<br>化、定制化的服务</strong>，延伸与提升全价值链服务，引领和推动行业服务型制造的转型升级，树<br>立行业服务标杆。</p>
+<p>6、构建全新供应商关系。与供方形成长期战略联盟，从交易关系向长期互惠共赢的战略<br>联盟关系转变，深入技术、工艺、制造优质资源互通共享，建立稳定、高效、低成本的供应<br>链体系。</p>
+<p>7、<strong>全力发展潜力、新兴市场</strong>。一是土方机械通过建设全新的销售渠道，为客户提供更加<br>专业和高效的销售、服务；升级全系列产品，尤其是产品的性能、质量，提升市场竞争力；<br>整合、提升供应链竞争力，为产品研发、制造和市场服务带来更大的正向协同效应。二是高<br>空作业机械基于高效率的智能化产线和全系列智能化产品，融合智能物联技术支持，快速开<br>拓市场。</p>
+<p>8、农业机械板块转型升级。农业机械板块围绕“夯基、聚焦、突破”开展业务，通过产<br>品制造品质和成本改善的整顿、攻关，打造高可靠性产品，聚焦产品与市场，关注产品质量、<br>交付、服务提升，通过“降本、控费、创收”等手段，实现业务突破。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Management/" rel="tag"># Management</a>
+              <a href="/tags/Zoomlion/" rel="tag"># Zoomlion</a>
+              <a href="/tags/ICT/" rel="tag"># ICT</a>
+              <a href="/tags/Platform/" rel="tag"># Platform</a>
+              <a href="/tags/Service/" rel="tag"># Service</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2019/05/28/2019-05-28-kingdee-investigation/" rel="prev" title="金蝶ERP与智慧记研究">
+                  <i class="fa fa-chevron-left"></i> 金蝶ERP与智慧记研究
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2019/06/04/2019-06-04-supply-side-structural-reform/" rel="next" title="供给侧结构性改革">
+                  供给侧结构性改革 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Abraham Xiao</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

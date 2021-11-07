@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.yxiao.org","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.8.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<meta name="description" content="SAP Access Control is an enterprise software application that allows organizations to manage their access governance policies and to monitor for compliance. SAP Access Control is an add-on to SAP NetW">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SAP Access Control and Spring Security">
+<meta property="og:url" content="http://www.yxiao.org/2020/05/12/2020-05-12-sap-access-control/index.html">
+<meta property="og:site_name" content="Masdar Wireless">
+<meta property="og:description" content="SAP Access Control is an enterprise software application that allows organizations to manage their access governance policies and to monitor for compliance. SAP Access Control is an add-on to SAP NetW">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.yxiao.org/images/2020051301.jpeg">
+<meta property="article:published_time" content="2020-05-12T04:00:00.000Z">
+<meta property="article:modified_time" content="2021-09-10T03:27:17.949Z">
+<meta property="article:author" content="Abraham Xiao">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="Security">
+<meta property="article:tag" content="ERP">
+<meta property="article:tag" content="SAP">
+<meta property="article:tag" content="Control">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.yxiao.org/images/2020051301.jpeg">
+
+
+<link rel="canonical" href="http://www.yxiao.org/2020/05/12/2020-05-12-sap-access-control/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.yxiao.org/2020/05/12/2020-05-12-sap-access-control/","path":"2020/05/12/2020-05-12-sap-access-control/","title":"SAP Access Control and Spring Security"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>SAP Access Control and Spring Security | Masdar Wireless</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Masdar Wireless</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Shut Up and Get Rich</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-study"><a href="/study/" rel="section"><i class="fa fa-read fa-fw"></i>study</a></li>
+        <li class="menu-item menu-item-reading"><a href="/reading/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>reading</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Managing-Roles"><span class="nav-number">1.</span> <span class="nav-text">Managing Roles</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%89%E8%B5%9E%E6%9D%83%E9%99%90%E7%B3%BB%E7%BB%9F-SAM"><span class="nav-number"></span> <span class="nav-text">有赞权限系统(SAM)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#RBAC"><span class="nav-number">1.</span> <span class="nav-text">RBAC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%83%E9%99%90%E7%B3%BB%E7%BB%9FSAM"><span class="nav-number">2.</span> <span class="nav-text">权限系统SAM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SAM%E6%9D%83%E9%99%90%E7%B3%BB%E7%BB%9F%E6%8A%BD%E8%B1%A1%E6%A8%A1%E5%9E%8B"><span class="nav-number">3.</span> <span class="nav-text">SAM权限系统抽象模型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SAP-Security-System-Authorization-Concept"><span class="nav-number"></span> <span class="nav-text">SAP Security - System Authorization Concept</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#PFCG-Role-Maintenance"><span class="nav-number">1.</span> <span class="nav-text">PFCG Role Maintenance</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Role-Administration"><span class="nav-number">2.</span> <span class="nav-text">Role Administration</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SAP%EF%BC%8D%E5%AE%A2%E6%88%B7%E4%B8%BB%E6%95%B0%E6%8D%AE%E7%BB%B4%E6%8A%A4"><span class="nav-number"></span> <span class="nav-text">SAP－客户主数据维护</span></a></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Abraham Xiao</p>
+  <div class="site-description" itemprop="description">A personal website with some posts from Zhihu also</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">271</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">410</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.yxiao.org/2020/05/12/2020-05-12-sap-access-control/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Abraham Xiao">
+      <meta itemprop="description" content="A personal website with some posts from Zhihu also">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Masdar Wireless">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          SAP Access Control and Spring Security
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-05-12 12:00:00" itemprop="dateCreated datePublished" datetime="2020-05-12T12:00:00+08:00">2020-05-12</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-09-10 11:27:17" itemprop="dateModified" datetime="2021-09-10T11:27:17+08:00">2021-09-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Programming/" itemprop="url" rel="index"><span itemprop="name">Programming</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>SAP Access Control is an enterprise software application that allows organizations to manage their access governance policies and to monitor for compliance.</p>
+<p>SAP Access Control is an add-on to SAP NetWeaver, and works with SAP applications and non-SAP applications, such as SAP Finance, SAP Sales and Distribution, Oracle, and JDE.</p>
+<span id="more"></span>
+<p>The application provides a framework for managing application authorization functions such as:</p>
+<p>Access Requests (ARQ) – You can implement your company’s policies for creating and maintaining access requests in ARQ. Users can create requests to access systems and applications. Approvers can review the requests, perform analysis for user access and Segregation of Duties (SoD) risks, and then approve, reject, or modify the requests.</p>
+<p>Access Risk Analysis (ARA) – You can implement your company’s policies for SoD and user access risk in ARA. Security analysts and business process owners run reports to determine if violations of SoD or user access policies have occurred. They can identify the root cause of the violations and remediate the risks.</p>
+<p>Compliance persons can use this function to monitor compliance with company policies.</p>
+<p>Business Role Management (BRM) – In an SAP landscape, users’ authorizations to applications are managed through the use of roles. Role designers, role owners, and security analysts can use BRM to maintain roles and analyze them for violations of company policies.</p>
+<p>Emergency Access Management (EAM) – You can implement your company’s policies for managing emergency access in EAM. Users can create self-service requests for emergency access to systems and applications. Business process owners can review requests for emergency access and grant access. Compliance persons can perform periodic audits of usage and logs to monitor compliance with company policies.</p>
+<p>Periodic Reviews of User Access and Segregation of Duties (SoD) – You can use the application to carry out your company’s policies on periodic reviews for compliance. Security and business process owners identify policies that require periodic reviews and define review processes. Reviewers perform the reviews and then security and business process owners determine if corrective actions are required.</p>
+<h3 id="Managing-Roles"><a href="#Managing-Roles" class="headerlink" title="Managing Roles"></a>Managing Roles</h3><p>This overview process explains how to monitor and prevent risks during role creation and update.</p>
+<p>Process<br>Maintain and/or refine role definition</p>
+<p>If the applicable role does not already exist, the first step is to define and document the business requirements and major attributes for the new role.</p>
+<p>For what business reasons is the role needed?</p>
+<p>Which part of the organization does it belong to; for example, business process, subprocess, functional area, and so on.</p>
+<p>Who is the person responsible for the role content? Who will approve user access to the role?</p>
+<p>Maintain role technical details</p>
+<p>Once the role definition is created or updated, the next step is to identify the technical details to perform the work process tasks that are defined in the role definition.</p>
+<p>Perform risk analysis</p>
+<p>Refine role technical details to remove conflicts when possible.</p>
+<p>If the technical details cannot be refined, the risk should be mitigated with the appropriate controls.</p>
+<p>Maintain authorization data</p>
+<p>Once the technical details are defined, the next step is to identify the authorization data to restrict the work process tasks based on job responsibility and organization assignment.</p>
+<p>Perform risk analysis</p>
+<p>After authorization data is defined or updated, risk analysis is performed to check if the role contains access risk violations.</p>
+<p>Refine role authorization data to remove conflict when possible.</p>
+<p>If the authorization data cannot be refined, the risk should be mitigated with the appropriate controls.</p>
+<p>Role Owner Approval</p>
+<p>Role is ready to be submitted for role owner approval if it does not contain access risk violations or if they are mitigated. If the role is rejected by role owner, it could be redefined, updated, or deleted.</p>
+<p>Create and update roles</p>
+<p>After the role is approved by role owner, the role is created or updated in the system.</p>
+<p>Perform testing and documenting results</p>
+<p>Testing is performed to ensure that the role has the proper access. The test results are documented.</p>
+<p>User provisioning</p>
+<p>Approved and tested roles are ready to be provisioned to users to provide them with system access.</p>
+<p>Result<br>Roles are introduced into environments without risks or with mitigated risks to provide compliant user access.</p>
+<h2 id="有赞权限系统-SAM"><a href="#有赞权限系统-SAM" class="headerlink" title="有赞权限系统(SAM)"></a>有赞权限系统(SAM)</h2><p>原链接：<a target="_blank" rel="noopener" href="https://tech.youzan.com/sam/">https://tech.youzan.com/sam/</a><br>本文为非商业转载。<br>商业转载请联系有赞公司相关人员。</p>
+<p>在介绍SAM系统之前，首先以几个案例来理解权限系统的概念和设计。</p>
+<p>计算机世界中的许多事物是现实世界的一个阴影，现实中所见的许多模式/概念在计算机世界里都能找到，权限作为现实世界随处可见的概念，在我们谈论私有制、所有权时，时常会谈及权限，在计算机世界中，权限在许多系统中举足轻重。一切皆文件的Linux操作系统，为大多技术人员所熟悉，在这样一个多用户操作系统里，每个用户有自己的工作空间，通过把权限落在文件上实现对资源的管理。曾记否，qq里隐身对她可见，怕她看不见，下线又上线，却依旧被视而不见；曾记否，亲密无间的恋人们，分手后变成了最熟悉的陌生人，悲痛伤心之余，微信、电话、 qq拉黑。上述这些，都是计算机中利用权限系统的典型案例，在qq隐身案例中，你对女神隐身可见，实际上是赋予了她可以看到你的隐身状态（真实状态）的权限，当然你也赋予了人家伤害你的权限；恋人的案例中，恋人们把对方拉到了黑名单用户组，这样一来，他们就看不见相互动态，成为最熟悉的陌生人；从此，从你的全世界路过。</p>
+<h3 id="RBAC"><a href="#RBAC" class="headerlink" title="RBAC"></a>RBAC</h3><p>上面例子，我们可以抽象出这样的模式：“Who对What(Which)进行How的操作” 。例如，恋人们的例子，在你拉黑对方后，在朋友圈中你(Who)将看不到(How)对方的消息(What)。这是一个经典的RBAC（基于角色的权限访问控制）权限模型。RBAC认为权限授权实际上是Who、What、How的问题。在RBAC模型中，Who、What、How构成了访问权限三元组,也就是“Who（权限的拥用者或主体）对What(Which)（权限针对的对象或资源）进行How（具体的权限）的操作”。</p>
+<p>RBAC模型引入了“角色”的概念。所谓“角色”就是一个或一群用户在系统中可执行操作的集合，它是一个用户的集合，又是一个授权许可的集合。通过将角色指派给用户，为角色赋予权限的方式，使用户和权限通过角色间接相联系。RBAC基本模型如图所示：</p>
+<p><img src="https://www.yxiao.org/images/2020051301.jpeg" alt="051301"></p>
+<p>在RBAC中，用户与角色之间、角色与权限之间都是多对多的关系。会话是一个用户对多个角色的映射，此时的用户权限可以为激活角色权限的并集。RBAC对资源授权管理过程分为两个部分，首先实现访问权限与角色相关联，然后再实现角色与用户相关联，从而实现了用户与访问权限的逻辑分离。</p>
+<h3 id="权限系统SAM"><a href="#权限系统SAM" class="headerlink" title="权限系统SAM"></a>权限系统SAM</h3><p>SAM权限系统模型设计<br>RBAC模型不同于强制存取控制以及自由选定存取控制直接赋予使用者权限，是将权限赋予角色。在RBAC中，权限与角色相关联，用户通过成为适当角色成员而得到这些角色的权限，角色可依新的需求和系统的合并而赋予新的权限，而权限也可根据需要而从某角色中回收。RBAC相对于传统访问控制更为中性且更具灵活性的存取控制技术。从一家零售店铺员工角色管理角度看，设置角色是为了完成各种工作而创造，员工则根据它的责任和资格来被指派相应的角色，员工应该可以很容易地从一个角色被指派到另一个角色。因此，零售选择了基于RBAC模型来实现权限系统解决商家们管理员工角色问题。</p>
+<p>依据RBAC模型思想，SAM权限系统业务模型设计为员工管理和权限管理两部分，员工管理主要指管理员工以及为员工指派角色，权限管理主要指管理菜单、页面、按钮、API等资源，<strong>通过定义最基本的业务功能点作为权限点</strong>，实现管理角色对资源主体的请求，构成“用户-角色-权限-资源”的授权模型。</p>
+<p>下面是SAM权限系统模型中的一些通用语言：</p>
+<p>员工：角色的载体，权限的实行者<br>角色：角色是权限集进一步映射。业务系统可动态管理角色,各业务为方便用户使用可提供给默认角色列表，满足不同的员工权限<br>权限点：全局唯一的用来表示某一个功能点对应的权限的状态<br>功能点：逻辑上定义的用来描述系统资源的最小基本单位，每一个功能点都对应唯一一个权限点<br>功能集(权限集)：即功能点的集合，有一组功能点按照特定格式进行组合<br>API：请求系统资源的通道和动作，拥有功能集属性<br>菜单：将系统资源组织后展示给请求者的入口，拥有功能集属性<br>页面：被当做一种特殊的菜单，拥有URL属性<br>按钮：页面中更细粒度的资源入口，被当作一种特殊的菜单</p>
+<p>SAM权限系统模型的实现<br>在传统的RBAC模型中，通常通过一张关系表来保存角色与权限集的对应关系，实现权限与角色相关联。可以预见的是，随着零售业务的不断发展会积累下不计其数的功能点，导致关联表的数据极难维护和使用。SAM权限系统利用进制转换的策略解决了这个问题 ，同时提高了存储效率以及权限判定效率。一个基本类型为Long的十进制数字，它也可以看做是由64位0或1组成的二进制。在SAM系统模型设计中，每一个功能点定义为一个权限点，该权限点由idx和pos两个属性确保是全局唯一的权限点。idx表示第几个Long型空间，pos表示Long型对应的二进制数中所处的位置，64位长度即可代表64个不同能功能点。当64位满时无法再容放更多的功能点，这时idx属性会自增，重新申请一个Long型空间。如此一个64位的Long数字，通过0或1的组合，即可表示最多对64个不同的功能点所拥有权限的状态描述。</p>
+<p>例如：权限集{1}表示拥有idx=0,pos=0对应功能点的权限，权限集{-1,1}表示拥有idx=0,pos∈[0,1,2,..,63]与idx=1,pos=0对应功能点的权限。</p>
+<p>SAM权限系统将资源与所代表的功能点的关联关系通过进制的方式管理起来，采用计算机进制的思想，抽象出功能集换算公式来完成资源与二进制之间的映射，以及角色与二进制的映射。</p>
+<p>权限集换算公式：<br>{(idx0,pos0),(idx0,pos1)…(idxN,posM)} =&gt; {Long0,Long1…LongN}</p>
+<p>SAM权限系统同样通过进制思想实现“Who对What进行了How的操作”，角色请求某个资源（菜单/API）时，通过权限校验计算公式——进制按位“与”运算操作的思想（见下）得出该角色是否拥有访问资源的权限。采用进制来实现运算，权限判定的效率会变得更加的高效。例如，一个仓管在点击一个商品库存菜单时，背后的权限校验计算公式，其实是将角色的权限集与资源的权限集进行按位与计算，任意一对序号为idx的Long算得不为0，即两集合有公共的功能集，认为该角色拥有对资源访问的权限。</p>
+<p>权限校验计算公式：<br>{Long0,Long1…LongN} &amp; {Long0,Long1…LongM}</p>
+<p>SAM权限系统模型的实现遵循RBAC模型中的最小权限原则，责任分离原则和数据抽象原则三大原则，<strong>通过最小权限原则可以将角色配置成其完成任务所需要的最小的功能集</strong>；<strong>有了责任分离原则可以通过调用相互独立互斥的角色来共同完成敏感的任务而体</strong>，比如要求一个仓管和商品管理员共同参与一个商品。数据抽象则可以通过权限的抽象来体现，如仓管操作商品发货，库存管理等抽象权限，而不用操作系统提供的典型的读、写、执行权限。</p>
+<p>菜单渲染<br>SAM通过客户端的方式进行接入，菜单渲染在客户端一侧进行。目前SAM已经提供了php/node js两套客户端，供web层进行接入和渲染。<br>菜单渲染的过程可以分为三点：<br>一、结点定位<br>按照系统功能的划分，菜单通常以一棵树的形式进行展现。以零售PC后台为例，所有在页面中展示的元素，都认为是一种菜单，这样的菜单元素包括：菜单、页面、按钮。在后台访问时，用户停留的菜单通常是页面，页面有一个全局唯一的属性：URL，往上：可以通过父菜单找到根结点，往下，页面下可能包含一些子菜单——按钮。因此SAM只需要根据当前请求的URL，即可在后台菜单树中定位到唯一的页面菜单，同时获得该菜单的结点路径以及拥有的按钮。<br>二、权限计算<br>我们已经获得了用户的角色权限和完整的菜单树，根据每个菜单结点的权限集，可以计算出当前用户对结点的访问权。根据计算结果，客户端对菜单可以进行区分渲染，比如：用户通过拼URL访问一个无权限页面时会提示非法，无权限访问的菜单和按钮会自动置灰不可点击。<br>三、属性传递<br>默认菜单不具备URL属性。菜单的URL属性通过子菜单的URL传递生成，SAM会选择第一个有权限的子菜单的URL作为父结点的属性，并逐级传递到一级菜单。</p>
+<h3 id="SAM权限系统抽象模型"><a href="#SAM权限系统抽象模型" class="headerlink" title="SAM权限系统抽象模型"></a>SAM权限系统抽象模型</h3><h2 id="SAP-Security-System-Authorization-Concept"><a href="#SAP-Security-System-Authorization-Concept" class="headerlink" title="SAP Security - System Authorization Concept"></a>SAP Security - System Authorization Concept</h2><h3 id="PFCG-Role-Maintenance"><a href="#PFCG-Role-Maintenance" class="headerlink" title="PFCG Role Maintenance"></a>PFCG Role Maintenance</h3><p>PFCG Role Maintenance can be used to manage roles and authorization in a SAP system. In PFCG, the role represents a work that a person performs related to real-life scenarios. PFCG allows you to define set of transactions that can be assigned to a person to perform their daily work.</p>
+<p>When the roles are created in a PFCG Transaction, you can use Transaction SU01 to assign these roles to individual users. A user in a SAP system can be assigned multiple number of roles and that are related to his/her daily task in real-life.</p>
+<p>These roles are in connection between user and authorizations in a SAP system. The actual authorizations and profiles are stored in the form of objects in a SAP system.</p>
+<p>Using PFCG Role Maintenance, you can perform the following functions −</p>
+<p>Changing and Assigning Roles<br>Creating Roles<br>Creating Composite Roles<br>Transporting and Distributing Roles<br>Let us now discuss these functions in detail.</p>
+<h3 id="Role-Administration"><a href="#Role-Administration" class="headerlink" title="Role Administration"></a>Role Administration</h3><p>Purpose<br>You can use the role administration functions to manage roles and authorization data. The role management tool creates authorization data automatically based on selected menu functions, and presents it for postprocessing. It is also integrated with organizational management.</p>
+<p>We recommend you use the role maintenance functions (transaction PFCG) to maintain your roles, authorizations and profiles. Although you can continue to create profiles manually, you need detailed knowledge of all SAP authorization components.</p>
+<p>The role administration functions support you in performing your task by automating various processes and allowing you more flexibility in your authorization plan. You can also use the Central User Administration functions to centrally edit the roles delivered by SAP or your own, new roles, and to assign the roles to any number of users.</p>
+<p>The roles (previously: activity groups), which are based on the organizational plan of your company, form the basic framework of the tool. These roles form the link between the user and the corresponding authorizations. The actual authorizations and profiles are stored in the SAP system as objects.</p>
+<p>With the roles, you assign to your users the user menu that is displayed after they log on to the SAP system. Roles also contain the authorizations that users can use to access the transactions, reports, Web-based applications, and so on that are contained in the menu.</p>
+<p>When you work with the role administration tool, you work with a level of information that is a step away from the actual objects in the SAP system. The graphic below shows how these two levels are separated, yet linked together with the role administration functions.</p>
+<p>Implementation Notes<br>Since the standard SAP system contains a large number of roles already, you should check whether you can use these before defining your own roles.</p>
+<p>To get an overview of the roles delivered with the system, do one of the following:</p>
+<p>●      In the SAP Easy Access menu, choose Tools → Administration → User Maintenance → Information System → Roles → Roles By Complex Selection Criteria and then Execute.</p>
+<p>●      In role administration (Tools → Administration → User Maintenance → Roles), choose the input help for the Role field.</p>
+<p>If you want to make modifications to an existing role, make a copy of it and modify this.</p>
+<p>If you do not find suitable roles, write job descriptions before beginning your work in role administration (see also Initial Installation Procedure).</p>
+<p>Either have all tasks performed centrally by a single superuser, or divide the tasks among several users in order to increase system security. For more information, see Organization of the Authorization Administration.</p>
+<h2 id="SAP－客户主数据维护"><a href="#SAP－客户主数据维护" class="headerlink" title="SAP－客户主数据维护"></a>SAP－客户主数据维护</h2><p>客户主数据是销售与分销模块中最重要的主数据，是指将各种商业伙伴的相关信息以主数据的形式在系统中建立，并以唯一的代码进行标识。维护客户主数据的主要作用是在进行销售与分销业务的各个阶段明确业务对象，并按照业务对象的客户主数据中维护的控制信息指导系统完成相应的业务处理。<br>客户主数据中的一般数据是对整个集团有效的数据，对任何公司代码和销售区域都有效，是客户的基本信息。<br>客户主数据中的公司代码数据是基于公司代码有效的数据，是客户的财务信息。<br>客户主数据中的销售区域数据是基于销售区域有效的数据，是客户的销售、发运和销售开票信息。</p>
+<p>1：创建客户主数据一般数据视图<br>主数据维护人员按照创建客户主数据请求，在系统中确认是新客户之后，创建客户的一般数据视图，为客户选择帐户组和建立唯一的代码标识。<br>步骤：（事务代码：VD01/XD01）</p>
+<ol>
+<li>输入客户帐户组，它有以下作用：<br>1）确定客户主数据的编码范围，确定使用内部编码还是外部编码（若使用外部编码，还需要手动输入客户编码）<br>2）确定客户主数据中各个字段的维护状态（显示、可选输入或强制输入）<br>3）是否是一次性客户<br>4）影响销售视图中的合作伙伴功能确定<br>5）影响输出确定<br>选定客户帐户组（如果是外部编码需输入客户编码）之后，维护一般视图。</li>
+<li>可以在一般数据视图中维护下列信息：<br>1）地址信息（如名称、地址、国家、城市、邮编、联系电话、传真号码等）<br>2）控制数据（如税务信息、权限组、对应供应商编码等）<br>3）付款业务（如银行信息等）<br>4）市场信息（如行业、客户分类等）<br>5）卸货点信息（如收货时间等）<br>6）出口数据（如出口控制数据等）<br>7）联系人（如商业伙伴地址等）</li>
+<li>保存客户主数据。</li>
+</ol>
+<p>2：创建客户主数据公司代码数据<br>创建客户的财务相关信息。<br>步骤：（事务代码：VD01/XD01）</p>
+<ol>
+<li>可以在公司代码数据视图中维护下列信息：<br>1）帐户管理（如统驭科目等）<br>2）付款业务（如付款方式、付款冻结等）<br>3）联系（如职员等）<br>4）保险（如投保金额等）</li>
+<li>保存客户主数据。</li>
+</ol>
+<p>3：创建客户主数据销售区域数据<br>创建客户销售、发运及销售开票的相关数据。<br>步骤：（事务代码：VD01/XD01）</p>
+<ol>
+<li>可以在销售区域数据视图中维护下列信息：<br>1）订单数据（如销售办公室、货币、销售组、销售区域、价格组等）<br>2）发运数据（如发运条件、交货工厂、运输区域等）<br>3）发票数据（如销项税分类、付款条件等）<br>4）合作伙伴功能（如售达方、送达方、付款方、开票方等）</li>
+<li>保存客户主数据。</li>
+</ol>
+<p>4：更改客户主数据<br>步骤：（事务代码：VD02/XD02）</p>
+<ol>
+<li>输入组织结构：<br>1）客户编码<br>2）如更改公司代码数据，需输入公司代码<br>3）如更改销售区域数据，需输入销售区域</li>
+<li>更改相应信息并保存。</li>
+</ol>
+<p>5：显示客户主数据<br>步骤：（事务代码：VD03/XD03）</p>
+<ol>
+<li>输入组织结构并显示：<br>1）客户编码<br>2）如显示公司代码数据，需输入公司代码<br>3）如显示销售区域数据，需输入销售区域</li>
+</ol>
+<p>收到客户创建申请<br>系统中没有创建过相同客户的主数据<br>对要创建的客户各种信息都已收集审核完毕<br>明确创建客户主数据的组织结构数据（公司代码和销售区域）</p>
+<p>维护客户帐户组及其编码范围</p>
+<p>维护各个控制字段的选择值配置<br>维护其合作伙伴功能的后台配置及前台主数据</p>
+<p>一次性客户：<br>可以在客户帐户组中控制是否为一次性客户，如果是一次性客户，那么在每次使用这个客户创建销售凭证时都要重新维护其地址等基本信息。</p>
+<p>通用分销渠道和通用产品组：<br>可以为几个分销渠道或产品组设置通用分销渠道和通用产品组。那么在创建客户主数据的销售区域数据视图时，如果采用通用渠道或产品组，则维护的数据对其它分销渠道或产品组同样适用。<br>————————————————<br>版权声明：本文为CSDN博主「wtxhai」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/wtxhai/java/article/details/72356426">https://blog.csdn.net/wtxhai/java/article/details/72356426</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Java/" rel="tag"># Java</a>
+              <a href="/tags/Security/" rel="tag"># Security</a>
+              <a href="/tags/ERP/" rel="tag"># ERP</a>
+              <a href="/tags/SAP/" rel="tag"># SAP</a>
+              <a href="/tags/Control/" rel="tag"># Control</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/05/11/2020-05-11-life-is-a-relay-race/" rel="prev" title="如何看待知乎版后浪的言论“人生是一场接力赛”？">
+                  <i class="fa fa-chevron-left"></i> 如何看待知乎版后浪的言论“人生是一场接力赛”？
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2020/05/20/2020-05-20-chinese-hospital-privatization/" rel="next" title="徐州市第三人民医院被三胞集团收购，如何看待公立三甲医院被商业集团收购这件事?">
+                  徐州市第三人民医院被三胞集团收购，如何看待公立三甲医院被商业集团收购这件事? <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Abraham Xiao</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

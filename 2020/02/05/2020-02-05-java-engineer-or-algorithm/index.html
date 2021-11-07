@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.yxiao.org","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.8.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<meta name="description" content="年轻人想太多了，以大部分人的技术水平，都谈不上选择技术方向，出去都是被社会艹的。 大部分人，能够选择一个价值观和你 match，给你机会发展的公司，已经是人生高光时刻了，做啥技术真的不重要。 打个蹭热点的比方，你要是憧憬生物学，去了武汉病毒所，除非你心黑，喜欢靠院士升职器当所长，这我无话可说，年轻人心不够脏的，你选择生物学方向，却屁颠颠去了这种机构，方向还重要吗？ 像我们一些垃圾群里面">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java工程师还是算法工程师">
+<meta property="og:url" content="http://www.yxiao.org/2020/02/05/2020-02-05-java-engineer-or-algorithm/index.html">
+<meta property="og:site_name" content="Masdar Wireless">
+<meta property="og:description" content="年轻人想太多了，以大部分人的技术水平，都谈不上选择技术方向，出去都是被社会艹的。 大部分人，能够选择一个价值观和你 match，给你机会发展的公司，已经是人生高光时刻了，做啥技术真的不重要。 打个蹭热点的比方，你要是憧憬生物学，去了武汉病毒所，除非你心黑，喜欢靠院士升职器当所长，这我无话可说，年轻人心不够脏的，你选择生物学方向，却屁颠颠去了这种机构，方向还重要吗？ 像我们一些垃圾群里面">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-02-05T10:00:00.000Z">
+<meta property="article:modified_time" content="2021-09-10T03:27:17.927Z">
+<meta property="article:author" content="Abraham Xiao">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="Programming">
+<meta property="article:tag" content="Computer">
+<meta property="article:tag" content="Science">
+<meta property="article:tag" content="Algorithm">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://www.yxiao.org/2020/02/05/2020-02-05-java-engineer-or-algorithm/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.yxiao.org/2020/02/05/2020-02-05-java-engineer-or-algorithm/","path":"2020/02/05/2020-02-05-java-engineer-or-algorithm/","title":"Java工程师还是算法工程师"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Java工程师还是算法工程师 | Masdar Wireless</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Masdar Wireless</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Shut Up and Get Rich</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-study"><a href="/study/" rel="section"><i class="fa fa-read fa-fw"></i>study</a></li>
+        <li class="menu-item menu-item-reading"><a href="/reading/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>reading</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%88%E5%A4%9A%E7%A8%8B%E5%BA%8F%E5%91%98%E9%83%BD%E8%AF%B4-35-%E5%B2%81%E8%81%8C%E4%B8%9A%E5%8D%B1%E6%9C%BA%EF%BC%8C%E9%82%A3%E4%B9%88%E4%B8%BA%E4%BB%80%E4%B9%88%E5%81%9A%E5%BC%80%E5%8F%91%E7%9A%84-35-%E5%B2%81%E7%A8%8B%E5%BA%8F%E5%91%98%E4%B8%8D%E8%BD%AC%E5%81%9A%E6%B5%8B%E8%AF%95%E5%91%A2%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">很多程序员都说 35 岁职业危机，那么为什么做开发的 35 岁程序员不转做测试呢？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%92%E8%81%94%E7%BD%91%E7%9A%84%E7%AE%A1%E7%90%86%E5%B1%82%E4%BA%BA%E5%91%98%E9%9C%80%E8%A6%81%E5%85%B7%E5%A4%87%E4%BB%80%E4%B9%88%E8%83%BD%E5%8A%9B%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">互联网的管理层人员需要具备什么能力？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AD%E5%8F%B0%E5%92%8C%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="nav-number">3.</span> <span class="nav-text">中台和微服务有什么区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A0%94%E7%A9%B6%E7%94%9F%E5%AF%BC%E5%B8%88%E6%9B%B4%E5%96%9C%E6%AC%A2%E5%89%A5%E5%89%8A%E5%AF%92%E9%97%A8%E5%AD%A6%E5%AD%90%E5%90%97%EF%BC%9F"><span class="nav-number">4.</span> <span class="nav-text">研究生导师更喜欢剥削寒门学子吗？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%82%93%E9%93%82%E9%8B%86%EF%BC%9A%E6%96%B0%E5%86%A0%E8%82%BA%E7%82%8E%E6%B5%81%E8%A1%8C%EF%BC%8C%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E6%B2%A1%E5%81%9A%E2%80%9C%E7%88%86%E6%96%99%E5%A4%A7V%E2%80%9D%EF%BC%9F"><span class="nav-number">5.</span> <span class="nav-text">邓铂鋆：新冠肺炎流行，我为什么没做“爆料大V”？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7%E6%AD%A6%E6%B1%89%E5%B8%82%E5%A7%94%E4%B9%A6%E8%AE%B0%E8%A1%A8%E7%A4%BA%E8%87%AA%E8%B4%A3%EF%BC%8C%E7%A7%B0%E5%A6%82%E6%9E%9C%E6%97%A9%E9%87%87%E5%8F%96%E4%B8%A5%E5%8E%89%E7%9A%84%E7%AE%A1%E6%8E%A7%E6%8E%AA%E6%96%BD%EF%BC%8C%E7%BB%93%E6%9E%9C%E4%BC%9A%E6%AF%94%E7%8E%B0%E5%9C%A8%E5%A5%BD%EF%BC%9F"><span class="nav-number">6.</span> <span class="nav-text">如何评价武汉市委书记表示自责，称如果早采取严厉的管控措施，结果会比现在好？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%BB%91%E4%BA%BA%E7%9A%84%E7%8E%B0%E4%BB%A3%E6%96%87%E6%98%8E%E6%88%90%E6%9E%9C%E9%82%A3%E4%B9%88%E5%B7%AE"><span class="nav-number">7.</span> <span class="nav-text">为什么黑人的现代文明成果那么差?</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Abraham Xiao</p>
+  <div class="site-description" itemprop="description">A personal website with some posts from Zhihu also</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">271</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">410</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.yxiao.org/2020/02/05/2020-02-05-java-engineer-or-algorithm/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Abraham Xiao">
+      <meta itemprop="description" content="A personal website with some posts from Zhihu also">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Masdar Wireless">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Java工程师还是算法工程师
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-02-05 18:00:00" itemprop="dateCreated datePublished" datetime="2020-02-05T18:00:00+08:00">2020-02-05</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-09-10 11:27:17" itemprop="dateModified" datetime="2021-09-10T11:27:17+08:00">2021-09-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>年轻人想太多了，以大部分人的技术水平，都谈不上选择技术方向，出去都是被社会艹的。</p>
+<p>大部分人，能够选择一个价值观和你 match，给你机会发展的公司，已经是人生高光时刻了，做啥技术真的不重要。</p>
+<p>打个蹭热点的比方，你要是憧憬生物学，去了武汉病毒所，除非你心黑，喜欢靠院士升职器当所长，这我无话可说，年轻人心不够脏的，你选择生物学方向，却屁颠颠去了这种机构，方向还重要吗？</p>
+<p>像我们一些垃圾群里面</p>
+<span id="more"></span>
+
+<p>有人喜欢算法，刚进行业时候，觉得自己数学好所以放大算法的价值，恨不得未来都是算法，然后干两年，发现破烂公司觉得算法没用，做算法创新涨一点点，还不如写 ppt 做架构做产品的牛逼，技术又上不去，管理也做不好，团队都被削了，跳槽没人要，整天骂骂咧咧。</p>
+<p>有人喜欢做开发，觉得自己特立独行，恨不得都劝退算法，过来搞开发，结果发现开发特别吃年龄，活也重的喘不过气，30 岁升不上管理或者架构师，就要退休了，自己爬不上，最终也是整天骂骂咧咧。</p>
+<p>有人喜欢钱，拼命刷题，一开始 offer 多， 纠结个半天哪个岗位钱多，结果找一个号称技术积累深厚，天天沸腾，搞“牢疫结合”的公司，进去发现领导结果就是坨屎，2 年下来技术啥都没学，白闷一肚子火气。</p>
+<p>结果，现在全都成了一堆骂骂咧咧的人。</p>
+<p>然后其他人咋理解我们呢？一群针对互联网的黑公关狂欢！只有我们深知，绝对没有人能够跟上社会科技和商业的改变速度的，你奋斗还是躺平，都是一个人和 N 平方的群体博弈，保不济还有黑天鹅事件，你说统计上谁赢？</p>
+<p><strong>大部分普通人与其纠结选择啥，还不如想着社会未来会是啥，增量是啥，你思考对了，躺在这个潮流里面都能笑傲江湖了。</strong></p>
+<p>想靠 alpha 策略成为人赢，当你知道这个因子的时候，因子已经开始 decay 了。</p>
+<p>你真的倔的不肯承认，活该被全球 quant 顺着网线过来打你。</p>
+<p><strong>支撑一个人走下去的，从来不是你手头那点杂耍，而是你内心相信未来是啥，是信仰让你坚强，不是高空走钢丝赢来的廉价掌声。</strong></p>
+<p>少年，你从现在开始，应该努力思考，我该如何做，才能更加接近未来互联网的新形态和新的渗透模式。</p>
+<p>作者：纳米酱<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/264499347/answer/999590739">https://www.zhihu.com/question/264499347/answer/999590739</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h2 id="很多程序员都说-35-岁职业危机，那么为什么做开发的-35-岁程序员不转做测试呢？"><a href="#很多程序员都说-35-岁职业危机，那么为什么做开发的-35-岁程序员不转做测试呢？" class="headerlink" title="很多程序员都说 35 岁职业危机，那么为什么做开发的 35 岁程序员不转做测试呢？"></a>很多程序员都说 35 岁职业危机，那么为什么做开发的 35 岁程序员不转做测试呢？</h2><p>作者：硅谷IT胖子<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/366571406/answer/988915732">https://www.zhihu.com/question/366571406/answer/988915732</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>这个非常支持轮子哥的答案。职业危机的本质是什么？本质是不需要那么多有经验的工程师，如何拿五个人的饭喂饱十个人？答案是，怎么分配都有人吃不饱。所以，这不是个人选择问题，而是市场问题、需求问题。比如一个老兵，会用迫击炮，会叫空中支援，懂无线电通讯，会火力压制，但是在岛主手下当兵，发一杆中正式，50发子弹，10个手榴弹，就这点东西，吃不饱饭还用绳子牵着防止逃跑去上战场跟穷凶极恶的鬼子拼命，那未必比得过战友那些文盲出身的士兵。因为，岛主的需求和市场和成本，不足以支撑美式老兵。难道，30多岁软工多年的老工程师，真的不如20多岁的新人？我30多岁写代码的能力比20多岁时不知道强了多少。关键在于就业市场和公司强调的，是什么竞争力。国内码工市场显然强调的是工作时间和耐劳易使。35岁的人其实技艺更精湛，但耐不住精力衰退，家庭分心，所以工作时间下降了不少；加上老油条好多时候想得多见得多，更不容易被情怀忽悠，滑得很。以前我觉得，这种跟西方的差别，是效率和技术水平导致的；现在又觉得，这也许是文化导致的，是思路不一样导致的。东方的思路本身就是强调人本身的能力，把“人”的潜力发挥到最大，是主观性的；西方的思路是强调“流程”，尽可能地消除“人”之间的差异，是客观性的。这是两种不同的思潮和习惯。测试职位回到正题，测试本身就是软件开发下的一个分支，既然软件开发都有市场带来的35岁危机，那么转测试并不能从根本上解决问题。当然，单分析测试和开发这两个方向的话，可以说测试更不乐观了。提到测试历史，必须说“陆奇改革”事件。长话短说，就是陆奇在微软时将自己部门SDET全部改为SDE，最后推广到全公司。这种带阵痛的改革非常成功，使得微软大大提高了开发效率。我先前听说一个SDET的Manager，在微软17年，从SDET1一路升上来，一行code没写过，是不是舒服得有些过分了？陆奇改革后，这人后来转成了SDE2，当然，人早就不差钱了。测试分为两种：手动测试的严格来说不算测试，跟Engineering不搭边，在如今的环境下，大公司基本上都是外包这种手动测试（中国和印度）；一般软工说的“测试”应该指的是“测试工程师”，是知道如何写code的人，写测试用例和框架。然而，测试工程师最大的问题就在于，他们的工作内容只是软件工程师的一个子集。这些code，完全可以交给软工来写，并且软工还更了解一个系统的弱点和细节。这就导致，测试工程师的职位，也被逐渐削减或是外包到更便宜的公司和国家去。我不是说测试框架在软工中不重要，而是说那种传统的微软式的开发、测试成双成对的做法，逐渐转变为全开发职位，部分人或是部分精力维护测试框架，偶尔一个部门下有一两个专精测试框架的专家（亚马逊这样做）即可。所以， 我个人认为，跟十几年前流行的工作方式比，其实对软工的要求更高了，活更重了，整个环节也更简单了。这就带来，软工职位不断增加，而测试、DBA等职位不断被削减，公司的效率和收益更高。从前，软工只是被认为是软件开发的一个环节，虽然也是最重要的；如今，软工的职责范围其实是扩大了。甚至，在很多快节奏，更现代化的大公司，软工还管项目进度和人员协调，以及项目报告等很多活，部分替代了PM/TPM/Manager的职责。有时候manager跑了、被开了，甚至还有“码工自治联盟”状态出现，没人管，几个码工自己商量做什么，也见过。这也部分解释了，软工需求大而且工资在过去10年间慢慢上涨的原因。很多公司之所以难面，不光是算法题的问题，还有承压、交流和设计等很多指标。要求高了，自然难招人，公司也不在乎钱多给点，因为巴不得进来的都是多面手。行业兴衰个人的努力虽然能够减缓、但是还是很难摆脱行业兴衰的。一个行业，享受它的福利，就必然承受它的规律和残酷。软工，无论国内外，最大的特征还是高强度的智力输出。而人的思维活跃和精力，无疑是一直随着时间而衰退的，有些衰退是因为要考虑的事情更多（比如身体状况，家庭等），哪怕30多岁更聪明了更努力了，也不行。此外，软工的行业跟总经济形式特别相关。你可以看出，各国的软工待遇，跟其GDP是非常相关的。中美IT之所以厉害，你当然可以吹说中美两国人聪明、能吃苦、自主研发，但说穿了还是因为两国GDP世界第一第二，有的是钱和市场，随便给点投资就雇得起码工去造东西，然后在本来已经非常巨大的市场上获得更多回报，良性循环。比如某些垃圾国家，饭都吃不饱，肉都不敢大口吃，穷得叮当乱响，你做外卖软件给谁用？在这种情况下，我倒是觉得，应该心平气和： 自己赚钱，是因为踏上行业的快车；自己失业，是因为行业或是经济下行。个人的能力和选择，倒没必要那么焦虑。</p>
+<h2 id="互联网的管理层人员需要具备什么能力？"><a href="#互联网的管理层人员需要具备什么能力？" class="headerlink" title="互联网的管理层人员需要具备什么能力？"></a>互联网的管理层人员需要具备什么能力？</h2><p>作者：纳米酱<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/24760263/answer/987571545">https://www.zhihu.com/question/24760263/answer/987571545</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>如果是技术类型管理的话，说几点：</p>
+<p><strong>最重要的，明确组里在公司的地位，聪明地接活，合理的安排活</strong></p>
+<p>业务过于琐碎和繁重会压垮组里成员，接着压垮你，要懂得抢做重要的活，为组里的整体绩效做精细化打算。</p>
+<p>抢活能力是管理层自身修为的重要体现，无非两个方面，你的技术和人品都要好，技术好不必多说，技术不好连人家要做啥都不懂，谈何抢活。</p>
+<p>这里强调人品不好的，就是对人特别狂的那种，这种人不适合当管理，很容易引起组和组之间的矛盾，这对整个组的影响力都是灾难性的打击。商业社会是利益的捆绑体，一个人再厉害，被人厌恶，也抵挡不住一堆人对你抵制。</p>
+<p>当然，待人接物温文尔雅，这事情没这么理想，如果公司金字塔结构都被削成纺锤形了，中层管理哪怕学富五车，也一样极度内卷，谁也看不惯谁，互相倾轧抢活打架，这也是非常有可能的。</p>
+<p>一般感受到这种纺锤形结构诞生以后，我觉得，中层管理赶紧跑路为好。</p>
+<p><strong>保持打磨自己的技术，不求深，但一定要广</strong></p>
+<p>管理以后技术是不可能变深的，管理如同挖战壕，你挖地过深会导致和其他人挖的连不到一块，反而还会形成一个巨坑，谁都爬不出来。此外，组里有人挖的深，有人挖的浅，管理要做的的是保证深浅不一的都能够串接起来。</p>
+<p>所以，技术管理层技术广度必须够广，这里的广，不仅说你懂的知识多，而且，你还要知道各种 low 的解决方案，和各种高级的解决方案，雅俗共赏。不然各种乱七八糟的技术做出来，你半天整合不到一起，同事做的你不懂没法帮人家说话， low 的你看不惯打击人家，感情这饭你没法吃了。</p>
+<p>但是，管理也有弊端，因为技术不深，导致跳槽经常性吃亏，一般国外的技术狂人都很不喜欢 manage people。只是国内风气不知为何，上年纪必须要考核你管理能力，实在是烦人。</p>
+<p><strong>听组里同事吐槽和抱怨，并想办法制造条件给他们排忧解难，学会给组里同事挡子弹</strong></p>
+<p>强调的是，管理不是奶妈或者坦克职业，管理也不是花掉你全部生命去做全职心理顾问，接受吐槽和挡子弹，只是一种最大化激励团队的措施，听取抱怨是防止有本事的同事频繁离职，增加你的招人成本，同时防止造成人才的死海效应。挡子弹是激发同事发挥更多自己主观能动性的措施，同时让他们觉得和你共事是有安全感的。</p>
+<p>一般公司的管理层和干活的绩效是分开打的，所以同事干活开心产出高，管理层也有好的绩效，两者不是你死我活的关系，而是同生共辱的关系。</p>
+<p>此外，国内对管理的理解还是掌握人事权这一点有点分歧，认为管理是统治阶级，抱有敌对态度。其实将心比心来说，互联网管理类岗位是很危险的职业，技术精进放慢，琐事增多，拿的工资未必比技术人员高(沸腾厂除外？？？)，离职跳槽非常困难，公司一个内斗或者业务不确定，人生被毁掉还不如一个写前端的小弟出去好找工作。</p>
+<p>至于如何听取抱怨和吐槽，这和你听你家人唠叨和抱怨一个道理，很多抱怨都是你个人理性层面没法理解的，但是你也要听下去，所以，可以从家人入手，解决他们的唠叨，学会让他们宽心，这个训练如果做下去，往往非常见效。</p>
+<p><strong>正确对待组里怠惰的同事</strong></p>
+<p>有些同事可能对业务和前途没啥盼头，觉得业务做来做去都是一坨屎，陷入迷茫状态，这对管理人性话来说，很考验心性的。可能国内管理第一想法就是干掉人家，常见于脉脉里面骂街的针对对象，这是一种懒政思维，也是恶化团队关系，增加各种谣言的罪魁祸首。</p>
+<p>对方不想做就候着，让他做自己喜欢做的，刷题考证都别理他，也别灌鸡汤忽悠人家或者苦口婆心劝对方，正确的方法是，组里潜意识灌输你不来给我们解决琐碎问题，我们组就要挂了的一种危机感，潜移默化让他觉得他是来救你的，不是来给你打工的，激发他的主人公意识。</p>
+<p>至于如何让对方觉得做琐碎事还是救火呢，很简单也有点欺骗性质的，就是每周开周会的时候，让组里其它同时疯狂吐槽这东西不做，就没法干下去了，需要人来拯救，接着管理者适当抽象这种吐槽，变成目标明确的活，说谁能解决请谁吃饭，总之多来几轮这种形式的会议，怠惰的同事久了也不好意思一个人啥都不干，愣在那里摸鱼。</p>
+<p>所以，有时候，可以巧妙地把一件事情拖到大家都觉得重要了才开始做，大家的战斗力都会巨大提升，deadline 是生产力，不是吗？</p>
+<p>最后一点，不是最重要，但是却是一种神奇的力量，就是谈吐能力</p>
+<p>谈吐能力无非几点，让人感到通情达理，幽默风趣，格局宏大，句句金句，都是好的谈吐。有空多多看看奇葩说一类的，看几本语言震撼的文学作品，多和脑洞大的有趣的人聊天，懂生活懂得玩，有共同话题。不求道理对不对，但求你的表达能力让人觉得耳目一新，听起来就是有趣的人。无论做啥事情，风趣的沟通能力都是好的印象分，如果实在受不了社会的虚假，你可以到网络匿名吐槽怼人也成(虽然我不是太赞同，不过有一些宣泄渠道很重要的)，总是，人前一定要学会高级别的谈吐，让人觉得你谈吐能力一流的人。</p>
+<h2 id="中台和微服务有什么区别？"><a href="#中台和微服务有什么区别？" class="headerlink" title="中台和微服务有什么区别？"></a>中台和微服务有什么区别？</h2><p>你到高校去，导师承包一个项目，分给学生做，学生根据甲方需求，没日没夜做好一个项目，做完毕业，然后师弟过来接手，一看傻眼了，完全看不懂，推倒重做，接着毕业，接着让小小师弟接手，小小师弟接着崩溃，接着推倒重做。</p>
+<p>组里唯一日益增长的，是导师的荷包，手下无数的横向项目ppt，还有组里某个学生才能看得懂的项目成果。这些拆分无比稀碎，功能又交叠极大的微型工程，只有做这个业务的学生看得懂，其它学生想用，费劲，没门。</p>
+<p>导师一看，不成呀，每次招一个苦力过来，都要高年纪的学生带，越带越吃力，还重复造轮子，出活越来越慢，成本越来越高。</p>
+<p>咋办呢，导师心里一横，把几个技术好的高年级博士叫过来，画了一个大饼，说你们前途无亮，让他们把整个组的项目都整和梳理一遍，把里面共同，且通用的东西都抽离出来，做了沉淀，让以后新来的师弟能够快速完成横向项目。</p>
+<p>这几位博士不负众望，高质量地完成了导师的任务，让新来师弟调包溜得飞起，小小小师弟很快地解决了导师的横向项目，迅速毕业，走向人生巅峰。</p>
+<p>而这几位博士，却因为没有直接完成导师的横向项目，被导师延期了。。。</p>
+<p>作者：纳米酱<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/366731124/answer/982928786">https://www.zhihu.com/question/366731124/answer/982928786</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h2 id="研究生导师更喜欢剥削寒门学子吗？"><a href="#研究生导师更喜欢剥削寒门学子吗？" class="headerlink" title="研究生导师更喜欢剥削寒门学子吗？"></a>研究生导师更喜欢剥削寒门学子吗？</h2><p>我的理解不是导师更加喜欢压榨寒门学子，而是寒门学子缺乏必要的斗争手段，以及家庭基础对抗无良博导。打个比方，我出身的家庭，父母对创造知识无感，对我读书有没有文凭压根不关心，至少我自己吃饱，父母饿不着。所以我对抗无良教授，手段可能比一般生性怯弱的贫寒博士更加有勇气，该丢的绝不心软。他们就算敢压制我毕业，我大不了逼急了就退学。历史证明无数次，我相信我无论换到任何行业，换多少方向，我都能生存下来。人要有这种心灵基础和物质基础，才不会因为某几个错误的人，把自己一身搭了进去。</p>
+<p>作者：纳米酱<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/353730142/answer/971930025">https://www.zhihu.com/question/353730142/answer/971930025</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h2 id="邓铂鋆：新冠肺炎流行，我为什么没做“爆料大V”？"><a href="#邓铂鋆：新冠肺炎流行，我为什么没做“爆料大V”？" class="headerlink" title="邓铂鋆：新冠肺炎流行，我为什么没做“爆料大V”？"></a>邓铂鋆：新冠肺炎流行，我为什么没做“爆料大V”？</h2><p>（文/观察者网专栏作者 邓铂鋆）</p>
+<p>承蒙观察者网和各位读者多年厚爱，我在医疗话题上的创作吸引了一些业内朋友的关注，近年来有了“粉丝投稿”。</p>
+<p>1月中旬，新型冠状病毒病人确诊数量及开始增多。武汉的一位医生，即接受《中国新闻周刊》采访的“林羽医生”（化名），开始向我介绍武汉的情况。同时，我的另一位朋友，北京的一位微生物专家，参与了北京市1月20日公布病人的诊治，他也向我透露了一些情况。得到这些消息后，我开始寻找各地业内人士核实。</p>
+<p>1月19日开始，根据朋友们提供的信息，我陆续在知乎发言，提出试剂盒与确诊权下沉，加强医院感染防控，确保人员防护物资等建议。我指出武汉市出现的一般发热病人盲目就医，导致医疗机构不堪重负、增加交叉感染危险等现象。在这过程中，一些当地医生和当地网友向我透露了新冠肺炎防治一线存在的严重问题。那么，我为什么没有“勇敢”的成为一名“爆料大V”，把这些来自新冠病毒防治一线的信息及时“分享”呢？</p>
+<p>首先，强行插播科普：</p>
+<p>武汉市及周边地区的新冠肺炎确诊存在一个痛点。近期，很多发热病人自述在医院无法确诊，这是实验室诊断依据核酸试剂盒数量与实验室工作量瓶颈的限制造成的。由于核酸试剂盒等检测手段的铺开需要时间，再加上我国疾控防控流程的规定，当前新冠病毒确诊流程较长，无法及时对疑似病人采取强制隔离措施。甚至出现了一些发热病人未能及时鉴别诊断的情况。</p>
+<p>这里需要介绍一下新冠病毒的诊断标准与确诊流程：</p>
+<p>疑似病人：指的是有疫区旅居史和病人接触史，有病毒性肺炎表现的病人。</p>
+<p>确诊病人：两次采样间隔超过一天的核酸检测都是阳性的病人。</p>
+<p>确诊流程：医生诊治某位病毒性肺炎病人N久，把其他可能性都排除了，于是申请院内或区内专家会诊。专家一致认为，可能是新冠病毒肺炎，于是医院控制住病人，请疾控中心来医院采样，带回疾控中心进行核酸检测。新冠病毒核酸试剂盒是1月11日发明的，随后下发，由于货源问题，最初仅在各地疾控中心掌握。疾控中心必须在收到采样的24小时内完成确认。于是，在医生排除了社会因素干涉的情况下，一个疑似病人（症状是滥大街的病毒性肺炎表现）变成确诊病人，怎么也得折腾两天。如果是该省首例病人，还要中国疾控中心复检。</p>
+<p>以北京朋友提供的信息为例。我在1月19日从他处得知北京存在新冠肺炎病人即将确诊，这会是北京的首批确诊病人。我认为没必要为了出风头“抢跑”这一信息。因为我知晓工作程序，知道这个病人已经得到了妥善收治。疾控中心正在进行复核诊断，病人情况根据信息公开流程即将发布。我此时“抢跑”出风头，相当于公鸡把太阳升起归因为自己打鸣的功劳。并且，这个行为会严重影响政府公信力，因为我的“谣言”变成了“预言”。</p>
+<p>另外一种情况就比较复杂了。</p>
+<p>比如说，以林羽医生透露的情况为例。林医生不是急诊、感染等直接收治病人的科室的医生。他作为会诊医生了解到，这些科室存在由于诊断能力瓶颈而无法及时确诊的发热病人，并且他不清楚疑似病人的具体数量。林医生提供给我的神经外科院内感染病人人数比官方公布和该科一位医生在微博上自己透露的略多，并且事发过程存在一定冲突。</p>
+<p>因此，我虽然认可林医生说的“大批发热病人无法及时确诊”，这是诊断能力不足的客观情况导致的，早在武汉限制交通之前即出现耗材不足现象（有其他医护人员的旁证），以及早在钟南山院士透露“人传人”之前就存在“人传人”的明显证据，但是我对他所述事情的细节一直在寻求别的验证通道。这里需要指出，林医生一个多月来一直奋战在抗击疾病的一线，还做了许多份外的工作，他是一位勇士。</p>
+<p>比如，以1月22日上午我得知的一个消息为例。黄冈某医生向同学诉苦，说他的医院有109位发热病人，包括大批医务人员，因为诊断能力瓶颈迟迟无法确诊。当时湖北省领导前来督导工作，“医院将病人转移到民营医院，有藏匿嫌疑”。这个确实“一手”的信息颇让我紧张，为了不引起社会恐慌，导致群众无序对抗政府，我试图动用私人关系与有关部门的同志联系汇报，甚至做出了上访的思想准备。回复我的朋友很有经验：“那位医生最近有没有连续作战，精神压力太大？”我乍一听，心想现在的一线医生谁不是“连续作战，精神压力大”，老兄你打什么官腔？</p>
+<p>我后来得知，当地确有109位病毒性肺炎病人 ，有红头文件说明情况。但是当地经实验室确诊的新冠肺炎病人共有12人，包括一位医护人员。毕竟新冠肺炎和流感等其他病毒性肺炎的表现太像了，工作和精神压力确实会影响医务人员的研判，甚至导致一线医护人员听信流言。那位爆料医生和他的同事们在前来视察的省领导的关心下，获得了一次肺部CT检查，以此排除新冠肺炎。爆料医生1月22日回复我的时侯已经是深夜，他抢救病人一整天，刚刚有机会休息，他同样是一位勇士。</p>
+<p>黄冈的事例让我警惕。幸好有关部门包括国务院之后开展的防疫工作不力线索征集原则是“获得线索，政府查证”。（国务院“互联网+督查”平台面向社会征集有关地方和部门在疫情防控工作中责任落实不到位、防控不力、推诿扯皮、敷衍塞责等问题线索，以及改进和加强防控工作的意见建议。）否则，只要我向有关部门提供的信息被证伪，就需要承担相关责任。幸好我理智的选择官方渠道解决，虽然是通过私人关系反映。假如我“勇敢”的利用网络舆论“倒逼真相”，恐怕春节就该吃“财政饭”了。同时，当前我了解的确诊瓶颈基本是客观原因导致的，主观故意的证据不足。（如果存在主观故意的问题，请朋友们尽快向国务院 “互联网+督查”平台举报。）假如我贸然宣布“存在恶意瞒报”，显然会对社会恐慌情绪火上浇油。</p>
+<p>但是，一线抗击病情的白衣战士还是为我提供了武汉及周边地区的重要情况：</p>
+<p>林医生和一位不幸感染新冠肺炎的医生介绍，根据诊疗规范，疑似病人的标准是武汉旅居史或病人接触史+病毒性肺炎表现，确诊则需要核酸检测。近期发热病人和“大白肺”病毒性肺炎病人由于诊断能力没跟上，优先选择重病人送检。在此需要指出，当前是流感高峰，发热病人和病毒性肺炎病人当中有许多都是其他因素引起的。武汉同济医院专家向媒体表示，他们接诊的发热病人当中一半多是流感，然后还有细菌性感染、感冒，各种不是新病毒造成的发热。诊断能力限制造成医生不能及时判断出哪个病人是新病毒引起的。</p>
+<p>医院病人太多，只能让病重确诊的病人住院，轻症的疑似病人在门诊治疗和观察。这就加剧了公众的恐慌和不满。最近两周，社会的恐慌情绪在加剧，医患冲突累进增加，医护人员的士气受到影响。尤其是1月20日之后，新冠病毒的传染性突然从“有限人传人”升级，主流媒体和新媒体、自媒体纷纷关注，市民的手机接收的大量“一手爆料”，导致了大批恐慌性就医。大批病人蜂拥而至，超过医院接诊能力，带来了医院内交叉感染的危险。</p>
+<p>今冬是流感流行“大年”。前期武汉市各医院发热门诊早就超负荷运行，无法克服医院内交叉感染。武汉市在1月23日启动7家新冠肺炎定点医院，关停了市内其他医院的发热门诊，进一步加剧了病人的过度集中，导致群众“看病难”加剧。</p>
+<p>1月23日，春节长假的第一天，全国各地很多群众都有了闲暇关注网络社交媒体。而网络上到处都是武汉定点医院人满为患、排队病人晕倒在地的视频和图片，甚至出现了“医院内病人尸体无人问津”的谣言横行。那位被新冠肺炎感染的医生是一位转业军人，政治站位很高。他忧心重重的表示，医患双方当前的心理压力都很大，病人情绪失控攻击医护人员的现象在增多，相关的宣传与心理干预不足，他担心武汉的社会秩序。</p>
+<p>这些有价值的信息，我自1月19日以来一直在知乎的新冠肺炎话题下和网友们分享。我呼吁建立分级诊疗制度，通过社区首诊、就近就医，避免一般发热病人向点定医院盲目集中。同时在1月23日晚间把受感染医生担心的情况再次通过朋友向有关人士汇报。当时有关人士回应，目前武汉各医院都布置了公安防暴队伍，可以及时处置就医市民的不理性行为。“七号令”即将发布，将建立社区网络化管理机制，防治工作的重点会导向基层。</p>
+<p>《武汉市新型肺炎防控指挥部通告（第7号）》于1月24日发布。“七号令”提出建立社区网络化管理措施，社区负责排查发热病，就近送社区医疗中心对病情进行筛选、分类。对于需要到发热门诊的病人，各区统一安排车辆送达指定发热门诊就诊，指定发热门诊不得以任何理由拒收病人；对于不需要到发热门诊就诊的病人，由各社区落实在家居家观察，社区负责做好市民居家观察服务工作。尽管朋友们透露，当地各社区的动员速度和动员水平仍然存在差距。但是据武汉当地媒体《长江日报》报道，新措施已经大幅降低了各点定医院的接诊数量。1月25日19时，记者走访的定点医院发热门诊就诊人数减半，市民就医秩序良好。</p>
+<p>后记：</p>
+<p>我至今对新冠病毒丝毫没有紧张感，我家都没有为此买些什么。我联系了医学界的朋友，包括与确诊感染该病的医务人员通电话，经朋友们分析，这个病跟它的冠状病毒“同胞”非典相比，危害性是很弱的。</p>
+<p>已经确诊新冠肺炎一周的医生与我通电话，交谈过程中根本听不出异样，他的情绪乐观，自称“就像得了重感冒”。他表述，身边有许多医务人员近期都出现了发热病情。由于缺少诊断能力，不知道同事们是否感染了新冠病毒，还只是季节性流感，就像当前许多前往医院就诊的发热病人那样。最后，只有病情较重的他向疾控中心送检标本确诊，但是其他同事在家口服药物治疗也都康复了。多位曾感染新冠病毒的医务人员向媒体投书，认为疑似病人和轻症病人在家自我隔离与治疗可行，远好于前往拥挤的医院“升级病毒库”。</p>
+<p>与一线医务人员交流，他们指出，现在是流感等呼吸道疾病的高发期，由于确诊能力存在瓶颈，他们只能优先送检重症病人。因此，他们认为，该病相当数量的病人是没有确诊的轻症病人，并不像非典来势汹汹。与我通电话的老军医患病期间自己走路去CT室拍片子，如果是非典的烈度，发病没多久就该插管使用呼吸机了。</p>
+<p>至于新冠病毒的传染性，国际知名医学刊物《柳叶刀》发表的最初收治的41名新冠肺炎病人的研究论文，认为新冠病毒的基本再生数R0（一个病人在其平均患病期内所传染的人数）是4。非典的基本再生数R0是2~4，流感R0是8，麻疹R0是15。目前公布的唯一“超级感染者”是发生在医疗环境特殊背景下的医院感染。即发生在武汉协和医院神经外科的手术病人传染给11名医务人员的医院感染事件。手术影响病人免疫力，病毒复制水平会增强。术后病人各种体液分泌物增多，这都是感染源，引流、换药等操作都会导致感染。这位病人感染的11位医务人员当中有10人是和病人接触较多的护士，仅感染了1名医生。</p>
+<p>我认为，只要防控措施得当，新型冠状病毒肺炎这个“废物”传染病，应当能够尽早攻克。</p>
+<p>本文系观察者网独家稿件，文章内容纯属作者个人观点，不代表平台观点，未经授权，不得转载，否则将追究法律责任。关注观察者网微信guanchacn，每日阅读趣味文章。</p>
+<h2 id="如何评价武汉市委书记表示自责，称如果早采取严厉的管控措施，结果会比现在好？"><a href="#如何评价武汉市委书记表示自责，称如果早采取严厉的管控措施，结果会比现在好？" class="headerlink" title="如何评价武汉市委书记表示自责，称如果早采取严厉的管控措施，结果会比现在好？"></a>如何评价武汉市委书记表示自责，称如果早采取严厉的管控措施，结果会比现在好？</h2><p>平行宇宙，山南道F4拿到了重启2020的按钮。</p>
+<p>作者：邓铂鋆<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/368888469/answer/1000024938">https://www.zhihu.com/question/368888469/answer/1000024938</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>2020年1月1日，汉京府颁布《关于加强流感防控工作的实施意见》。《意见》指出，2019年以来，本地干旱少雨，流感暴发，各医疗机构发热病人接诊压力非常大，一些老年人和慢性病人因流感导致的肺炎面临生命危险，已经构成公共卫生安全的严重挑战。为了减少流感发病，汉京府决定倡议市民出门戴口罩，取消群众聚集活动，并免费为市民注射流感疫苗。从即日起，分批次为医护人员、中小学幼儿园教师、公交地铁司乘人员、政府窗口办事人员等易感易传人群免费注射流感疫苗，为儿童、中小学生、孕产妇、老年人免费注射流感疫苗，其他市民可以自愿预约注射疫苗。在强制注射流感疫苗减少一般发热病人数量的同时，汉京府强化了当地各主要医院的发热门诊建设，加强医务人员防护水平。</p>
+<p>1月8日，鉴于流感流行水平仍然较高，医疗机构发热门诊就诊人员集中，有院内交叉感染风险，颁布《关于发热病人网格化管理的实施意见》。《意见》要求发热病人必须先和社区网格员联系，在网格员安排下先前往社区诊所就医，根据社区诊所对病情的判断，由社区预约前往大医院发热门诊就诊。此举遭到了群众的不理解和反对，在医疗机构出现了一些无预约病人与医务人员的冲突。很多市民都认为这样做是多此一举：“我就想找同济的专家看看，多排队老子愿意！社区看不了还是要去同济，折腾老百姓啊！我同学的亲戚的同事的朋友上次就让社区诊所误诊了艾滋病，我能相信社区么？”</p>
+<p>1月20日，新冠肺炎如期进入公众视野。2月5日，马道台在接受记者采访时自责：“花了这么多钱，动员了这么多人力防控流感，用意之一就是控制新冠肺炎。然而本地仍然有两百多例新冠肺炎病人，并感染了高级专家组的王教授……”（本时空，很早就报告了医务人员感染的事例，没有见到“广州的二代病人”的钟南山院士仍然及时判断出新冠的传染性。）上峰问责：“2019年贵宝地的大型活动多，财力人力消耗较大。前阵子天天有人告状说你们防治流感是劳民伤财，现在则是告状说你们的流感疫苗接种和网格化管理导致肺炎疫情扩大。请看有关部门采集的网络谣言，攻击注射流感疫苗导致交叉感染的，捏造疫苗被新冠病毒污染的……”</p>
+<p>为官三思。思危：花了这么多钱搞管制措施，危机控制住了，大家不理解这样做的必要性怎么办？思退：我拍的板，到时候啥事没有，问责怎么办？思变：既然大家都不想背锅，那就通过集体决策和请示上级把责任甩出去！集体讨论和请示行文一来一回耽误的时间，那是必（别）要（人）的付（代）出（价）。</p>
+<h2 id="为什么黑人的现代文明成果那么差"><a href="#为什么黑人的现代文明成果那么差" class="headerlink" title="为什么黑人的现代文明成果那么差?"></a>为什么黑人的现代文明成果那么差?</h2><p>饭要一口一口吃，钱要一块一块赚，官要一级一级升，这是最最基本的历史唯物主义对吧！我这边原始部落征伐万把年完成了奴隶主义革命，血流得把黄河都染红了建立的四级复杂酋邦。然后邦国改朝换代千把年完成的封建主义革命，血把长江都染红了建立的大一统王朝。然后又被人撞开国门按在地上摩擦了一百多年完成的民主主义和社会主义革命，血把整个东亚都染红了建立的新中国。建成了之后仍然屁嘛没有，花了不知道多少钱多少资源多少人命完成的工业化，这才勉强走到社会主义初级阶段，民族矛盾，阶级矛盾，整天在tm三个鸡蛋上跳舞，这也就是刚刚摆脱了挨打和挨饿两个问题，每天每夜仍然在持续不断地挨草。然后你昨天还在树下晒几把，今天就跑步进入文明高级阶段？你tm在逗我？？？你这是跑步吗，你这是坐火箭吧？凡事得讲道理啊，饭要一口一口吃，钱要一块一块赚，官要一级一级升，这是最最基本的历史唯物主义对吧！</p>
+<p>作者：寒冰射手曹草草<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/361759738/answer/998491681">https://www.zhihu.com/question/361759738/answer/998491681</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Java/" rel="tag"># Java</a>
+              <a href="/tags/Programming/" rel="tag"># Programming</a>
+              <a href="/tags/Computer/" rel="tag"># Computer</a>
+              <a href="/tags/Science/" rel="tag"># Science</a>
+              <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/01/29/2020-01-29-ncov/" rel="prev" title="23日起武汉城市公交、地铁、轮渡、长途客运暂停，机场、火车站离汉通道暂时关闭，各方该怎样一起渡过难关？">
+                  <i class="fa fa-chevron-left"></i> 23日起武汉城市公交、地铁、轮渡、长途客运暂停，机场、火车站离汉通道暂时关闭，各方该怎样一起渡过难关？
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2020/02/06/2020-02-06-god-and-money/" rel="next" title="基督教如何解释几乎与上帝毫不相干的古中国?">
+                  基督教如何解释几乎与上帝毫不相干的古中国? <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Abraham Xiao</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

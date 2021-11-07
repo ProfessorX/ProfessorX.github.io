@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.yxiao.org","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.8.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<meta name="description" content="卫星通信：利用人造地球卫星作为中继站来转发无线电波，从而实现两个或多个地球站之间的通信。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Satellite Communication">
+<meta property="og:url" content="http://www.yxiao.org/2017/04/20/2017-04-20-satellite-communication/index.html">
+<meta property="og:site_name" content="Masdar Wireless">
+<meta property="og:description" content="卫星通信：利用人造地球卫星作为中继站来转发无线电波，从而实现两个或多个地球站之间的通信。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2017-04-20T10:00:00.000Z">
+<meta property="article:modified_time" content="2021-09-10T03:27:17.787Z">
+<meta property="article:author" content="Abraham Xiao">
+<meta property="article:tag" content="UAV">
+<meta property="article:tag" content="DataLink">
+<meta property="article:tag" content="Communication">
+<meta property="article:tag" content="Satellite">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://www.yxiao.org/2017/04/20/2017-04-20-satellite-communication/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.yxiao.org/2017/04/20/2017-04-20-satellite-communication/","path":"2017/04/20/2017-04-20-satellite-communication/","title":"Satellite Communication"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Satellite Communication | Masdar Wireless</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Masdar Wireless</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Shut Up and Get Rich</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-study"><a href="/study/" rel="section"><i class="fa fa-read fa-fw"></i>study</a></li>
+        <li class="menu-item menu-item-reading"><a href="/reading/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>reading</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#What-is-a-relay-satellite"><span class="nav-number">1.</span> <span class="nav-text">What is a relay satellite?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#What-kind-of-communications-do-NASA-missions-require"><span class="nav-number">2.</span> <span class="nav-text">What kind of communications do NASA missions require?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%AB%E6%98%9F%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F"><span class="nav-number">3.</span> <span class="nav-text">卫星通信方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%B9%E7%82%B9"><span class="nav-number">4.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%AB%E6%98%9F%E9%80%9A%E4%BF%A1%E7%9A%84%E7%BC%BA%E7%82%B9"><span class="nav-number">5.</span> <span class="nav-text">卫星通信的缺点</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Abraham Xiao</p>
+  <div class="site-description" itemprop="description">A personal website with some posts from Zhihu also</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">271</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">410</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.yxiao.org/2017/04/20/2017-04-20-satellite-communication/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Abraham Xiao">
+      <meta itemprop="description" content="A personal website with some posts from Zhihu also">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Masdar Wireless">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Satellite Communication
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2017-04-20 18:00:00" itemprop="dateCreated datePublished" datetime="2017-04-20T18:00:00+08:00">2017-04-20</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-09-10 11:27:17" itemprop="dateModified" datetime="2021-09-10T11:27:17+08:00">2021-09-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Information/" itemprop="url" rel="index"><span itemprop="name">Information</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>卫星通信：利用人造地球卫星作为中继站来转发无线电波，从而实现两个或多个<br>地球站之间的通信。</p>
+<span id="more"></span>
+
+<h2 id="What-is-a-relay-satellite"><a href="#What-is-a-relay-satellite" class="headerlink" title="What is a relay satellite?"></a>What is a relay satellite?</h2><p>Like in a relay race, where runners pass the baton to the next runner<br>to run the next leg of the race, the <strong>Tracking and Data Relay Satellite</strong><br>(TDRS) works similarly with satellite’s information to transfer data<br><strong>between the ground and space</strong>.</p>
+<p>Satellites in orbit cannot pass along their information to the ground<br>stations on Earth if the satellite does not have a clear view of the<br>ground station. Therefore, TDRS serves as a way to pass along the<br>satellite’s information. Nine TDRS sit about 35,400 kilometers (22,000<br>miles) above the Earth and are able to forward information from a<br>satellite until it reaches the appropriate ground station in view, to<br>that TDRS at either White Sands, New Mexico or Guam Island. TDRS can<br>also send information from the ground to the satellite to tell the<br>satellite what to do (take a picture, turn a sensor or off, send<br><strong>stored data back or change its orbit</strong>). TDRS allows NASA to have global<br>coverage of all the satellites-24 hours a day- without having to build<br><strong>extra ground</strong> stations on Earth.</p>
+<blockquote>
+<p>Relay is good. Then use it. It saves us money, it’s more than good.</p>
+</blockquote>
+<h2 id="What-kind-of-communications-do-NASA-missions-require"><a href="#What-kind-of-communications-do-NASA-missions-require" class="headerlink" title="What kind of communications do NASA missions require?"></a>What kind of communications do NASA missions require?</h2><p>NASA missions require <strong>highly reliable</strong> communications, sometimes over<br>long periods of <strong>time</strong> and great <strong>distances</strong>. Deep space operations<br>require <strong>high power</strong> transmitters and very <strong>sensitive</strong> receivers at Earth<br>stations. Because many missions continue working for a number of<br>years, and because there are usually a wide variety of missions<br>on-going at the same time, there is a need to communicate with several<br>spacecraft at any given time. In order to monitor mission progress<br>from launch to completion and to obtain collected information, a<br><strong>global network of Earth stations</strong> is required.</p>
+<p>To satisfy NASA’s communications needs, Space Communications and<br>Navigation (SCaN) operates a sophisticated global radiocommunications<br>infrastructure, consisting of several component networks:</p>
+<ul>
+<li>Deep Space Network (DSN): The DSN is used to support scientific<br><strong>spacecraft</strong>; it provides coverage from low Earth orbit to the edge<br>of the solar system and beyond.</li>
+<li>Space Network (SN): The SN provides tracking and data relay for<br>spacecraft, satellites, and expendable launch vehicles using space<br>and ground segments. It includes the Tracking and Data Relay<br>Satellites (TDRS), which uses communications satellites in<br><strong>geosynchronous orbit</strong> to relay data from spacecraft to <strong>fixed</strong> ground<br>locations; the satellite relays provide <strong>continuous global coverage</strong><br>of Earth orbits from equatorial to highly elliptical orbits.</li>
+<li>Near Earth Network (NEN): The NEN consists of ground stations<br>owned by NASA, commercial entities, and other partners that<br>provide communications and tracking services to missions operating<br>in the near earth region, including Earth-orbiting spacecraft.</li>
+</ul>
+<p>All three SCaN networks utilize the terrestrial wide-area<br>communication services provided by the NASA Integrated Services<br>Network (NISN). The NISN services used for data transfer between each<br>of the three networks and the customer’s mission operations centers<br>underlie nearly allSCaN operations. In this way, NISN can be<br>considered a fourth space communications and navigation infrastructure<br>network, since its’ services are almost a prerequisite for using the<br>three SCaN networks’ services. NISN services are provided through the<br>customer’s agreements with SCaN or can be directly subscribed to by<br>customer missions.</p>
+<blockquote>
+<p>Bandwidth is the portion of the spectrum that a given<br>telecommunications system can use. For example, a system that<br>operates on frequencies between 150 and 200 MHz has a bandwidth of<br>50 megahertz.</p>
+</blockquote>
+<blockquote>
+<p>An important distinction in spectrum technology is the difference<br>between narrowband and broadband. Narrowband signals have a <strong>smaller</strong><br>bandwidth (kilohertz) and are used for limited services such as<br>paging and <strong>low-speed</strong> data transmission. Broadband signals have a<br>large bandwidth (megahertz) and can support many advanced<br>telecommunications services such as high-speed data and video<br>transmission. The precise dividing line between broadband and<br>narrowband is <strong>not always clear</strong>, and <strong>changes as technology<br>evolves</strong>.</p>
+</blockquote>
+<p>二十一世纪什么最贵？人才。Changes as technology evolves—-要以运动的<br>观点看待问题。哲学发展到最后，对神学进行完美结构—-然后呢？该来的迟早<br>还是要来的。</p>
+<p>人造地球卫星根据对无线电信号放大的有无、转发功能，有有源人造地球卫星和<br>无源人造地球卫星之分。由于无源人造地球卫星反射下来的信号太弱<strong>无实用价值</strong>，<br>于是人们致力于研究具有放大、变频转发功能的<strong>有源人造地球卫星</strong>——通信卫星来<br>实现卫星通信。其中绕地球赤道运行的周期与地球自转周期相等的<strong>同步卫星</strong>具有<br>优越性能，利用同步卫星的通信已成为主要的卫星通信方式。不在地球同步轨道<br>上运行的低轨卫星多在卫星移动通信中应用。</p>
+<blockquote>
+<p>需求推动创新！再强调一遍，“有效需求”推动创新。为啥? Human by<br>nature are greedy.没有利益的事情谁TM去干？共产党人吗？。</p>
+</blockquote>
+<p>在地面上用微波接力通通信系统进行的通信，因系视距传播，平均每2500km假设<br>参考电路要经过每跨距约为46km的54次接力转接。如利用通信卫星进行中继，地<br>面距离长达1万多公里的通信，经通信卫星<strong>1跳</strong>即可连通（由地至星，再由星至地<br>为1跳，含两次中继），而电波传输的中继距离约为4万公里。</p>
+<p>卫星在空中起<strong>中继站</strong>的作用，即把地球站发上来的电磁波放大后再反送回另一地<br>球站。地球站则是卫星系统形成的链路。由于静止卫星在赤道上空36000千米，<br>它绕地球一周时间恰好与地球自转一周（23小时56分4秒）一致，从地面看上去<br>如同静止不动一样。三颗相距120度的卫星就能覆盖整个赤道圆周。故卫星通信<br>易于实现越洋和洲际通信。最适合卫星通信的频率是<strong>1一10GHz频段</strong>，即<strong>微波频段</strong>、<br>为了满足越来越多的需求，已开始研究应用新的频段，如12GHz,14GHz,20GHz及<br>30GHz。</p>
+<blockquote>
+<p>超高频、特高频。旧时王谢堂前燕，飞入寻常百姓家。</p>
+</blockquote>
+<p>在<strong>微波频带</strong>，整个通信卫星的工作频带约有<strong>500MHz宽度</strong>，为了便于放大和发射及<br>减少变调干扰，一般在卫星上设置若干个转发器。每个转发器的工作频带宽度为<br><strong>36MHz或72MHz</strong>的卫星通信多采用<strong>频分多址技术</strong>，不同的地球站占用不同的频率，<br>即采用不同的载波。它对于<strong>点对点大容量</strong>的通信比较适合。已逐渐采用时分多址<br>技术，即每一地球站占用同一频带，但占用不同的时隙，它比频分多址有一系列<br>优点，如不会产生互调干扰，不需用上下变频把各地球站信号分开，适合数字通<br>信，可根据业务量的变化按需分配，可采用数字话音插空等新技术，使容量增加<br>5倍。另一种多址技术使码分多址（CDMA），即不同的地球站占用同一频率和同<br>一时间，但有<strong>不同的随机码</strong>来区分不同的地址。它采用了扩展频谱通信技术，具<br>有抗干扰能力强，有较好的保密通信能力，可灵活调度话路等优点。其缺点频<br>谱利用率较低。它比较适合于容量小，分布广，有一定保密要求的系统使用。</p>
+<p>20世纪末或21世纪初，<strong>C和Ku频段将出现拥挤</strong>，FSS将在20GHz～30GHz的Ka频段开<br>发业务，其频率为：</p>
+<pre><code>* 上行（GHz） 29.5～30 带宽500MHz
+* 下行（GHz） 19.7～20.2 带宽500MHz
+</code></pre>
+<h2 id="卫星通信方式"><a href="#卫星通信方式" class="headerlink" title="卫星通信方式"></a>卫星通信方式</h2><p>国内卫星通信方式大体仿效国际卫星通信用C频段和<strong>Ku频段</strong>，也有用<strong>Ka频段</strong>的。<br>一般的TDMA方式为<strong>60Mbit/s以下速率</strong>，还有SS-TDMA和转发器跳频的TDMA方式，<br>有加数字电路复用设备的卫星数字信道（IDR/DCME）方式，也有自适差分脉冲编<br>码的卫星数字信道（IDR/ADPCM）方式。因模拟<strong>频分多址（FDMA）</strong>方式技术成<br>熟，仍有使用。国内范围的以通话为主的稀路由（VISTA）方式用得较多，有单<br>载波单信道/音节压扩频率调制/按需分配多址（SCPC/CFM/DAMA）方式和单载波<br>单信道/4相移相键控/按需分配多址（SCPC/QPSK/DAMA）方式以及较低速率的<br>TDMA方式。甚小天线地球站系统的市场很大，它是以数据传输为主兼有话音传输<br>的星状网，其制式和速率有多种，可供用户选用。国内卫星通信的极化方式一般<br>为线极化，个别也有用圆极化的。</p>
+<h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><ul>
+<li>通信距离远，且费用与通信距离无关。从图16.2中可见，利用<strong>静止卫星</strong>，<br> 最大的通信距离达18100km左右。而且建站费用和运行费用不因通信站之间<br> 的距离远近、两通信站之间<strong>地面上的自然条件恶劣程度</strong>(However,<br> nothing is perfect, nothing.)而变化。这在远距离通信上，比微波接力、<br> 电缆、光缆、短波通信有明显的优势。</li>
+<li>广播方式工作，可以进行<strong>多址通信</strong>。通常，其他类型的通信手段只能实现<br> 点对点通信，而卫星是以广播方式进行工作的，在卫星天线波束覆盖的整<br> 个区域内的<strong>任何一点</strong>(理论上来说是这样的)都可以设置地球站，这些<br> 地球站可共用一颗通信卫星来实现<strong>双边或多边通信</strong>，即进行多址通信。<br> 另外，一颗在轨卫星，相当于在一定区域内铺设了可以到达任何一点的无<br> 数条无形电路（Haskell is the best language?），它为通信网络的组成，<br> 提供了高效率和灵活性。</li>
+<li>通信容量大，适用多种业务传输。卫星通信使用微波频段，可以使用<pre><code>  的频带**很宽**。一般C和Ku频段的卫星带宽可达500～800MHz，而Ka
+  频段可达几个GHz。
+</code></pre>
+</li>
+<li>可以自发自收进行监测。一般，发信端地球站同样可以接收到自己发出的<br> 信号，从而可以监视本站所发消息是否正确，以及传输质量的优劣。</li>
+<li>无缝覆盖能力。利用卫星移动通信，可以不受地理环境、气候条件和时间的<br>限制，建立覆盖全球性的海、陆、空一体化通信系统。 (全球通：喵喵喵？)</li>
+<li>广域<strong>复杂</strong>网络拓扑构成能力。卫星通信的高功率密度与灵活的多点波束能力<br>加上星上交换处理技术，可按优良的价格性能比提供宽广地域范围的点对点<br>与多点对多点的复杂的网络拓扑构成能力。</li>
+<li>安全可靠性。事实证明，在面对抗震救灾或国际海底/光缆的故障时，卫星<br> 通信是一种<strong>无可比拟</strong>的重要通信手段。即使将来有较完善的自愈备份或路<br> 由迂回的陆地光缆及海底光缆网络，明智的网络规划者与设计师还是能够<br> 理解卫星通信作为传输介质应急备份与信息高速公路混合网基本环节的重<br> 要性与必要性。</li>
+</ul>
+<blockquote>
+<p>私有制经济是公有制必要的补充。卫星通信同理，虽然目前看来性价比并<br>不是很高，却是某些应用场景下的，唯一手段。</p>
+</blockquote>
+<h2 id="卫星通信的缺点"><a href="#卫星通信的缺点" class="headerlink" title="卫星通信的缺点"></a>卫星通信的缺点</h2><ul>
+<li>传输时延大</li>
+<li>高纬度地区难以实现卫星通信</li>
+<li>同步轨道的星位是有一点限度的</li>
+<li>太空中的日凌现象和星食现象会中断和影响卫星通信</li>
+<li>卫星发射的成功率,卫星的寿命为几年到十几年.</li>
+</ul>
+<blockquote>
+<p>太空垃圾，卫星杀手怎么办？安理会五大流氓：关我P事。</p>
+</blockquote>
+<p>Reference:<br><a target="_blank" rel="noopener" href="https://www.nasa.gov/directorates/heo/scan/communications/outreach/funfacts/txt_relay_satellite.html">NASA Satellite Communications</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/UAV/" rel="tag"># UAV</a>
+              <a href="/tags/DataLink/" rel="tag"># DataLink</a>
+              <a href="/tags/Communication/" rel="tag"># Communication</a>
+              <a href="/tags/Satellite/" rel="tag"># Satellite</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2017/04/20/2017-04-20-microwave-link.networks/" rel="prev" title="Microwave Link Networks">
+                  <i class="fa fa-chevron-left"></i> Microwave Link Networks
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2017/04/21/2017-04-21-unmanned-aerial-vehicle/" rel="next" title="Unmanned Aerial Vehicles">
+                  Unmanned Aerial Vehicles <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Abraham Xiao</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

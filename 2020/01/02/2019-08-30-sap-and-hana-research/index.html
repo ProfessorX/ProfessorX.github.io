@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.yxiao.org","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.8.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<meta name="description" content="工业互联网，降低成本，提高效率。总是这八个字。 工业互联网的意义在于：系统多做事，员工少做事。而且效率还上去了。  要做好会计分录，首先要理解的是借贷方向，有一句口诀是“有借必有贷，借贷必相等”，就是说每一笔分录都有借方、贷方，而且每个科目的借贷两个方向的总的金额是相等的。  项目实施三部曲：    1. 根据甲方实际情况设计系统中的角色（用于控制用户可用的系统功能点）。    2. 设计系统中的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SPA CRM and Digital Experience">
+<meta property="og:url" content="http://www.yxiao.org/2020/01/02/2019-08-30-sap-and-hana-research/index.html">
+<meta property="og:site_name" content="Masdar Wireless">
+<meta property="og:description" content="工业互联网，降低成本，提高效率。总是这八个字。 工业互联网的意义在于：系统多做事，员工少做事。而且效率还上去了。  要做好会计分录，首先要理解的是借贷方向，有一句口诀是“有借必有贷，借贷必相等”，就是说每一笔分录都有借方、贷方，而且每个科目的借贷两个方向的总的金额是相等的。  项目实施三部曲：    1. 根据甲方实际情况设计系统中的角色（用于控制用户可用的系统功能点）。    2. 设计系统中的">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-01-02T09:00:00.000Z">
+<meta property="article:modified_time" content="2021-09-10T03:27:17.886Z">
+<meta property="article:author" content="Abraham Xiao">
+<meta property="article:tag" content="Management">
+<meta property="article:tag" content="ERP">
+<meta property="article:tag" content="Business">
+<meta property="article:tag" content="SAP">
+<meta property="article:tag" content="HANA">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://www.yxiao.org/2020/01/02/2019-08-30-sap-and-hana-research/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.yxiao.org/2020/01/02/2019-08-30-sap-and-hana-research/","path":"2020/01/02/2019-08-30-sap-and-hana-research/","title":"SPA CRM and Digital Experience"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>SPA CRM and Digital Experience | Masdar Wireless</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Masdar Wireless</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Shut Up and Get Rich</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-study"><a href="/study/" rel="section"><i class="fa fa-read fa-fw"></i>study</a></li>
+        <li class="menu-item menu-item-reading"><a href="/reading/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>reading</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Building-Trust-in-the-Customer-First-Digital-Age"><span class="nav-number">1.</span> <span class="nav-text">Building Trust in the Customer-First Digital Age</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SAP-Marketing-Cloud"><span class="nav-number">2.</span> <span class="nav-text">SAP Marketing Cloud</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SAP-Commerce-Cloud"><span class="nav-number">3.</span> <span class="nav-text">SAP Commerce Cloud</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SAP-Customer-Data-Cloud"><span class="nav-number">4.</span> <span class="nav-text">SAP Customer Data Cloud</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SAP-Sales-Cloud"><span class="nav-number">5.</span> <span class="nav-text">SAP Sales Cloud</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SAP-Service-Cloud"><span class="nav-number">6.</span> <span class="nav-text">SAP Service Cloud</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%91%E8%9D%B6%E4%BA%91%E8%BF%9B%E9%94%80%E5%AD%98"><span class="nav-number">7.</span> <span class="nav-text">金蝶云进销存</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B0%E6%89%8B%E5%AF%BC%E8%88%AA"><span class="nav-number">7.1.</span> <span class="nav-text">新手导航</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%87%E8%B4%AD%E7%AE%A1%E7%90%86"><span class="nav-number">7.2.</span> <span class="nav-text">采购管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%94%80%E5%94%AE%E7%AE%A1%E7%90%86"><span class="nav-number">7.3.</span> <span class="nav-text">销售管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%93%E5%BA%93%E7%AE%A1%E7%90%86"><span class="nav-number">7.4.</span> <span class="nav-text">仓库管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B5%84%E9%87%91%E7%AE%A1%E7%90%86"><span class="nav-number">7.5.</span> <span class="nav-text">资金管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%88%E6%9C%AC%E5%AF%B9%E6%AF%94"><span class="nav-number">7.6.</span> <span class="nav-text">版本对比</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">7.7.</span> <span class="nav-text">系统初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B5%84%E6%96%99"><span class="nav-number">7.8.</span> <span class="nav-text">资料</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%A2%E6%88%B7%E7%AE%A1%E7%90%86"><span class="nav-number">7.9.</span> <span class="nav-text">客户管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%A2%E6%88%B7%E7%AD%89%E7%BA%A7"><span class="nav-number">7.10.</span> <span class="nav-text">客户等级</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB%E5%88%AB%E7%AE%A1%E7%90%86"><span class="nav-number">7.11.</span> <span class="nav-text">类别管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE"><span class="nav-number">7.12.</span> <span class="nav-text">设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%83%E9%99%90%E8%AE%BE%E7%BD%AE"><span class="nav-number">7.13.</span> <span class="nav-text">权限设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E6%8E%88%E6%9D%83"><span class="nav-number">7.14.</span> <span class="nav-text">数据授权</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%91%E9%A2%9D%E6%9D%83%E9%99%90"><span class="nav-number">7.15.</span> <span class="nav-text">金额权限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E8%B4%A6-%E5%8F%8D%E7%BB%93%E8%B4%A6"><span class="nav-number">7.16.</span> <span class="nav-text">结账&#x2F;反结账</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B4%AD%E8%B4%A7%E7%AE%A1%E7%90%86"><span class="nav-number">7.17.</span> <span class="nav-text">购货管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%94%80%E8%B4%A7%E7%AE%A1%E7%90%86"><span class="nav-number">7.18.</span> <span class="nav-text">销货管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%93%E5%BA%93"><span class="nav-number">7.19.</span> <span class="nav-text">仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B0%83%E6%8B%A8%E5%8D%95"><span class="nav-number">7.19.1.</span> <span class="nav-text">调拨单</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%9B%98%E7%82%B9"><span class="nav-number">7.19.2.</span> <span class="nav-text">盘点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BA%8F%E5%88%97%E5%8F%B7%E7%9B%98%E7%82%B9"><span class="nav-number">7.19.3.</span> <span class="nav-text">序列号盘点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E5%85%A5%E5%BA%93"><span class="nav-number">7.19.4.</span> <span class="nav-text">其他入库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E5%87%BA%E5%BA%93"><span class="nav-number">7.19.5.</span> <span class="nav-text">其他出库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%88%90%E6%9C%AC%E8%B0%83%E6%95%B4"><span class="nav-number">7.19.6.</span> <span class="nav-text">成本调整</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%84%E8%A3%85%E6%8B%86%E5%8D%B8"><span class="nav-number">7.19.7.</span> <span class="nav-text">组装拆卸</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B5%84%E9%87%91%E7%AE%A1%E7%90%86-1"><span class="nav-number">7.20.</span> <span class="nav-text">资金管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E6%8D%AE%E9%80%9A%E7%94%A8%E6%93%8D%E4%BD%9C%E8%AF%B4%E6%98%8E"><span class="nav-number">7.21.</span> <span class="nav-text">单据通用操作说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%94%B6%E6%AC%BE%E5%8D%95"><span class="nav-number">7.22.</span> <span class="nav-text">收款单</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%98%E6%AC%BE%E5%8D%95"><span class="nav-number">7.23.</span> <span class="nav-text">付款单</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B8%E9%94%80%E5%8D%95"><span class="nav-number">7.24.</span> <span class="nav-text">核销单</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%87%87%E8%B4%AD%E9%94%80%E5%94%AE%E8%B4%B9%E7%94%A8%E6%B8%85%E5%8D%95"><span class="nav-number">7.24.1.</span> <span class="nav-text">采购销售费用清单</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Abraham Xiao</p>
+  <div class="site-description" itemprop="description">A personal website with some posts from Zhihu also</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">271</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">410</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.yxiao.org/2020/01/02/2019-08-30-sap-and-hana-research/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Abraham Xiao">
+      <meta itemprop="description" content="A personal website with some posts from Zhihu also">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Masdar Wireless">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          SPA CRM and Digital Experience
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-01-02 17:00:00" itemprop="dateCreated datePublished" datetime="2020-01-02T17:00:00+08:00">2020-01-02</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-09-10 11:27:17" itemprop="dateModified" datetime="2021-09-10T11:27:17+08:00">2021-09-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>工业互联网，降低成本，提高效率。总是这八个字。</p>
+<p>工业互联网的意义在于：系统多做事，员工少做事。而且效率还上去了。</p>
+<blockquote>
+<p>要做好会计分录，首先要理解的是借贷方向，有一句口诀是“有借必有贷，借贷必相等”，就是说每一笔分录都有借方、贷方，而且每个科目的借贷两个方向的总的金额是相等的。</p>
+</blockquote>
+<p>项目实施三部曲：<br>    1. 根据甲方实际情况设计系统中的角色（用于控制用户可用的系统功能点）。<br>    2. 设计系统中的数据权限（哪些数据需要授权，哪些不需要进行数据权限控制）。<br>    3. 项目实施。根据甲方的实际情况进行 用户–角色；用户–数据权限的授权。</p>
+<span id="more"></span>
+
+<p>Win in the experience economy by differentiating and growing your business and delivering exceptional customer experiences.</p>
+<p>This overview video introduces you to SAP C/4HANA, our customer experience suite. The video explains how the suite helps you to connect business processes across sales, service, marketing, e-commerce, and customer management to create a trusted and personalized customer journey to win in the experience economy.</p>
+<p>Combining insights from your day-to-day operations (O-data) with customer feedback, sentiments, and intent (X-data) can help you understand what, when, and why things are happening, so you can act in the moment.</p>
+<ul>
+<li>Database</li>
+<li>Chat</li>
+<li>Cart</li>
+<li>Money</li>
+<li>Service</li>
+</ul>
+<h2 id="Building-Trust-in-the-Customer-First-Digital-Age"><a href="#Building-Trust-in-the-Customer-First-Digital-Age" class="headerlink" title="Building Trust in the Customer-First Digital Age"></a>Building Trust in the Customer-First Digital Age</h2><p>(Newsletters v.s. Enterprise Wechat WeWork)</p>
+<ul>
+<li>Slow Onboarding</li>
+<li>Poor User Experience</li>
+<li>Rising Costs</li>
+</ul>
+<h2 id="SAP-Marketing-Cloud"><a href="#SAP-Marketing-Cloud" class="headerlink" title="SAP Marketing Cloud"></a>SAP Marketing Cloud</h2><p>营销云</p>
+<h2 id="SAP-Commerce-Cloud"><a href="#SAP-Commerce-Cloud" class="headerlink" title="SAP Commerce Cloud"></a>SAP Commerce Cloud</h2><p>商务云</p>
+<h2 id="SAP-Customer-Data-Cloud"><a href="#SAP-Customer-Data-Cloud" class="headerlink" title="SAP Customer Data Cloud"></a>SAP Customer Data Cloud</h2><p>客户数据云</p>
+<h2 id="SAP-Sales-Cloud"><a href="#SAP-Sales-Cloud" class="headerlink" title="SAP Sales Cloud"></a>SAP Sales Cloud</h2><h2 id="SAP-Service-Cloud"><a href="#SAP-Service-Cloud" class="headerlink" title="SAP Service Cloud"></a>SAP Service Cloud</h2><h2 id="金蝶云进销存"><a href="#金蝶云进销存" class="headerlink" title="金蝶云进销存"></a>金蝶云进销存</h2><h3 id="新手导航"><a href="#新手导航" class="headerlink" title="新手导航"></a>新手导航</h3><ul>
+<li>系统参数：根据您的业务现状进行个性化设置</li>
+<li>录入仓库：商品需要有存放的位置</li>
+<li>录入商品：商品信息及对应的期初信息（即开账前仓库中的商品数量）</li>
+<li>录入客户：录销售单时需要选择客户</li>
+<li>录供应商：录采购单时需要选择供应商</li>
+<li>开始使用：点击开始后会重新登录</li>
+</ul>
+<h3 id="采购管理"><a href="#采购管理" class="headerlink" title="采购管理"></a>采购管理</h3><ul>
+<li>完整的购货流程：订单 现购 赊购</li>
+<li>以销定购：根据客户订单情况安排采购计划，真正实现零库存管理</li>
+<li>快捷初始化：所有基础资料及期初数据一张表格一次导入</li>
+</ul>
+<h3 id="销售管理"><a href="#销售管理" class="headerlink" title="销售管理"></a>销售管理</h3><ul>
+<li>完整的销货流程：能够完成订单、现销、赊销等所有销货业务</li>
+<li>快速开单：支持表格式录入，批量选择商品开单</li>
+<li>即时毛利计算：随时查看销售收入、成本及毛利，即时调整销售策略</li>
+</ul>
+<h3 id="仓库管理"><a href="#仓库管理" class="headerlink" title="仓库管理"></a>仓库管理</h3><ul>
+<li>完整的仓储流程：能够完成其他入库、其他出库、盘点、成本调整等所有仓存业务</li>
+<li>库存盘点：方便的库存盘点功能，表格式录入，操作简便；盘点结果自动生成盘盈盘亏单据，再多商品<br>也不怕</li>
+<li>丰富的业务报表：对<strong>采购、销售、仓存状况、订单状态跟踪、收付款、应收账龄、资金收支</strong>等进行了全面、多<br>维度的分析展示</li>
+</ul>
+<h3 id="资金管理"><a href="#资金管理" class="headerlink" title="资金管理"></a>资金管理</h3><ul>
+<li>完整的资金流程：能够完成收款、付款、往来账款核销等所有资金业务</li>
+<li>财务集成：可与云会计灵活对接，直接将云进销存业务数据生成凭证</li>
+<li>数据授权：灵活的权限分配机制，通过数据授权，让员工只能操作自己负责的客户数据和仓库，有效实<br>现数据分离</li>
+</ul>
+<h3 id="版本对比"><a href="#版本对比" class="headerlink" title="版本对比"></a>版本对比</h3><ul>
+<li>采购销售业务往来款逐笔核销，往来对账更清晰</li>
+<li>功能点权限控制</li>
+<li>金额权限控制（可控制子账号不能看到金额字段，如采购价格，销售价格等）</li>
+<li>数据权限控制（可控制子账号只能使用自己的客户、供应商、仓库、结算账户数据）</li>
+<li>移动平均法，先进先出法，分仓计算成本</li>
+<li>同一商品，可按多种计量单位统计数量</li>
+<li>序列号管理：适用于数码行业，可独立跟踪每台设备的出入库情况</li>
+<li>批次保质期管理：适用于食品医药行业，可管理每一批次商品的生产日期、保质期，避免商品过期带来损失</li>
+</ul>
+<h3 id="系统初始化"><a href="#系统初始化" class="headerlink" title="系统初始化"></a>系统初始化</h3><ul>
+<li>注意：创建账套时，启用时间可以根据实际需要修改，您可将启用时间调前。账套一旦启用，系统会按照启用时间记录期初，且不允许录入启用时间之前的单据。</li>
+</ul>
+<p>初始化是指系统启用时，企业根据自身进销存业务的需要先完成的背景设置。包括员工权限<br>和系统参数的设置，及期初数据（仓库、商品、客户、供应商）的录入。<br>创建账套后进入系统新手导航：<br>1、 新增同事：每个同事需要一个云账号；<br>2、 分配权限：给新增的同事进行统一授权；<br>3、 系统参数：根据企业现状进行个性化设置；<br>4、 录入仓库：首先录入仓库，才能存放商品；<br>5、 录入商品：录入商品基础信息和期初数量；<br>6、 录入客户：销售单需要选择客户；<br>7、 录入供应商：采购单需要选择供应商；<br>8、 开始使用：新手导航完成后，会重新登陆系统，开始业务处理。<br>详细介绍请参看“权限设置”、“系统参数”和“基础资料”章节。</p>
+<h3 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h3><ul>
+<li>商品管理</li>
+<li>零售价 批发价 VIP会员价 折扣率1 折扣率2</li>
+<li>库存预警</li>
+<li>期初设置：仓库 属性 期初数量 单位成本 期初总价</li>
+<li>条码管理：支持商品条码管理，录业务单据时可通过扫描枪扫码选择商品。</li>
+<li>多计量单位：勾选“多单位”，则可设置商品的多计量单位组及其换算关系（如图：1 箱=6 件）；在日常业务中，采购和销售的单位往往不同，系统也可以设置销售单中自动携带的“首选出库单位”（如：件）和采购单中自动携带的“首选入库单位”（如：箱）；</li>
+<li>多辅助属性：启用后允许商品新增服装、尺码等<strong>自定义属性</strong> 2、在新增商品界面，勾选“设置商品辅助属性”，进行“属性分类”（如：颜色）的设置和属性值（如：蓝色）的勾选；3、建立属性值的不同组合，系统自动生成属性编号（必录项，也可修改），不同的属性商品可设置不同的价格</li>
+<li>序列号管理：点击【设置】→【系统参数】→【功能参数】，勾选“启用序列号”；在新增商品界面，勾选“启用序列号管理”； 在业务单据界面，可以录入该商品的序列号，比如销货单，指定销售 002 序列号的剃须刀。</li>
+<li>批次保质期管理：2、 在新增商品界面勾选“启用批次保质期管理”，注意可以只启用批次不启用保质期，也可以同时启用批次和保质期，如需启用保质期，在保质期天数字段录入天数即可； （保质期可以视为某种意义上的库龄。保质期做减法，库龄做加法。</li>
+<li>在业务单据，可以录入该商品的批次、生产日期，比如在销货单中指定销售 12451 批次生产日期为 2016-10-25 的保质期天数为 60 日的牛奶。</li>
+<li>期初库存：1、录入期初库存数量时，须同时录入仓库才能保存；录入单位成本，则必须录入期初数量，系统会自动计算期初总价；若有多个仓库，可每个仓库录入一条期初库存。2、含属性商品，务必先设置辅助属性，再按商品属性录入期初库存。</li>
+<li>供应商管理：期初应付款与期初预付款的差额，<strong>为最终的期初往来余额</strong>。若期初应付款大于期初预付款，<strong>差额作为应付款进行核销</strong>；若期初应付款小于期初预付款，差额作为<strong>预付款进行核销</strong>。若录入多个联系人，需指定一个联系人为“首要联系人”，在打印单据时，若要打印联系人字段，取首要联系人打印。</li>
+</ul>
+<h3 id="客户管理"><a href="#客户管理" class="headerlink" title="客户管理"></a>客户管理</h3><ul>
+<li>客户编号</li>
+<li>客户名称</li>
+<li>客户类别</li>
+<li>客户等级</li>
+<li>余额日期</li>
+<li><strong>期初</strong>应收款</li>
+<li><strong>期初</strong>预收款</li>
+</ul>
+<h3 id="客户等级"><a href="#客户等级" class="headerlink" title="客户等级"></a>客户等级</h3><ul>
+<li>零售客户</li>
+<li>批发客户</li>
+<li>会员客户</li>
+<li>折扣等级1</li>
+<li>折扣等级2</li>
+</ul>
+<h3 id="类别管理"><a href="#类别管理" class="headerlink" title="类别管理"></a>类别管理</h3><ul>
+<li>类别包括：客户类别、供应商类别、商品类别、支出类别和收入类别，可用多页签切换。其中，商品类别支持多级类别，其余仅支持一级类别。下边以商品类别为例。（按道理都可以支持多级类别，跟业务功能后台使用的<strong>数据结构</strong>有关系。</li>
+<li>结算方式：结算方式用于录入资金类单据（收款单、付款单等）。</li>
+<li>【资料】→【客户物料编码】，点击新增，选择客户和商品，录入客户的物料编码。客户物料编码用于：同一个商品，企业和客户有不同的编码规则；因此需要记录客户对该商品的编码，在打印销货单时，方便给客户查看和对照。</li>
+</ul>
+<h3 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h3><ul>
+<li>本位币：系统启用时设置，不能修改。</li>
+<li>存货计价方法：默认为“移动平均法”；基础版不能选择存货计价方法，标准版还可以选择为“先进先出法”。</li>
+<li>是否检查负库存：不勾选表示录入出库单据时不检查库存是否充足；勾选后，在做销售单，其他出库单，调拨单等出库类单据时，若库存不足，单据不允许保存。</li>
+<li>1、 启用审核：基础版不提供此设置，标准版中若勾选了启用审核，则购货单，销货单需审核后才会增加或减少库存。</li>
+</ul>
+<h3 id="权限设置"><a href="#权限设置" class="headerlink" title="权限设置"></a>权限设置</h3><p>权限设置是管理员对子用户所能使用的功能和所能访问的数据进行设置，分为功能授权和数据授权两种授权方式。</p>
+<p>功能授权是指：管理员授予子用户使用系统部分功能的权力。对子用户“启用授权”，点击“功能授权”的编辑按钮，进行设置。</p>
+<p>系统提供：按功能模块授权（横向）、按操作组授权（纵向），用户也可自行勾选具体操作权限。</p>
+<p><strong>为方便用户快捷设置，用户也可按员工角色（销售、采购、仓管、财务）快速授权，或者套用其他同事权限。</strong></p>
+<h3 id="数据授权"><a href="#数据授权" class="headerlink" title="数据授权"></a>数据授权</h3><ol>
+<li><p>数据授权是指：管理员授予子用户访问<strong>系统部分数据</strong>的权力。对子用户“启用授权”，点击“数据授权”的编辑按钮，进行设置。</p>
+</li>
+<li><p>系统提供仓库、客户、供应商、制单人 4 种数据权限；</p>
+</li>
+<li><p>例 1：某销售人员只负责自己的客户，不允许其看到其他客户的单据，则需<strong>“启用”</strong>客户的数据权限，并<strong>勾选部分客户</strong>。</p>
+</li>
+<li><p>例 2：某仓管只负责深圳、北京、上海三地仓库，不允许其看到其他仓库的数据，则需“启用”仓库的数据权限，<strong>并勾选上述仓库</strong>，如图所示。</p>
+</li>
+</ol>
+<h3 id="金额权限"><a href="#金额权限" class="headerlink" title="金额权限"></a>金额权限</h3><p>1、 企业管理者一般对商品金额数据管控较严格，金额查看权限主要用于管理员工是否有权限查看商品相关金额；</p>
+<p>2、 例 1：某销售员只负责销售开单，不允许其查看<strong>商品成本及采购金额</strong>，则须设置此项，仅勾选 “出库金额”；</p>
+<p>3、 例 2：某仓管只负责商品出入库，并不涉及金额结算，则无需勾选“金额查看”权限。</p>
+<h3 id="结账-反结账"><a href="#结账-反结账" class="headerlink" title="结账/反结账"></a>结账/反结账</h3><p>【设置】→【结账/反结账】，系统提供结账功能，结账日期之前的<strong>数据只能查询，不能修改。</strong>若需要修改，则须进行<strong>反结账</strong>操作。</p>
+<h3 id="购货管理"><a href="#购货管理" class="headerlink" title="购货管理"></a>购货管理</h3><p>（一）购货订单与购货单的区别<br>1、用户根据企业的商品采购需求，编制购货订单，购货订单只是<strong>采购计划</strong>，不影响<br>实际库存数量。购货订单在整个采购业务系统中是一个可选流程，但采购订单同时也是一<br>个重要的流程，可以快速、有效地<strong>跟踪订单业务</strong>的执行情况。</p>
+<p>2、当所采购商品到达仓库时，可以<strong>根据购货订单生成购货单</strong>，如果是<strong>现金采购</strong>则将相应的付款金额填写到购货单的“本次付款”，如果是<strong>赊购</strong>则不需要在购货单中填写“本次付款”，在<strong>实际付款</strong>时录入“付款单”。</p>
+<p>3、购货订单在整个采购业务系统中是一个可选流程，<strong>可以不录入购货订单</strong>，直接在购货入库时录入<strong>购货单</strong>，但购货订单同时也是一个重要的流程，可以快速、有效地跟踪订单业务的执行情况，比如订单是否已审核，<strong>货物分批入库</strong>状态等。</p>
+<p>（二）购货订单→购货单→付款</p>
+<p>1、当企业内部管理需要有购货订单流程时，在制定采购计划或签定采购合同后，填写“购货订单”；若系统启用了审核，则订单<strong>需要审核后才生效</strong>。</p>
+<p>2、按订单采购的货物到达仓库后，在订单界面点击“生成购货单”，根据<strong>实际到货数量</strong>修改购货单中的数量，购货单保存或审核（若启用了审核）后，仓库库存数量增加。</p>
+<p>3、若购货时已同时付款，在购货单界面填写“本次付款”及结算账户；若未付款，不需填写这两个字段，购货金额计入“应付账款”，在以后实际付款日，填写“付款单”，<strong>并选择对应的购货单进行核销应付账款</strong>。</p>
+<p>4、当购货订单无需后续处理了，可以在点击&lt;购货订单&gt;后面的&lt;查询&gt;，进入&lt;购货订单记录&gt;,点击“关闭”按钮。</p>
+<p>（三）以销定购流程<br>有一些企业不事先采购货物存放在仓库，而是根据接收到的销售订单，来制定采购计划，采<br>购入库后再给客户发货；采用以销定购流程，可以帮助企业降低库存成本。</p>
+<p>以销定购流程：录入销货订单——在以销定购看板中，可以看到该订单中商品的需求量——<br>生成购货订单——购货入库——销货出库<br>以销定购的销货订单出库扣减库存规则：<br>在以销定购前出库的，扣减库存余额数量；在以销定购之后出库的，先扣减已采购的数量，<br>再扣减库存余额数量<br>以销定购的待采购数量计算规则：</p>
+<p>待采购数量=以销定购前订单未出库数量-以销定购数量；</p>
+<p>待采购数量不能大于订单未出库数量，若按以上公式计算出的待采购数量大于订单未出库数<br>量，则取未出库数量</p>
+<p>举例 1：<br>1，若销售订单 A 数量为 10，直接通过看板进行采购，则待采购数量为 10；<br>2，若销售订单 A 采购 4 后，待采购数量为（10-4=6）<br>3，若销售订单 A 采购后，又生成销货单出库 1，则出库的 1 个商品，视为将采购回的商品<br>进行销售，则待采购数量仍为（10-4=6）<br>4，若销售订单 A 继续出库 5，视为将采购回的商品先出库完（4-1=3）个，在将库存商品<br>出库 2 个，此时订单未出库数量为 4，则待采购数量为 4</p>
+<p>（四）购货类单据录入通用说明</p>
+<p>表头信息:</p>
+<p>供应商 购货类单据中，供应商字段为必录项；点击供应商字段框的…，打<br>开供应商选择框，选择需要填入的供应商；也可以直接录入供应商<br>编号或名称进行模糊搜索；供应商资料需要先在“资料——供应商<br>管理”中维护好，若需要输入不存在的供应商，在模糊搜索下拉选<br>项最下方，点击“新增供应商”，也可以即时增加供应商信息。<br>被禁用的供应商不能被选择到。</p>
+<p>单据日期 单据日期为必录项，默认为当天日期，可以修改为其他日期。若是<br>修改单据日期为当天以后日期，在保存单据时会提示是否保存。若<br>修改单据日期为系统启用日期或结账日期之前，单据不允许保存。</p>
+<p>单据编号 单据编号为必录项，系统自动生成，且不能修改。（将提供单据编<br>码规则自定义和手工录入编号）</p>
+<p>表体信息：</p>
+<p> 商品 购货类单据中，商品字段为必录项；点击商品字段框的“选择”，<br>打开商品选择框，选择需要填入的商品（可一次选择多个商品）；<br>也可以直接录入商品编号、名称、规格型号进行模糊搜索；商品资<br>料需要先在“资料——商品管理”中维护好，若需要输入不存在的<br>商品，在模糊搜索下拉选项最下方，点击“新增商品”，也可以即<br>时增加商品信息。<br>被禁用的商品不能被选择到。</p>
+<p>商品条码 条码字段为商品的辅助字段。在商品资料中，若没有填写该商品的<br>条码，则不显示且不能输入；若某商品设置了条码，则携带出该条<br>码，且不能修改；</p>
+<p>属性 属性字段为商品的辅助字段。若该商品启用的辅助属性管理，需要<br>在商品资料中，录入该商品的辅助属性值，在单据的一条分录中，<br>选择商品后，必须且只能选择一个辅助属性值。若商品没有启用辅<br>助属性管理，该字段不能录入。</p>
+<p>单位 单位字段为商品的辅助字段。在商品资料中，若没有填写该商品的<br>单位，则不显示且不能输入；若某商品设置了单计量单位，则携带<br>出该单位，且不能修改；若某商品设置了多计量单位组，会携带出<br>单位组，可选择为单位组中的任意一个单位。</p>
+<p>仓库 仓库为必录项。需要先在“资料——仓库管理”中维护好。</p>
+<p>数量 数量为必录项，且只能为正数；根据系统参数中设置的小数位数显<br>示。</p>
+<p>购货单价 为不含税单价；根据系统参数中设置的小数位数显示。若系统参数<br>中，设置了商品中的预设价格为不含税价格，则在选择商品后，商<br>品资料中录入的预计采购价，被携带入该字段。</p>
+<p>含税单价 为含税单价；根据系统参数中设置的小数位数显示。若系统参数中，<br>设置了商品中的预设价格为含税价格，则在选择商品后，商品资料<br>中录入的预计采购价，被携带入该字段。</p>
+<p>折扣率 商品打折的折扣率，用来计算折扣额。若本张单据中所有商品均为<br>相同的折扣，可点击列头的“批量”一次性填充。</p>
+<p>折扣额 数量<em>购货单价</em>折扣率=折扣额；该折扣为商品打折，不计入采购<br>成本；</p>
+<p>金额 该金额为不含税购货金额；=数量*购货单价-折扣额</p>
+<p>税率 自动携带出供应商资料中录入的税率；</p>
+<p>税额 =金额*税率。根据不含税购货金额和税率计算出税额。</p>
+<p>价税合计 购货金额+税额</p>
+<p>备注 手工录入。</p>
+<p>关联销货订单号 <strong>仅购货订单中有该列。</strong>若购货订单是由以销定购看板生成的，则自<br>动填入对应的销货订单号。不能修改。</p>
+<p>表尾信息:<br>优惠率 手工输入，用来计算付款优惠；</p>
+<p>付款优惠 优惠金额通常用来处理付款抹零，不减少采购成本</p>
+<p> 优惠后金额 =价税合计-付款优惠。为实际需要支付的购货款。</p>
+<p>本次付款 在购货时支付的货款；</p>
+<p>在系统参数中开启“自动填充结算金额”后，该字段自动填入“优<br>惠后金额”的值；建议同时设置一个默认结算账户，在现购时，就<br>不需要手工录入这两个字段</p>
+<p>结算账户 货款从现金或银行账户支付；若填写了本次付款，则必须选择结算<br>账户。在“资料——账户管理”录入本公司的常用账户。</p>
+<p>本次欠款 本次购货未支付的货款。**=优惠后金额-本次付款**</p>
+<p>采购费用 记录购货过程中发生的费用，<strong>比如运费，搬运费等</strong>；可选择是否分摊入商品采购成本；此处只用于记录，可在“采购费用清单”查看，并支付。</p>
+<p>（五）购货类单据操作通用说明<br>工具栏：<br>保存并新增 保存当前单据，同时更新为一张新的单据界面；<br>保存 保存当前单据，并保持为当前单据界面。<br>复制 复制当前单据的内容，产生一张新的单据。<br>删除 在单据记录中，可点击操作列的“删除”图标，删除某张单据；也可<br>以勾选一张或多张单据，点击工具栏的“删除”进行批量删除。<br>打印 在单据编辑界面，单据保存后，“打印”按钮显示出来；可打印单张单<br>据。<br>在单据记录中，勾选单据后，点击“打印”，可批量打印；<br>在打印选择框，可选择 PDF 打印或套打打印两种方式；PDF 打印为固<br>定格式，不能修改；套打打印可选择预设的模版进行打印，若对模版<br>有其他需求，可申请打印设计服务；<br>单据记录中的“打印次数”列，记录某张单据被打印次数；在打印选<br>择框中，点击一次打印按钮，则记录为打印了一次。</p>
+<p> 审核反审核 若系统参数——功能参数中启用了审核，才会出现<strong>审核、反审核按钮</strong>；<br>购货订单审核后，才能生成购货单；<br>购货单审核后，数据才会生效，商品库存数量、资金、应付账款等数据才会相应发生变化。<br>单据审核后不能修改，若需要修改，请点击“反审核”；</p>
+<p>若本单据<strong>有其他关联单据</strong>，比如订单已生成购货单，<strong>购货单已在付款单中被核销等等</strong>，则不能反审核单据。</p>
+<p>导入导出 将单据数据导出到 Excel 表格；<br>点导入，下载导入模版，可在模版中填好数据后，一次性导入多张单<br>据。在导入前，请先仔细阅读导入说明。<br>导出 SN 若本单据中，有商品是进行序列号管理的，则在数量字段，必须录入<br>同等个数的序列号。可以将本单据中所有序列号导出到 excel 表格。<br>插入分录 在表体操作区点+为在本条分录的上方插入一条分录；在最后一条分录<br>的最后一个可编辑输入框按 ENTER，在最后增加一条分录。<br>删除分录 在表体操作区点删除图标，将本条分录删除；<br> 前单后单查询 从单据记录中打开一张单据，可以看到向左向右的两个小三角图标，<br>点击切换到上一张单据或下一张单据。<br>扫描枪录入 若商品管理中已维护了商品条码，点击该按钮切换到条码输入模式，<br>扫描条码录入商品。<br>列设置 可以设置表格列的隐藏和显示<br>历史单据 可以点击查看之前录入过的单据<br>操作日志 记录本张单据的首次录制时间，录单人，审核时间，审核人，最后一<br>次修改时间，最后一次修改人。</p>
+<p>（六）购货类报表<br>操作说明：<br>查询 点“查询”按条件把查询结果显示在下面列表中<br>联查 单击某行，可打开下级报表或单据；<br>打印 查询出的数据清单打印<br>导出 查询出的数据清单导出到 EXCEL 表格<br>列设置 可以设置表格列的隐藏和显示</p>
+<p>采购订单跟踪表<br>仅标准版提供订单跟踪表。实时跟踪一段时期内所有购货订单的详细信息，可选择全部供应<br>商、商品和三种订单入库状态进行统计，也可挑选部分供应商、商品、状态进行统计。<br>报表展示格式提供按商品排列和按单据排列两种。按商品排列指不同订单中的相同商品的分<br>录排在一起，按单据排列指一张单据中的所有分录排在一起。<br>采购订单跟踪表中，商品信息，订单日期，订单编号，供应商，预计交货日期，数量，单价，<br>采购额直接取订单中的信息；状态为每条分录数量的入库状态；未入库数量和未入库金额未<br>订单中的数量和金额减去已生成购货单的数量和金额；最后入库日期为订单最后一次生成的<br>购货单的日期。</p>
+<p>采购明细表<br>统计一段时期内商品的采购明细情况，可选择全部供应商、商品、仓库进行统计，也可挑选<br>部分供应商、商品、仓库进行统计。<br>报表展示按单据日期正序排列，同一张单据中的分录顺序与单据界面分录一致。采购明细表<br>中的列头字段的取值，均直接取购货单中对应列的值。单价为单据中的“不含税单价”。<br>查询条件及界面：<br>A.供应商、商品、仓库如果空表示查找所有供应商、商品、仓库，可分别打开各选择框进行<br>勾选；<br>B.日期范围可以任意调整；<br>C.可选择部分供应商，商品，仓库进行组合查询</p>
+<p>采购汇总表（按商品）<br>统计一段时期内对某商品进行采购的汇总数，可选择全部供应商、商品、仓库进行统计，也<br>可挑选部分供应商、商品、仓库进行统计。<br>报表展示按商品编号正序排序。采购汇总表中的列头字段的取值，均直接取购货单中同一商<br>品分录对应列的值的合计。单价为汇总表中的“采购金额÷基本数量”。<br>查询条件及界面：<br>A.供应商、商品、仓库如果空表示查找所有供应商、商品、仓库，可分别打开各选择框进行<br>勾选；<br>B.日期范围可以任意调整；<br>C.可选择部分供应商，商品，仓库进行组合查询<br>D. 当账套启用了辅助属性管理时，查询条件增加“显示辅助属性”，勾选后管理辅助属性的<br>商品，会同时显示商品及各属性的采购汇总数据。</p>
+<p>采购汇总表（按供应商）<br>统计一段时期内向某供应商进行采购的汇总数，可选择全部供应商、商品、仓库进行统计，<br>也可挑选部分供应商、商品、仓库进行统计。<br>报表展示按商品编号正序排序。采购汇总表中的列头字段的取值，均直接取购货单中同一商<br>品分录对应列的值的合计。单价为汇总表中的“采购金额÷基本数量”。</p>
+<p>采购付款一览表<br>统计一段时期内产生的采购单据的付款跟踪记录。</p>
+<p>报表展示按供应商编号正序排序，同一供应商的采购单按单据日期排序。</p>
+<p>报表中的采购金额，优惠金额，优惠后金额，本次付款直接取采购单中对应字段的数值；<br>若有付款单或核销单对该采购单核销应付款，则本次付款为这张付款单或核销单中对该采购<br>单核销的金额；应付款余额为这张采购单总应付金额被付款或被核销后余额。</p>
+<h3 id="销货管理"><a href="#销货管理" class="headerlink" title="销货管理"></a>销货管理</h3><p>（一）销货订单与销货单的区别<br>1、销售人员根据销售合同或订单，编制&lt;销货订单&gt;，销货订单只是销售计划，不影响<br>实际库存数量。&lt;销货订单&gt;可以快速、有效地跟踪订单业务的出库情况。</p>
+<p>2、当所销售出去商品出库后，可以根据&lt;销货订单&gt;生成&lt;销货单&gt;，如果是客户现付则<br>将相应的收款金额填写到销货单的“本次收款”，如果是<strong>赊销</strong>则无需填写销货单的“本次收<br>款”，在实际付款时录入“收款单”。</p>
+<p>3、&lt;销货订单&gt;在整个销售业务系统中是一个可选流程，可以不录销货订单，直接在销<br>货出库时录入&lt;销货单&gt;。</p>
+<p>（二）销货订单→销货单→收款</p>
+<p>1、当企业内部管理需要有&lt;销货订单&gt;流程时，在制定销售计划或签定销售合同后，填写“销<br>货订单”；若系统启用了审核，则订单需要审核后才生效。<br>2、按订单销售的货物出库后，在订单界面点击“生成销货单”，根据实际出货数量修改销货<br>单中的数量，销货单保存或审核（若启用了审核）后，仓库库存数量减少。<br>3、若销货时同时付款，在销货单界面填写“本次收款”及结算账户；若未收款，无需填写<br>这两个字段，销货金额计入“应收账款”，在以后实际收款日，填写“收款单”，并选择对应<br>的销货单进行核销应收账款。</p>
+<p>（三）销货单→退货</p>
+<p>1、当销售的货物发生退货后：如果按照源销货单退货，查询到需要退货的销货单，点击“生<br>成退货单”；<strong>若不是按照源销货单退货</strong>，可以在菜单&lt;销货&gt;—&lt;销货退货单&gt;中，录入退回的<br>商品、数量等。</p>
+<p>2、若销货退货同时退款，在销货退货单界面填写<strong>“本次退款”及结算账户</strong>；若未退款，无<br>需填写这两个字段，<strong>销货退款金额会抵扣“应收账款”</strong>，在以后实际收款日，填写“收款单”，<br>并选择对应的销货退货单进行<strong>核销应收账款</strong>。</p>
+<blockquote>
+<p>本次退款，结算账户。</p>
+</blockquote>
+<p>（四）原始单据</p>
+<p>销售凭证、合同、收据可以扫描成图片格式上传到进销存中，点击右上角【导入附件】按钮<br>导入，导入后也可以选择图片。点击【生成销货单】，系统会将选中的图片作为附件，和改<br>销货单关联，方便查看。</p>
+<p>（五）销售开票<br>选择需要开票的销货单，填写<strong>“本次开票金额”</strong>，在下方区域填写“发票号”、“发票抬头”，<br>点击【确定】即可标记开票，目前暂不允许开票金额大于未开票金额。<br>点击右上角【开票记录】，可以查询历史开票记录。</p>
+<p>（四）销货类单据录入通用说明</p>
+<blockquote>
+<p>表头、表中、表尾三块分割非常科学合理。Magic number 3 LOL.</p>
+</blockquote>
+<p>表头信息:<br>客户 销货类单据中，供应商字段为必录项；点击供应商字段框的…，打<br>开供应商选择框，选择需要填入的供应商；也可以直接录入供应商<br>编号或名称进行模糊搜索；供应商资料需要先在“资料——供应商<br>管理”中维护好，若需要输入不存在的供应商，在模糊搜索下拉选<br>项最下方，点击“新增供应商”，也可以即时增加供应商信息。<br>被禁用的供应商不能被选择到。</p>
+<p>单据日期 单据日期为必录项，默认为当天日期，可以修改为其他日期。若是<br>修改单据日期为当天以后日期，在保存单据时会提示是否保存。若<br>修改单据日期为系统启用日期或结账日期之前，单据不允许保存。<br>销售人员 选择单据所属的职员，下拉选择，可以点击“新增职员”添加新职<br>员。<br>修改原始单据 点击后查看或者重新选择与之关联原始单据<br>单据编号 单据编号为必录项，系统自动生成，且不能修改。（将提供单据编<br>码规则自定义和手工录入编号）</p>
+<p>表体信息：<br> 商品 销货类单据中，商品字段为必录项；点击商品字段框的“选择”，<br>打开商品选择框，选择需要填入的商品（可一次选择多个商品）；<br>也可以直接录入商品编号、名称、规格型号进行模糊搜索；商品资<br>料需要先在“资料——商品管理”中维护好，若需要输入不存在的<br>商品，在模糊搜索下拉选项最下方，点击“新增商品”，也可以即<br>时增加商品信息。<br>被禁用的商品不能被选择到。<br>商品条码 条码字段为商品的辅助字段。在商品资料中，若没有填写该商品的<br>条码，则不显示且不能输入；若某商品设置了条码，则携带出该条<br>码，且不能修改；<br>属性 属性字段为商品的辅助字段。若该商品启用的辅助属性管理，需要<br>在商品资料中，录入该商品的辅助属性值，在单据的一条分录中，<br>选择商品后，必须且只能选择一个辅助属性值。若商品没有启用辅<br>助属性管理，该字段不能录入。<br>单位 单位字段为商品的辅助字段。在商品资料中，若没有填写该商品的<br>单位，则不显示且不能输入；若某商品设置了单计量单位，则携带<br>出该单位，且不能修改；若某商品设置了多计量单位组，会携带出<br>单位组，可选择为单位组中的任意一个单位。<br>仓库 仓库为必录项。需要先在“资料——仓库管理”中维护好。<br>数量 数量为必录项，且只能为正数；根据系统参数中设置的小数位数显<br>示。<br>销货单价 为不含税单价；根据系统参数中设置的小数位数显示。销售单价可<br>以根据单据所选客户的等级，来自动携带商品管理中对应的预设价<br>格。（例：VIP 客户对应取 VIP 会员价）<br>含税单价 为含税单价；根据系统参数中设置的小数位数显示。若系统参数中，<br>设置了商品中的预设价格为含税价格，则在选择商品后，会携带商<br>品管理维护的、该客户等级对应的商品价格策略。<br>折扣率 商品打折的折扣率，用来计算折扣额。若本张单据中所有商品均为<br>相同的折扣，可点击列头的“批量”一次性填充。<br>折扣额 数量<em>销货单价</em>折扣率=折扣额；该折扣为商品打折，不计入销售<br>成本；<br>金额 该金额为不含税销货金额；=数量<em>销货单价-折扣额。<br>税率 自动携带系统参数中录入的税率；系统参数不启用就不显示。<br>税额 =金额</em>税率。根据不含税销货金额和税率计算出税额。<br>价税合计 销货金额+税额</p>
+<p>销售订单跟踪表</p>
+<p>仅标准版提供订单跟踪表。实时跟踪一段时期内所有销货订单的详细信息，<strong>可选择全部客户、<br>商品和三种订单入库状态进行统计，也可挑选部分客户、商品、状态进行统计</strong>。</p>
+<p>报表展示格式提供按商品排列和按单据排列两种。按商品排列指不同订单中的相同商品的分<br>录排在一起，<strong>按单据排列指一张单据中的所有分录排在一起</strong>。</p>
+<p>销货订单跟踪表中，商品信息，订单日期，订单编号，客户，预计交货日期，数量，单价，<br>销售额直接取订单中的信息；状态为每条分录数量的出库状态；未出库数量和未出库金额未<br>订单中的数量和金额减去已生成销货单的数量和金额；最后出库日期为订单最后一次生成的<br>销货单的日期。</p>
+<p>销售明细表</p>
+<p>统计一段时期内商品的销售明细情况，可选择全部客户、商品、仓库进行统计，也可挑选部<br>分客户、商品、仓库进行统计。<br>报表展示按单据日期正序排列，同一张单据中的分录顺序与单据界面分录一致。<br>当不勾选“计算毛利”时，销售明细表中的列头字段的取值，均直接取销货单中对应列的值，<br>单价为单据中的“不含税单价”，销售收入对应单据中的“金额”列。</p>
+<p>当勾选“计算毛利”时，报表增加<strong>单位成本、销售成本、销售毛利、毛利率四列</strong>；单位成本<br>为根据存货计价方法计算出的这条分录商品的出库成本，销售成本为销售数量×单位成本，<br>销售毛利为销售收入-销售成本，毛利率为销售毛利÷销售收入。</p>
+<ul>
+<li>单位成本</li>
+<li>销售成本</li>
+<li>销售毛利</li>
+<li>毛利率 （小学一年级数学题 LOL</li>
+</ul>
+<p>销售收款一览表</p>
+<p>统计一段时期内产生的销售单据的收款跟踪记录。</p>
+<p>报表展示按客户编号正序排序，同一客户的销货单按单据日期排序。<br>报表中的销售金额，优惠金额，优惠后金额，客户承担费用，本次收款直接取销货单中对应<br>字段的数值；<br>若有收款单或核销单对该销货单核销应付款，则本次付款为这张收款单或核销单中对该销货<br>单核销的金额；应收款余额为这张销货单总应收金额被收款或被核销后余额；回款率为这张<br>销售单的本次收款合计÷（优惠后金额+客户承担费用）</p>
+<p>往来单位欠款表</p>
+<p><strong>统计客户的应收款余额，供应商额应付款余额。</strong></p>
+<p>应收款余额为客户的“应收账款合计-预收账款合计”；应付款余额为供应商的“应付账款合<br>计-预付账款合计”</p>
+<p>销售利润表</p>
+<p>统计一段时期内产生的销售单据的收款跟踪记录。<br>报表展示按单据日期正序排序，同一天的销货单按单据编号排序。<br>数量，单价，含税单价，折扣额，销售收入，税额，价税合计：来源于销货单和退货单的表<br>体分录对应字段的合计，其中销售收入对应的是“金额”列。（基础版和没有启用税金的标<br>准版，没有含税单价，税额，价税合计列）<br>销售成本：为这张销售单所有商品的出库成本合计； 销售毛利：销售收入-销售成本;；优<br>惠后毛利：销售毛利-优惠金额<br>优惠金额，优惠后金额，客户承担费用，整单备注：来源于销货单和退货单表尾对应字段。<br>应收金额：优惠后金额+客户承担费用<br>已收款金额：整张销售单已收款金额，包括在销售单中及时收款和通过收款单、核销单抵扣<br>的金额</p>
+<h3 id="仓库"><a href="#仓库" class="headerlink" title="仓库"></a>仓库</h3><h4 id="调拨单"><a href="#调拨单" class="headerlink" title="调拨单"></a>调拨单</h4><p>1、 【仓库】→【调拨单】，可将商品从一个仓库调入另一个仓库；若启用了审核，则审核<br>后同时扣减商品在调出仓库的数量，增加商品在调入仓库的数量。<br>2、 调出仓库：可自动携带商品信息中设置的“首选仓库”，可批量设置；调入仓库：可批<br>量设置。<br>3、 点击“历史单据”，可以查看历史的调拨记录；也可从【调拨单】→“查询”进入。<br>4、 可以按条件查找已保存的所有调拨单，支持按照单据编号，备注和日期范围进行单据查<br>找；在“高级搜索”中，可按仓库查找。<br>5、 批量打印当前列表中已勾选的单据。可选择已预设的模板打印，也可以申请设计自定义<br>模板。</p>
+<h4 id="盘点"><a href="#盘点" class="headerlink" title="盘点"></a>盘点</h4><p>盘点功能是将系统中的商品数量与盘点出的仓库中实际存放的数量进行对比，并调整一致。<br>1、 【仓库】→【盘点】，盘点日期默认为当天，可修改；选择仓库和商品类别，也可输入<br>指定商品编号，若均为空则默认查询所有仓库中所有商品的系统库存。<br>2、 手工录入“盘点库存”：在“盘点库存”中录入实际库存数量，若与系统库存数量不一<br>致，则自动显示盘盈盘亏数量：系统库存&lt;实际库存，盘盈为正；系统库存&gt;实际库存，<br>盘亏为负。<br>3、 “导入盘点库存”：适用于盘点库存时，没有电脑或平板在身边；用户须“导出系统库<br>存”（下载 EXCEL 表格），打印系统库存，并填写 EXCEL 表格中的实际库存列，然后导入<br>到系统中。<br>4、 盘点完成后，“生成盘点单据”，自动产生盘盈盘亏单；也可以直接手工录入其他入库→<br>盘盈，其他出库→盘亏，调整库存数量。</p>
+<h4 id="序列号盘点"><a href="#序列号盘点" class="headerlink" title="序列号盘点"></a>序列号盘点</h4><p>1、 【仓库】→【序列号盘点】，只有当系统参数中启用了序列号管理时，才显示该功能。<br>2、 点击某序列号商品实际库存列的“SN”标记，弹出“序列号盘点”界面。<br>3、 输入盘点出的实际库存序列号后，自动与系统中的序列号进行匹配，得出盘点结果。<br>4、 盘点结束后，点击“生成盘点单据”，会将盘盈或盘亏的序列号自动填入生成的盘点单<br>据中。</p>
+<h4 id="其他入库"><a href="#其他入库" class="headerlink" title="其他入库"></a>其他入库</h4><p>1、 【仓库】→【其他入库】：选择业务类别→录入商品→录入数量→录入入库单价→录入<br>仓库→保存或保存并新增。<br>2、 其他入库单用于处理购货之外的增加商品库存的业务，比如盘盈，借入，接受捐赠等等。<br>3、 其他入库单保存后，商品的库存数量及成本增加。<br>4、 【仓库】→【其他入库】→【查询】，可按照单据编号，供应商名称，备注和日期范围<br>进行单据查找；在“高级搜索”中，可按仓库和业务类型查找。<br>5、 修改、删除：选中一笔单据可以修改、删除；<br>6、 审核：批量当前列表中已勾选的单据；</p>
+<h4 id="其他出库"><a href="#其他出库" class="headerlink" title="其他出库"></a>其他出库</h4><p>1、 【仓库】→【其他出库】：选择业务类别→录入商品→录入数量→录入仓库→保存或保<br>存并新增。<br>2、 其他出库单用于处理销货之外的减少商品库存的业务，比如盘亏，借出，领用材料等等。<br>3、 单据中的“出库单位成本”及“出库成本”不能录入，当单据保存后，会根据存货计价<br>方法计算出此时的出库单位成本，并填入单据中。<br>4、 其他出库单保存后，商品的库存数量及成本减少。<br>5、 【仓库】→【其他出库】→【查询】，与其他入库功能类似，不再赘述。</p>
+<h4 id="成本调整"><a href="#成本调整" class="headerlink" title="成本调整"></a>成本调整</h4><p>1、 【仓库】→【成本调整单】：选择商品→录入调整金额→录入仓库→保存。<br>2、 成本调整单用于修改商品的<strong>结存成本</strong>。调整金额为正数时，该商品的结存总成本增加，<br>调整金额为负数是，该商品的结存总成本减少。</p>
+<h4 id="组装拆卸"><a href="#组装拆卸" class="headerlink" title="组装拆卸"></a>组装拆卸</h4><p>组装拆卸单用于简单的加工业，用于记录有组装、拆卸业务的商品出入库情况和成本核算。</p>
+<p>组装单<br>1、 在【商品管理】中新增组合商品和所需的子商品；<br>2、 在组装单中，选择要入库的组合商品和要出库的子商品，录入组装费用，点击 “保存”；<br>3、 保存后，系统根据存货计价方法自动核算子商品的出库成本；<br>4、 组合件的入库成本=子件出库成本合计+组装费用。</p>
+<p>拆卸单<br>1、 在拆卸单中，选择要出库的组合商品和要入库的子商品，录入拆卸费用，点击 “保存”；<br>2、 保存后，系统根据“费用分摊” 规则自动核算子商品的入库成本；<br>3、 费用分摊举例：子件成本合计为 12，<strong>权数比为 2:1</strong>；<br>拆卸单保存后，<strong>自动将组件成本 10</strong>，按 2:1 分配到子件 A 和 B 中，<br>分摊后的入库成本为，A：6.67, B：3.33。</p>
+<h3 id="资金管理-1"><a href="#资金管理-1" class="headerlink" title="资金管理"></a>资金管理</h3><p>常见流程介绍<br>（一） 预收业务</p>
+<p>预收是指在销售过程中<strong>客户先交钱，后完成交易的销售业务</strong>，适用于面向企业的预收交易销<br>售业务。</p>
+<p>1、负责资金记录的出纳人员对客户以<strong>定金或其他用途提供的资金</strong>，可以在收款单中记<br>录这部分金额；<br>2、<strong>仓管人员进行发货并填写销货单</strong>，销货单确认即表示应收款项确立；<br>3、财务人员在核销单中选择<strong>预收冲应收来进行预收款和应收款项的对冲</strong>。</p>
+<blockquote>
+<p>财务人员 核销 选择预冲应收</p>
+</blockquote>
+<p>（二）应收业务</p>
+<p>应收是指在销售过程中和客户<strong>先办理赊销发票</strong>，待款到后完成交易的销售业务，适用于面向<br>企业的到款交易销售业务<br>1、仓管人员根据销货订单生成或手工录入销货单；<br>2、财务人员根据已确认的销货单<strong>记录应收款项</strong>；<br>3、财务人员在收款单中<strong>选择源单来收取应收款项</strong>。</p>
+<p>（三）退款业务<br>退款是指在销售过程中由于客户预付款后取消、变更订单或退货后需要退款的销售业务，分<br>为预收款退款、退货退款两种情形。</p>
+<p>1、 出纳人员根据客户预付款或月结付款记录手工录入收款单；<br>2、 销售人员根据客户要求取消销货订单或减少了订货数量；或仓管人员根据客户退货单生<br>成销货退货单；<br>3、 出纳人员根据销货退货单生成收款单（负数）或手工录入收款单（负数）。<br>预付业务、应付业务、应付退款业务与预收业务、应收业务、退款业务类似，不再详述。</p>
+<h3 id="单据通用操作说明"><a href="#单据通用操作说明" class="headerlink" title="单据通用操作说明"></a>单据通用操作说明</h3><p>（一）资金类单据录入通用说明<br>表头信息:<br>销货单位/客户 必录项；点击销货单位/客户字段框的…，打开销货单位/客户选择<br>框，选择需要填入的销货单位/客户；也可以直接录入销货单位/客<br>户编号或名称进行模糊搜索；销货单位/客户资料需要先在“资料—<br>—客户管理”中维护好，若需要输入不存在的销货单位/客户，在模<br>糊搜索下拉选项最下方，点击“新增客户”，也可以即时增加销货<br>单位/客户信息。<br>被禁用的客户不能被选择到。<br>购货单位/供应商 必录项；点击购货单位/供应商字段框的…，打开购货单位/供应商<br>选择框，选择需要填入的购货单位/供应商；也可以直接录入购货单<br>位/供应商编号或名称进行模糊搜索；购货单位/供应商资料需要先<br>在“资料——供应商管理”中维护好，若需要输入不存在的购货单<br>位/供应商，在模糊搜索下拉选项最下方，点击“新增供应商”，也<br>可以即时增加购货单位/供应商信息。<br>被禁用的供应商不能被选择到。</p>
+<p>单据日期 必录项，默认为系统日期，可以修改但必须大于等于最近结账日期。<br>单据编号 必录项，系统自动生成，且不能修改。（将提供单据编码规则自定<br>义和手工录入编号）<br>总欠款 显示截至当前日期的客户欠款余额，取客户对账单或应收账款明细<br>账的余额信息。<br>收款人 下拉选择，取自资料-职员管理的职员信息。<br>付款人 下拉选择，取自资料-职员管理的职员信息。</p>
+<p>表体信息：<br> 收款金额/付款金<br>额/金额<br>金额，手工录入。<br>收入类别/支出类<br>别<br>下拉选择，取自资料-收入类别或资料-支出类别。<br>转入账户 必录项，下拉选择，取自资料-账户管理的账号信息。<br>转出账户 必录项，下拉选择，取自资料-账户管理的账号信息。<br>结算账户 必录项，下拉选择，取自资料-账户管理的账号信息。<br>结算方式 下拉选择，取自资料-结算方式。<br>结算号 字符串，手工录入。<br>备注 字符串，手工录入，对分录行收付款业务的辅助说明。<br>源单编码 单据上的单据编码。<br>业务类别 所选单据的业务类别，如期初余额等<br>单据日期 单据上的单据日期。<br>单据金额 单据上的本次欠款金额。<br>已核销金额 <strong>累计已收款或付款的金额。</strong><br>未核销金额 <strong>单据金额-已核销金额。</strong><br>本次核销金额 手工录入，必须小于等于未核销金额。</p>
+<p>表尾信息:<br>结算账户 必录项，下拉选择，取自资料-账户管理的账号信息。<br>本次预收款 收款金额大于本次核销金额的部分款项<br>本次预付款 付款金额大于本次核销金额的部分款项<br>收款金额 金额，合计数。<br> 付款金额 金额，手工录入。<br>整单折扣 金额，手工录入，对收款或付款进行抹零或坏账计提。<br>备注 字符串，手工录入，对收付款业务的辅助说明。</p>
+<h3 id="收款单"><a href="#收款单" class="headerlink" title="收款单"></a>收款单</h3><p>收款单是向客户<strong>收取商品赊销货款或预收货款的业务行为</strong>，此单据可处理<strong>企业销售收款、销售预收款、销售退款</strong>等收款业务，收款单还可以处理一张销货单分次收款，或一张收款单同时处理几张销货单的业务。</p>
+<p>点击资金-收款单，新增收款单。</p>
+<p>（一） 收款单制单说明<br>销货单位（<em>）<br> 通过客户编码、名称、联系人、拼音等检索录入，或者选择销货单位框的…查找按钮选<br>择录入，选择源单收款时必须首先录入销货单位。<br>总欠款<br> 显示客户的最新欠款金额，包括以后日期的审核单据，在单据保存重新打开后会自动刷<br>新。<br>收款人<br> 出纳或业务员，取自资料-职员管理的职员信息。<br>单据日期（</em>）<br> 默认系统当前日期，可以修改，但不允许小于最近结账日期。<br>单据编码（<em>）<br> 系统自动生成，不会填补断号，依次递增。<br>结算账户（</em>）<br> 现金或银行账号，取自资料-账户管理的账号信息。<br>收款金额（*）<br> 手工录入。<br>结算方式<br> 电汇、信汇、支票等，取自资料-结算方式的结算方式信息。<br>结算号<br> 银行流水号或票据号码，手工录入。<br>备注<br> 辅助说明，手工录入。<br>选择源单：<br>源单编号：所选单据的单据编码。<br>业务类别：所选单据的业务类别。<br>单据日期：所选单据的单据日期。</p>
+<p>（二） 收款单操作说明</p>
+<p>整单折扣<br>对整个收款单的<strong>抹零及坏账处理简化功能</strong>，<strong>实际收款金额=收款金额 x 整单折扣。</strong><br>批量审核、反审核、删除<br> 进入收款单记录界面，通过复选框单选、多选、全选所需批量操作的收款单，然后点击<br>审核、反审核、删除，注意所选单据的状态要保持一致，如批量反审核需所选单据在审核状<br>态。</p>
+<p>（三） 收款单查询<br> 点击收款单-历史单据查询或资金-收款单-查询，进入收款单记录界面，默认显示当前月<br>份截至到系统日期的所有收款单。</p>
+<h3 id="付款单"><a href="#付款单" class="headerlink" title="付款单"></a>付款单</h3><p>付款单是向购货单位<strong>支付商品赊购货款或预付货款</strong>的业务行为，此单据可处理<strong>企业采购付款、采购预付款、采购退款</strong>等付款业务。付款单的制单、操作说明同收款单基本一致，不再详细说明。</p>
+<h3 id="核销单"><a href="#核销单" class="headerlink" title="核销单"></a>核销单</h3><p>核销单是用来处理预收业务、预付业务及其他一些无资金收支的<strong>往来款项抵消</strong>的业务单据，该功能只有标准版才提供。</p>
+<p>单据金额，已核销金额，未核销金额，本次核销金额</p>
+<p>业务类型</p>
+<ul>
+<li><p>预收冲应收：用于处理预收业务，收款单与销货单、销货退货单进行核销。</p>
+</li>
+<li><p>预付冲应付：用于处理预付业务，付款单与购货单、购货退货单进行核销。</p>
+</li>
+<li><p>应收冲应付：用于处理三角债务或同一个往来单位既是供应商又是客户的情况，销货单、<br>销货退货单与购货单、购货退货单进行核销。</p>
+</li>
+<li><p>应收转应收：用于处理三角债务或客户改名或关联客户的情况，销货单、销货退货单与<br>销货单、销货退货单进行核销。</p>
+</li>
+<li><p>应付转应付：用于处理三角债务或供应商改名或关联供应商的情况，购货单、购货退货<br>单与购货单、购货退货单进行核销。</p>
+</li>
+</ul>
+<p>其他收入单</p>
+<p>其他收入单是向客户<strong>收取非购销业务产生的款项的业务行为</strong>，如租赁费、水电费、等。</p>
+<p>收入类别<br>按款项的性质设置，如劳务费、保证金、代垫款项等。<br>金额与收款金额<br> 金额是按收入类别分类合计，收款金额按结算账户详列，表体的金额合计必须等于表尾<br>的收款金额。</p>
+<p>其他支出单<br>其他支出单是向供应商<strong>支付非购销业务产生的款项的业务行为</strong>，如定金、押金等。</p>
+<h4 id="采购销售费用清单"><a href="#采购销售费用清单" class="headerlink" title="采购销售费用清单"></a>采购销售费用清单</h4><p>采购销售费用清单是由<strong>购货单的采购费用</strong>字段和<strong>销货单的销售费用</strong>字段自动产生的费用记<br>录，只提供查询、支付费用功能，源单号对应的购货单或销货单删除时会自动删除采购销售<br>费用清单里面的记录，但不删除由采购销售费用清单关联生成的其他支出单，因为其他支出<br>单是已经支付给供应商的款项，影响现金银行报表。</p>
+<p>关联关系</p>
+<p><strong>上游：购货单或销货单，关注源单号。</strong><br><strong>下游：其他支出单，关注其他支出单编号。</strong><br>支付费用<br>勾选未付款或部分付款的费用记录，点击支付费用，自动生成其他支出单。</p>
+<p>资金转账单<br>资金转账单是用来处理公司内部资金转账、存现、提现的业务单据。<br>转出账户和转入账户为必录项，同属于结算账户，转出账户与转入账户不能相同。</p>
+<p>资金报表<br>资金管理模块的报表合集，主要跟资金有关，包括现金银行报表、应付账款明细表及供应商<br>对账单、应收账款明细表及客户对账单、其他收支明细表、利润表。<br>现金银行报表<br>现金银行报表用于查询各银行账户及现金的收入、支出及结余情况，可以按客户、供应商、<br>结算账户、收付款人查询。</p>
+<p>应付账款明细表<br>应付账款明细表用于查询供应商的往来情况，勾选不显示无欠款供应商将不显示余额为零的<br>供应商往来（即使该供应商有购货、付款等业务明细），该报表可以同时显示多个供应商的<br>应付账款明细情况。</p>
+<p>应收账款明细表<br>应收账款明细表用于查询客户的往来情况，勾选不显示无欠款客户将不显示余额为零的客户<br>往来（即使该客户有购货、付款等业务明细），该报表可以显示多个客户的应收账款明细情<br>况。</p>
+<p>客户对账单<br>客户对账单是统计客户每一笔销售业务的销售金额、优惠金额、客户承担费用、应收金额、<br>实际收款金额、应收款余额信息的综合报表，只能按单个客户过滤，勾选“是否显示商品明<br>细”将显示销货单、销货退货单的商品明细信息。</p>
+<p>供应商对账单<br>供应商对账单是统计供应商每一笔采购业务的采购金额、优惠金额、应付金额、实际付款金<br>额、应付款余额信息的综合报表，只能按单个供应商过滤，勾选“是否显示商品明细”将显<br>示购货单、购货退货单的商品明细信息。</p>
+<p>其他收支明细表<br>其他收支明细表是统计其他收入、其他支出的报表，可以按日期、备注、收支类别过滤。</p>
+<p>利润表<br>利润表是按照业务维度出具的统计企业主营业务、其他业务的收入、成本、利润情况的综合<br>报表，不同于云会计的利润表，仅限于给未使用云会计或者未关联云会计的云进销存用户使<br>用。<br>利润表分两部分，主营业务及其他业务，各项目计算公式如下：<br>（1） 净利润=主营业务利润（11）+其他业务利润（20）<br>（2） 主营业务利润=销售收入（2）-销售优惠金额（3）-收款折扣（4）+销售成本（6）-<br>购货优惠金额（7）-付款折扣（8）+盘盈盘亏（10）<br>（3） 其他业务利润=其他收入（15）-其他支出（17）<br>利润表项目取数规则如下：<br>（1） 销售收入，取销货单、销货退货单折扣后的金额合计（表体）<br>（2） 销售优惠金额，取销货单、销货退货单的收款优惠合计（表尾）<br>（3） 收款折扣，取收款单的整单折扣（表尾）<br>（4） 销售成本，取销售汇总表（按商品）的销售成本合计<br>（5） 购货优惠金额，取购货单、购货退货单的付款优惠合计（表尾）<br>（6） 付款折扣，取付款单的整单折扣（表尾）<br>（7） 盘盈盘亏，取商品收发汇总表的盘盈成本合计-盘亏成本合计<br>（8） 其他收入，取其他收支明细表的收入合计<br>（9） 其他支出，取其他收支明细表的支出合计<br>（10） 其中项，为对其他收入、其他支出的明细项</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Management/" rel="tag"># Management</a>
+              <a href="/tags/ERP/" rel="tag"># ERP</a>
+              <a href="/tags/Business/" rel="tag"># Business</a>
+              <a href="/tags/SAP/" rel="tag"># SAP</a>
+              <a href="/tags/HANA/" rel="tag"># HANA</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2019/12/30/2019-12-30-ping-an-technology-lay-off/" rel="prev" title="习近平发表二〇二〇年新年贺词：让我们只争朝夕，不负韶华">
+                  <i class="fa fa-chevron-left"></i> 习近平发表二〇二〇年新年贺词：让我们只争朝夕，不负韶华
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2020/01/05/2020-01-05-xcmg-2019-semi-year-report/" rel="next" title="XCMG 2019 Semi-Annual Report Research (Excerpt)">
+                  XCMG 2019 Semi-Annual Report Research (Excerpt) <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Abraham Xiao</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

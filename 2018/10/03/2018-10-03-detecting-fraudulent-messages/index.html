@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.yxiao.org","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.8.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<meta name="description" content="This project aims to build a smartphone app that can automaticallydetect deceptive text messages (such as “You have won a free flightto Dubai!! Claim it on etihad.com.xyz”) as well as raise theawarene">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Detecting Fraudulent Messages with Strong Privacy Protection">
+<meta property="og:url" content="http://www.yxiao.org/2018/10/03/2018-10-03-detecting-fraudulent-messages/index.html">
+<meta property="og:site_name" content="Masdar Wireless">
+<meta property="og:description" content="This project aims to build a smartphone app that can automaticallydetect deceptive text messages (such as “You have won a free flightto Dubai!! Claim it on etihad.com.xyz”) as well as raise theawarene">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2018-10-03T06:00:00.000Z">
+<meta property="article:modified_time" content="2021-09-10T03:27:17.813Z">
+<meta property="article:author" content="Abraham Xiao">
+<meta property="article:tag" content="Data">
+<meta property="article:tag" content="Security">
+<meta property="article:tag" content="Privacy">
+<meta property="article:tag" content="Fraudulent">
+<meta property="article:tag" content="BigData">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://www.yxiao.org/2018/10/03/2018-10-03-detecting-fraudulent-messages/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.yxiao.org/2018/10/03/2018-10-03-detecting-fraudulent-messages/","path":"2018/10/03/2018-10-03-detecting-fraudulent-messages/","title":"Detecting Fraudulent Messages with Strong Privacy Protection"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Detecting Fraudulent Messages with Strong Privacy Protection | Masdar Wireless</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Masdar Wireless</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Shut Up and Get Rich</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-study"><a href="/study/" rel="section"><i class="fa fa-read fa-fw"></i>study</a></li>
+        <li class="menu-item menu-item-reading"><a href="/reading/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>reading</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Header-Information"><span class="nav-number">1.</span> <span class="nav-text">Header Information</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Proposal-Description"><span class="nav-number">2.</span> <span class="nav-text">Proposal Description</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Research-Area-Keywords"><span class="nav-number">3.</span> <span class="nav-text">Research Area Keywords</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Institution"><span class="nav-number">4.</span> <span class="nav-text">Institution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Review-and-Notes-on-Prof-Yin-Yang%E2%80%99s-Research"><span class="nav-number">5.</span> <span class="nav-text">Review and Notes on Prof. Yin Yang’s Research</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Key-Abilities-To-Master"><span class="nav-number">6.</span> <span class="nav-text">Key Abilities To Master</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Abraham Xiao</p>
+  <div class="site-description" itemprop="description">A personal website with some posts from Zhihu also</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">271</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">410</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.yxiao.org/2018/10/03/2018-10-03-detecting-fraudulent-messages/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Abraham Xiao">
+      <meta itemprop="description" content="A personal website with some posts from Zhihu also">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Masdar Wireless">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Detecting Fraudulent Messages with Strong Privacy Protection
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2018-10-03 14:00:00" itemprop="dateCreated datePublished" datetime="2018-10-03T14:00:00+08:00">2018-10-03</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-09-10 11:27:17" itemprop="dateModified" datetime="2021-09-10T11:27:17+08:00">2021-09-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Technology/" itemprop="url" rel="index"><span itemprop="name">Technology</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>This project aims to build a smartphone app that can automatically<br>detect deceptive text messages (such as “You have won a free flight<br>to Dubai!! Claim it on etihad.com.xyz”) as well as raise the<br>awareness of vulnerable customers who have increased the risk of<br>falling into such traps. A flood of such messages may lead to a sudden<br>burst of network traffic, which burdens the network infrastructure of<br>the mobile operator, such as Ooredoo, our main industrial partner and<br>co-funding provider. Further, vulnerable customers can become victims<br>of such an attack, which often end up to be a fraud case.</p>
+<span id="more"></span>
+
+<h2 id="Header-Information"><a href="#Header-Information" class="headerlink" title="Header Information"></a>Header Information</h2><p>Proposal Number:<br>NPRP10-0208-170408<br>Program Cycle:<br>NPRP 10<br>Submitting Institution Name:<br>Hamad Bin Khalifa University<br>Project Status:<br>Award Active<br>Start Date:<br>07 Jul 2018<br>Lead Investigator:<br>Dr. Yin Yang<br>Project Duration:<br>3 Year(s)<br>End Date:<br>07 Jul 2021<br>SubmissionType:<br>New<br>Proposal Title:<br>Detecting Fraudulent Messages with Strong Privacy Protection</p>
+<h2 id="Proposal-Description"><a href="#Proposal-Description" class="headerlink" title="Proposal Description"></a>Proposal Description</h2><p>This project aims to build a smartphone app that can automatically<br>detect deceptive text messages (such as “You have won a free flight<br>to Dubai!! Claim it on etihad.com.xyz”) as well as raise the<br>awareness of vulnerable customers who have increased the risk of<br>falling into such traps. A flood of such messages may lead to a sudden<br>burst of network traffic, which burdens the network infrastructure of<br>the mobile operator, such as Ooredoo, our main industrial partner and<br>co-funding provider. Further, vulnerable customers can become victims<br>of such an attack, which often end up to be a fraud case. However, it<br>is not easy to determine whether a text message is authentic or not on<br>a single device. As an anecdotal evidence, in 2015 a scientist at HBKU<br>received a seemingly fake SMS notification about winning a lucky draw<br>for two business-class flights to Istanbul, and that message turned<br>out to be genuine: the scientist and his wife happily claimed the<br>award from QNB, a major bank in Qatar, and spent a nice weekend in<br>Istanbul. In addition, senders of fraudulent messages often adjust<br>their behavior in an effort to defeat AI-based fraud detectors,<br>especially lightweight ones running on a mobile device. Deceptive text<br>messages can be more accurately recognized if we can detect that it is<br>sent to a large number of users simultaneously. To do so, we need to<br>collect and combine information from multiple users; this, however,<br>will probably raise privacy concerns as users do not want to reveal<br>the contents of their text messages. Note that although the mobile<br>operator (Ooredoo in this project) possesses the content of certain<br>types of text messages such as SMSes, it has no access to contents in<br>other messaging services such as Whatsapp, which encrypts messages<br>during transmission. Further, SMSes are highly sensitive data, and are<br>rarely accessed even inside Ooredoo, in order to protect customers’<br>privacy. This project proposes a novel solution based on local<br>differential privacy technology. In particular, this solution does not<br>collect sensitive personal information such as users’ exact text<br>contents, and yet it is capable of analyzing the authenticity of a<br>message through users’ collaborative efforts. For instance, each user<br>may send to a server randomized versions of n-grams from its text<br>messages. An n-gram is a sequence of n characters extracted from a<br>piece of text: for instance, 3-grams for the message “Dubai” include<br>“Dub”, “uba” and “bai”. If common n-grams are reported from<br>multiple users, it is likely that a text message containing many such<br>n-grams was broadcast to these users. This information, in combination<br>with analysis based on modern natural language processing techniques<br>such as deep learning, can be used to more accurately predict whether<br>a text message is fraudulent or authentic. Simultaneously, we plan to<br>analyze Ooredoo’s data records and interview customers who filed<br>complaints about fraudulent messages, which helps us identify<br>vulnerable customers which could be victims of deceptive messages. For<br>instance, customers of a certain segment (such as seniors) may be more<br>susceptible to text message fraud. By gathering customers’ smartphone<br>usage data (such as on-screen behavior, phone and text records) and<br>cross-referencing with complaints related to deceptive messages, we<br>can profile each user and assess her or his vulnerability to deceptive<br>text messages. Such profiling and assessment can help Ooredoo run<br>targeted awareness campaigns to specific groups of vulnerable<br>customers. In addition, the app can also incorporate relevant parts of<br>Qatar’s recently announced data privacy law, and educate users about<br>their rights. The proposed differential privacy technology can be<br>applied to eliminate privacy concerns in the user profiling and<br>vulnerability assessment activities. The proposed project thus aims to<br>build a client-side mobile app and server-side data analytic tools<br>with a high technological readiness level, and evaluate the system in<br>Ooredoo’s operational environment. Once the proposed system is<br>validated, it can be provided as a free service to Ooredoo’s<br>customers, which will improve Ooredoo’s customer experience, reduce<br>text-message fraud cases, and contribute novel differential privacy<br>technologies to telco industry as well as to the broader data privacy<br>research community.</p>
+<h2 id="Research-Area-Keywords"><a href="#Research-Area-Keywords" class="headerlink" title="Research Area Keywords"></a>Research Area Keywords</h2><p>Privacy Protection; Mobile Data Analytics; Mobile HCI; Distributed Machine Learning; Fraud Detection</p>
+<h2 id="Institution"><a href="#Institution" class="headerlink" title="Institution"></a>Institution</h2><p>Institution<br>Country<br>Institution Role<br>Hamad Bin Khalifa University<br>Qatar<br>Submitting Institution<br>ADSC - Advanced Digital Sciences Center<br>Singapore<br>Collaborative Institution<br>Ooredoo<br>Qatar<br>Collaborative Institution<br>National University of Singapore<br>Singapore<br>Collaborative Institution</p>
+<h2 id="Review-and-Notes-on-Prof-Yin-Yang’s-Research"><a href="#Review-and-Notes-on-Prof-Yin-Yang’s-Research" class="headerlink" title="Review and Notes on Prof. Yin Yang’s Research"></a>Review and Notes on Prof. Yin Yang’s Research</h2><ul>
+<li><strong>Build a smartphone APP</strong> that can automatically detect deceptive<br>text messages.</li>
+<li>Deveptive text messages can be more accurately recognized if we<br>can detect that it is sent to <strong>a large number of users<br>simutalneously</strong>. BUT HOW? To have the app stay and run in the<br>background forever?</li>
+<li><strong>Local differential privacy technology</strong>. Key and the innovation<br>part of this project.</li>
+<li>Modern natural language processing, <strong>predict whether a text<br>message is fraudulent or authentic.</strong></li>
+<li>Analyze Ooredo’s data records.</li>
+<li>The <strong>DIFFIRENTIAL privacy technology</strong> can be applied to<br>eliminate privacy concerns in the user profiling.</li>
+<li>FINAL-OUTCOME: <strong>CLIENT SIDE MOBILE APP</strong> and ** SERVER SIDE DATA<br>ANALYTIC TOOL**.</li>
+<li>A Chinese comment: 核心算法 差分算法。另外在分析移动运营商的客户数<br>据以及差分算法搜集到的数据的时候，可能会用到神经网络和深度神经网络<br>的AI算法。最终的工程产品是一个服务器端的程序和一个手机端的APP。两<br>个都比较贴合自己的专业以及背景，予以重点准备。</li>
+</ul>
+<h2 id="Key-Abilities-To-Master"><a href="#Key-Abilities-To-Master" class="headerlink" title="Key Abilities To Master"></a>Key Abilities To Master</h2><ul>
+<li>Android programming with cloud computing. (Very Important for HBKU<br>Application.)</li>
+<li>Applied Statistics and Data Science basics. Hands-on experience<br>will be preferred.</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Data/" rel="tag"># Data</a>
+              <a href="/tags/Security/" rel="tag"># Security</a>
+              <a href="/tags/Privacy/" rel="tag"># Privacy</a>
+              <a href="/tags/Fraudulent/" rel="tag"># Fraudulent</a>
+              <a href="/tags/BigData/" rel="tag"># BigData</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2018/09/27/2018-09-27-data-visualization-by-uiuc/" rel="prev" title="Data Visualization by UIUC on Coursera">
+                  <i class="fa fa-chevron-left"></i> Data Visualization by UIUC on Coursera
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2018/10/16/2018-10-16-java-for-android-coursera/" rel="next" title="Java For Android by Vanderbilt University">
+                  Java For Android by Vanderbilt University <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Abraham Xiao</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

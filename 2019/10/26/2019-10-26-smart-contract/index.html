@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.yxiao.org","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.8.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<meta name="description" content="好久没有写专栏了。今天我在知乎和微博说，智能合约3年内能得到大规模应用，我直播吃土。那里篇幅有限，就在这儿写篇文章，描述一下为什么我做出这种判断，也是自己记录下来看看会不会被打脸，然后可以反思一下自己的思维模式。 我的结论是，区块链作为分布式账本有一些应用场景，但是不会太大范围的应用。智能合约则非常不靠谱，最多能在彩票、地下赌场有些半黑半白的应用。而那些币，除了黑市洗钱、违法交易以外没有任何价值。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="为什么我说智能合约不靠谱">
+<meta property="og:url" content="http://www.yxiao.org/2019/10/26/2019-10-26-smart-contract/index.html">
+<meta property="og:site_name" content="Masdar Wireless">
+<meta property="og:description" content="好久没有写专栏了。今天我在知乎和微博说，智能合约3年内能得到大规模应用，我直播吃土。那里篇幅有限，就在这儿写篇文章，描述一下为什么我做出这种判断，也是自己记录下来看看会不会被打脸，然后可以反思一下自己的思维模式。 我的结论是，区块链作为分布式账本有一些应用场景，但是不会太大范围的应用。智能合约则非常不靠谱，最多能在彩票、地下赌场有些半黑半白的应用。而那些币，除了黑市洗钱、违法交易以外没有任何价值。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic4.zhimg.com/v2-6b79cfbd4045178e13504371a69fd5f0_r.jpg">
+<meta property="article:published_time" content="2019-10-26T11:00:00.000Z">
+<meta property="article:modified_time" content="2021-09-10T03:27:17.903Z">
+<meta property="article:author" content="Abraham Xiao">
+<meta property="article:tag" content="China">
+<meta property="article:tag" content="Zhihu">
+<meta property="article:tag" content="Blockchain">
+<meta property="article:tag" content="SmartContract">
+<meta property="article:tag" content="P2P">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic4.zhimg.com/v2-6b79cfbd4045178e13504371a69fd5f0_r.jpg">
+
+
+<link rel="canonical" href="http://www.yxiao.org/2019/10/26/2019-10-26-smart-contract/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.yxiao.org/2019/10/26/2019-10-26-smart-contract/","path":"2019/10/26/2019-10-26-smart-contract/","title":"为什么我说智能合约不靠谱"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>为什么我说智能合约不靠谱 | Masdar Wireless</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Masdar Wireless</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Shut Up and Get Rich</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-study"><a href="/study/" rel="section"><i class="fa fa-read fa-fw"></i>study</a></li>
+        <li class="menu-item menu-item-reading"><a href="/reading/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>reading</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%8D%E8%AE%BA%E5%8C%BA%E5%9D%97%E9%93%BE"><span class="nav-number">1.</span> <span class="nav-text">再论区块链</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%91%E8%AE%A1%E7%AE%97"><span class="nav-number">2.</span> <span class="nav-text">云计算</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Abraham Xiao</p>
+  <div class="site-description" itemprop="description">A personal website with some posts from Zhihu also</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">271</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">410</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.yxiao.org/2019/10/26/2019-10-26-smart-contract/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Abraham Xiao">
+      <meta itemprop="description" content="A personal website with some posts from Zhihu also">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Masdar Wireless">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          为什么我说智能合约不靠谱
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-10-26 19:00:00" itemprop="dateCreated datePublished" datetime="2019-10-26T19:00:00+08:00">2019-10-26</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-09-10 11:27:17" itemprop="dateModified" datetime="2021-09-10T11:27:17+08:00">2021-09-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>好久没有写专栏了。<br>今天我在知乎和微博说，智能合约3年内能得到大规模应用，我直播吃土。那里篇幅有限，就在这儿写篇文章，描述一下为什么我做出这种判断，也是自己记录下来看看会不会被打脸，然后可以反思一下自己的思维模式。</p>
+<p><strong>我的结论是，区块链作为分布式账本有一些应用场景，但是不会太大范围的应用。智能合约则非常不靠谱，最多能在彩票、地下赌场有些半黑半白的应用。而那些币，除了黑市洗钱、违法交易以外没有任何价值。</strong></p>
+<span id="more"></span>
+
+<p>区块链的宣传点不外乎分布式去中心化、公开透明可审计、安全不可篡改。所以当有大公司提供BaaS服务的时候，我第一反应就是挂羊头卖狗肉，按道理认为区块链是未来将重构一切的那些支持者，更应该出来反对，但是遗憾没有，他们把这些服务当做区块链是未来的依据。微软也好，IBM也好，他们提供的区块链服务让开发者开发，用户使用，这些账本存储在哪里？在这些互联网巨头的云数据中心里，在互联网的巨无霸手心里面，完完全全违背了去中心化的理念好么？</p>
+<p>当有大公司宣称自己的业务运行在区块链上时，我有同样的反应。这些区块链节点有多少个？控制权在谁的手里？哦，全部在这些大公司的运维部么手里。我区你妈的块。</p>
+<p>那么公有链是不是更靠谱？相比而言，就分布式去中心化和公开透明可审计方面要好很多，但是不够大的区块链很容易遭受计算力攻击。物联网设备这么发达，安全又是原始阶段，黑客控制的大规模pc加上物联网设备，达到几十万的规模不是难事，更不用说国家机关的超级计算机了，51%攻击？我看91%攻击都有可能，真的不可篡改不可撤销么？</p>
+<p>有没有可能的区块链应用？联盟链也许是一个好主意。多加企业联合在一起，每家多少节点，共同存储托管一些不太敏感的数据，还是可行的。</p>
+<p>所以我认为，区块链能有一些应用，但是不会很广泛的应用。</p>
+<p>再说智能合约。这是大家谈得很多的一个东西，有人反对区块链重构一切或者说币是泡沫的时候，就有人跳出来说我们有智能合约多么多么nb，去中心化的信任，重构社会机制。前几天我花了一晚上时间看了看，就两个字，呵呵……</p>
+<p>首先，请把智能两个字去掉，或者改成自动合约，因为这跟智能没有一毛钱关系。</p>
+<p>然后我们继续。两只球队比赛，我赌a赢，你赌b赢，于是5毛赌局开始了。我怕你反悔，你怕我反悔，我们决定一起把钱交给黄鹤，让他主持公道。结果比赛结束了，我去找黄鹤领钱，发现他拿着钱带着小姨子跑了。如果有智（自）能（动）合约怎么做呢？我们写一个合（程）约（序），双方的钱包都写进去，如果a赢了你给我钱包打钱，b赢了我给你钱包转账，把这个job发到区块链的分布式网络去，这个job不可撤销不可篡改。然后静待结果，比赛结束了，结果出来了，job执行，一个人拿到钱，很赞，完美。</p>
+<p>似乎有个问题，这个比赛结果哪里来？</p>
+<p>去 第！三！方！权！威！地！址！拿！</p>
+<p>啊？不是说去中心化的信任嘛？微博上还有人跟我说预言机可以解决这个问题，简书上有个例子，区块链学堂——预言机、预言机网络、预测市场：</p>
+<p>“假设在区块链体系的租房APP上，租客与房东达成了租赁协议，其中有一个智能合同规定，在退房时，如果租客弄坏了客厅的小米9A电视，则需要按退房当天小米官方的价格原价赔偿。转眼到了退房的那一天，租客在APP上点击一键退房，APP自动下发指令让客厅的小米9A电视自检（确认是否损坏），因为租客在使用过程中，确实弄坏了小米电视，导致自检结果触发了智能合同中的赔偿条款，很不巧的时，当天小米天猫旗舰店正在做活动，比小米商城要便宜300元，此时智能合同赔偿金额要以哪个价格为准？</p>
+<p>假设现在有一个第三方系统（预言机）可以提供权威准确、不可篡改、稳定、并可接受审计的价格查询接口，包括查询小米9A电视的价格，在执行赔偿智能合约时会自动触发该预言机，向区块链发送一笔交易，交易的数据块携带了小米电视9A的价格，随着每个矿工节点区块的同步，就保证了价格完全一致。</p>
+<p>换一种解释，预言机整个完整的工作流程是这样的，首先预言机从小米官方获取小米9A的电视价格，然后向特定区块链上的地址进行转账，并将价格信息写入交易备注，这样智能合约只需要查看特定地址的交易记录，就可以获取小米9A的价格了。而由于区块链会自动同步存储包含交易的区块，所以智能合约几乎只需要访问本地就能得到价格信息。既保证了访问效率，又保证了价格的一致性。</p>
+<p>总的来说就是由<strong>预言机（第三方）</strong>将数据推送给区块链，而不需要智能合约主动向第三方拉取数据。”</p>
+<p>有卵用？讲了一大堆，预言机，分布式预言机，预言机网络，各种概念，最终呢？nb的预言机还是要去小米官网拿数据，而且折旧什么的一样各种纠缠，你的合约里面不可能考虑了各种情况万无一失。球赛的话，还得去球赛官方拿数据。</p>
+<p>信任不是无源之水，最终还是有权威第三方作为根。所谓智能合约，并没有完成去中心化的信任构建，使用的还是区块链网络的不可篡改不可撤销特性——关于这个特性我前文讲过了，<strong>区块链节点要么在云计算巨头的计算中心里面，要么直接掌握在大企业私有的idc中心里面。</strong>智能合约的生效，还是依赖一个独立权威第三方，提供结果，作为合约执行的条件，<strong>这跟支付宝有多大区别？</strong></p>
+<p>“如果说预言机和预言机网络是数据的搬运工，那么预测市场则可以给智能合同提供未来准确的数据。</p>
+<p>假设今天晚上在天河体育中心举行世界杯决赛，所有的直播和赛事数据都来自于CCTV5，却没有人能保证CCTV5的网站不被攻击，或者出现无法访问等各种意外情况，而一旦出现这些意外将造成严重的后果，在这种情况下，我们就可以运用预测市场的技术。</p>
+<p>预测市场的最终数据从哪里来呢？数据来自于人，而非机器，比如那些博彩，下注，竞猜等一切与比赛结果相关，并捆绑了自身利益的人，都可以成为预测数据的提供者，因为他们捆绑了自身利益，他们不会牺牲自身利益提供虚假数据，从而有效地保证了数据的可靠性和真实性。”</p>
+<p>最后是关于预测市场的。简单一句话概括，就是一人一票，我说a赢了你说b赢了。谁人多就是谁赢了。你们愿意参与到这种合约里面去吗？每次都赌自己在人多的那一面？</p>
+<p>当然，智能合约在某些时候还是有用的。比如说彩票、赌博。这种结果不需要第三方给出，在job里面直接随机生成。<strong>但是如果合约代码有鬼，那就自认倒霉吧</strong>——别人还可以解释成bug。一旦涉及到现实，智能合约就乏力了。</p>
+<p>币，我都懒得说了。</p>
+<p>回到开头，区块链有一些应用场景，联盟链可以搞搞，但是颠覆一切？做梦。智能合约？比作为账本的区块链都不如——最后可能成为分歧争端机那样的东西，就在一个大的同一平台上对赌，反正要权威第三方，还要区块链干啥，阿里云飞天提供一套DSL语言就o98k了。</p>
+<p>醒醒吧。</p>
+<p>作者：云舒<br>链接：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/34345088">https://zhuanlan.zhihu.com/p/34345088</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h2 id="再论区块链"><a href="#再论区块链" class="headerlink" title="再论区块链"></a>再论区块链</h2><p>作者：云舒<br>链接：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/34455537">https://zhuanlan.zhihu.com/p/34455537</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>前几天讲过一点区块链和智能合约的事情，今天就区块链再说两点——去中心化和不可篡改。</p>
+<p>我发现IBM、微软、腾讯、阿里都有自己的区块链服务，未来应该还会有更多的巨头加入进来，也许有些巨头已经加入了而我不知道，毕竟这不是我所关注的方向。这些巨头的加入，乍一看是好事，其实细想一下则不然，这是典型的打着红旗反红旗的做法。</p>
+<p>这些巨头发布的区块链服务完全是基于自身的云业务，让使用者快速构建一个区块链提供服务，<strong>但是这跟去中心化是背道而驰，最终的区块链会集中在这几家大型的云计算厂商身上，变成更强大的中心集权</strong>。另一层面，这种集中部署在某家云中心的区块链，云服务商说是不可篡改，你信么？如果你真的信，那你要区块链干啥，直接用他们的数据库服务不就好呢？</p>
+<p>扩展开来，区块链的部署技术，不外乎5种模式：云服务商提供BaaS服务，基于云服务商的IaaS自己搭建，基于开源的产品自己服务器搭建，合作伙伴基于开源产品搭建联盟链，以及分布到客户端的自主研发。</p>
+<p>就原教旨主义而言，我觉得只有最后2种是区块链，前面三种都是修正主义，前两种尤甚，是传统中心化巨头在新时代的进化，第3种如果成功也只是形成了新的巨头而已。去中心化这种浪漫主义的东西，不要谈了。不可篡改更是依附在去中心化之上的东西，皮之不存，毛之焉附？第4种，合作这个东西，是一件很困难的事情，一般是雷声大雨点小。</p>
+<p>至于第5种，现在PC端使用越来越少，主要是手机连接云端。手机上搞区块链，看起来不是一个很好的做法，存储空间，CPU计算能力等等都受限。这个就看未来摩尔定律是否一直那么给力了。我个人觉得手机APP里面搞区块链是不太靠谱的，手机开放程度也有限。还有一种做法是发专门的硬件盒子替代PC，类似原来迅雷搞的。以后要讨论区块链，就讨论这种吧。其实这种也有问题，<strong>你的封闭盒子，你的封闭区块链产品，不开源，你要做啥就做啥，我信你不可篡改</strong>？</p>
+<p>最后说一下币。</p>
+<p>前几天的事情大家都看到了，交易所可以回滚交易，<strong>信仰者也给出了各种解释，交易所只是记账呀，没有上链呀，上链链受不了啊什么的，这尼玛的还好意思说出口！？</strong>不就是东西做的烂么？还成了理由？</p>
+<p><strong>另一个层面，既然交易所没有上链，只是本地记账，这说明什么？说明交易所可以超发啊同志们。</strong>我本来只有1万个比特币，你要买，没有了，但是我依旧可以卖给你，为啥，因为不是每个人都立即提现了，只要这个资金链不断就可以一直玩下去，这也是银行的模式。</p>
+<p><strong>但是银行为啥可信，因为有银监会监管，有保证金率，你交易所有啥？？？？</strong>这就是你们可信的区块链和币？？？总而言之，去中心化基本变成了老巨头的新扩展，和新巨头对霸权发起挑战，普通的小玩家指望处处平等没有中心化，洗洗睡吧。依附其上的不可篡改和可信，谈都不要谈。</p>
+<h2 id="云计算"><a href="#云计算" class="headerlink" title="云计算"></a>云计算</h2><p><img src="https://pic4.zhimg.com/v2-6b79cfbd4045178e13504371a69fd5f0_r.jpg" alt="cloudcomputing"></p>
+<p>作者：云舒<br>链接：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/24589587">https://zhuanlan.zhihu.com/p/24589587</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>前几天想过一点关于云计算的事情（这里的云计算，仅指弹性计算，不包括分布式计算）。最原始时代，硬件服务器，调整业务需要提前几周申请机器，然后上架、部署。业务方要预估业务量，预估机器数，预估每台机器的配置和性能——最终闹出不少悲剧和喜剧。</p>
+<p>虚拟化IAAS时代，弹性计算兴起。服务器上线的周期缩短到几天甚至当天，配置不够了可以临时修改。性能负载撑不住了，可以适时增减，基于监控服务以及弹性计算的WEB API，甚至可以做到自动化伸缩。对于运维而言，启动多个VM可以讲硬件资源的利用率提高到极致，CPU消耗型和内存消耗型业务搭配部署。这都是IAAS带来的好处。但是本应只专注于业务的人，依旧要关注每个机器的存活、故障、配置等事情，业务也需要去手动的发布。</p>
+<p>容器技术在此基础上有更进一步的提高。首先是节省资源上，容器比VM更轻量级，可以起得更多，颗粒度更小。就像一块大石头，打得越碎，用来装它的容器就需要得越少。其次是借助k8s等容器编排、集群管理技术，业务可以不再关注机器了，眼里已经没有机器，更不需要关注机器数量、机器性能，连容器运行在什么地方都不需要理会，只需要编写规则将容器打包在一起成为一个服务，设置每个容器最多实例、最少实例即可，系统自动发布、自动伸缩，可以更专注于业务本身。</p>
+<p>随着运维系统越来越抽象，上层的业务关注的点越来越单纯。那么，下一步再如何抽象？只能容器也不要了。那么是什么？我自己都吓一跳，就是裸代码啊……</p>
+<p>那么，难道GAE才是IAAS进化的方向么？GAE不是已经快挂了么？也许就是因为他的思想太先进，反而成了先烈？也许过些年，IAAS会走回GAE的老路。云用户把代码发布到GAE之类的平台，使用提供的各种配套服务，然后购买不同的SLA套餐即可——至于怎么运行的毫不在意。SLA里面包含业务的可用性，4个9有4个9的价格，5个9有5个9的价格，响应时间100ms有100ms的价格，50ms有50ms的价格，听起来是不是更赞……</p>
+<p>那么，IAAS会不会真的走这么一条脑洞大开的路呢？容器安全会不会是接下来几年安全的重要方向呢？</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/China/" rel="tag"># China</a>
+              <a href="/tags/Zhihu/" rel="tag"># Zhihu</a>
+              <a href="/tags/Blockchain/" rel="tag"># Blockchain</a>
+              <a href="/tags/SmartContract/" rel="tag"># SmartContract</a>
+              <a href="/tags/P2P/" rel="tag"># P2P</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2019/10/26/2019-10-27-lao-gan-ma/" rel="prev" title="「老干妈」配方泄密是怎么回事？">
+                  <i class="fa fa-chevron-left"></i> 「老干妈」配方泄密是怎么回事？
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2019/11/11/2019-11-11-consuming-loan/" rel="next" title="1962年人民日报：消费贷 ——垄断资本家套在劳动人民身上的镣铐">
+                  1962年人民日报：消费贷 ——垄断资本家套在劳动人民身上的镣铐 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Abraham Xiao</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

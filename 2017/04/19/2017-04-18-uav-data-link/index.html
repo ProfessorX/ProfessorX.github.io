@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.yxiao.org","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.8.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<meta name="description" content="当前,无人机系统已成为信息化作战条件下夺取和保持信息优势的重要装备,而无人机数据链是无人机系统将信息优势转化为战斗力的关键设备和有效手段。大型预警、战略侦察以及高分辨率对地观察飞行器作为信息化战场信息获取的主力军,而空前巨大的信息量需求与数据链传输能力不足的矛盾日益尖锐。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UAV Data Link">
+<meta property="og:url" content="http://www.yxiao.org/2017/04/19/2017-04-18-uav-data-link/index.html">
+<meta property="og:site_name" content="Masdar Wireless">
+<meta property="og:description" content="当前,无人机系统已成为信息化作战条件下夺取和保持信息优势的重要装备,而无人机数据链是无人机系统将信息优势转化为战斗力的关键设备和有效手段。大型预警、战略侦察以及高分辨率对地观察飞行器作为信息化战场信息获取的主力军,而空前巨大的信息量需求与数据链传输能力不足的矛盾日益尖锐。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://github.com/ProfessorX/ProfessorX.github.io/images/mq9-1.jpg">
+<meta property="article:published_time" content="2017-04-18T17:00:00.000Z">
+<meta property="article:modified_time" content="2021-09-10T03:27:17.786Z">
+<meta property="article:author" content="Abraham Xiao">
+<meta property="article:tag" content="UAV">
+<meta property="article:tag" content="Military">
+<meta property="article:tag" content="UnitedStates">
+<meta property="article:tag" content="China">
+<meta property="article:tag" content="DataLink">
+<meta property="article:tag" content="Communication">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github.com/ProfessorX/ProfessorX.github.io/images/mq9-1.jpg">
+
+
+<link rel="canonical" href="http://www.yxiao.org/2017/04/19/2017-04-18-uav-data-link/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.yxiao.org/2017/04/19/2017-04-18-uav-data-link/","path":"2017/04/19/2017-04-18-uav-data-link/","title":"UAV Data Link"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>UAV Data Link | Masdar Wireless</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Masdar Wireless</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Shut Up and Get Rich</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-study"><a href="/study/" rel="section"><i class="fa fa-read fa-fw"></i>study</a></li>
+        <li class="menu-item menu-item-reading"><a href="/reading/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>reading</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%A0%E4%BA%BA%E4%BE%A6%E5%AF%9F%E6%9C%BA%E6%98%AF%E9%80%9A%E8%BF%87%E4%BB%80%E4%B9%88%E6%96%B9%E5%BC%8F%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8B%E6%8E%A7%E5%88%B6%E5%92%8C%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E7%9A%84%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">无人侦察机是通过什么方式实现远程控制和数据传输的？</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Abraham Xiao</p>
+  <div class="site-description" itemprop="description">A personal website with some posts from Zhihu also</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">271</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">410</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.yxiao.org/2017/04/19/2017-04-18-uav-data-link/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Abraham Xiao">
+      <meta itemprop="description" content="A personal website with some posts from Zhihu also">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Masdar Wireless">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          UAV Data Link
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2017-04-19 01:00:00" itemprop="dateCreated datePublished" datetime="2017-04-19T01:00:00+08:00">2017-04-19</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-09-10 11:27:17" itemprop="dateModified" datetime="2021-09-10T11:27:17+08:00">2021-09-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Information/" itemprop="url" rel="index"><span itemprop="name">Information</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>当前,无人机系统已成为<strong>信息化作战条件</strong>下夺取和保持信息优势的重要装备,而无<br>人机数据链是无人机系统将信息优势转化为战斗力的<strong>关键设备和有效手段</strong>。大型<br>预警、战略侦察以及高分辨率对地观察飞行器作为信息化战场信息获取的主力军,而<br>空前巨大的<strong>信息量需求</strong>与数据链<strong>传输能力不足的矛盾</strong>日益尖锐。</p>
+<span id="more"></span>
+
+<blockquote>
+<p>华为：老子不是吹，老子家的5G通信就是吊啊就是吊。错是没错，不过这么吊<br>无人机肯定不会用对吧，数据量辣么大，亲妈爆炸。</p>
+</blockquote>
+<p>在严峻的现实压力下,中国电子科技集团公司第十研究所研制的“<strong>Ku频段无人机<br>数据链</strong>”应运而生,据现场专家介绍,这套数据链处于<strong>国内领先、国际先进水平</strong>,<br>能<strong>实时准确</strong>地共享机载传感器获取的大容量数据,具有“频段高、<strong>传输稳</strong>”等众<br>多优势,真正实现了高速信息的实时获取与共享,显著提升了无人机数据链的<strong>可靠性</strong>。</p>
+<p>据介绍,“Ku频段无人机数据链”克服了高速数据可靠传输和目标稳定跟踪两大<br>难题,实现了每秒高达<strong>300兆比特</strong>数据的可靠传输。举例来说,我们在各种新闻视<br>频中看到以下场景:拥有高技术无人机系统一方,在上百公里之外对恐怖分子实施<br>侦察和打击,其无人机实际上配置的空-地实时链路传输能力也仅<strong>每秒几兆字节</strong>,<br>能力相差100倍以上。</p>
+<p>作为无人机系统的“<strong>中枢神经</strong>”,数据链是无人机与地面联系的纽带,国在无人机<br>应用日益繁多的失事案例中,“中枢神经”被斩断导致的“瘫痪”已占相当大的<br>比例。</p>
+<p>据专家介绍,Ku频段无人机数据链,是一套具有<strong>复杂电磁环境</strong>适应能力的智能系统,采<br>用认知无线电这一在无线通信领域中具有革命性的技术,具备智能感知外部电磁<br>环境,并从环境中学习,可实现任何时间、任何地点的高可靠通信,为无人机系统<br>建设了一条难以斩断的“中枢神经”,已达到国际一流水平。</p>
+<h2 id="无人侦察机是通过什么方式实现远程控制和数据传输的？"><a href="#无人侦察机是通过什么方式实现远程控制和数据传输的？" class="headerlink" title="无人侦察机是通过什么方式实现远程控制和数据传输的？"></a>无人侦察机是通过什么方式实现远程控制和数据传输的？</h2><p>作者：airbunny<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/27004521/answer/35699049">https://www.zhihu.com/question/27004521/answer/35699049</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>不同级别的无人机，链路是不大一样的。但大致上脱不出点对点通信和依数据链<br>两种方式。</p>
+<p>使用点对点链路的无人机，大抵都是<strong>手持级别 or 中型的</strong>。高带宽的电台大多是<br>数字化的，这样可以回传各种飞行器参数、传感器读数和流媒体数据。电台工作<br>在<strong>L波段和C波段的为多（也有Ku波段的）</strong>。同时电台也多支持跳频功能。但对于<br>非常小的无人机就装不起很贵的<strong>高带宽双工电台</strong>了，一般会分为低带宽的双工数<br>据链路传输<strong>控制指令和回传数据</strong>，和高带宽的单工<strong>图像链路</strong>，以节省成本。甚至<br>在一些极端的设计里，会将回传的数据链路信<strong>叠加</strong>在图像链路里，使数据链路<br>的硬件也变成单工的，可以<strong>进一步降低成本</strong>。从结构上来看，这样的设计除了更<br>可靠和带跳频功能以外，和一般航模上用的链路没有太本质的区别。不过很多时<br>候会将他们组成小范围的网络共享观测数据。</p>
+<blockquote>
+<p>在各种五花八门的需求面前(aka,更高更快更强)，通信行业必将追随克劳德香<br>农同志的脚步，将数据传输和稳定性推至理论的极限。<br>感谢西工大，感谢申小毅老师的《信号系统》，感谢当年那个认真听课、欲求<br>不满的我。</p>
+</blockquote>
+<p>至于链路的工作距离，高功率的设备配上较好的天线大约可以到几十公里，对空<br>的话可以到上百公里甚至数百公里。但因为<strong>地球曲率的问题</strong>，一般实用的通讯范<br>围在70到90公里为多。这也就是为什么很多<strong>长航时战术无人机</strong>为何活动半径只有<br>几十公里的原因了—飞出这个范围，链路就连接不上了呀~当然那些小无人机的<br>电台，可能对空距离就5倒10公里的样子。</p>
+<blockquote>
+<p>解决方案，卫星中继通讯，内置谷歌地图（滑稽），到达一定飞行高度自动切<br>换成卫星导航（and 控制）。完成任务后一键自毁(or 返航)。可以去搜一下<br>DJI的自动返航功能，或许有帮助。</p>
+</blockquote>
+<p>而用数据链的飞行器用的也是类似的链路，但增加了<strong>组网和转发</strong>（天空中只<br>能用Ad Hoc了吧，莫非还有啥黑科技？）的功能，可以认为他加入了一个巨大的<br>空中局域网。加入数据链的<strong>很多飞行器或者中继站</strong>都可以为无人机做通信转<br>发中继，也可以让很多不同的设备间<strong>共享</strong>无人机传回来的数据。比如一架火<br>力侦察兵，他的飞行计划可能由一艘驱逐舰发送，这些指令通过一架<strong>E-3预警机</strong>转发，最后看到侦查结果的却是陆地上的一群士兵。这样做实在是太方便了，<br>而且只要附近有我方接入数据链的中继平台就可以进行通讯，所以可以很容易的<br>覆盖巨大的范围。所以至少在美国，已经开始逐渐把数据链<strong>下放到比较小</strong>的<br>无人机上面了。甚至如沙漠鹰Deserthawk这样小的无人机也开始尝试上数据链。</p>
+<blockquote>
+<p>All in one is all you need.一个感觉，我军离真正全方位立体化的信息化<br>现代战争，还有相当长一段路要走。</p>
+</blockquote>
+<p>至于卫通，一般就是给需要<strong>深入敌境</strong>的无人机，或者巨大如捕食者这样的大家伙<br>用的。比如下图这样的，MQ-9的地面控制站（GCS）。<br><img src="https://github.com/ProfessorX/ProfessorX.github.io/images/mq9-1.jpg" alt="MQ-9"></p>
+<p>看起来正副两个飞行员，有操纵杆有机头显示器，那么飞起来和一般的飞机区别<br>不大吧？</p>
+<p>其实这些飞行员都是键盘侠。</p>
+<blockquote>
+<p>妈妈再让我当一次键盘侠谢谢！</p>
+</blockquote>
+<p>和多数人想象的不一样，无人机的飞行员在绝大多数情况下不会亲自使用操纵杆<br>飞行的。由于视角有限和链路时延的问题，其实无人机不是很适合人手遥控飞行。<br>在大多数时候，飞机都是<strong>自动飞行</strong>的。无人机上都会载有<strong>任务控制计算机<br>（MCC）和自动驾驶仪（AP）</strong>。飞行员的工作就是在起飞前编制飞行计划上传<br>到MCC中，由MCC通过AP自动控制飞机完成飞行。而飞行员的任务就是坐在屏幕前<br><strong>监控</strong>飞机状态，并根据情况修改飞行计划并<strong>上传</strong>–实际上他们基本上是在用<br>键盘和鼠标来飞飞机，而不是用操纵杆。</p>
+<blockquote>
+<p>Watch and learn. 要相信电脑！要相信尖端科技！（善意的微笑）</p>
+</blockquote>
+<p>不过也因为飞机起降的时候毕竟环境比较复杂，使用AP或者有严重时延（<strong>可能<br>会有数百毫秒</strong>）的卫通着陆会有一定风险（尤其是在野战机场，一般都缺少民<br>航的盲降系统）。故此在起降的时候飞机有可能会切入非常传统的<strong>单工链路</strong>，<br>并由一名机场内的操纵手使用传统的遥控器（PGCS）进行操纵–那时候就和一架<br>遥控飞机没什么太大区别了。当然，卫通的主要用处是让<strong>机组控制飞机</strong>。如果需<br>要向前线的作战部队传送信息或者接受引导的话，飞机上还是会接入一般的数据<br>链的。而强如RQ-170这样全程无线电静默的无人机，除了降落时候用作辅助的那<br>一套以外，根本就不需要什么链路吧~</p>
+<p>大约就是这样了~</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/UAV/" rel="tag"># UAV</a>
+              <a href="/tags/Military/" rel="tag"># Military</a>
+              <a href="/tags/UnitedStates/" rel="tag"># UnitedStates</a>
+              <a href="/tags/China/" rel="tag"># China</a>
+              <a href="/tags/DataLink/" rel="tag"># DataLink</a>
+              <a href="/tags/Communication/" rel="tag"># Communication</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2017/04/18/2017-04-17-china-six-types-uav/" rel="prev" title="美承认中国已领先 6大无人机震撼曝光">
+                  <i class="fa fa-chevron-left"></i> 美承认中国已领先 6大无人机震撼曝光
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2017/04/20/2017-04-20-microwave-link.networks/" rel="next" title="Microwave Link Networks">
+                  Microwave Link Networks <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Abraham Xiao</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

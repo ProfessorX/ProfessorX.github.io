@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.yxiao.org","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.8.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<meta name="description" content="物联网本质上是借助ICT技术对传统产业进行重构，通过物理世界和数字世界的融合，缩短业务流程、提升生产效率，为客户提供更好的产品和服务，释放出产业创新的巨大潜能。经过近几年技术与市场的培育，物联网即将进入快速发展期，给ICT行业带来了广阔的市场空间，预计2025年，物联网连接数将达近1000亿。 物联网是一个庞大复杂的系统，千亿不同物体对联接有着不同的要求。由于缺乏智能化的传感设备，终端难以连接到云">
+<meta property="og:type" content="article">
+<meta property="og:title" content="华为物联网平台的一些资料">
+<meta property="og:url" content="http://www.yxiao.org/2019/05/22/2019-05-22-huawei-iot/index.html">
+<meta property="og:site_name" content="Masdar Wireless">
+<meta property="og:description" content="物联网本质上是借助ICT技术对传统产业进行重构，通过物理世界和数字世界的融合，缩短业务流程、提升生产效率，为客户提供更好的产品和服务，释放出产业创新的巨大潜能。经过近几年技术与市场的培育，物联网即将进入快速发展期，给ICT行业带来了广阔的市场空间，预计2025年，物联网连接数将达近1000亿。 物联网是一个庞大复杂的系统，千亿不同物体对联接有着不同的要求。由于缺乏智能化的传感设备，终端难以连接到云">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-05-22T04:00:00.000Z">
+<meta property="article:modified_time" content="2021-09-10T03:27:17.834Z">
+<meta property="article:author" content="Abraham Xiao">
+<meta property="article:tag" content="Zoomlion">
+<meta property="article:tag" content="Huawei">
+<meta property="article:tag" content="IOT">
+<meta property="article:tag" content="Cloud">
+<meta property="article:tag" content="Information">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://www.yxiao.org/2019/05/22/2019-05-22-huawei-iot/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.yxiao.org/2019/05/22/2019-05-22-huawei-iot/","path":"2019/05/22/2019-05-22-huawei-iot/","title":"华为物联网平台的一些资料"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>华为物联网平台的一些资料 | Masdar Wireless</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Masdar Wireless</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Shut Up and Get Rich</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-study"><a href="/study/" rel="section"><i class="fa fa-read fa-fw"></i>study</a></li>
+        <li class="menu-item menu-item-reading"><a href="/reading/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>reading</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%99%BA%E6%85%A7%E8%B7%AF%E7%81%AF"><span class="nav-number">1.</span> <span class="nav-text">智慧路灯</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E4%BA%AE%E7%82%B9"><span class="nav-number">2.</span> <span class="nav-text">解决方案亮点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%A6%E8%BE%86%E5%AE%89%E5%85%A8"><span class="nav-number">2.1.</span> <span class="nav-text">车辆安全</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BD%A6%E8%81%94%E7%BD%91%E4%B8%9A%E5%8A%A1%E9%A2%84%E9%9B%86%E6%88%90"><span class="nav-number">2.1.1.</span> <span class="nav-text">车联网业务预集成</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%90%E5%8A%9F%E6%A1%88%E4%BE%8B"><span class="nav-number">3.</span> <span class="nav-text">成功案例</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Abraham Xiao</p>
+  <div class="site-description" itemprop="description">A personal website with some posts from Zhihu also</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">271</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">410</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.yxiao.org/2019/05/22/2019-05-22-huawei-iot/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Abraham Xiao">
+      <meta itemprop="description" content="A personal website with some posts from Zhihu also">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Masdar Wireless">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          华为物联网平台的一些资料
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-05-22 12:00:00" itemprop="dateCreated datePublished" datetime="2019-05-22T12:00:00+08:00">2019-05-22</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-09-10 11:27:17" itemprop="dateModified" datetime="2021-09-10T11:27:17+08:00">2021-09-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Technology/" itemprop="url" rel="index"><span itemprop="name">Technology</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>物联网本质上是借助ICT技术对传统产业进行重构，通过物理世界和数字世界的<br>融合，缩短业务流程、提升生产效率，为客户提供更好的产品和服务，释放出产<br>业创新的巨大潜能。经过近几年技术与市场的培育，物联网即将进入快速发展期，<br>给ICT行业带来了广阔的市场空间，预计2025年，物联网连接数将达近1000亿。</p>
+<p>物联网是一个庞大复杂的系统，千亿不同物体对联接有着不同的要求。由于缺乏<br>智能化的传感设备，终端难以连接到云平台；单一网络技术不能满足海量物联需<br>求，难以适应多样化的应用场景；由于缺乏端到端的网络安全、人工智能、大数<br>据分析能力，数据价值难以创造。 面对这些困难与挑战，需要生产设备制造商、<br>运营商、ICT厂商、应用软件开发商、研究机构和政府等相关部门，建立广泛的<br>联盟，进行联合创新。</p>
+<span id="more"></span>
+
+<h2 id="智慧路灯"><a href="#智慧路灯" class="headerlink" title="智慧路灯"></a>智慧路灯</h2><p>不可否认的是，相对于智慧路灯产品的日趋成熟，商业模式的单一，投资、运营<br>和服务模式的落后，已经成为制约产业发展的瓶颈。如何打破大规模商用的壁垒，<br>其中商业模式的探索显得尤为迫切。</p>
+<p>无锡城市智慧照明改造项目中的建设模式不失为一个有益的探索。政府主导项目，<br>由泰华智慧提供从终端设备到应用软件的端到端解决方案，无锡移动提供网络、<br>收取流量费，政府直接投资建设，提高管理效率和实现低碳环保的同时，每年还<br>节省大量的电费支出和管理运维费用。良性正向循环的商业模式保障了项目的持<br>续推进。</p>
+<p>目前，我国城市智慧路灯建设采用较多的是EMC模式，即由运营商移动提供网络、<br>收取流量费，由企业出资，包含建设、运营和维保等费用，政府每年从改造后节<br>省的电费中按月返还投资本息和利润。</p>
+<p>与此同时，还有一种PPP模式，即政府和社会资本合作，政府采取竞争性方式选<br>择具有投资、运营管理能力的社会资本，双方按照平等协商原则订立合同，由社<br>会资本提供智慧路灯服务，政府依据服务绩效评价结果向社会资本支付对价。</p>
+<p>星星之火，可以燎原。在智慧城市的浪潮中，智慧路灯已在杭州、深圳、上海、<br>鹰潭、无锡、济南等城市广泛应用。智慧城市与通信技术结合的伟大革命序幕已<br>经拉开，基于NB-IoT技术解决方案的城市智慧照明，必将继续驱动整个物联网产<br>业链的发展，点亮每一座智慧城市的绿色发展之路。</p>
+<p>加法：路灯+ICT =智慧路灯，高起点完成解决方案升级。</p>
+<p>传感器、控制器–网络–管理控制器（IOT平台）–应用系统。</p>
+<p>早期的功能型车联网，无法满足车企在全球不同区域的用户使用场景和个性化出<br>行服务的需求，以至于造成客户续约率低、建设/运营成本高、装配率低下等问<br>题。最典型的问题为：没有统一平台，不同车型接入不同的业务平台，割裂的烟<br>囱式系统，维护复杂，管理成本高；平台能力不足，无法满足高并发、高频率接<br>入需求，20万车辆就已经出现严重性能瓶颈；系统已经运行了多年，系统老旧，<br>难以叠加新的业务，扩展困难。</p>
+<p>同时，在新能源车的迅速发展、互联网企业对汽车制造及无人驾驶技术的探索，<br>大众对共享经济的接受度以及国家监管政策颁发等因素的共同作用下，汽车行业<br>开始制定新四化（网联化、电动化、共享化、自动化）的战略，并通过实现自身<br>产品与服务的数字化转型与多样化市场需求接轨。</p>
+<p>车企数字化转型成功的一大关键是构建一个生态型数字云平台，通过平台聚合生<br>态开发者、行业应用合作伙伴，在全球市场环境下满足跨国销售其产品和服务，<br>共同向车主及车辆使用者提供个性化出行服务需求，并满足当地政府强制性监管<br>的要求。</p>
+<p>华为车联网解决方案主要基于OceanConnect 物联网平台，并依托华为全球公有<br>云、或者和运营商的合营云，以云服务的方式提供。OceanConnect 物联网平台<br>的定位是：帮助车企在数字化转型过程中，将车内的信息以安全、可靠、高效的<br>方式传递到云端，形成以车为核心的数字化资产，再开放给丰富的上层应用，同<br>时具备C-V2X/AI等未来演进能力。</p>
+<h2 id="解决方案亮点"><a href="#解决方案亮点" class="headerlink" title="解决方案亮点"></a>解决方案亮点</h2><p>面向上层应用（车联网应用平台和第三方应用），提供丰富的业务使能套件，比<br>如出行服务、保养服务、车队管理、分时租赁、UBI等；面向未来，提供预测性<br>维护，ADAS分析、AI（比如个人助理）、车路网协同服务、故障定界等能力的支<br>持。</p>
+<p>提供丰富的开发API， 帮助应用开发者降低开发成本，满足业务灵活定制及个性<br>化，实现新业务快速上线；提供全球一体化的车辆接入和 管理能力，比如车辆<br>的安全接入和鉴权、双方通信的双向证书加密、设备管理、远程控制、<br>FOTA/SOTA等能力；支持千万级别的终端接入，200万消息并发处理；通道端到端<br>加密，确保用户信息安全。</p>
+<p>车厂通过控制基础平台来掌握核心技术资产和数据资产；同时，提供IoT大数据<br>分析能力，将应用数据的价值最大化，包括车辆运行状况、位置追踪和驾驶行为<br>分析等等。</p>
+<h3 id="车辆安全"><a href="#车辆安全" class="headerlink" title="车辆安全"></a>车辆安全</h3><ul>
+<li>车辆定位</li>
+<li>远程控制</li>
+<li>盗窃报警</li>
+<li>碰撞报警</li>
+</ul>
+<h4 id="车联网业务预集成"><a href="#车联网业务预集成" class="headerlink" title="车联网业务预集成"></a>车联网业务预集成</h4><ul>
+<li><p>车队应用</p>
+<ul>
+<li>行驶状态</li>
+<li>驾驶习惯</li>
+<li>物流监控</li>
+<li>位置监控</li>
+</ul>
+</li>
+<li><p>个人应用</p>
+<ul>
+<li>车辆监控</li>
+<li>保险求助</li>
+<li>导航</li>
+<li>车载娱乐</li>
+</ul>
+</li>
+<li><p>IOT连接管理平台</p>
+<ul>
+<li>SIM卡连接管理</li>
+<li>非SIM卡连接管理</li>
+<li>大数据分析</li>
+<li>BSS</li>
+</ul>
+</li>
+</ul>
+<h2 id="成功案例"><a href="#成功案例" class="headerlink" title="成功案例"></a>成功案例</h2><p>和一汽启明的成功合作：华为基于OceanConnect 物联网平台，为一汽提供统一<br>的车联网解决方案，按照云、管、端的系统架构来建设，满足传统汽车制造企业<br>服务转型的需求，通过物联网、云计算、大数据等技术将各个层面整合成统一有<br>机的整体，支撑车联网业务应用的构建和快速上线。同时华为OceanConnect 物<br>联网平台支持大容量、高并发业务，支持海量车辆接入，满足一汽百万车辆同时<br>上线后的车辆状态信息反馈，并准确监控车辆的实时路径等需求，支持不同车型、<br>不同应用领域的电动车分时租赁及解放车队管理等业务应用， 并具备扩展其他<br>如新能源汽车安全监控、研发大数据分析等新领域，帮助一汽服务转型开拓车联<br>网新蓝海。</p>
+<p>和PSA的合作：全球汽车提供商PSA启动了2016-2021 Push to Pass战略转型计划，<br>希望未来几年完成从整车提供商向移动出行服务商转型。通过车联网技术，PSA<br>希望能实现租车业务，私车共享和车队管理等移动出行服务，二手车转售、车辆<br>资产信息管理等增值服务。除此之外，通过车辆联网服务，用户还能实现安全、<br>快乐的驾车体验，并进而向自动驾驶、无人驾驶等未来行车体验演进。所有这些<br>服务，都需要一个架构先进、具备高扩展性、跨行业互联互通、以及能支持新技<br>术演进的车联网平台，并且平台能够以云服务的方式提供出行服务，适应多场景<br>业务的快速部署和迭代。凭借ICT融合的车联网平台，全球化的公有云服务，以<br>及车联网业务需求的行业套件，华为成为PSA从战略到技术全方位匹配的供应商，<br>帮助PSA实现从整车提供商向移动出行服务商转型的计划。未来，PSA将与华为紧<br>密合作，以一个全球化平台支持所有车厂和所有车系，目标在2020年在8大区域<br>上线运营，支持超过1000万互联网车辆，为180多个国家提供移动出行服务，帮<br>助PSA实现商业成功。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Zoomlion/" rel="tag"># Zoomlion</a>
+              <a href="/tags/Huawei/" rel="tag"># Huawei</a>
+              <a href="/tags/IOT/" rel="tag"># IOT</a>
+              <a href="/tags/Cloud/" rel="tag"># Cloud</a>
+              <a href="/tags/Information/" rel="tag"># Information</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2019/05/17/2019-05-17-wealth/" rel="prev" title="为什么很多女孩是大叔控？">
+                  <i class="fa fa-chevron-left"></i> 为什么很多女孩是大叔控？
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2019/05/28/2019-05-28-kingdee-investigation/" rel="next" title="金蝶ERP与智慧记研究">
+                  金蝶ERP与智慧记研究 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Abraham Xiao</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.yxiao.org","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.8.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<meta name="description" content="In this post we will discuss some pros cons and usages of caterpillar’s Google Play listed applications.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Caterpillar Mobile App Research">
+<meta property="og:url" content="http://www.yxiao.org/2019/07/16/2019-07-16-cat-mobile-app/index.html">
+<meta property="og:site_name" content="Masdar Wireless">
+<meta property="og:description" content="In this post we will discuss some pros cons and usages of caterpillar’s Google Play listed applications.">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-07-16T04:00:00.000Z">
+<meta property="article:modified_time" content="2021-09-10T03:27:17.862Z">
+<meta property="article:author" content="Abraham Xiao">
+<meta property="article:tag" content="Engineering">
+<meta property="article:tag" content="Caterpillar">
+<meta property="article:tag" content="Mechanical">
+<meta property="article:tag" content="Manufacturing">
+<meta property="article:tag" content="APP">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://www.yxiao.org/2019/07/16/2019-07-16-cat-mobile-app/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.yxiao.org/2019/07/16/2019-07-16-cat-mobile-app/","path":"2019/07/16/2019-07-16-cat-mobile-app/","title":"Caterpillar Mobile App Research"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Caterpillar Mobile App Research | Masdar Wireless</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Masdar Wireless</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Shut Up and Get Rich</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-study"><a href="/study/" rel="section"><i class="fa fa-read fa-fw"></i>study</a></li>
+        <li class="menu-item menu-item-reading"><a href="/reading/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>reading</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Cat-Inspect-4-0"><span class="nav-number">1.</span> <span class="nav-text">Cat Inspect 4.0</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Inspections"><span class="nav-number">1.1.</span> <span class="nav-text">Inspections</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Support"><span class="nav-number">1.2.</span> <span class="nav-text">Support</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Reports"><span class="nav-number">1.3.</span> <span class="nav-text">Reports</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cat-App-Fleet-Management"><span class="nav-number">2.</span> <span class="nav-text">Cat App: Fleet Management</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cat-Value-Estimating-Tool"><span class="nav-number">3.</span> <span class="nav-text">Cat Value Estimating Tool</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cat-Virtual-Showroom"><span class="nav-number">4.</span> <span class="nav-text">Cat Virtual Showroom</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Copyright"><span class="nav-number">6.</span> <span class="nav-text">Copyright</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Abraham Xiao</p>
+  <div class="site-description" itemprop="description">A personal website with some posts from Zhihu also</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">271</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">410</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.yxiao.org/2019/07/16/2019-07-16-cat-mobile-app/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Abraham Xiao">
+      <meta itemprop="description" content="A personal website with some posts from Zhihu also">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Masdar Wireless">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Caterpillar Mobile App Research
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-07-16 12:00:00" itemprop="dateCreated datePublished" datetime="2019-07-16T12:00:00+08:00">2019-07-16</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-09-10 11:27:17" itemprop="dateModified" datetime="2021-09-10T11:27:17+08:00">2021-09-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Report/" itemprop="url" rel="index"><span itemprop="name">Report</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>In this post we will discuss some pros cons and usages of caterpillar’s Google Play listed applications.</p>
+<span id="more"></span>
+
+<h2 id="Cat-Inspect-4-0"><a href="#Cat-Inspect-4-0" class="headerlink" title="Cat Inspect 4.0"></a>Cat Inspect 4.0</h2><p>Cat Inspect is an easy-to-use application which allows users to download and complete pre-defined inspection tasks, as well as include pictures, comments, and ratings for Cat and non-Cat assets. Completed inspection details are easily retrieved from the streamlined web portal for follow up and opportunity management.</p>
+<p>对应的是中联重科—-售后服务—-主动服务—-设备例检。</p>
+<ul>
+<li>Download inspection forms.</li>
+<li>Complete your inspection</li>
+<li>Immediately share the results</li>
+</ul>
+<h3 id="Inspections"><a href="#Inspections" class="headerlink" title="Inspections"></a>Inspections</h3><ul>
+<li>In progress<ul>
+<li>Assigned</li>
+<li>Submitted</li>
+<li>Inspection Types: Equipment, Site, SOS.</li>
+<li>Online and offline forms support.</li>
+<li>QR code on a machine for customer information.</li>
+<li>SMU—-Service meter unit.</li>
+<li><strong>Asset Info</strong> <strong>Custoemr Info</strong></li>
+<li>System auto save the information</li>
+<li>Normal/Monitor/Action (Additional Information)</li>
+<li>System API to <strong>draw</strong> on the uploaded photo.</li>
+<li>Your title (aka position) and sign on the inspection form.</li>
+<li><strong>You may view the inspection on CATINSPECT web</strong> <a href="cat.com/catinspect">CATINSPECT</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="Support"><a href="#Support" class="headerlink" title="Support"></a>Support</h3><ul>
+<li>Makes it easy to share issue with CAT support.</li>
+<li><strong>Describe your issue</strong></li>
+<li><strong>Attach a photo</strong></li>
+<li>Submit the request or call the support line.</li>
+</ul>
+<h3 id="Reports"><a href="#Reports" class="headerlink" title="Reports"></a>Reports</h3><p>All inspections completed by the person logged into the device.</p>
+<h2 id="Cat-App-Fleet-Management"><a href="#Cat-App-Fleet-Management" class="headerlink" title="Cat App: Fleet Management"></a>Cat App: Fleet Management</h2><p>OVERVIEW, ASSETS, OPERATIONS, MY ACTIVITY, ADMINISTRATION</p>
+<p>中联重科目前来看没有与之类似的客户车队、产品管理系统（主要提供给终端客户使用）。手机APP核心功能：<strong>客户备件在线下单；客户产品请求服务</strong>。</p>
+<p>Wherever you use your smart phone — around the jobsite, in your parked vehicle, even in your machine — you can use the Cat App. This equipment management tool, a companion to My.Cat.Com, makes it easy to <strong>track your equipment, giving you real-time access to data and actionable insights</strong>.</p>
+<p>Managing equipment is chaotic. My.Cat.Com can help you be proactive with 24/7 access to equipment data and insights anywhere you go.</p>
+<p><strong>CONNECT EVERYWHERE</strong>. With the Cat App, answers to common questions are as close as your smart phone, and you can complete everyday tasks without turning on your computer or returning to the office. There’s no need to sift through large amounts of data. Just use the app while you’re on site, at home or in transit from one job to another to:</p>
+<ul>
+<li>Track hours, location, fuel use, health &amp; utilization</li>
+<li><strong>Request parts or service</strong></li>
+<li><strong>Receive health &amp; maintenance alerts</strong></li>
+<li>Manage planned maintenance</li>
+<li>Connect with your Cat dealer</li>
+<li>Create &amp; share tasks</li>
+<li>Access Operation &amp; Maintenance Manuals, warranties, work orders, service history &amp; safety service letters</li>
+<li>Request Cat PL542 Product Link™ &amp; self-install Cat Product Link devices</li>
+<li><strong>Use your phone as a digital key to start select Next Generation Cat machines</strong></li>
+</ul>
+<p><strong>Connect with your dealer 24/7 with My.Cat.Com.</strong> Use your computer or tablet to manage yourequipment – on your schedule. Access your asset data, including location, health, maintenance, performance and more.</p>
+<p>Want to see your whole fleet without driving from site to site? View your full asset list at a glance and check regularly updated hour, fuel level and utilization information. Use the Google maps feature to see the assets closest to your current location.<br>对应的是主机的产品档案和实时的主机信息。不过配上车上的传感器信息可以做到动态更新。</p>
+<p>Don’t have time to go to the office to order parts or request service? <strong>Do it immediately on the app.</strong> Plus, when you request service, auto-filled location and machine information may save you the time and effort of typing – ask your Cat dealer if this feature is available in your region.<br>服务系统ZOOMLINK中的备件在线下单功能。</p>
+<p>Wish you could plan service when it doesn’t impact production? Get notifications about upcoming indicators based on machine operating hours so you schedule services proactively.<br>服务系统中的服务预警功能。</p>
+<p>Overwhelmed by notifications? Customize what fault codes, alerts or machine operating conditions you want to know about, even if you don’t check the app every day.</p>
+<p>Want to connect machines to telematics when it fits into your schedule? Request and self-install PL542 Product Link boxes to get connected and frequently receive data insights.<br>车联网智能终端。</p>
+<p>Tired of losing or trying to find the right key? Using the keyless start feature, you can start select Next Generation Cat machines from the app.<br>手机变身成为智能钥匙。</p>
+<p>Looking for an easy way to keep maintenance on schedule? Share maintenance tasks with your team, mark work complete and adjust future schedules if needed.</p>
+<p>Interested in the condition of individual machines? Review your S•O•SSM Services fluid analysis results or Cat Inspect reports to identify problems before they become failures.</p>
+<p>Trouble finding your paper records or manuals? Access Operational &amp; Maintenance Manuals, support agreements, service letters, warranty information, invoices and more.</p>
+<p>Interested in <strong>how the performance of different machines or jobsites compares?</strong> Run utilization and benchmarking reports to determine if you need to make adjustments to your fleet or operations.</p>
+<p>Ready to sell a piece of equipment? Download <strong>a complete work order and service history</strong> to command a higher resale price.</p>
+<p>Want to customize how you see your information? Set up your home page to get to your most important or most used tools quickly. Choose to view your assets in a table, in a grid or on a map — select an individual asset to see all its details.</p>
+<ul>
+<li>Equipment: Utilisation, Issues detected, Planned Maintenance, Subscription information, Dealer information.</li>
+<li>Keys: Bluetooth enabled key.</li>
+<li>Analytics Data: Equipment total working hours <strong>per day</strong>. Equipment <strong>Idle Time</strong>.</li>
+</ul>
+<h2 id="Cat-Value-Estimating-Tool"><a href="#Cat-Value-Estimating-Tool" class="headerlink" title="Cat Value Estimating Tool"></a>Cat Value Estimating Tool</h2><h2 id="Cat-Virtual-Showroom"><a href="#Cat-Virtual-Showroom" class="headerlink" title="Cat Virtual Showroom"></a>Cat Virtual Showroom</h2><p>手机端的产品名录加虚拟展厅进行产品体验。</p>
+<p>This application is meant for Caterpillar and dealer sales personnel only. CWS login is required to gain access. This app gives sales reps access to enterprise wide, non-confidential marketing material that can be emailed. In addition, Cat Dealers have the option of integrating their own content into the app by opening an account with Modus (gomodus.com)</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><h2 id="Copyright"><a href="#Copyright" class="headerlink" title="Copyright"></a>Copyright</h2><p>Caterpillar reserves all its right of the content listed here and above, unless specified otherwise.</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Engineering/" rel="tag"># Engineering</a>
+              <a href="/tags/Caterpillar/" rel="tag"># Caterpillar</a>
+              <a href="/tags/Mechanical/" rel="tag"># Mechanical</a>
+              <a href="/tags/Manufacturing/" rel="tag"># Manufacturing</a>
+              <a href="/tags/APP/" rel="tag"># APP</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2019/07/16/2019-07-16-dota-underlords/" rel="prev" title="Dota Underlords Research">
+                  <i class="fa fa-chevron-left"></i> Dota Underlords Research
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2019/07/17/2019-07-17-you-must-sleep-early/" rel="next" title="早睡早起 晚睡剁屌">
+                  早睡早起 晚睡剁屌 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Abraham Xiao</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

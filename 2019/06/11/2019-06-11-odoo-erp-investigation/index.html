@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.yxiao.org","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.8.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<meta name="description" content="Odoo is the best management software to run a company.Millions of happy users work better with our integrated Apps.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Odoo ERP Investigation">
+<meta property="og:url" content="http://www.yxiao.org/2019/06/11/2019-06-11-odoo-erp-investigation/index.html">
+<meta property="og:site_name" content="Masdar Wireless">
+<meta property="og:description" content="Odoo is the best management software to run a company.Millions of happy users work better with our integrated Apps.">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-06-11T06:00:00.000Z">
+<meta property="article:modified_time" content="2021-09-10T03:27:17.839Z">
+<meta property="article:author" content="Abraham Xiao">
+<meta property="article:tag" content="Management">
+<meta property="article:tag" content="ERP">
+<meta property="article:tag" content="Odoo">
+<meta property="article:tag" content="Manufacture">
+<meta property="article:tag" content="Pricing">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://www.yxiao.org/2019/06/11/2019-06-11-odoo-erp-investigation/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.yxiao.org/2019/06/11/2019-06-11-odoo-erp-investigation/","path":"2019/06/11/2019-06-11-odoo-erp-investigation/","title":"Odoo ERP Investigation"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Odoo ERP Investigation | Masdar Wireless</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Masdar Wireless</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Shut Up and Get Rich</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-study"><a href="/study/" rel="section"><i class="fa fa-read fa-fw"></i>study</a></li>
+        <li class="menu-item menu-item-reading"><a href="/reading/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>reading</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CRM"><span class="nav-number">1.</span> <span class="nav-text">CRM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Website"><span class="nav-number">2.</span> <span class="nav-text">Website</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Project"><span class="nav-number">3.</span> <span class="nav-text">Project</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Inventory"><span class="nav-number">4.</span> <span class="nav-text">Inventory</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Invoicing"><span class="nav-number">5.</span> <span class="nav-text">Invoicing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Manufacturing"><span class="nav-number">6.</span> <span class="nav-text">Manufacturing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sales"><span class="nav-number">7.</span> <span class="nav-text">Sales</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Point-of-Sale"><span class="nav-number">8.</span> <span class="nav-text">Point of Sale</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#eCommerce"><span class="nav-number">9.</span> <span class="nav-text">eCommerce</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Purchase"><span class="nav-number">10.</span> <span class="nav-text">Purchase</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Expenses"><span class="nav-number">11.</span> <span class="nav-text">Expenses</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Accounting"><span class="nav-number">12.</span> <span class="nav-text">Accounting</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Accounts-Receivable"><span class="nav-number">12.1.</span> <span class="nav-text">Accounts Receivable</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Account-payables"><span class="nav-number">12.2.</span> <span class="nav-text">Account payables</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pay-bills"><span class="nav-number">12.3.</span> <span class="nav-text">Pay bills</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bank-amp-Cash"><span class="nav-number">12.4.</span> <span class="nav-text">Bank &amp; Cash</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Easy-Reconciliation"><span class="nav-number">12.5.</span> <span class="nav-text">Easy Reconciliation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Performance-Reports"><span class="nav-number">12.6.</span> <span class="nav-text">Performance Reports</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Legal-Statements"><span class="nav-number">12.7.</span> <span class="nav-text">Legal Statements</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Asset-amp-Revenues"><span class="nav-number">12.8.</span> <span class="nav-text">Asset &amp; Revenues</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Connect"><span class="nav-number">12.9.</span> <span class="nav-text">Connect</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Integrations"><span class="nav-number">12.10.</span> <span class="nav-text">Integrations</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Extra"><span class="nav-number">13.</span> <span class="nav-text">Extra</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Abraham Xiao</p>
+  <div class="site-description" itemprop="description">A personal website with some posts from Zhihu also</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">271</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">410</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.yxiao.org/2019/06/11/2019-06-11-odoo-erp-investigation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Abraham Xiao">
+      <meta itemprop="description" content="A personal website with some posts from Zhihu also">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Masdar Wireless">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Odoo ERP Investigation
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-06-11 14:00:00" itemprop="dateCreated datePublished" datetime="2019-06-11T14:00:00+08:00">2019-06-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-09-10 11:27:17" itemprop="dateModified" datetime="2021-09-10T11:27:17+08:00">2021-09-10</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Technology/" itemprop="url" rel="index"><span itemprop="name">Technology</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>Odoo is the best management software to run a company.<br>Millions of happy users work better with our integrated Apps.</p>
+<span id="more"></span>
+
+<h2 id="CRM"><a href="#CRM" class="headerlink" title="CRM"></a>CRM</h2><p>Track leads and close opportunities.</p>
+<ul>
+<li>new</li>
+<li>qualified</li>
+<li>proposition</li>
+<li>won</li>
+</ul>
+<p>The data fields in the CRM module are:</p>
+<ul>
+<li>created on</li>
+<li>opportunity</li>
+<li>customer</li>
+<li>country</li>
+<li>next activity deadline</li>
+<li>next activity summary</li>
+<li>stage</li>
+<li>expected revenue</li>
+<li>probability</li>
+<li>sales team</li>
+<li>salesperson</li>
+</ul>
+<h2 id="Website"><a href="#Website" class="headerlink" title="Website"></a>Website</h2><h2 id="Project"><a href="#Project" class="headerlink" title="Project"></a>Project</h2><p>项目管理。</p>
+<ul>
+<li>Projects<ul>
+<li>TODO</li>
+<li>In progress</li>
+<li>Done</li>
+</ul>
+</li>
+</ul>
+<p>Possible data fields in the project module are:</p>
+<ul>
+<li>title</li>
+<li>project name</li>
+<li>deadline</li>
+<li>assigned to</li>
+<li>tags</li>
+</ul>
+<h2 id="Inventory"><a href="#Inventory" class="headerlink" title="Inventory"></a>Inventory</h2><ul>
+<li><p>Receipts 收货</p>
+</li>
+<li><p>Delivery orders</p>
+</li>
+<li><p>Manufacturing</p>
+</li>
+<li><p>outgoing shipment</p>
+</li>
+<li><p>Operations</p>
+<ul>
+<li>Transfer</li>
+<li>Inventory Adjustment</li>
+<li>Scrap. Scrapping a product will remove it from your stock. The product will end up in a scrap location that can be used for reporting purpose. （即商品报废。）</li>
+</ul>
+</li>
+<li><p>Master Data</p>
+<ul>
+<li>Products</li>
+<li>Product Variants</li>
+<li>Recording rules</li>
+<li>Lots/Serial Numbre</li>
+</ul>
+</li>
+<li><p>Reporting</p>
+<ul>
+<li>Inventory Report</li>
+<li>Inventory Valuation</li>
+<li>Product Moves</li>
+</ul>
+</li>
+</ul>
+<h2 id="Invoicing"><a href="#Invoicing" class="headerlink" title="Invoicing"></a>Invoicing</h2><ul>
+<li>Company data</li>
+<li>invoice layout</li>
+<li>payment method</li>
+<li>sample invoice</li>
+</ul>
+<h2 id="Manufacturing"><a href="#Manufacturing" class="headerlink" title="Manufacturing"></a>Manufacturing</h2><ul>
+<li><p>Reference</p>
+</li>
+<li><p>Deadline start</p>
+</li>
+<li><p>product</p>
+</li>
+<li><p>source</p>
+</li>
+<li><p>quantity</p>
+</li>
+<li><p>material availability</p>
+</li>
+<li><p>state</p>
+</li>
+<li><p>Create an unbuild order. An unbuild order is used to break down a finished product into its components.</p>
+</li>
+<li><p>Master Data</p>
+<ul>
+<li>Products</li>
+<li>Product Variants</li>
+<li>Bill of materials</li>
+<li>Lots/Serial Numbers</li>
+</ul>
+</li>
+</ul>
+<h2 id="Sales"><a href="#Sales" class="headerlink" title="Sales"></a>Sales</h2><ul>
+<li><p>Quotation number.</p>
+</li>
+<li><p>Quotation date.</p>
+</li>
+<li><p>Customer.</p>
+</li>
+<li><p>Salesperson.</p>
+</li>
+<li><p>Total</p>
+</li>
+<li><p>Status</p>
+</li>
+<li><p>Order Lines</p>
+<ul>
+<li>Product</li>
+<li>Description</li>
+<li>Ordered Qty</li>
+<li>Unit Price</li>
+<li>Taxes</li>
+<li>Subtotal</li>
+<li>Untaxed Amount</li>
+<li>Taxes</li>
+</ul>
+</li>
+</ul>
+<p>From Quotation Sent to Sales Order.</p>
+<h2 id="Point-of-Sale"><a href="#Point-of-Sale" class="headerlink" title="Point of Sale"></a>Point of Sale</h2><h2 id="eCommerce"><a href="#eCommerce" class="headerlink" title="eCommerce"></a>eCommerce</h2><h2 id="Purchase"><a href="#Purchase" class="headerlink" title="Purchase"></a>Purchase</h2><ul>
+<li>Request for quotation<ul>
+<li>Reference</li>
+<li>Order date</li>
+<li>Vendor</li>
+<li>Schedule Date</li>
+<li>Purchase Representative</li>
+<li>Source document</li>
+<li>Untaxed</li>
+<li>total</li>
+<li>status</li>
+</ul>
+</li>
+</ul>
+<h2 id="Expenses"><a href="#Expenses" class="headerlink" title="Expenses"></a>Expenses</h2><p>Submit, validate and reinvoice employee expenses.</p>
+<ul>
+<li><p>Date</p>
+</li>
+<li><p>Description</p>
+</li>
+<li><p>Employee</p>
+</li>
+<li><p>Paid by</p>
+</li>
+<li><p>Total</p>
+</li>
+<li><p>Status</p>
+</li>
+<li><p>Expense report.</p>
+</li>
+<li><p>Draft.</p>
+</li>
+<li><p>Submitted.</p>
+</li>
+<li><p>Approved.</p>
+</li>
+<li><p>Posted. 财务过账。</p>
+</li>
+<li><p>A payment related to your expense has been made.</p>
+</li>
+<li><p>Posted – Paid.</p>
+</li>
+</ul>
+<h2 id="Accounting"><a href="#Accounting" class="headerlink" title="Accounting"></a>Accounting</h2><p>If we pick up at the end of a typical ‘order to cash’ scenario, after the goods have been shipped, you will: issue an invoice; receive payment; deposit that payment at the bank; make sure the Customer Invoice is closed; follow up if Customers are late; and finally present your Income on the Profit and Loss report and show the decrease in Assets on the Balance Sheet report.</p>
+<p>Invoicing in most countries occurs when a contractual obligation is met. If you ship a box to a customer, you have met the terms of the contract and can bill them. If your supplier sends you a shipment, they have met the terms of that contract and can bill you. Therefore, the terms of the contract is fulfilled when the box moves to or from the truck. At this point, Odoo supports the creation of what is called a Draft Invoice by Warehouse staff.</p>
+<h3 id="Accounts-Receivable"><a href="#Accounts-Receivable" class="headerlink" title="Accounts Receivable"></a>Accounts Receivable</h3><h3 id="Account-payables"><a href="#Account-payables" class="headerlink" title="Account payables"></a>Account payables</h3><ul>
+<li>Control supplier bills. Compare the information appearing on the Purchase Order, the Vendor Bill, and the Receipt to make sure you pay the correct bill.</li>
+<li>Forecast expenses. Get a clear forecast of your future bills to pay.</li>
+<li>Employee expenses. Track employee expenses, from the recording by every employee to the validation and reimbursement.</li>
+<li>Bill digitalization. Upload your scanned vendor bills in PDF and let Odoo creates your vendors bills with OCR and Artificial Intelligence.</li>
+</ul>
+<h3 id="Pay-bills"><a href="#Pay-bills" class="headerlink" title="Pay bills"></a>Pay bills</h3><h3 id="Bank-amp-Cash"><a href="#Bank-amp-Cash" class="headerlink" title="Bank &amp; Cash"></a>Bank &amp; Cash</h3><h3 id="Easy-Reconciliation"><a href="#Easy-Reconciliation" class="headerlink" title="Easy Reconciliation"></a>Easy Reconciliation</h3><ul>
+<li>Smart Reconciliation Tool. Get reconciliation propositions automatically, register extra journal items on the fly, search efficiently. Interface for manual reconciliations, for both open and paid invoices. Learning of account numbers based on first manual reconciliation. Odoo matches 95% of invoices &amp; payments automatically and the smart matching tool allows to do the remaining 5% super fast.</li>
+<li>Easy outstanding payments. Get partial and full reconciliation proposition directly from the invoice or the bank statement.</li>
+<li>Online Payments. Confirmed online transactions create a payment for easy reconciliation. They also show up as notifications in the document’s chatter for easier follow-up.</li>
+<li>Reconciliation Report. Audit differences between your accounts and your bank statement balance to ease reconciliation.</li>
+</ul>
+<h3 id="Performance-Reports"><a href="#Performance-Reports" class="headerlink" title="Performance Reports"></a>Performance Reports</h3><ul>
+<li>Business Intelligence reports. Use Odoo pivot table to navigate through the information: consolidations, drill-up/down, group data, filters, etc.<br>Multiple standard reports are available - Profit &amp; Loss, cash flow statements, cash reports, executive summary and aged payable/receivables, etc. Get standard reports and chart of accounts available for 80+ countries. Export to Excel and pdf.</li>
+<li>Customizable dashboards. Create your own dashboard by assembling custom reports. Generate reports for any time period, comparing time period. Get dynamic calculation of certain fields e.g. YTD earning. Share filters and dashboard across teams.</li>
+<li>Annotate any report. All reports are full dynamic allowing you to navigate easily. Create multiple annotations. Annotate reports to add your notes for the managers inline.</li>
+<li>Customizable KPI’s. Define your own KPIs based on formulaes: gross margin, customer acquisition costs, growth rate by products,…</li>
+<li>Perpetual fiscal year closing. No need to report balance sheet accounts from one year to another. Automatic calculation of P&amp;L based on chosen dates, only need to write the handling of earnings for closure. Choose lock entry dates for non advisers and all users.</li>
+</ul>
+<h3 id="Legal-Statements"><a href="#Legal-Statements" class="headerlink" title="Legal Statements"></a>Legal Statements</h3><ul>
+<li>Profit &amp; Loss</li>
+<li>Balance Sheet</li>
+<li>Cash flow statement</li>
+<li>Tax reports</li>
+<li>General ledger</li>
+<li>Country-specific statements</li>
+<li>Advanced Taxes Management</li>
+<li>Tax Audit Report</li>
+<li>Consolidated Journal Repotr</li>
+</ul>
+<h3 id="Asset-amp-Revenues"><a href="#Asset-amp-Revenues" class="headerlink" title="Asset &amp; Revenues"></a>Asset &amp; Revenues</h3><ul>
+<li>Assets Management</li>
+<li>Budgets</li>
+<li>Revenue Recognition</li>
+<li>Revenue dashboard</li>
+</ul>
+<h3 id="Connect"><a href="#Connect" class="headerlink" title="Connect"></a>Connect</h3><ul>
+<li>Web-service API</li>
+<li>Flexible Import-Export</li>
+<li>Google spreadsheet integration</li>
+<li>Taxcloud integration</li>
+</ul>
+<h3 id="Integrations"><a href="#Integrations" class="headerlink" title="Integrations"></a>Integrations</h3><ul>
+<li>Sales. Get your customer invoices created automatically from your sales order, tasks or delivery orders.</li>
+<li>Inventory. Work in periodic or perpetual inventory valuations. Get your accounting entries created automatically in standard price, average price of FIFO.</li>
+<li>Purchase. Control supplier bills is just a few clicks. No need to record everything, they are proposed by Odoo based on purchase orders or incoming shipments.</li>
+<li>E-commerce. Get all your ecommerce transactions reported automatically in your accounts: sales, payments, refunds, shipping, etc.</li>
+<li>Customer Portal. Your customers get an access to their portal where they can download invoices, check order status, track payments, etc.</li>
+</ul>
+<h2 id="Extra"><a href="#Extra" class="headerlink" title="Extra"></a>Extra</h2><ul>
+<li>要能看到数据。</li>
+<li>要实现手机上批流程的功能。</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Management/" rel="tag"># Management</a>
+              <a href="/tags/ERP/" rel="tag"># ERP</a>
+              <a href="/tags/Odoo/" rel="tag"># Odoo</a>
+              <a href="/tags/Manufacture/" rel="tag"># Manufacture</a>
+              <a href="/tags/Pricing/" rel="tag"># Pricing</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2019/06/05/2019-06-05-crowds-under-crisis/" rel="prev" title="危机下的四种人">
+                  <i class="fa fa-chevron-left"></i> 危机下的四种人
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2019/06/13/2019-06-13-java/" rel="next" title="给Java说句公道话">
+                  给Java说句公道话 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Abraham Xiao</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
